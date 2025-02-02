@@ -3,12 +3,18 @@
         {
             "Node": {
                 "rid": 1000
-            }
+            },
+            "fromGUID": "f9092192-a5d0-4246-8ab3-64b4dde32d47",
+            "toGUIDs": [
+                "8776a23f-1efc-49f7-b564-12c5c1dbf0da"
+            ]
         },
         {
             "Node": {
                 "rid": 1001
-            }
+            },
+            "fromGUID": "8776a23f-1efc-49f7-b564-12c5c1dbf0da",
+            "toGUIDs": []
         }
     ],
     "references": {
@@ -22,32 +28,34 @@
                     "asm": "Assembly-CSharp"
                 },
                 "data": {
-                    "GUID": "8ea90cbc-0f07-4f89-aba3-0aac40bd5fda",
+                    "GUID": "f9092192-a5d0-4246-8ab3-64b4dde32d47",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 360.0,
-                        "y": 250.0,
+                        "x": 316.0,
+                        "y": 176.0,
                         "width": 73.0,
                         "height": 77.0
-                    }
+                    },
+                    "NodeName": "Root"
                 }
             },
             {
                 "rid": 1001,
                 "type": {
-                    "class": "CompositeNode",
+                    "class": "SequenceNode",
                     "ns": "",
                     "asm": "Assembly-CSharp"
                 },
                 "data": {
-                    "GUID": "f296869f-9d07-4251-ac89-2f414a48f483",
+                    "GUID": "8776a23f-1efc-49f7-b564-12c5c1dbf0da",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 235.0,
-                        "y": 485.0,
+                        "x": 468.0,
+                        "y": 428.0,
                         "width": 103.0,
                         "height": 77.0
-                    }
+                    },
+                    "NodeName": "Sequence"
                 }
             }
         ]

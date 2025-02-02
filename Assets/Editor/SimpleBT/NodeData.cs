@@ -1,8 +1,9 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 [System.Serializable]
 public class NodeData
 {
     [SerializeReference] public BehaviourTreeNode Node;
+    public string fromGUID;
+    public List<string> toGUIDs = new List<string>();
 }

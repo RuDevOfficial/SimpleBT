@@ -5,6 +5,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[System.Serializable]
 public class SBTGraphView : GraphView
 {
     private SBTEditorWindow _editor;
@@ -32,15 +33,9 @@ public class SBTGraphView : GraphView
         
         nodeCreationRequest = context => SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), _searchWindow);
         
-        // Adding contextual items
-        //this.AddManipulator(CreateNewContextualMenuManipulator("Create Node"));
-        
         // Adding style
         var styeSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/SimpleBT/SBTStyles.uss");
         styleSheets.Add(styeSheet);
-        
-        // Override Deletion callback
-        //OnElementsDeleted();
     }
 
     public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -67,13 +62,30 @@ public class SBTGraphView : GraphView
         return (actionEvent.eventInfo.localMousePosition - viewPosition) / viewTransform.scale;
     }
     
+    public Vector2 GetLocalMousePosition(Vector2 position, bool isSearchWindow = false)
+    {
+        Vector2 worldMousePosition = position;
+
+        if (isSearchWindow) {
+            worldMousePosition -= _editor.position.position;
+        }
+
+        Vector2 localMousePosition = contentViewContainer.WorldToLocal(worldMousePosition);
+        return localMousePosition;
+    }
+    
     #endregion
 
-    #region Node Creation, Deletion & Modification
-
-    public void CreateNode(System.Type type)
+    public BehaviourTreeNode GetNodeByGUID(string guid)
     {
+        foreach (Node node in nodes)
+        {
+            BehaviourTreeNode BTnode = (BehaviourTreeNode)node;
+            if(BTnode.GUID == guid) { return BTnode; }
+        }
         
+        Debug.LogError($"Couldn't find node of guid {guid}");
+        return null;
     }
     
     /*
@@ -111,16 +123,6 @@ public class SBTGraphView : GraphView
             }
         });
     }*/
-    
-    #endregion
-    
-    #region Saving
 
-    public void Save()
-    {
-
-    }
-    
-    #endregion
 
 }

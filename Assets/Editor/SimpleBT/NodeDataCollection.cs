@@ -8,7 +8,7 @@ public class NodeDataCollection
     public NodeDataCollection(NodeData[] nodes) { this.nodes = nodes; }
     public NodeDataCollection(string fileName)
     {
-        NodeDataCollection collection = SimpleBTDataSystem.Load(fileName);
+        NodeDataCollection collection = SimpleBTDataSystem.LoadNodesFromJson(fileName);
         nodes = collection != null ? collection.nodes : Array.Empty<NodeData>();
     }
 }

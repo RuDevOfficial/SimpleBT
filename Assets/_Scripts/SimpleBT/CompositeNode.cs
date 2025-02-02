@@ -1,12 +1,13 @@
 ﻿using UnityEditor.Experimental.GraphView;
 
+[System.Serializable]
 public class CompositeNode : BehaviourTreeNode
 {
-    public CompositeNode() { }
+    public CompositeNode() { NodeName = "Composite"; }
     
     public override void Draw()
     {
-        title = "Sequence";
+        base.Draw();
 
         Port inputPort = this.InstantiatePort(Orientation.Vertical, Direction.Input, Port.Capacity.Single,
             typeof(bool));
@@ -19,4 +20,3 @@ public class CompositeNode : BehaviourTreeNode
         outputContainer.Add(outputPort);
     }
 }
-

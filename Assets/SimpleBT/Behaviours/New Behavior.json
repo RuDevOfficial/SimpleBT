@@ -1,0 +1,118 @@
+{
+    "nodes": [
+        {
+            "Node": {
+                "rid": 1000
+            },
+            "fromGUID": "e1edbf0e-854f-4505-935b-35676b268dbf",
+            "toGUIDs": [
+                "ef2b8add-214f-43e6-9c6e-12344364b28c"
+            ]
+        },
+        {
+            "Node": {
+                "rid": 1001
+            },
+            "fromGUID": "ef2b8add-214f-43e6-9c6e-12344364b28c",
+            "toGUIDs": [
+                "1c4b5e33-222d-4d17-9a5d-a0076f910fea",
+                "b40a7f4a-c00c-44f4-bd48-ca476f6bcd8d"
+            ]
+        },
+        {
+            "Node": {
+                "rid": 1002
+            },
+            "fromGUID": "1c4b5e33-222d-4d17-9a5d-a0076f910fea",
+            "toGUIDs": []
+        },
+        {
+            "Node": {
+                "rid": 1003
+            },
+            "fromGUID": "b40a7f4a-c00c-44f4-bd48-ca476f6bcd8d",
+            "toGUIDs": []
+        }
+    ],
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootNode",
+                    "ns": "SimpleBT",
+                    "asm": "Assembly-CSharp"
+                },
+                "data": {
+                    "GUID": "e1edbf0e-854f-4505-935b-35676b268dbf",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 207.0,
+                        "y": 114.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "SequenceNode",
+                    "ns": "",
+                    "asm": "Assembly-CSharp"
+                },
+                "data": {
+                    "GUID": "ef2b8add-214f-43e6-9c6e-12344364b28c",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 342.0,
+                        "y": 251.0,
+                        "width": 103.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Sequence"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "SequenceNode",
+                    "ns": "",
+                    "asm": "Assembly-CSharp"
+                },
+                "data": {
+                    "GUID": "1c4b5e33-222d-4d17-9a5d-a0076f910fea",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 515.0,
+                        "y": 407.0,
+                        "width": 103.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Sequence"
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "SequenceNode",
+                    "ns": "",
+                    "asm": "Assembly-CSharp"
+                },
+                "data": {
+                    "GUID": "b40a7f4a-c00c-44f4-bd48-ca476f6bcd8d",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 291.0,
+                        "y": 387.0,
+                        "width": 103.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Sequence"
+                }
+            }
+        ]
+    }
+}
