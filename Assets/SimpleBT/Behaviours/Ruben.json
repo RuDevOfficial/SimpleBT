@@ -4,17 +4,17 @@
             "Node": {
                 "rid": 1000
             },
-            "fromGUID": "f9092192-a5d0-4246-8ab3-64b4dde32d47",
-            "toGUIDs": [
-                "8776a23f-1efc-49f7-b564-12c5c1dbf0da"
-            ]
+            "fromGUID": "e0ddd352-6fdc-4872-90c6-a9ed873f8f29",
+            "toGUIDs": []
         },
         {
             "Node": {
                 "rid": 1001
             },
-            "fromGUID": "8776a23f-1efc-49f7-b564-12c5c1dbf0da",
-            "toGUIDs": []
+            "fromGUID": "dbdb6bb0-fd2b-42d1-9df7-849f2dbbbc98",
+            "toGUIDs": [
+                "e0ddd352-6fdc-4872-90c6-a9ed873f8f29"
+            ]
         }
     ],
     "references": {
@@ -23,39 +23,39 @@
             {
                 "rid": 1000,
                 "type": {
-                    "class": "RootNode",
-                    "ns": "SimpleBT",
-                    "asm": "Assembly-CSharp"
-                },
-                "data": {
-                    "GUID": "f9092192-a5d0-4246-8ab3-64b4dde32d47",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 316.0,
-                        "y": 176.0,
-                        "width": 73.0,
-                        "height": 77.0
-                    },
-                    "NodeName": "Root"
-                }
-            },
-            {
-                "rid": 1001,
-                "type": {
                     "class": "SequenceNode",
                     "ns": "",
                     "asm": "Assembly-CSharp"
                 },
                 "data": {
-                    "GUID": "8776a23f-1efc-49f7-b564-12c5c1dbf0da",
+                    "GUID": "e0ddd352-6fdc-4872-90c6-a9ed873f8f29",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 468.0,
-                        "y": 428.0,
+                        "x": 376.0,
+                        "y": 371.0,
                         "width": 103.0,
                         "height": 77.0
                     },
                     "NodeName": "Sequence"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "RootNode",
+                    "ns": "SimpleBT",
+                    "asm": "Assembly-CSharp"
+                },
+                "data": {
+                    "GUID": "dbdb6bb0-fd2b-42d1-9df7-849f2dbbbc98",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 213.0,
+                        "y": 136.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Root"
                 }
             }
         ]

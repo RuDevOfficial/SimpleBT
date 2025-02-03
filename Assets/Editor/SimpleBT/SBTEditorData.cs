@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
 
-[System.Serializable]
-public class SBTEditorData
+namespace SimpleBT.Editor.Data
 {
-    public string LastFileName;
-    
-    public SBTEditorData(SBTEditorWindow window)
+    [System.Serializable]
+    public class SBTEditorData
     {
-        LastFileName = window.LastFieldValue;
+        public string LastFileName;
+    
+        public SBTEditorData(SBTEditorWindow window)
+        {
+            LastFileName = window.LastFieldValue;
+        }
     }
 }
+

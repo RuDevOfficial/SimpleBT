@@ -1,153 +1,203 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using SimpleBT;
-using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UIElements;
+
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
-using UnityEngine;
-using UnityEngine.UIElements;
-using Edge = UnityEditor.Experimental.GraphView.Edge;
 
-[System.Serializable]
-public class SBTEditorWindow : EditorWindow, ISerializationCallbackReceiver
+namespace SimpleBT.Editor
 {
-    private SBTGraphView _graph;
-    private SimpleTree _currentSimpleTree;
-
-    private TextField _field;
-    private static string _lastFieldValue;
-    public string LastFieldValue => _lastFieldValue;
+    using SimpleBT.Editor.Data;
+    using SimpleBT.Editor.GraphNodes;
     
-    private const string DATA_PATH = "Assets/SimpleBT/";
-    
-    [MenuItem("SimpleBT/Window")]
-    public static void Open()
+    [System.Serializable]
+    public class SBTEditorWindow : EditorWindow, ISerializationCallbackReceiver
     {
-        SBTEditorWindow wnd = GetWindow<SBTEditorWindow>();
-        wnd.titleContent = new GUIContent("Simple BT");
-    }
+        private SBTGraphView _graph;
 
-    private void OnEnable()
-    {
-        _graph = new SBTGraphView(this);
-        _graph.StretchToParentSize();
-        rootVisualElement.Add(_graph);
+        #region Private Fields
         
-        // Adding Toolbar for Saving
-        Toolbar toolbar = new Toolbar();
-        rootVisualElement.Add(toolbar);
-
-        TextElement label = new TextElement();
-        label.text = "  File Name";
-        label.style.alignSelf = Align.Center;
-        toolbar.Add(label);
+        private TextField _field;
+        private static string _lastFieldValue;
         
-        _field = new TextField();
-        _field.value = _lastFieldValue ?? "New Behaviour Tree";
-        _field.RegisterValueChangedCallback(evt => { _lastFieldValue = evt.newValue; });
-        toolbar.Add(_field);
+        #endregion
         
-        Button saveButton = new Button(Save);
-        saveButton.text = "Save";
-        toolbar.Add(saveButton);
+        #region Public Fields
         
-        Button loadButton = new Button(Load);
-        loadButton.text = "Load";
-        toolbar.Add(loadButton);
+        public string LastFieldValue => _lastFieldValue;
         
+        #endregion
         
-        // Poner los datos que se hayan guardado antes
-        SBTEditorData editorData = SimpleBTDataSystem.LoadEditorFromJson();
-
-        _lastFieldValue = editorData.LastFileName;
-        _field.value = _lastFieldValue;
-    }
-
-    private void OnDisable()
-    {
-        SimpleBTDataSystem.SaveEditorToJson(this);
-    }
-
-    void Save()
-    {
-        List<BehaviourTreeNode> nodesList = new List<BehaviourTreeNode>();
-        
-        _graph.graphElements.ForEach(element => {
-            if (element is BehaviourTreeNode node) {
-                nodesList.Add(node);
-            }
-        });
-
-        NodeData[] nodesDatas = new NodeData[nodesList.Count];
-        for (int i = 0; i < nodesList.Count; i++)
+        [MenuItem("SimpleBT/Window")]
+        public static void Open()
         {
-            BehaviourTreeNode node = nodesList[i];
-            node.Rect = node.GetPosition();
-                       
-            List<string> toGUIDs = new List<string>();
-            Port port = node.outputContainer.Q<Port>("");
-            foreach (Edge edge in port.connections)
+            SBTEditorWindow wnd = GetWindow<SBTEditorWindow>();
+            wnd.titleContent = new GUIContent("Simple BT");
+        }
+
+        #region Unity Event Functions
+        
+        private void OnEnable()
+        {
+            GenerateGraph();
+            GenerateVisualElements();
+            LoadPreviousData();
+        }
+
+        private void OnDisable() {
+            // Make sure to save any necessary data before its serialized
+            SimpleBTDataSystem.SaveEditorToJson(this);
+        }
+
+        #endregion
+        
+        #region Initialization
+        
+        private void GenerateGraph()
+        {
+            _graph = new SBTGraphView(this);
+            _graph.StretchToParentSize();
+            rootVisualElement.Add(_graph);
+        }
+        
+        private void GenerateVisualElements()
+        {
+            Toolbar toolbar = new Toolbar();
+            rootVisualElement.Add(toolbar);
+
+            TextElement label = new TextElement();
+            label.text = "  File Name";
+            label.style.alignSelf = Align.Center;
+            toolbar.Add(label);
+            
+            _field = new TextField();
+            _field.value = _lastFieldValue ?? "New Behaviour Tree";
+            _field.RegisterValueChangedCallback(evt => { _lastFieldValue = evt.newValue; });
+            toolbar.Add(_field);
+            
+            Button saveButton = new Button(Save);
+            saveButton.text = "Save";
+            toolbar.Add(saveButton);
+            
+            Button loadButton = new Button(Load);
+            loadButton.text = "Load";
+            toolbar.Add(loadButton);
+        }
+        
+        private void LoadPreviousData()
+        {
+            SBTEditorData editorData = SimpleBTDataSystem.LoadEditorFromJson();
+
+            _lastFieldValue = editorData.LastFileName;
+            _field.value = _lastFieldValue;
+        }
+        
+        #endregion
+        
+        #region Saving & Loading
+        
+        /// <summary>
+        /// This method saves the serializable data into a JSON file by checking which graphElements are nodes and obtaining the
+        /// necessary data to then create a NodeData class which will hold the values
+        /// </summary>
+        private void Save()
+        {
+            List<GraphTreeNode> nodesList = new List<GraphTreeNode>();
+            
+            //Grabs all graphElement that is a node and saves it to a list (nodesList)
+            _graph.graphElements.ForEach(element => {
+                if (element is GraphTreeNode node) {
+                    nodesList.Add(node);
+                }
+            });
+
+            //Generates an array of nodeData and populates it
+            //Variable "Node", "fromGUID" cannot be null
+            //Variable "toGUID" can be null
+            NodeData[] nodesDatas = new NodeData[nodesList.Count];
+            for (int i = 0; i < nodesList.Count; i++)
             {
-                Node connectedNode = edge.input.node;
-                BehaviourTreeNode btNode = (BehaviourTreeNode)connectedNode;
-                toGUIDs.Add(btNode.GUID);
+                //Sets the checked node's position Rect value in advance
+                GraphTreeNode node = nodesList[i];
+                node.Rect = node.GetPosition();
+                           
+                //Lists all GUIDs that come out of the output port of the checked node
+                List<string> toGUIDs = new List<string>();
+                Port port = node.outputContainer.Q<Port>("");
+                foreach (Edge edge in port.connections)
+                {
+                    Node connectedNode = edge.input.node;
+                    GraphTreeNode btNode = (GraphTreeNode)connectedNode;
+                    toGUIDs.Add(btNode.GUID);
+                }
+                
+                //Generates the NodeData class and populates the obtained data
+                NodeData nodeData = new NodeData();
+                nodeData.Node = node;
+                nodeData.fromGUID = node.GUID;
+                nodeData.toGUIDs = new List<string>(toGUIDs);
+                
+                nodesDatas[i] = nodeData;
             }
-            
-            NodeData nodeData = new NodeData();
-            nodeData.Node = node;
-            nodeData.fromGUID = node.GUID;
-            nodeData.toGUIDs = new List<string>(toGUIDs);
-            
-            nodesDatas[i] = nodeData;
+
+            SimpleBTDataSystem.SaveNodesToJson(_field.value, nodesDatas);
         }
-
-        SimpleBTDataSystem.SaveNodesToJson(_field.value, nodesDatas);
-    }
-
-    
-    void Load()
-    {
-        NodeDataCollection collection = new NodeDataCollection(_field.value);
         
-        _graph.DeleteElements(_graph.graphElements);
-        
-        foreach (NodeData data in collection.nodes)
+        /// <summary>
+        /// This method loads the data in the JSON file and generates both nodes
+        /// and port connections (and edges) separately
+        /// </summary>
+        private void Load()
         {
-            // Generate all nodes First
-            BehaviourTreeNode node = data.Node;
-            node.SetPosition(node.Rect);
-            node.Draw();
-            node.RefreshPorts();
-            node.RefreshExpandedState();
-            _graph.AddElement(node);
-        }
-
-        foreach (NodeData data in collection.nodes)
-        {
-            BehaviourTreeNode fromNode = data.Node;
-            if (data.toGUIDs.Count == 0) { continue; }
+            NodeDataCollection collection = new NodeDataCollection(_field.value);
             
-            Port fromPort = fromNode.outputContainer.Q<Port>("");
-            foreach (string toGUID in data.toGUIDs)
+            //Delete all previous elements to not generate duplicates
+            _graph.DeleteElements(_graph.graphElements);
+            
+            //Generate nodes and add them to the graph
+            foreach (NodeData data in collection.nodes)
             {
-                BehaviourTreeNode node = _graph.GetNodeByGUID(toGUID);
-                Port toPort = node.inputContainer.Q<Port>("");
-                Edge edge = fromPort.ConnectTo(toPort);
-                _graph.AddElement(edge);
+                // Generate all nodes First
+                GraphTreeNode node = data.Node;
+                node.SetPosition(node.Rect);
+                node.Draw();
+                node.RefreshPorts();
+                node.RefreshExpandedState();
+                _graph.AddElement(node);
+            }
+
+            //Generates the connections and edges by obtaining the input
+            //of the "fromNode" to the output port of the "toNode"
+            foreach (NodeData data in collection.nodes)
+            {
+                GraphTreeNode fromNode = data.Node;
+                if (data.toGUIDs.Count == 0) { continue; }
+                
+                Port fromPort = fromNode.outputContainer.Q<Port>("");
+                foreach (string toGUID in data.toGUIDs)
+                {
+                    GraphTreeNode node = _graph.GetNodeByGUID(toGUID);
+                    Port toPort = node.inputContainer.Q<Port>("");
+                    Edge edge = fromPort.ConnectTo(toPort);
+                    _graph.AddElement(edge);
+                }
             }
         }
-    }
+        
+        #endregion
+        
+        #region ISerializationCallbackReceiver Methods
+        
+        //Method to save on domain reload
+        public void OnBeforeSerialize() {
+            if(!string.IsNullOrEmpty(_lastFieldValue)) { SimpleBTDataSystem.SaveEditorToJson(this); }
+        }
 
-    public void OnBeforeSerialize()
-    {
-        if(!string.IsNullOrEmpty(_lastFieldValue)) { SimpleBTDataSystem.SaveEditorToJson(this); }
-    }
-
-    public void OnAfterDeserialize()
-    {
-
+        //Left blank
+        public void OnAfterDeserialize() { }
+        
+        #endregion
     }
 }
+

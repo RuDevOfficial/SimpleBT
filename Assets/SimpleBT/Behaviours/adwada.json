@@ -4,16 +4,16 @@
             "Node": {
                 "rid": 1000
             },
-            "fromGUID": "3de146b8-6887-4210-ada9-8cce2f889e1f",
+            "fromGUID": "bedef33f-4570-4a9b-9da3-e9ef6210ef94",
             "toGUIDs": []
         },
         {
             "Node": {
                 "rid": 1001
             },
-            "fromGUID": "331f734d-38c1-431c-9633-97f8fad5e55e",
+            "fromGUID": "b8f3bef5-7fb7-4482-9168-aebd776eb289",
             "toGUIDs": [
-                "3de146b8-6887-4210-ada9-8cce2f889e1f"
+                "bedef33f-4570-4a9b-9da3-e9ef6210ef94"
             ]
         }
     ],
@@ -24,15 +24,15 @@
                 "rid": 1000,
                 "type": {
                     "class": "SequenceNode",
-                    "ns": "",
-                    "asm": "Assembly-CSharp"
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "3de146b8-6887-4210-ada9-8cce2f889e1f",
+                    "GUID": "bedef33f-4570-4a9b-9da3-e9ef6210ef94",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 457.0,
-                        "y": 362.0,
+                        "x": 285.0,
+                        "y": 370.0,
                         "width": 103.0,
                         "height": 77.0
                     },
@@ -43,15 +43,15 @@
                 "rid": 1001,
                 "type": {
                     "class": "RootNode",
-                    "ns": "SimpleBT",
-                    "asm": "Assembly-CSharp"
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "331f734d-38c1-431c-9633-97f8fad5e55e",
+                    "GUID": "b8f3bef5-7fb7-4482-9168-aebd776eb289",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 609.0,
-                        "y": 103.0,
+                        "x": 128.0,
+                        "y": 161.0,
                         "width": 73.0,
                         "height": 77.0
                     },

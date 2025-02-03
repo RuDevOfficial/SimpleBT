@@ -1,0 +1,61 @@
+{
+    "nodes": [
+        {
+            "Node": {
+                "rid": 1000
+            },
+            "fromGUID": "dbdb6bb0-fd2b-42d1-9df7-849f2dbbbc98",
+            "toGUIDs": []
+        },
+        {
+            "Node": {
+                "rid": 1001
+            },
+            "fromGUID": "ef68c537-4db6-47fb-beeb-a88be160e2ed",
+            "toGUIDs": []
+        }
+    ],
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootNode",
+                    "ns": "SimpleBT",
+                    "asm": "Assembly-CSharp"
+                },
+                "data": {
+                    "GUID": "dbdb6bb0-fd2b-42d1-9df7-849f2dbbbc98",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 158.0,
+                        "y": 149.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "RootNode",
+                    "ns": "SimpleBT",
+                    "asm": "Assembly-CSharp"
+                },
+                "data": {
+                    "GUID": "ef68c537-4db6-47fb-beeb-a88be160e2ed",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 356.0,
+                        "y": 149.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Root"
+                }
+            }
+        ]
+    }
+}
