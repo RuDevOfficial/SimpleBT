@@ -5,54 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="227eb850-3e24-477a-8760-e6199cf36f52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeDataCollection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SimpleBTDataSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SimpleBTEditorUtils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/GraphTreeNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/SBTGraphView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EdgeData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EdgeData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EdgeDataCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EdgeDataCollection.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/NodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/NodeData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/NodeDataCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/NodeDataCollection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeDataCollection.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeDataCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/BehaviourCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeDataCollection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/BehaviourCollection.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SimpleBTDataSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SimpleBTDataSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/GraphTreeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/GraphTreeNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorData.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTGraphView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTGraphView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/SBTGraphView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SimpleBTDataSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SimpleBTDataSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SimpleBTDataSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/Hello hun.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/Hello hun.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/Mama eres una pesada.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/Mama eres una pesada.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/New Behavior.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/New Behavior.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/Alex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/Alex.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/Ruben.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/Ruben.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/adwada.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Behaviours/adwada.json.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/BehaviourTreeNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/BehaviourTreeNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/GraphTreeNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/CompositeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/CompositeNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/CompositeNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/CompositeNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/RootNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RootNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/RootNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RootNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/SequenceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/SequenceNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/SequenceNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/SequenceNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/SimpleBTEditorUtils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/SimpleBTEditorUtils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SimpleBTEditorUtils.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/SimpleTree.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/SimpleTree.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/SimpleTree.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SimpleBT/SimpleTree.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +30,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa2564.17919/BehaviourTree.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/0c/a75fe4c0/Edge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/a0/63e6b948/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/c2/cd46938b/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -156,6 +124,7 @@
       <workItem from="1738513024075" duration="9935000" />
       <workItem from="1738582607140" duration="2930000" />
       <workItem from="1738585588744" duration="1932000" />
+      <workItem from="1738664901424" duration="3363000" />
     </task>
     <servers />
   </component>

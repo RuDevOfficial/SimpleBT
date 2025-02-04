@@ -13,8 +13,11 @@ namespace SimpleBT.Editor.GraphNodes
         public string NodeName;
     
         public GraphTreeNode() { }
-    
-        public virtual void Instantiate() { GUID = Guid.NewGuid().ToString(); }
+
+        public virtual void Instantiate()
+        {
+            GUID = Guid.NewGuid().ToString();
+        }
 
         public virtual void Draw() { title = NodeName; }
     }

@@ -1,10 +1,13 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
+using Object = UnityEngine.Object;
 
 namespace SimpleBT.Editor
 {
@@ -51,7 +54,27 @@ namespace SimpleBT.Editor
         }
 
         #endregion
-        
+
+        private void OnSelectionChange()
+        {
+            Object selectedObject = Selection.activeObject;
+            if (selectedObject == null) { return; }
+
+            string path = AssetDatabase.GetAssetPath(selectedObject);
+            string fileNameAndPath = Path.GetFileName(path);
+
+            if (fileNameAndPath.Contains(".simple"))
+            {
+                string fileName = Path.GetFileNameWithoutExtension(path);
+                if (fileName != _field.value)
+                {
+                    Load(fileName);
+                    _field.value = fileName;
+                    _lastFieldValue = fileName;
+                }
+            }
+        }
+
         #region Initialization
         
         private void GenerateGraph()
@@ -80,7 +103,7 @@ namespace SimpleBT.Editor
             saveButton.text = "Save";
             toolbar.Add(saveButton);
             
-            Button loadButton = new Button(Load);
+            Button loadButton = new Button(() => { Load(); });
             loadButton.text = "Load";
             toolbar.Add(loadButton);
         }
@@ -141,16 +164,19 @@ namespace SimpleBT.Editor
                 nodesDatas[i] = nodeData;
             }
 
-            SimpleBTDataSystem.SaveNodesToJson(_field.value, nodesDatas);
+            SimpleBTDataSystem.SaveNodesToJson(_field.value, nodesDatas, _graph);
         }
         
         /// <summary>
         /// This method loads the data in the JSON file and generates both nodes
         /// and port connections (and edges) separately
         /// </summary>
-        private void Load()
+        private void Load(string fieldValue = null)
         {
-            NodeDataCollection collection = new NodeDataCollection(_field.value);
+            BehaviourCollection collection;
+
+            if (fieldValue == null) { collection = new BehaviourCollection(_field.value); }
+            else { collection = new BehaviourCollection(fieldValue); }
             
             //Delete all previous elements to not generate duplicates
             _graph.DeleteElements(_graph.graphElements);
@@ -183,6 +209,10 @@ namespace SimpleBT.Editor
                     _graph.AddElement(edge);
                 }
             }
+            
+            //Viewport update
+            _graph.viewTransform.position = collection.ViewportPosition;
+            _graph.viewTransform.scale = collection.ViewportScale;
         }
         
         #endregion

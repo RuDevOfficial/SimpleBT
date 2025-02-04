@@ -8,10 +8,7 @@ namespace SimpleBT.Editor.Data
     {
         public string LastFileName;
     
-        public SBTEditorData(SBTEditorWindow window)
-        {
-            LastFileName = window.LastFieldValue;
-        }
+        public SBTEditorData(){  }
     }
 }
 

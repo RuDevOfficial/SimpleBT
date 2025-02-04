@@ -7,40 +7,45 @@ namespace SimpleBT.Editor.Data
 {
     public static class SimpleBTDataSystem
     {
-        public static void SaveNodesToJson(string fileName, NodeData[] nodeData)
+        public static void SaveNodesToJson(string fileName, NodeData[] nodeData, SBTGraphView graph)
         {
-            NodeDataCollection nodeDataCollection = new NodeDataCollection() { nodes = nodeData };
+            BehaviourCollection behaviourCollection = new BehaviourCollection()
+            {
+                nodes = nodeData,
+                ViewportPosition = graph.viewTransform.position,
+                ViewportScale = graph.viewTransform.scale
+            };
             
             CreateFolder("Assets", "SimpleBT");
             CreateFolder("Assets/SimpleBT", "Behaviours");
             
-            string nodeJson = JsonUtility.ToJson(nodeDataCollection, true);
+            string nodeJson = JsonUtility.ToJson(behaviourCollection, true);
             
             try {
-                File.WriteAllText($"Assets/SimpleBT/Behaviours/{fileName}.json", nodeJson);
+                File.WriteAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple", nodeJson);
             } catch (Exception e) {
                 Debug.LogError(e);
             }
         }
 
-        public static NodeDataCollection LoadNodesFromJson(string fileName)
+        public static BehaviourCollection LoadNodesFromJson(string fileName)
         {
-            if (!File.Exists($"Assets/SimpleBT/Behaviours/{fileName}.json")) { Debug.LogError($"JSON file {fileName} not found at that path."); }
+            if (!File.Exists($"Assets/SimpleBT/Behaviours/{fileName}.simple")) { Debug.LogError($"JSON file {fileName} not found at that path."); }
 
             string jsonContent = default;
 
             try {
-                jsonContent = File.ReadAllText($"Assets/SimpleBT/Behaviours/{fileName}.json");
+                jsonContent = File.ReadAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple");
             }
             catch (Exception e) {
                 Debug.LogError($"Error reading JSON file {fileName}");
                 return null;
             }
 
-            NodeDataCollection collection;
+            BehaviourCollection collection;
 
             try {
-                collection = JsonUtility.FromJson<NodeDataCollection>(jsonContent);
+                collection = JsonUtility.FromJson<BehaviourCollection>(jsonContent);
             } catch (Exception e) {
                 Debug.LogError($"Error parsing JSON file {fileName}");
                 return null;
@@ -52,8 +57,11 @@ namespace SimpleBT.Editor.Data
         public static void SaveEditorToJson(SBTEditorWindow window)
         {
             CreateFolder("Assets/SimpleBT", "EditorData");
-            
-            SBTEditorData data = new SBTEditorData(window);
+
+            SBTEditorData data = new SBTEditorData()
+            {
+                LastFileName = window.LastFieldValue,
+            };
             
             string json = JsonUtility.ToJson(data, true);
             
