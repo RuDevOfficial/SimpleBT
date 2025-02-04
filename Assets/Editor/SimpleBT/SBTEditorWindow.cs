@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -96,7 +97,17 @@ namespace SimpleBT.Editor
             
             _field = new TextField();
             _field.value = _lastFieldValue ?? "New Behaviour Tree";
-            _field.RegisterValueChangedCallback(evt => { _lastFieldValue = evt.newValue; });
+            _field.RegisterValueChangedCallback(evt =>
+            {
+                string newValue = evt.newValue;
+                string filteredValue = new string(newValue.Where(
+                    c => Char.IsLetter(c) || // Only letters but...
+                         Char.IsSeparator(c) || // Empty spaces allowed
+                         c == '_').ToArray()); // '_' allowed
+                        
+                _lastFieldValue = filteredValue;
+                _field.value = filteredValue;
+            });
             toolbar.Add(_field);
             
             Button saveButton = new Button(Save);

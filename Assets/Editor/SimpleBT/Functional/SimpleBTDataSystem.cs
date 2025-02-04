@@ -37,7 +37,7 @@ namespace SimpleBT.Editor.Data
             try {
                 jsonContent = File.ReadAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple");
             }
-            catch (Exception e) {
+            catch {
                 Debug.LogError($"Error reading JSON file {fileName}");
                 return null;
             }
@@ -46,7 +46,7 @@ namespace SimpleBT.Editor.Data
 
             try {
                 collection = JsonUtility.FromJson<BehaviourCollection>(jsonContent);
-            } catch (Exception e) {
+            } catch {
                 Debug.LogError($"Error parsing JSON file {fileName}");
                 return null;
             }

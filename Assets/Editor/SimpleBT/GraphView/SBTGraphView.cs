@@ -90,44 +90,6 @@ namespace SimpleBT.Editor
             Debug.LogError($"Couldn't find node of guid {guid}");
             return null;
         }
-        
-        /*
-        void OnElementsDeleted()
-        {
-            deleteSelection = ((operationName, user) =>
-            {
-                Type edgeType = typeof(Edge);
-                
-                List<GraphBTNode> nodesToDelete = new List<GraphBTNode>();
-                List<Edge> edgesToDelete = new List<Edge>();
-
-                foreach (GraphElement element in selection) {
-                    if (element is RootNode) { }
-                    else
-                    {
-                        if (element is GraphBTNode node) {
-                            nodesToDelete.Add(node);
-                        }
-                    }
-
-                    if (element.GetType() == edgeType)
-                    {
-                        Edge edge = (Edge)element;
-                        edgesToDelete.Add(edge);
-                    }
-                }
-
-                DeleteElements(edgesToDelete);
-                
-                foreach (GraphBTNode node in nodesToDelete) {
-                    
-                    node.DisconnectAllPorts();
-                    RemoveElement(node);
-                }
-            });
-        }*/
-
-
     }
 }
     

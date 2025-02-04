@@ -13,7 +13,7 @@ namespace SimpleBT.Editor.GraphNodes
             base.Draw();
 
             this.GeneratePort(Direction.Input, Port.Capacity.Single);
-            this.GeneratePort(Direction.Output, Port.Capacity.Single);
+            this.GeneratePort(Direction.Output, Port.Capacity.Multi);
         }
     }
 }

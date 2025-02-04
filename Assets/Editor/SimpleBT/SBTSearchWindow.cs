@@ -10,7 +10,7 @@ namespace SimpleBT.Editor
     public class SBTSearchWindow : ScriptableObject, ISearchWindowProvider
     {
         private SBTGraphView _graph;
-        private Texture2D _icon;
+        protected Texture2D _icon;
     
         public void Initialize(SBTGraphView graph)
         {
@@ -35,17 +35,48 @@ namespace SimpleBT.Editor
                 {
                     level = 2,
                     userData = "SequenceNode"
+                },
+                new SearchTreeEntry(new GUIContent("Selector", _icon))
+                {
+                    level = 2,
+                    userData = "SelectorNode"
                 }
             };
+
+            AddCustomEntries(context, entries);
     
+            return entries;
+        }
+
+        /// <summary>
+        /// Method used to add additional custom entries.
+        /// This should be called from a class that inherits SBTSearchWindow and should be overwritten.
+        /// </summary>
+        /// <param name="context"> The SearchWindowContext parameter </param>
+        /// <param name="entries"> The pre-built list of entries </param>
+        /// <returns></returns>
+        protected virtual List<SearchTreeEntry> AddCustomEntries(SearchWindowContext context, List<SearchTreeEntry> entries)
+        {
             return entries;
         }
     
         public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
         {
-            Vector2 localMousePosition = _graph.GetLocalMousePosition(context.screenMousePosition, true);
+            // Check if there was already a root node on the graph
+            if ((string)searchTreeEntry.userData == "RootNode")
+            {
+                bool rootLocated = false;
+                _graph.graphElements.ForEach(element => { if (element is RootNode) { rootLocated = true; } });
+
+                if (rootLocated == true) {
+                    Debug.Log("There is already a Root Node on the Graph!");
+                    return false;
+                }
+            }
             
+            Vector2 localMousePosition = _graph.GetLocalMousePosition(context.screenMousePosition, true);
             Type type = Type.GetType($"SimpleBT.Editor.GraphNodes.{searchTreeEntry.userData}");
+            
             var node = (GraphTreeNode)Activator.CreateInstance(type);
             
             node.Instantiate();
