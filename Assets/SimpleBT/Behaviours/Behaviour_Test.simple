@@ -5,7 +5,12 @@
                 "rid": 1000
             },
             "fromGUID": "151ff01e-4a65-4ed6-8042-8656fe41565e",
-            "toGUIDs": []
+            "toGUIDs": [
+                "e87e16fc-64ee-4695-a221-eef7b77904f0"
+            ],
+            "VariableName": "",
+            "Condition": 0,
+            "VariableCheckName": ""
         },
         {
             "Node": {
@@ -15,28 +20,47 @@
             "toGUIDs": [
                 "e0b57f5d-f851-4901-a478-2eb7265b916d",
                 "151ff01e-4a65-4ed6-8042-8656fe41565e"
-            ]
+            ],
+            "VariableName": "",
+            "Condition": 0,
+            "VariableCheckName": ""
         },
         {
             "Node": {
                 "rid": 1002
             },
-            "fromGUID": "3a61529a-d0f3-4b7a-bcc1-350ff92e6b94",
-            "toGUIDs": [
-                "82a258fa-1bac-41f3-b72f-5b460487c80c"
-            ]
+            "fromGUID": "e0b57f5d-f851-4901-a478-2eb7265b916d",
+            "toGUIDs": [],
+            "VariableName": "",
+            "Condition": 0,
+            "VariableCheckName": ""
         },
         {
             "Node": {
                 "rid": 1003
             },
-            "fromGUID": "e0b57f5d-f851-4901-a478-2eb7265b916d",
-            "toGUIDs": []
+            "fromGUID": "3a61529a-d0f3-4b7a-bcc1-350ff92e6b94",
+            "toGUIDs": [
+                "82a258fa-1bac-41f3-b72f-5b460487c80c"
+            ],
+            "VariableName": "",
+            "Condition": 0,
+            "VariableCheckName": ""
+        },
+        {
+            "Node": {
+                "rid": 1004
+            },
+            "fromGUID": "e87e16fc-64ee-4695-a221-eef7b77904f0",
+            "toGUIDs": [],
+            "VariableName": "dwadaw",
+            "Condition": 4,
+            "VariableCheckName": ":D"
         }
     ],
     "ViewportPosition": {
-        "x": 0.0,
-        "y": -21.15200424194336
+        "x": -24.0,
+        "y": -120.0
     },
     "ViewportScale": {
         "x": 1.0,
@@ -56,10 +80,10 @@
                     "GUID": "151ff01e-4a65-4ed6-8042-8656fe41565e",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 345.6000061035156,
-                        "y": 371.20001220703127,
-                        "width": 94.39999389648438,
-                        "height": 76.79998779296875
+                        "x": 346.0,
+                        "y": 371.0,
+                        "width": 94.0,
+                        "height": 77.0
                     },
                     "NodeName": "Selector"
                 }
@@ -76,34 +100,15 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 220.0,
-                        "y": 225.60000610351563,
-                        "width": 104.0,
-                        "height": 76.79998779296875
+                        "y": 226.0,
+                        "width": 103.0,
+                        "height": 77.0
                     },
                     "NodeName": "Sequence"
                 }
             },
             {
                 "rid": 1002,
-                "type": {
-                    "class": "RootNode",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "3a61529a-d0f3-4b7a-bcc1-350ff92e6b94",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 104.0,
-                        "y": 100.0,
-                        "width": 73.60000610351563,
-                        "height": 76.79999542236328
-                    },
-                    "NodeName": "Root"
-                }
-            },
-            {
-                "rid": 1003,
                 "type": {
                     "class": "SelectorNode",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -114,11 +119,94 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 220.0,
-                        "y": 371.20001220703127,
-                        "width": 94.39999389648438,
-                        "height": 76.79998779296875
+                        "y": 371.0,
+                        "width": 94.0,
+                        "height": 77.0
                     },
                     "NodeName": "Selector"
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "RootNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3a61529a-d0f3-4b7a-bcc1-350ff92e6b94",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 104.0,
+                        "y": 102.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Root"
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "ConditionNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "e87e16fc-64ee-4695-a221-eef7b77904f0",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 494.0,
+                        "y": 514.0,
+                        "width": 132.0,
+                        "height": 136.0
+                    },
+                    "NodeName": "ConditionNode",
+                    "ConditionBox": {
+                        "VariableName": {
+                            "rid": 1005
+                        },
+                        "DropDown": {
+                            "rid": 1006
+                        },
+                        "VariableChecked": {
+                            "rid": 1007
+                        },
+                        "ConditionType": 4
+                    }
+                }
+            },
+            {
+                "rid": 1005,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "dwadaw"
+                }
+            },
+            {
+                "rid": 1006,
+                "type": {
+                    "class": "DropdownField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "MoreOrEqual"
+                }
+            },
+            {
+                "rid": 1007,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": ":D"
                 }
             }
         ]

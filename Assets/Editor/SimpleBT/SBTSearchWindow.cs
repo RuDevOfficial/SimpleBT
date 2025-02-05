@@ -40,6 +40,11 @@ namespace SimpleBT.Editor
                 {
                     level = 2,
                     userData = "SelectorNode"
+                },
+                new SearchTreeEntry(new GUIContent("Condition", _icon))
+                {
+                    level = 1,
+                    userData = "ConditionNode"
                 }
             };
 

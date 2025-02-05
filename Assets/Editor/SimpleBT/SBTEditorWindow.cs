@@ -159,18 +159,27 @@ namespace SimpleBT.Editor
                 //Lists all GUIDs that come out of the output port of the checked node
                 List<string> toGUIDs = new List<string>();
                 Port port = node.outputContainer.Q<Port>("");
-                foreach (Edge edge in port.connections)
+                if (port != null)
                 {
-                    Node connectedNode = edge.input.node;
-                    GraphTreeNode btNode = (GraphTreeNode)connectedNode;
-                    toGUIDs.Add(btNode.GUID);
+                    foreach (Edge edge in port.connections)
+                    {
+                        Node connectedNode = edge.input.node;
+                        GraphTreeNode btNode = (GraphTreeNode)connectedNode;
+                        toGUIDs.Add(btNode.GUID);
+                    }
                 }
                 
-                //Generates the NodeData class and populates the obtained data
                 NodeData nodeData = new NodeData();
                 nodeData.Node = node;
                 nodeData.fromGUID = node.GUID;
                 nodeData.toGUIDs = new List<string>(toGUIDs);
+
+                if (node is ConditionNode condNode)
+                {
+                    nodeData.VariableName = condNode.ConditionBox.VariableName.value;
+                    nodeData.Condition = condNode.ConditionBox.ConditionType;
+                    nodeData.VariableCheckName = condNode.ConditionBox.VariableChecked.value;
+                }
                 
                 nodesDatas[i] = nodeData;
             }
@@ -199,6 +208,14 @@ namespace SimpleBT.Editor
                 GraphTreeNode node = data.Node;
                 node.SetPosition(node.Rect);
                 node.Draw();
+
+                if (node is ConditionNode condNode)
+                {
+                    condNode.ConditionBox.VariableName.value = data.VariableName;
+                    condNode.ConditionBox.VariableChecked.value = data.VariableCheckName;
+                    condNode.ConditionBox.ConditionType = data.Condition;
+                }
+                
                 node.RefreshPorts();
                 node.RefreshExpandedState();
                 _graph.AddElement(node);
