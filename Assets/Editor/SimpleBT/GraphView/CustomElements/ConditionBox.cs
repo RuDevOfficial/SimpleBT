@@ -61,10 +61,10 @@ namespace SimpleBT.Editor.GraphNodes
         public enum Condition
         {
             Equal,
-            Less,
-            LessOrEqual,
-            More,
-            MoreOrEqual,
+            Less_Than,
+            Less_Or_Equal_Than,
+            More_Than,
+            More_Or_Equal_Than,
             Null
         }
     }
