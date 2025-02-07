@@ -1,0 +1,46 @@
+{
+    "nodes": [
+        {
+            "Node": {
+                "rid": 1000
+            },
+            "fromGUID": "cf6fd536-e73c-42ca-a6b0-ba5ce28ffcf2",
+            "toGUIDs": [],
+            "VariableName": "",
+            "Condition": 0,
+            "VariableCheckName": ""
+        }
+    ],
+    "ViewportPosition": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "ViewportScale": {
+        "x": 1.0,
+        "y": 1.0
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "cf6fd536-e73c-42ca-a6b0-ba5ce28ffcf2",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 414.0,
+                        "y": 141.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Root"
+                }
+            }
+        ]
+    }
+}

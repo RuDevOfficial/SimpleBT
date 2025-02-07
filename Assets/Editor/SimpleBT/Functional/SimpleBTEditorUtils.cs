@@ -1,6 +1,6 @@
-﻿using UnityEditor.Experimental.GraphView;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using System;
+using System.Linq;
+using UnityEditor.Experimental.GraphView;
 
 namespace SimpleBT.Editor.Utils
 {
@@ -13,6 +13,18 @@ namespace SimpleBT.Editor.Utils
         
             if (direction == Direction.Input) { node.inputContainer.Add(port); }
             else { node.outputContainer.Add(port); }
+        }
+
+        /// <summary>
+        /// Returns a string with only letters or "_"
+        /// </summary>
+        public static string FilterValue(this string value)
+        {
+            string filteredValue = new string(value.Where(
+                c => Char.IsLetter(c) || // Only letters but...
+                     c == '_').ToArray()); // '_' allowed
+
+            return filteredValue;
         }
     } 
 }

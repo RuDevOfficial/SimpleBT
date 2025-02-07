@@ -1,15 +1,62 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace SimpleBT.Editor.Data
 {
     public static class SimpleBTDataSystem
     {
+        public static void SaveBehaviorCollectionToJson(
+            string fileName, 
+            SBTGraphView graph, 
+            NodeData[] nodeData, 
+            List<ExposedProperty> exposedProperties,
+            Blackboard blackboard)
+        {
+            CreateFolder("Assets", "SimpleBT");
+            CreateFolder("Assets/SimpleBT", "GraphData");
+            
+            BehaviorCollection collection = new BehaviorCollection()
+            {
+                NodeCollection = new NodeCollection(nodeData, graph)
+                {
+                    Nodes = nodeData,
+                    ViewportPosition = graph.viewTransform.position,
+                    ViewportScale = graph.viewTransform.scale
+                },
+                BlackboardCollection = new BlackboardCollection()
+                {
+                    ExposedProperties = exposedProperties
+                }
+            };
+            
+            string collectionJson = JsonUtility.ToJson(collection, true);
+            
+            try { File.WriteAllText($"Assets/SimpleBT/GraphData/{fileName}.simple", collectionJson); } 
+            catch (Exception e) { Debug.LogError(e); }
+        }
+
+        public static BehaviorCollection LoadBehaviorCollectionToJson(string fileName)
+        {
+            if (!File.Exists($"Assets/SimpleBT/GraphData/{fileName}.simple")) {
+                EditorUtility.DisplayDialog("Error", $"JSON file {fileName} does not exist.", "OK");
+                return null;
+            }
+
+            string jsonContent = File.ReadAllText($"Assets/SimpleBT/GraphData/{fileName}.simple");
+            BehaviorCollection behaviorCollection = JsonUtility.FromJson<BehaviorCollection>(jsonContent);
+            return behaviorCollection;
+        }
+        
+        // TO DELETE
+        /*
         public static void SaveNodesToJson(string fileName, NodeData[] nodeData, SBTGraphView graph)
         {
-            BehaviourCollection behaviourCollection = new BehaviourCollection()
+            NodeCollection nodeCollection = new NodeCollection()
             {
                 nodes = nodeData,
                 ViewportPosition = graph.viewTransform.position,
@@ -19,57 +66,40 @@ namespace SimpleBT.Editor.Data
             CreateFolder("Assets", "SimpleBT");
             CreateFolder("Assets/SimpleBT", "Behaviours");
             
-            string nodeJson = JsonUtility.ToJson(behaviourCollection, true);
+            string nodeJson = JsonUtility.ToJson(nodeCollection, true);
             
-            try {
-                File.WriteAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple", nodeJson);
-            } catch (Exception e) {
-                Debug.LogError(e);
-            }
+            try { File.WriteAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple", nodeJson); } 
+            catch (Exception e) { Debug.LogError(e); }
         }
 
-        public static BehaviourCollection LoadNodesFromJson(string fileName)
+        public static NodeCollection LoadNodesFromJson(string fileName)
         {
             if (!File.Exists($"Assets/SimpleBT/Behaviours/{fileName}.simple")) { Debug.LogError($"JSON file {fileName} not found at that path."); }
 
             string jsonContent = default;
 
-            try {
-                jsonContent = File.ReadAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple");
-            }
-            catch {
-                Debug.LogError($"Error reading JSON file {fileName}");
-                return null;
-            }
+            try { jsonContent = File.ReadAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple"); }
+            catch { Debug.LogError($"Error reading JSON file {fileName}"); return null; }
 
-            BehaviourCollection collection;
+            NodeCollection collection;
 
-            try {
-                collection = JsonUtility.FromJson<BehaviourCollection>(jsonContent);
-            } catch {
-                Debug.LogError($"Error parsing JSON file {fileName}");
-                return null;
-            }
+            try { collection = JsonUtility.FromJson<NodeCollection>(jsonContent); } 
+            catch { Debug.LogError($"Error parsing JSON file {fileName}"); return null; }
 
             return collection;
         }
+        */
 
         public static void SaveEditorToJson(SBTEditorWindow window)
         {
             CreateFolder("Assets/SimpleBT", "EditorData");
 
-            SBTEditorData data = new SBTEditorData()
-            {
-                LastFileName = window.LastFieldValue,
-            };
+            SBTEditorData data = new SBTEditorData() { LastFileName = window.LastFieldValue, };
             
             string json = JsonUtility.ToJson(data, true);
             
-            try {
-                File.WriteAllText($"Assets/SimpleBT/EditorData/EditorData.json", json);
-            } catch (Exception e) {
-                Debug.LogError(e);
-            }
+            try { File.WriteAllText($"Assets/SimpleBT/EditorData/EditorData.json", json); } 
+            catch (Exception e) { Debug.LogError(e); }
         }
         
         public static SBTEditorData LoadEditorFromJson()
@@ -79,22 +109,13 @@ namespace SimpleBT.Editor.Data
 
             string jsonContent = default;
 
-            try {
-                jsonContent = File.ReadAllText($"Assets/SimpleBT/EditorData/EditorData.json");
-            }
-            catch {
-                Debug.LogError($"Error reading JSON file EditorData");
-                return null;
-            }
+            try { jsonContent = File.ReadAllText($"Assets/SimpleBT/EditorData/EditorData.json"); }
+            catch { Debug.LogError($"Error reading JSON file EditorData"); return null; }
 
             SBTEditorData editorData;
 
-            try {
-                editorData = JsonUtility.FromJson<SBTEditorData>(jsonContent);
-            } catch {
-                Debug.LogError($"Error parsing JSON file EditorData");
-                return null;
-            }
+            try { editorData = JsonUtility.FromJson<SBTEditorData>(jsonContent); } 
+            catch { Debug.LogError($"Error parsing JSON file EditorData"); return null; }
 
             return editorData;
         }

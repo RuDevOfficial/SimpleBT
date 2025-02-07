@@ -17,4 +17,14 @@ namespace SimpleBT.Editor.GraphNodes
         }
     }
 
+    public class DebugActionNode : ExecutionNode
+    {
+        public string Message;
+        public DebugActionNode() { NodeName = "DebugActionNode"; }
+
+        public override void Draw()
+        {
+            base.Draw();
+        }
+    }
 }

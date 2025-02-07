@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using SimpleBT.Editor.Utils;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -18,7 +19,10 @@ namespace SimpleBT.Editor
     [System.Serializable]
     public class SBTEditorWindow : EditorWindow, ISerializationCallbackReceiver
     {
+        private readonly Rect BLACKBOARD_RECT = new Rect(0, 30, 250, 400);
+        
         private SBTGraphView _graph;
+        private SBTBlackboard _blackboard;
 
         #region Private Fields
         
@@ -46,7 +50,7 @@ namespace SimpleBT.Editor
         {
             GenerateGraph();
             GenerateVisualElements();
-            LoadPreviousData();
+            LoadEditorData();
         }
 
         private void OnDisable() {
@@ -90,20 +94,12 @@ namespace SimpleBT.Editor
             Toolbar toolbar = new Toolbar();
             rootVisualElement.Add(toolbar);
 
-            TextElement label = new TextElement();
-            label.text = "  File Name";
-            label.style.alignSelf = Align.Center;
-            toolbar.Add(label);
-            
-            _field = new TextField();
+            _field = new TextField("Behavior Name: ");
             _field.value = _lastFieldValue ?? "New Behaviour Tree";
             _field.RegisterValueChangedCallback(evt =>
             {
                 string newValue = evt.newValue;
-                string filteredValue = new string(newValue.Where(
-                    c => Char.IsLetter(c) || // Only letters but...
-                         Char.IsSeparator(c) || // Empty spaces allowed
-                         c == '_').ToArray()); // '_' allowed
+                string filteredValue = newValue.FilterValue();
                         
                 _lastFieldValue = filteredValue;
                 _field.value = filteredValue;
@@ -114,12 +110,17 @@ namespace SimpleBT.Editor
             saveButton.text = "Save";
             toolbar.Add(saveButton);
             
-            Button loadButton = new Button(() => { Load(); });
+            Button loadButton = new Button(() => { Load(_field.value); });
             loadButton.text = "Load";
             toolbar.Add(loadButton);
+            
+            // Adding the Blackboard
+            _blackboard = new SBTBlackboard(_graph);
+            _blackboard.SetPosition(BLACKBOARD_RECT);
+            _graph.Add(_blackboard);
         }
         
-        private void LoadPreviousData()
+        private void LoadEditorData()
         {
             SBTEditorData editorData = SimpleBTDataSystem.LoadEditorFromJson();
 
@@ -136,6 +137,19 @@ namespace SimpleBT.Editor
         /// necessary data to then create a NodeData class which will hold the values
         /// </summary>
         private void Save()
+        {
+            NodeData[] nodesDataArray = SaveNodes();
+            List<ExposedProperty> exposedProperties = SaveBlackboardProperties();
+
+            SimpleBTDataSystem.SaveBehaviorCollectionToJson(
+                _field.value,
+                _graph, 
+                nodesDataArray, 
+                exposedProperties, 
+                _blackboard);
+        }
+
+        private NodeData[] SaveNodes()
         {
             List<GraphTreeNode> nodesList = new List<GraphTreeNode>();
             
@@ -184,7 +198,11 @@ namespace SimpleBT.Editor
                 nodesDatas[i] = nodeData;
             }
 
-            SimpleBTDataSystem.SaveNodesToJson(_field.value, nodesDatas, _graph);
+            return nodesDatas;
+        }
+
+        private List<ExposedProperty> SaveBlackboardProperties() {
+            return new List<ExposedProperty>(_blackboard.ExposedProperties);
         }
         
         /// <summary>
@@ -193,16 +211,28 @@ namespace SimpleBT.Editor
         /// </summary>
         private void Load(string fieldValue = null)
         {
-            BehaviourCollection collection;
-
-            if (fieldValue == null) { collection = new BehaviourCollection(_field.value); }
-            else { collection = new BehaviourCollection(fieldValue); }
+            BehaviorCollection collection = SimpleBTDataSystem.LoadBehaviorCollectionToJson(fieldValue);
             
-            //Delete all previous elements to not generate duplicates
+            //Delete all previous elements to not generate duplicates and empty the blackboard
             _graph.DeleteElements(_graph.graphElements);
             
+            LoadNodes(collection);
+
+            //Load ViewTransform
+            _graph.viewTransform.position = collection.NodeCollection.ViewportPosition;
+            _graph.viewTransform.scale = collection.NodeCollection.ViewportScale;
+            
+            //Load Blackboard Values
+            _blackboard.Reset();
+            collection.BlackboardCollection.ExposedProperties.ForEach(property => {
+                _blackboard.AddPropertyToBlackboard(property);
+            });
+        }
+
+        private void LoadNodes(BehaviorCollection collection)
+        {
             //Generate nodes and add them to the graph
-            foreach (NodeData data in collection.nodes)
+            foreach (NodeData data in collection.NodeCollection.Nodes)
             {
                 // Generate all nodes First
                 GraphTreeNode node = data.Node;
@@ -223,7 +253,7 @@ namespace SimpleBT.Editor
 
             //Generates the connections and edges by obtaining the input
             //of the "fromNode" to the output port of the "toNode"
-            foreach (NodeData data in collection.nodes)
+            foreach (NodeData data in collection.NodeCollection.Nodes)
             {
                 GraphTreeNode fromNode = data.Node;
                 if (data.toGUIDs.Count == 0) { continue; }
@@ -237,12 +267,8 @@ namespace SimpleBT.Editor
                     _graph.AddElement(edge);
                 }
             }
-            
-            //Viewport update
-            _graph.viewTransform.position = collection.ViewportPosition;
-            _graph.viewTransform.scale = collection.ViewportScale;
         }
-        
+
         #endregion
         
         #region ISerializationCallbackReceiver Methods

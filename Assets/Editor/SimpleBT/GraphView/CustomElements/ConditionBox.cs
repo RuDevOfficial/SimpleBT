@@ -23,13 +23,6 @@ namespace SimpleBT.Editor.GraphNodes
         {
             VariableName = new TextField();
             VariableName.value = "Variable Name or Value";
-            VariableName.RegisterValueChangedCallback(evt => {
-                if (string.IsNullOrEmpty(_lastVariableCheckedValue)) {
-                    Debug.LogError("There is no value or variable on the input field!");
-                }
-                
-                _lastVariableNameValue = evt.newValue;
-            });
 
             string[] conditions = Enum.GetNames(typeof(Condition));
             DropDown = new DropdownField(conditions.ToList(), 0, FormatSelectedValueCallback);

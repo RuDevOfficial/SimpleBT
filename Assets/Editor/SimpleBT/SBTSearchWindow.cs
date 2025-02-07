@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace SimpleBT.Editor
     public class SBTSearchWindow : ScriptableObject, ISearchWindowProvider
     {
         private SBTGraphView _graph;
-        protected Texture2D _icon;
+        private Texture2D _icon;
     
         public void Initialize(SBTGraphView graph)
         {
@@ -74,7 +75,7 @@ namespace SimpleBT.Editor
                 _graph.graphElements.ForEach(element => { if (element is RootNode) { rootLocated = true; } });
 
                 if (rootLocated == true) {
-                    Debug.Log("There is already a Root Node on the Graph!");
+                    EditorUtility.DisplayDialog("Error", "There is already a Root node in the graph!", "OK");
                     return false;
                 }
             }

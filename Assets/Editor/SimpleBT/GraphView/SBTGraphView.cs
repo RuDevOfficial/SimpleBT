@@ -12,6 +12,7 @@ namespace SimpleBT.Editor
     [System.Serializable]
     public class SBTGraphView : GraphView
     {
+        private Blackboard _blackboard;
         private SBTEditorWindow _editor;
         private SBTSearchWindow _searchWindow;
         
@@ -40,7 +41,7 @@ namespace SimpleBT.Editor
             var styeSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/SimpleBT/SBTStyles.uss");
             styleSheets.Add(styeSheet);
         }
-
+        
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
         {
             List<Port> compatiblePorts = new List<Port>();
