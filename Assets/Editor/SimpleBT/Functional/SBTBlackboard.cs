@@ -9,6 +9,7 @@ public class SBTBlackboard : Blackboard
 {
     private Texture2D _icon;
     public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
+    private BlackboardField _selectedField;
     
     public SBTBlackboard(GraphView associatedGraphView) : base (associatedGraphView)
     {
@@ -36,6 +37,20 @@ public class SBTBlackboard : Blackboard
         int propertyIndex = ExposedProperties.FindIndex(x => x.PropertyName == oldPropertyName);
         ExposedProperties[propertyIndex].PropertyName = newValue;
         field.text = newValue;
+        
+        this.RegisterCallback<KeyDownEvent>(evt =>
+        {
+            if (evt.keyCode == KeyCode.Delete && _selectedField != null)
+            {
+                ExposedProperty property = ExposedProperties.Find(x => x.PropertyName == _selectedField.text);
+                ExposedProperties.Remove(property);
+
+                BlackboardRow row = _selectedField.GetFirstAncestorOfType<BlackboardRow>();
+                row.RemoveFromHierarchy();
+                
+                _selectedField = null;
+            }
+        });
     }
 
     private void AddItem(Blackboard obj)
@@ -60,6 +75,9 @@ public class SBTBlackboard : Blackboard
 
         var container = new VisualElement();
         var blackboardField = new BlackboardField() { text = property.PropertyName, typeText = "string" };
+        blackboardField.RegisterCallback<PointerDownEvent>(evt => {
+            _selectedField = blackboardField;
+        });
         container.Add(blackboardField);
 
         var propertyValueTextField = new TextField("Value: ") { value = localPropertyValue };
@@ -68,8 +86,8 @@ public class SBTBlackboard : Blackboard
             var changingPropertyIndex = ExposedProperties.FindIndex(x => x.PropertyName == property.PropertyName);
             ExposedProperties[changingPropertyIndex].PropertyValue = evt.newValue;
         });
-        var blackBoardValueRow = new BlackboardRow(blackboardField, propertyValueTextField);
-        container.Add(blackBoardValueRow);
+        var blackboardRow = new BlackboardRow(blackboardField, propertyValueTextField);
+        container.Add(blackboardRow);
         
         Add(container);
     }

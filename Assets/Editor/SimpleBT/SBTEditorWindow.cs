@@ -24,6 +24,8 @@ namespace SimpleBT.Editor
         private SBTGraphView _graph;
         private SBTBlackboard _blackboard;
 
+        private Button _generateButton;
+
         #region Private Fields
         
         private TextField _field;
@@ -63,21 +65,42 @@ namespace SimpleBT.Editor
         private void OnSelectionChange()
         {
             Object selectedObject = Selection.activeObject;
-            if (selectedObject == null) { return; }
 
-            string path = AssetDatabase.GetAssetPath(selectedObject);
-            string fileNameAndPath = Path.GetFileName(path);
-
-            if (fileNameAndPath.Contains(".simple"))
+            if (selectedObject == null)
             {
-                string fileName = Path.GetFileNameWithoutExtension(path);
-                if (fileName != _field.value)
-                {
-                    Load(fileName);
-                    _field.value = fileName;
-                    _lastFieldValue = fileName;
-                }
+                _generateButton.SetEnabled(false);
+                return;
             }
+            
+            if (AssetDatabase.Contains(selectedObject))
+            {
+                string path = AssetDatabase.GetAssetPath(selectedObject);
+                string fileNameAndPath = Path.GetFileName(path);
+
+                if (fileNameAndPath.Contains(".simple"))
+                {
+                    string fileName = Path.GetFileNameWithoutExtension(path);
+                    if (fileName != _field.value)
+                    {
+                        Load(fileName);
+                        _field.value = fileName;
+                        _lastFieldValue = fileName;
+                    }
+                }
+                
+                _generateButton.SetEnabled(false);
+            }
+            else
+            {
+                GameObject selectedGameObject = Selection.activeGameObject;
+
+                if (selectedGameObject == null) { return; }
+
+                // do stuff :D
+                _generateButton.SetEnabled(true);
+            }
+            
+
         }
 
         #region Initialization
@@ -113,6 +136,10 @@ namespace SimpleBT.Editor
             Button loadButton = new Button(() => { Load(_field.value); });
             loadButton.text = "Load";
             toolbar.Add(loadButton);
+
+            _generateButton = new Button(Generate);
+            _generateButton.text = "Generate";
+            toolbar.Add(_generateButton);
             
             // Adding the Blackboard
             _blackboard = new SBTBlackboard(_graph);
@@ -280,6 +307,19 @@ namespace SimpleBT.Editor
 
         //Left blank
         public void OnAfterDeserialize() { }
+        
+        #endregion
+        
+        #region Generating Tree
+
+        private void Generate()
+        {
+            GameObject selectedObject = Selection.activeGameObject;
+
+            if (selectedObject.GetComponent<TreeExecutor>() != null) { return; }
+            
+            selectedObject.AddComponent<TreeExecutor>();
+        }
         
         #endregion
     }

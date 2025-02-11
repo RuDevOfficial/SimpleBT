@@ -1,6 +1,17 @@
 {
     "NodeCollection": {
-        "Nodes": [],
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "6da0f0f9-a68b-4f4e-a4ee-ed01075b7165",
+                "toGUIDs": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
         "ViewportPosition": {
             "x": 0.0,
             "y": 0.0
@@ -11,15 +22,30 @@
         }
     },
     "BlackboardCollection": {
-        "ExposedProperties": [
-            {
-                "PropertyName": "Tomato",
-                "PropertyValue": "teee"
-            }
-        ]
+        "ExposedProperties": []
     },
     "references": {
         "version": 2,
-        "RefIds": []
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "6da0f0f9-a68b-4f4e-a4ee-ed01075b7165",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 557.0,
+                        "y": 93.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Root"
+                }
+            }
+        ]
     }
 }
