@@ -12,7 +12,7 @@ public class ACTION_DebugAndFail : ActionNode
 
     protected override void Initialize()
     {
-        _message = SbtBlackboard.GetValue<string>(_keyMessage);
+        _message = blackboard.GetValue<string>(_keyMessage);
     }
 
     protected override Status Tick()

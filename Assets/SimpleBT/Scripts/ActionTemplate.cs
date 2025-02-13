@@ -22,7 +22,7 @@ namespace SimpleBT.Templates
         
         protected override void Initialize()
         {
-            value = SbtBlackboard.GetValue<int>(_keyValue);
+            value = blackboard.GetValue<int>(_keyValue);
         }
         #endregion
 
@@ -56,7 +56,7 @@ namespace SimpleBT.Templates
         
         protected override void Initialize()
         {
-            value = SbtBlackboard.GetValue<int>(_keyValue);
+            value = blackboard.GetValue<int>(_keyValue);
         }
         #endregion
 

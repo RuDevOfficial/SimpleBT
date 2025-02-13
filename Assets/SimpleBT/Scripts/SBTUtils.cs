@@ -46,36 +46,23 @@ namespace SimpleBT.Editor.Utils
 
         public static object ConvertValue(this string valueToConvert, Type type)
         {
+            if (type == typeof(int)) { return int.Parse(valueToConvert); }
+            if (type == typeof(float)) { return float.Parse(valueToConvert); }
+            if (type == typeof(bool)) { return bool.Parse(valueToConvert); }
+            if (type == typeof(string)) { return valueToConvert; }
+            if (type == typeof(GameObject)) { return GameObject.Find(valueToConvert); }
+
+            Debug.LogWarning($"Couldn't return variable of type {type}. Not supported.");
+            return null;
+        }
+
+        public static T GetValue<T>(this string valueToGet)
+        {
             object value = null;
-
-            if (type == typeof(int)) { value = int.Parse(valueToConvert); }
-
-            return value;
-
-            /*
-            if (float.TryParse(valueToConvert,
-                    NumberStyles.Float,
-                    CultureInfo.InvariantCulture,
-                    out var newFloat))
-            {
-                value = newFloat;
-                return (float)value;
-            }
-
-            if (int.TryParse(valueToConvert, out var newInt))
-            {
-                value = newInt;
-                return (int)value;
-            }
-
-            if (bool.TryParse(valueToConvert, out var newBool))
-            {
-                value = newBool;
-                return (bool)value;
-            }
-
-            // if no other variable was catched then it is returned as string
-            return valueToConvert;*/
+            
+            // TODO
+            
+            return (T)value;
         }
     } 
 }

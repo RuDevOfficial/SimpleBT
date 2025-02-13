@@ -86,6 +86,8 @@ namespace SimpleBT.Editor.Blackboard
         // Method based on Mert Kirimgeri on YT https://www.youtube.com/watch?v=F4cTWOxMjMY&t=1091s&ab_channel=MertKirimgeri
         public void AddNewField(ExposedProperty exposedProperty)
         {
+            if (exposedProperty.PropertyName == "Self") { return; }
+            
             GenerateNewProperty(exposedProperty, out var localPropertyValue, out var property);
 
             var container = new VisualElement();
@@ -104,7 +106,7 @@ namespace SimpleBT.Editor.Blackboard
             });
 
             string[] conditions = Enum.GetNames(typeof(VariableType));
-            DropdownField dropdownField = new DropdownField(conditions.ToList(), 0, value =>
+            DropdownField dropdownField = new DropdownField(conditions.ToList(), (int)property.PropertyType, value =>
             {
                 blackboardField.typeText = value;
                 Enum.TryParse(value, out VariableType variableType);
@@ -135,14 +137,14 @@ namespace SimpleBT.Editor.Blackboard
             string localPropertyName = exposedProperty.PropertyName;
             localPropertyValue = exposedProperty.PropertyRawValue;
 
-            while (ExposedProperties.Any(x => x.PropertyName == localPropertyName))
-            {
+            while (ExposedProperties.Any(x => x.PropertyName == localPropertyName)) {
                 localPropertyName = $"{localPropertyName}(1)";
             }
 
             property = new ExposedProperty();
             property.PropertyName = localPropertyName;
             property.PropertyRawValue = localPropertyValue;
+            property.PropertyType = exposedProperty.PropertyType;
             ExposedProperties.Add(property);
         }
 

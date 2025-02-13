@@ -119,6 +119,21 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &1460878715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
+  m_Name: Self
+  m_EditorClassIdentifier: 
+  Key: Self
+  RawValue: Square
+  VariableType: 4
 --- !u!1 &1541622753
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,8 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data:
-  - {fileID: 1811009873}
-  RawData: []
+  - {fileID: 1460878715}
+  - {fileID: 2087030294}
 --- !u!114 &1541622757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,7 +388,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &1811009873
+--- !u!114 &2087030294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,11 +398,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
-  m_Name: sasa
+  m_Name: _watchDistance
   m_EditorClassIdentifier: 
-  Field: sasa
-  RawValue: 1
-  VariableType: 1
+  Key: _watchDistance
+  RawValue: 6.8
+  VariableType: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ namespace SimpleBT.Core
     
     public abstract class Node : ScriptableObject, INode
     {
-        protected SBTBlackboard SbtBlackboard;
+        protected SBTBlackboard blackboard;
 
         public Node() { }
         
@@ -22,7 +22,7 @@ namespace SimpleBT.Core
 
         public virtual void RegisterBlackboard(SBTBlackboard sbtBlackboard)
         {
-            SbtBlackboard = sbtBlackboard;
+            blackboard = sbtBlackboard;
         }
 
         protected abstract Status Tick();

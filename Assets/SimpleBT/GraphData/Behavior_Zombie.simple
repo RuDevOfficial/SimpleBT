@@ -1,0 +1,93 @@
+{
+    "NodeCollection": {
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "ece7aa78-3896-4453-a689-bb0a0f1fa44e",
+                "toGUIDs": [
+                    "e71d26b4-8fb9-4348-89d3-8f03c54b27c2"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "e71d26b4-8fb9-4348-89d3-8f03c54b27c2",
+                "toGUIDs": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": 0.0,
+            "y": 22.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": [
+            {
+                "PropertyName": "Self",
+                "PropertyRawValue": "",
+                "PropertyType": 4
+            },
+            {
+                "PropertyName": "_watchDistance",
+                "PropertyRawValue": "6.8",
+                "PropertyType": 2
+            }
+        ]
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "ece7aa78-3896-4453-a689-bb0a0f1fa44e",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 374.0,
+                        "y": 36.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "SequenceNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "e71d26b4-8fb9-4348-89d3-8f03c54b27c2",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 500.0,
+                        "y": 203.0,
+                        "width": 103.0,
+                        "height": 77.0
+                    },
+                    "NodeName": "Sequence"
+                }
+            }
+        ]
+    }
+}

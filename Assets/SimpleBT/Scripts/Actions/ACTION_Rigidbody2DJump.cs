@@ -18,10 +18,10 @@ public class ACTION_Rigidbody2DJump : ActionNode
 
     protected override void Initialize()
     {
-        _rb2D = SbtBlackboard.gameObject.GetComponent<Rigidbody2D>();
-        force = SbtBlackboard.GetValue<float>(_keyForce);
+        _rb2D = blackboard.gameObject.GetComponent<Rigidbody2D>();
+        force = blackboard.GetValue<float>(_keyForce);
 
-        vector = new Vector2(SbtBlackboard.GetValue<float>(_keyX), SbtBlackboard.GetValue<float>(_keyY));
+        vector = new Vector2(blackboard.GetValue<float>(_keyX), blackboard.GetValue<float>(_keyY));
     }
 
     protected override Status Tick()

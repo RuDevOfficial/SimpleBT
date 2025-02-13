@@ -14,7 +14,7 @@ public class ACTION_Wait : ActionNode
 
     protected override void Initialize()
     {
-        _time = SbtBlackboard.GetValue<float>(_keyTime);
+        _time = blackboard.GetValue<float>(_keyTime);
     }
 
     protected override Status Tick()

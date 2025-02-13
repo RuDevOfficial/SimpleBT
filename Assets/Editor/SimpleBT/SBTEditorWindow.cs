@@ -31,6 +31,7 @@ namespace SimpleBT.Editor
 
         private Button _generateButton;
         private Button _removeComponentsButton;
+        private Button _regenerateBlackboardButton;
 
         #region Private Fields
         
@@ -89,38 +90,15 @@ namespace SimpleBT.Editor
             {
                 // Update respective buttons
                 GameObject selectedGameObject = Selection.activeGameObject;
-                TreeExecutor treeExecutor = selectedGameObject.GetComponent<TreeExecutor>();
+                selectedGameObject.TryGetComponent<TreeExecutor>(out TreeExecutor treeExecutor);
+                selectedGameObject.TryGetComponent<SBTBlackboard>(out SBTBlackboard blackboard);
 
-                UpdateGenerateButton(selectedGameObject);
-                UpdateRemoveComponentsButton(treeExecutor);
+                _removeComponentsButton.SetEnabled(treeExecutor != null || blackboard != null);
+                _regenerateBlackboardButton.SetEnabled(blackboard != null);
+                _generateButton.SetEnabled(blackboard == null);
             }
         }
         
-        private void UpdateGenerateButton(GameObject selectedGameObject)
-        {
-            if (selectedGameObject == null
-                || selectedGameObject.TryGetComponent(out TreeExecutor treeExecutor))
-            {
-                _generateButton.SetEnabled(false);
-                return;
-            }
-
-            _generateButton.SetEnabled(true);
-        }
-
-        private void UpdateRemoveComponentsButton(TreeExecutor treeExecutor)
-        {
-            if (treeExecutor == null)
-            {
-                _removeComponentsButton.SetEnabled(false);
-                return;
-            }
-
-            _removeComponentsButton.SetEnabled(true);
-        }
-
-
-
         private void OverwriteGraph(Object selectedObject)
         {
             string path = AssetDatabase.GetAssetPath(selectedObject);
@@ -167,12 +145,14 @@ namespace SimpleBT.Editor
             
             Button saveButton = new Button(Save) { text = "Save" };
             Button loadButton = new Button(() => { Load(_field.value); }) { text = "Load" };
-            _generateButton = new Button(Generate) { text = "Generate" };
+            _generateButton = new Button(GenerateGameObjectComponents) { text = "Generate" };
+            _regenerateBlackboardButton = new Button(GenerateBlackboard) { text = "Regenerate Blackboard" }; 
             _removeComponentsButton = new Button(RemoveComponents) { text = "Remove Components" };
             
             toolbar.Add(saveButton);
             toolbar.Add(loadButton);
             toolbar.Add(_generateButton);
+            toolbar.Add(_regenerateBlackboardButton);
             toolbar.Add(_removeComponentsButton);
             
             // Adding the Blackboard
@@ -344,9 +324,9 @@ namespace SimpleBT.Editor
         
         #endregion
         
-        #region Generating Tree & Object Cleanup
+        #region Generating Tree, Blackboard & Object Cleanup
 
-        private void Generate()
+        private void GenerateGameObjectComponents()
         {
             // Editor Part
             GameObject selectedObject = Selection.activeGameObject;
@@ -355,9 +335,18 @@ namespace SimpleBT.Editor
             selectedObject.AddComponent<TreeExecutor>();
             
             _removeComponentsButton.SetEnabled(true);
+            _regenerateBlackboardButton.SetEnabled(true);
             _generateButton.SetEnabled(false);
             
             //TODO Tree Generation Part
+            GenerateBehaviorTree(selectedObject);
+
+            //TODO Blackboard Generation
+            GenerateBlackboard();
+        }
+
+        private static void GenerateBehaviorTree(GameObject selectedObject)
+        {
             BehaviorCollection collection = SimpleBTDataSystem.LoadBehaviorCollectionToJson(_lastFieldValue);
 
             if (collection == null)
@@ -369,25 +358,29 @@ namespace SimpleBT.Editor
             }
             
             SBTBehaviorGeneration.Generate(selectedObject, collection);
-            
-            //TODO Blackboard Generation
-            SBTBlackboard blackboard = selectedObject.AddComponent<SBTBlackboard>();
+            return;
+        }
 
+        private void GenerateBlackboard()
+        {
+            GameObject selectedObject = Selection.activeGameObject;
+            SBTBlackboard blackboard = null;
+
+            if (selectedObject.TryGetComponent<SBTBlackboard>(out SBTBlackboard bb))
+            {
+                blackboard = bb; 
+                blackboard.Data.Clear();
+            }
+            else { blackboard = selectedObject.AddComponent<SBTBlackboard>(); }
+            
+            blackboard.Set(); // Adds "Self" to itself before any value
             foreach (ExposedProperty property in _blackboardGraph.ExposedProperties)
             {
-                /*
-                if (property.PropertyName == "Self") { continue; }
-                blackboard.AddNewRawVariable(
-                    property.PropertyName.ToUpper(), 
-                    property.PropertyValue, 
-                    property.PropertyType);
-                    */
-
                 if (property.PropertyName == "Self") { continue; }
                 
                 BlackboardData data = ScriptableObject.CreateInstance<BlackboardData>();
                 data.name = property.PropertyName;
-                data.Field = property.PropertyName;
+                data.Key = property.PropertyName;
                 data.RawValue = property.PropertyRawValue;
                 data.VariableType = property.PropertyType;
                 data.Instantiate();
@@ -411,6 +404,7 @@ namespace SimpleBT.Editor
             }
             
             _removeComponentsButton.SetEnabled(false);
+            _regenerateBlackboardButton.SetEnabled(false);
             _generateButton.SetEnabled(true);
         }
         

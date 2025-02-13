@@ -8,7 +8,7 @@ namespace SimpleBT.NonEditor
     [System.Serializable]
     public class BlackboardData : ScriptableObject
     {
-        public string Field;
+        [FormerlySerializedAs("Field")] public string Key;
         public string RawValue;
         public VariableType VariableType;
 

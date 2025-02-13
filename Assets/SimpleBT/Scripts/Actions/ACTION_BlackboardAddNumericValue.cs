@@ -18,14 +18,14 @@ public class ACTION_BlackboardAddNumericValue : ActionNode
     {
         if (int.TryParse(_value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var newInt))
         {
-            SbtBlackboard.AddNewVariable(_keyName, newInt); 
-            Debug.Log("Int value " + newInt + " added to " + SbtBlackboard.gameObject.name);
+            //blackboard.AddNewVariable(_keyName, newInt); 
+            Debug.Log("Int value " + newInt + " added to " + blackboard.gameObject.name);
         }
         else
         {
             float newFloat = float.Parse(_value, NumberStyles.Float, CultureInfo.InvariantCulture);
-            SbtBlackboard.AddNewVariable(_keyName, newFloat); 
-            Debug.Log("Float value " + newFloat + " added to " + SbtBlackboard.gameObject.name);
+            //blackboard.AddNewVariable(_keyName, newFloat); 
+            Debug.Log("Float value " + newFloat + " added to " + blackboard.gameObject.name);
         }
 
         return Status.Success;
