@@ -8,14 +8,15 @@ using UnityEngine;
 
 namespace SimpleBT.Editor.Data
 {
+    using Editor.Blackboard;
+    
     public static class SimpleBTDataSystem
     {
         public static void SaveBehaviorCollectionToJson(
             string fileName, 
             SBTGraphView graph, 
             NodeData[] nodeData, 
-            List<ExposedProperty> exposedProperties,
-            Blackboard blackboard)
+            List<ExposedProperty> exposedProperties)
         {
             CreateFolder("Assets", "SimpleBT");
             CreateFolder("Assets/SimpleBT", "GraphData");
@@ -51,44 +52,6 @@ namespace SimpleBT.Editor.Data
             BehaviorCollection behaviorCollection = JsonUtility.FromJson<BehaviorCollection>(jsonContent);
             return behaviorCollection;
         }
-        
-        // TO DELETE
-        /*
-        public static void SaveNodesToJson(string fileName, NodeData[] nodeData, SBTGraphView graph)
-        {
-            NodeCollection nodeCollection = new NodeCollection()
-            {
-                nodes = nodeData,
-                ViewportPosition = graph.viewTransform.position,
-                ViewportScale = graph.viewTransform.scale
-            };
-            
-            CreateFolder("Assets", "SimpleBT");
-            CreateFolder("Assets/SimpleBT", "Behaviours");
-            
-            string nodeJson = JsonUtility.ToJson(nodeCollection, true);
-            
-            try { File.WriteAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple", nodeJson); } 
-            catch (Exception e) { Debug.LogError(e); }
-        }
-
-        public static NodeCollection LoadNodesFromJson(string fileName)
-        {
-            if (!File.Exists($"Assets/SimpleBT/Behaviours/{fileName}.simple")) { Debug.LogError($"JSON file {fileName} not found at that path."); }
-
-            string jsonContent = default;
-
-            try { jsonContent = File.ReadAllText($"Assets/SimpleBT/Behaviours/{fileName}.simple"); }
-            catch { Debug.LogError($"Error reading JSON file {fileName}"); return null; }
-
-            NodeCollection collection;
-
-            try { collection = JsonUtility.FromJson<NodeCollection>(jsonContent); } 
-            catch { Debug.LogError($"Error parsing JSON file {fileName}"); return null; }
-
-            return collection;
-        }
-        */
 
         public static void SaveEditorToJson(SBTEditorWindow window)
         {
@@ -125,4 +88,5 @@ namespace SimpleBT.Editor.Data
             if (AssetDatabase.IsValidFolder($"{path}/{folderName}") == false) { AssetDatabase.CreateFolder(path, folderName); }
         }
     }
+
 }

@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using SimpleBT.Editor.GraphNodes;
 using UnityEditor.Graphs.AnimationBlendTree;
 using UnityEngine;
 
 namespace SimpleBT.Editor.Data
 {
-    using SimpleBT.Editor.GraphNodes;
+    using Editor.GraphNodes;
     
     [System.Serializable]
     public class NodeData

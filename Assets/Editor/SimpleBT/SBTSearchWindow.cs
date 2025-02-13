@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using SimpleBT.Editor.GraphNodes;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace SimpleBT.Editor
 {
-    using SimpleBT.Editor.GraphNodes;
+    using Editor.GraphNodes;
     
     public class SBTSearchWindow : ScriptableObject, ISearchWindowProvider
     {

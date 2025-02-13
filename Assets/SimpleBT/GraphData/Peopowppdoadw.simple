@@ -5,7 +5,7 @@
                 "Node": {
                     "rid": 1000
                 },
-                "fromGUID": "b4064005-cfd5-4701-8fc2-0b353c28bc8c",
+                "fromGUID": "516eff09-fe68-4408-8828-c43c2bcf12b1",
                 "toGUIDs": [],
                 "VariableName": "",
                 "Condition": 0,
@@ -15,9 +15,9 @@
                 "Node": {
                     "rid": 1001
                 },
-                "fromGUID": "6da0f0f9-a68b-4f4e-a4ee-ed01075b7165",
+                "fromGUID": "57e2d511-dd04-4baf-974c-b00d376adb98",
                 "toGUIDs": [
-                    "b4064005-cfd5-4701-8fc2-0b353c28bc8c"
+                    "516eff09-fe68-4408-8828-c43c2bcf12b1"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -25,8 +25,8 @@
             }
         ],
         "ViewportPosition": {
-            "x": 0.0,
-            "y": 0.0
+            "x": -102.0,
+            "y": 64.0
         },
         "ViewportScale": {
             "x": 1.0,
@@ -34,7 +34,28 @@
         }
     },
     "BlackboardCollection": {
-        "ExposedProperties": []
+        "ExposedProperties": [
+            {
+                "PropertyName": "DefaultName",
+                "PropertyValue": "DefaultValue"
+            },
+            {
+                "PropertyName": "dwadaddwd",
+                "PropertyValue": "DefaultValue"
+            },
+            {
+                "PropertyName": "dwada",
+                "PropertyValue": "DefaultValue"
+            },
+            {
+                "PropertyName": "DefaultName(1)(1)(1)",
+                "PropertyValue": "DefaultValue"
+            },
+            {
+                "PropertyName": "aaaaaa",
+                "PropertyValue": "DefaultValue"
+            }
+        ]
     },
     "references": {
         "version": 2,
@@ -42,20 +63,20 @@
             {
                 "rid": 1000,
                 "type": {
-                    "class": "SequenceNode",
+                    "class": "SelectorNode",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "b4064005-cfd5-4701-8fc2-0b353c28bc8c",
+                    "GUID": "516eff09-fe68-4408-8828-c43c2bcf12b1",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 497.0,
-                        "y": 243.0,
-                        "width": 103.0,
+                        "x": 635.0,
+                        "y": 260.0,
+                        "width": 94.0,
                         "height": 77.0
                     },
-                    "NodeName": "Sequence"
+                    "NodeName": "Selector"
                 }
             },
             {
@@ -66,11 +87,11 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "6da0f0f9-a68b-4f4e-a4ee-ed01075b7165",
+                    "GUID": "57e2d511-dd04-4baf-974c-b00d376adb98",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 377.0,
-                        "y": 99.0,
+                        "x": 546.0,
+                        "y": 105.0,
                         "width": 73.0,
                         "height": 77.0
                     },

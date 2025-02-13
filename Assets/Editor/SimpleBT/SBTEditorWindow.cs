@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using SimpleBT.Editor.Utils;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -13,18 +12,25 @@ using Object = UnityEngine.Object;
 
 namespace SimpleBT.Editor
 {
-    using SimpleBT.Editor.Data;
-    using SimpleBT.Editor.GraphNodes;
+    //Editor
+    using Editor.Data;
+    using Editor.GraphNodes;
+    using Editor.Blackboard;
+    
+    //Non-Editor
+    using NonEditor.Tree;
+    using NonEditor;
     
     [System.Serializable]
     public class SBTEditorWindow : EditorWindow, ISerializationCallbackReceiver
     {
-        private readonly Rect BLACKBOARD_RECT = new Rect(0, 30, 250, 400);
+        private readonly Rect _blackboardRect = new Rect(0, 30, 250, 350);
         
         private SBTGraphView _graph;
-        private SBTBlackboard _blackboard;
+        private SBTBlackboardGraph _blackboardGraph;
 
         private Button _generateButton;
+        private Button _removeComponentsButton;
 
         #region Private Fields
         
@@ -62,47 +68,78 @@ namespace SimpleBT.Editor
 
         #endregion
 
+        #region Button Updates
+        
         private void OnSelectionChange()
         {
             Object selectedObject = Selection.activeObject;
 
-            if (selectedObject == null)
-            {
+            if (selectedObject == null) {
                 _generateButton.SetEnabled(false);
                 return;
             }
             
-            if (AssetDatabase.Contains(selectedObject))
-            {
-                string path = AssetDatabase.GetAssetPath(selectedObject);
-                string fileNameAndPath = Path.GetFileName(path);
-
-                if (fileNameAndPath.Contains(".simple"))
-                {
-                    string fileName = Path.GetFileNameWithoutExtension(path);
-                    if (fileName != _field.value)
-                    {
-                        Load(fileName);
-                        _field.value = fileName;
-                        _lastFieldValue = fileName;
-                    }
-                }
+            if (AssetDatabase.Contains(selectedObject)) {
+                
+                OverwriteGraph(selectedObject);
                 
                 _generateButton.SetEnabled(false);
             }
             else
             {
+                // Update respective buttons
                 GameObject selectedGameObject = Selection.activeGameObject;
+                TreeExecutor treeExecutor = selectedGameObject.GetComponent<TreeExecutor>();
 
-                if (selectedGameObject == null) { return; }
-
-                // do stuff :D
-                _generateButton.SetEnabled(true);
+                UpdateGenerateButton(selectedGameObject);
+                UpdateRemoveComponentsButton(treeExecutor);
             }
-            
+        }
+        
+        private void UpdateGenerateButton(GameObject selectedGameObject)
+        {
+            if (selectedGameObject == null
+                || selectedGameObject.TryGetComponent(out TreeExecutor treeExecutor))
+            {
+                _generateButton.SetEnabled(false);
+                return;
+            }
 
+            _generateButton.SetEnabled(true);
         }
 
+        private void UpdateRemoveComponentsButton(TreeExecutor treeExecutor)
+        {
+            if (treeExecutor == null)
+            {
+                _removeComponentsButton.SetEnabled(false);
+                return;
+            }
+
+            _removeComponentsButton.SetEnabled(true);
+        }
+
+
+
+        private void OverwriteGraph(Object selectedObject)
+        {
+            string path = AssetDatabase.GetAssetPath(selectedObject);
+            string fileNameAndPath = Path.GetFileName(path);
+
+            if (fileNameAndPath.Contains(".simple"))
+            {
+                string fileName = Path.GetFileNameWithoutExtension(path);
+                if (fileName != _field.value)
+                {
+                    Load(fileName);
+                    _field.value = fileName;
+                    _lastFieldValue = fileName;
+                }
+            }
+        }
+
+        #endregion
+        
         #region Initialization
         
         private void GenerateGraph()
@@ -117,34 +154,31 @@ namespace SimpleBT.Editor
             Toolbar toolbar = new Toolbar();
             rootVisualElement.Add(toolbar);
 
-            _field = new TextField("Behavior Name: ");
-            _field.value = _lastFieldValue ?? "New Behaviour Tree";
+            _field = new TextField("Behavior Name: ") { value = _lastFieldValue ?? "New Behaviour Tree" };
             _field.RegisterValueChangedCallback(evt =>
             {
-                string newValue = evt.newValue;
-                string filteredValue = newValue.FilterValue();
+                var newValue = evt.newValue;
+                var filteredValue = newValue.FilterValue();
                         
                 _lastFieldValue = filteredValue;
                 _field.value = filteredValue;
             });
             toolbar.Add(_field);
             
-            Button saveButton = new Button(Save);
-            saveButton.text = "Save";
-            toolbar.Add(saveButton);
+            Button saveButton = new Button(Save) { text = "Save" };
+            Button loadButton = new Button(() => { Load(_field.value); }) { text = "Load" };
+            _generateButton = new Button(Generate) { text = "Generate" };
+            _removeComponentsButton = new Button(RemoveComponents) { text = "Remove Components" };
             
-            Button loadButton = new Button(() => { Load(_field.value); });
-            loadButton.text = "Load";
+            toolbar.Add(saveButton);
             toolbar.Add(loadButton);
-
-            _generateButton = new Button(Generate);
-            _generateButton.text = "Generate";
             toolbar.Add(_generateButton);
+            toolbar.Add(_removeComponentsButton);
             
             // Adding the Blackboard
-            _blackboard = new SBTBlackboard(_graph);
-            _blackboard.SetPosition(BLACKBOARD_RECT);
-            _graph.Add(_blackboard);
+            _blackboardGraph = new SBTBlackboardGraph(_graph);
+            _blackboardGraph.SetPosition(_blackboardRect);
+            _graph.Add(_blackboardGraph);
         }
         
         private void LoadEditorData()
@@ -170,10 +204,9 @@ namespace SimpleBT.Editor
 
             SimpleBTDataSystem.SaveBehaviorCollectionToJson(
                 _field.value,
-                _graph, 
-                nodesDataArray, 
-                exposedProperties, 
-                _blackboard);
+                _graph,
+                nodesDataArray,
+                exposedProperties);
         }
 
         private NodeData[] SaveNodes()
@@ -210,10 +243,11 @@ namespace SimpleBT.Editor
                     }
                 }
                 
-                NodeData nodeData = new NodeData();
-                nodeData.Node = node;
-                nodeData.fromGUID = node.GUID;
-                nodeData.toGUIDs = new List<string>(toGUIDs);
+                NodeData nodeData = new NodeData {
+                    Node = node,
+                    fromGUID = node.GUID,
+                    toGUIDs = new List<string>(toGUIDs)
+                };
 
                 if (node is ConditionNode condNode)
                 {
@@ -229,7 +263,7 @@ namespace SimpleBT.Editor
         }
 
         private List<ExposedProperty> SaveBlackboardProperties() {
-            return new List<ExposedProperty>(_blackboard.ExposedProperties);
+            return new List<ExposedProperty>(_blackboardGraph.ExposedProperties);
         }
         
         /// <summary>
@@ -250,9 +284,9 @@ namespace SimpleBT.Editor
             _graph.viewTransform.scale = collection.NodeCollection.ViewportScale;
             
             //Load Blackboard Values
-            _blackboard.Reset();
+            _blackboardGraph.Reset();
             collection.BlackboardCollection.ExposedProperties.ForEach(property => {
-                _blackboard.AddPropertyToBlackboard(property);
+                _blackboardGraph.AddNewField(property);
             });
         }
 
@@ -286,9 +320,9 @@ namespace SimpleBT.Editor
                 if (data.toGUIDs.Count == 0) { continue; }
                 
                 Port fromPort = fromNode.outputContainer.Q<Port>("");
-                foreach (string toGUID in data.toGUIDs)
+                foreach (string toGuid in data.toGUIDs)
                 {
-                    GraphTreeNode node = _graph.GetNodeByGUID(toGUID);
+                    GraphTreeNode node = _graph.GetNodeByGUID(toGuid);
                     Port toPort = node.inputContainer.Q<Port>("");
                     Edge edge = fromPort.ConnectTo(toPort);
                     _graph.AddElement(edge);
@@ -310,15 +344,74 @@ namespace SimpleBT.Editor
         
         #endregion
         
-        #region Generating Tree
+        #region Generating Tree & Object Cleanup
 
         private void Generate()
         {
+            // Editor Part
             GameObject selectedObject = Selection.activeGameObject;
 
             if (selectedObject.GetComponent<TreeExecutor>() != null) { return; }
-            
             selectedObject.AddComponent<TreeExecutor>();
+            
+            _removeComponentsButton.SetEnabled(true);
+            _generateButton.SetEnabled(false);
+            
+            //TODO Tree Generation Part
+            BehaviorCollection collection = SimpleBTDataSystem.LoadBehaviorCollectionToJson(_lastFieldValue);
+
+            if (collection == null)
+            {
+                EditorUtility.DisplayDialog("Error",
+                    $"There is no JSON file of name {_lastFieldValue} to generate. Save the behavior before generating it",
+                    "OK");
+                return;
+            }
+            
+            SBTBehaviorGeneration.Generate(selectedObject, collection);
+            
+            //TODO Blackboard Generation
+            SBTBlackboard blackboard = selectedObject.AddComponent<SBTBlackboard>();
+
+            foreach (ExposedProperty property in _blackboardGraph.ExposedProperties)
+            {
+                /*
+                if (property.PropertyName == "Self") { continue; }
+                blackboard.AddNewRawVariable(
+                    property.PropertyName.ToUpper(), 
+                    property.PropertyValue, 
+                    property.PropertyType);
+                    */
+
+                if (property.PropertyName == "Self") { continue; }
+                
+                BlackboardData data = ScriptableObject.CreateInstance<BlackboardData>();
+                data.name = property.PropertyName;
+                data.Field = property.PropertyName;
+                data.RawValue = property.PropertyRawValue;
+                data.VariableType = property.PropertyType;
+                data.Instantiate();
+                
+                blackboard.Data.Add(data);
+            }
+        }
+
+        private void RemoveComponents()
+        {
+            GameObject gameObject = Selection.activeGameObject;
+            if (gameObject == null) { return; }
+            
+            TreeExecutor executor = gameObject.GetComponent<TreeExecutor>();
+            SBTBlackboard blackboard = gameObject.GetComponent<SBTBlackboard>();
+
+            if (executor != null)
+            {
+                DestroyImmediate(executor);
+                DestroyImmediate(blackboard);
+            }
+            
+            _removeComponentsButton.SetEnabled(false);
+            _generateButton.SetEnabled(true);
         }
         
         #endregion

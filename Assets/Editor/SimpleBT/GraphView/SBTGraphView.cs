@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using SimpleBT;
+using SimpleBT.Editor.GraphNodes;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -7,12 +8,10 @@ using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor
 {
-    using SimpleBT.Editor.GraphNodes;
-    
     [System.Serializable]
-    public class SBTGraphView : GraphView
+    public class SBTGraphView : UnityEditor.Experimental.GraphView.GraphView
     {
-        private Blackboard _blackboard;
+        private UnityEditor.Experimental.GraphView.Blackboard _blackboard;
         private SBTEditorWindow _editor;
         private SBTSearchWindow _searchWindow;
         

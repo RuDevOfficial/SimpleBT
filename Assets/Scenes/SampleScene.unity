@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541622755}
   - component: {fileID: 1541622754}
+  - component: {fileID: 1541622757}
   - component: {fileID: 1541622756}
   m_Layer: 0
   m_Name: Square
@@ -216,10 +217,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1541622753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 527caed52fcf3a2459675d1a1210a909, type: 3}
+  m_Script: {fileID: 11500000, guid: 253985aff45e7e24e85a331e4c449f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: rewteryeey
+  Data:
+  - {fileID: 1811009873}
+  RawData: []
+--- !u!114 &1541622757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541622753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2924091bdb827439206f7535467acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BT: {fileID: 0}
 --- !u!1 &1739251521
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +373,21 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1811009873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
+  m_Name: sasa
+  m_EditorClassIdentifier: 
+  Field: sasa
+  RawValue: 1
+  VariableType: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
