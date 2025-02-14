@@ -8,7 +8,7 @@ namespace SimpleBT.NonEditor
     [System.Serializable]
     public class BlackboardData : ScriptableObject
     {
-        [FormerlySerializedAs("Field")] public string Key;
+        public string Key;
         public string RawValue;
         public VariableType VariableType;
 
@@ -17,10 +17,10 @@ namespace SimpleBT.NonEditor
         public void Instantiate()
         {
             Type type = VariableType.ConvertToType();
-            var newValue = RawValue.ConvertValue(type);
+            var newValue = RawValue.ConvertValue(type, Key);
             Value = newValue;
         }
 
-        private void Awake() { Instantiate(); }
+        void Awake() { Instantiate(); }
     }
 }

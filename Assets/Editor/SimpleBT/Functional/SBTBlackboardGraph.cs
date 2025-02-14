@@ -59,18 +59,15 @@ namespace SimpleBT.Editor.Blackboard
 
             BlackboardField field = (BlackboardField)element;
 
-            if (ExposedProperties.Any(x => x.PropertyName == newValue))
-            {
+            if (ExposedProperties.Any(x => x.PropertyName == newValue)) {
                 EditorUtility.DisplayDialog("Error", "This property is already named, choose another one!", "OK");
                 return;
             }
-            else if (field.text == "Self")
-            {
+            else if (field.text == "Self") {
                 EditorUtility.DisplayDialog("Error", "You can't rename this variable!", "OK");
                 return;
             }
-            else if (newValue == "Self")
-            {
+            else if (newValue == "Self") {
                 EditorUtility.DisplayDialog("Error", "That name is prohibited!", "OK");
                 return;
             }

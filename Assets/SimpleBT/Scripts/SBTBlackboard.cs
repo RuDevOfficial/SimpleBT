@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Globalization;
 using UnityEngine;
 
 namespace SimpleBT.NonEditor
@@ -7,6 +6,8 @@ namespace SimpleBT.NonEditor
     public class SBTBlackboard : MonoBehaviour
     {
         public List<BlackboardData> Data = new List<BlackboardData>();
+        
+        void Start() { Debug.Log(Data[1].Value); }
         
         public T GetValue<T>(string keyToGet)
         {
@@ -79,6 +80,8 @@ namespace SimpleBT.NonEditor
         Int,
         Float,
         Bool,
-        GameObject
+        GameObject,
+        Vector2,
+        Vector3,
     }
 }

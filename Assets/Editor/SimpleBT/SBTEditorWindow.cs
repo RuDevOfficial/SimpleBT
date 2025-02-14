@@ -145,7 +145,7 @@ namespace SimpleBT.Editor
             
             Button saveButton = new Button(Save) { text = "Save" };
             Button loadButton = new Button(() => { Load(_field.value); }) { text = "Load" };
-            _generateButton = new Button(GenerateGameObjectComponents) { text = "Generate" };
+            _generateButton = new Button(GenerateGameObjectComponents) { text = "Generate Tree & Blackboard" };
             _regenerateBlackboardButton = new Button(GenerateBlackboard) { text = "Regenerate Blackboard" }; 
             _removeComponentsButton = new Button(RemoveComponents) { text = "Remove Components" };
             
@@ -383,7 +383,6 @@ namespace SimpleBT.Editor
                 data.Key = property.PropertyName;
                 data.RawValue = property.PropertyRawValue;
                 data.VariableType = property.PropertyType;
-                data.Instantiate();
                 
                 blackboard.Data.Add(data);
             }

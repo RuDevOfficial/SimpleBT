@@ -9,15 +9,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTBlackboardGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTBlackboardGraph.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/ActionTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/ActionTemplate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_BlackboardAddNumericValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_BlackboardAddNumericValue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_DebugAndFail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_DebugAndFail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_DebugAndSucceed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_DebugAndSucceed.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_Rigidbody2DJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_Rigidbody2DJump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_Wait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_Wait.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Behavior_Zombie.simple" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Behavior_Zombie.simple" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/BlackboardData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/BlackboardData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Core.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTBlackboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTBlackboard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTUtils.cs" afterDir="false" />
     </list>
@@ -34,6 +27,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/3c/933571a2/BlackboardSection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/a0/63e6b948/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/ee/c6d7e640/BlackboardRow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/69/342c5738/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/98/d9b66875/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/c2/cd46938b/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/fb/7c1ca1da/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c0c221501f3a41f8ac0af9d6a9dc9ff335fd90/77/b83a0913/GenericUriParser.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,6 +136,7 @@
       <workItem from="1739357207185" duration="7418000" />
       <workItem from="1739441459293" duration="10014000" />
       <workItem from="1739454465083" duration="2802000" />
+      <workItem from="1739528205267" duration="6882000" />
     </task>
     <servers />
   </component>

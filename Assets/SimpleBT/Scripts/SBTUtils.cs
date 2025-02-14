@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using SimpleBT.NonEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor.Experimental.GraphView;
+#endif
 
 namespace SimpleBT.Editor.Utils
 {
@@ -15,7 +19,9 @@ namespace SimpleBT.Editor.Utils
             { VariableType.Bool, typeof(bool) },
             { VariableType.Int, typeof(int) },
             { VariableType.Float, typeof(float) },
-            { VariableType.GameObject, typeof(GameObject) }
+            { VariableType.GameObject, typeof(GameObject) },
+            { VariableType.Vector2, typeof(Vector2) },
+            { VariableType.Vector3, typeof(Vector3) }
         };
 
         public static Type ConvertToType(this VariableType variableType)
@@ -35,34 +41,95 @@ namespace SimpleBT.Editor.Utils
         /// <summary>
         /// Returns a string with only letters or "_"
         /// </summary>
-        public static string FilterValue(this string value)
+        public static string FilterValue(this string value, bool filterNumbers = true)
         {
-            string filteredValue = new string(value.Where(
-                c => Char.IsLetter(c) || // Only letters but...
-                     c == '_').ToArray()); // '_' allowed
+            string filteredValue;
 
+            if (filterNumbers) {
+                filteredValue = new string(value.Where(
+                    c => Char.IsLetter(c) || // Only letters but...
+                         c == '_').ToArray()); // '_' allowed
+            }
+            else
+            {
+                filteredValue = new string(value.Where(
+                    c => 
+                        Char.IsLetter(c) || // Only letters but...
+                        c == '_' || // '_' allowed
+                        Char.IsNumber(c) ||
+                        c == '.')// floats need this char
+                    .ToArray()); 
+            }
+            
             return filteredValue;
         }
 
-        public static object ConvertValue(this string valueToConvert, Type type)
+        /// <summary>
+        /// Converts or returns a new value based on the type given.
+        /// </summary>
+        /// <param name="valueToConvert">used as input for the conversion</param>
+        /// <param name="type">the type you want the string to convert to</param>
+        /// <param name="variableName"></param>
+        /// <returns></returns>
+        public static object ConvertValue(this string valueToConvert, Type type, string variableName)
         {
+            string errorPopupDialogue = "";
+            
             if (type == typeof(int)) { return int.Parse(valueToConvert); }
             if (type == typeof(float)) { return float.Parse(valueToConvert); }
             if (type == typeof(bool)) { return bool.Parse(valueToConvert); }
             if (type == typeof(string)) { return valueToConvert; }
             if (type == typeof(GameObject)) { return GameObject.Find(valueToConvert); }
 
-            Debug.LogWarning($"Couldn't return variable of type {type}. Not supported.");
-            return null;
-        }
+            if (type == typeof(Vector2))
+            {
+                string[] substring = valueToConvert.Split(',');
 
-        public static T GetValue<T>(this string valueToGet)
-        {
-            object value = null;
-            
-            // TODO
-            
-            return (T)value;
+                if (substring.Length != 2) { errorPopupDialogue += $"You are trying to convert ({variableName}) with ({valueToConvert}) to type ({type}). \nDid you forget to add or remove a comma?\n"; }
+                else {
+                    Vector2 vector = new Vector2();
+
+                    for (int i = 0; i < 2; i++)
+                    {
+                        substring[i] = FilterValue(substring[i], filterNumbers: false);
+                        string number = substring[i];
+
+                        if (number.Contains('.') == false) { vector[i] = int.Parse(number); }
+                        else { vector[i] = float.Parse(number, NumberStyles.Float, CultureInfo.InvariantCulture.NumberFormat); }
+                    }
+                
+                    return vector;
+                }
+            }
+
+            if (type == typeof(Vector3))
+            {
+                string[] substring = valueToConvert.Split(',');
+
+                if (substring.Length != 3) { errorPopupDialogue += $"You are trying to convert ({variableName}) with ({valueToConvert}) to type ({type}). \nDid you forget to add or remove a comma?\n"; }
+                else {
+                    Vector3 vector = new Vector3();
+                
+                    for (int i = 0; i < 3; i++)
+                    {
+                        substring[i] = FilterValue(substring[i], filterNumbers: false);
+                        string number = substring[i];
+
+                        if (number.Contains('.') == false) { vector[i] = int.Parse(number); }
+                        else { vector[i] = float.Parse(number, NumberStyles.Float, CultureInfo.InvariantCulture.NumberFormat); }
+                    }
+                
+                    return vector;  
+                }
+            }
+
+            if (string.IsNullOrEmpty(errorPopupDialogue))
+            {
+                errorPopupDialogue = $"Couldn't convert variable ({variableName}) of type ({type}). Not supported.\n"; 
+                Debug.LogError(errorPopupDialogue);
+            }
+            else { Debug.LogError("Conversion Error: " + errorPopupDialogue); }
+            return null;
         }
     } 
 }
