@@ -1,13 +1,15 @@
 ﻿using SimpleBT.Core;
 
-namespace SimpleBT.Composite.Prebuilt
+namespace SimpleBT.NonEditor.Nodes
 {
+    using Composite;
+    
     // Ticks children in order, goes to the next if it returns Success, fails if the currently ticked
     // children returns failure
     public class Sequence : Composite
     {
         public Sequence() : base() { }
-        public Sequence(params INode[] nodes) : base(nodes) { }
+        public Sequence(params Node[] nodes) : base(nodes) { }
 
         protected override Status Tick()
         {

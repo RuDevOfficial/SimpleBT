@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace SimpleBT.Composite
 {
@@ -9,11 +10,11 @@ namespace SimpleBT.Composite
     // Base class for nodes capable of having children
     public abstract class Composite : Node
     {
-        protected List<INode> _children = new List<INode>();
+        [SerializeReference] protected List<Node> _children = new List<Node>();
         protected int _childrenIndex = 0;
 
         public Composite() : base() {}
-        public Composite(params INode[] nodes) { _children = nodes.ToList(); }
+        public Composite(params Node[] nodes) { _children = nodes.ToList(); }
         
         // Checks if the composite has any children fist
         public override Status OnTick() { return _children.Count == 0 ? Status.Success : Tick(); }
@@ -21,7 +22,12 @@ namespace SimpleBT.Composite
         public override void RegisterBlackboard(SBTBlackboard sbtBlackboard)
         {
             base.RegisterBlackboard(sbtBlackboard);
-            foreach(INode node in _children) { node.RegisterBlackboard(sbtBlackboard); }
+            foreach(Node node in _children) { node.RegisterBlackboard(sbtBlackboard); }
+        }
+
+        public override void AddChild(Node child)
+        {
+            _children.Add(child);
         }
     }
 

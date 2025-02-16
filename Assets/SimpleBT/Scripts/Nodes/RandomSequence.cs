@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using SimpleBT.Core;
-using UnityEngine;
 using Random = System.Random;
 
-namespace SimpleBT.Composite.Prebuilt
+namespace SimpleBT.NonEditor.Nodes
 {
+    using Composite;
+    
     public class RandomSequence : Composite
     {
         private List<int>  _generatedOrder;
         private List<int> _numberList;
         private Random _randomGenerator;
 
-        public RandomSequence(params INode[] nodes) : base(nodes)
+        public RandomSequence(params Node[] nodes) : base(nodes)
         {
             _numberList = new List<int>();
             _generatedOrder = new List<int>(_children.Count);

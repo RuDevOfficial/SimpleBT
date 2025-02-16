@@ -5,9 +5,9 @@
     
     public abstract class Decorator : Node
     {
-        protected INode _child;
+        protected Node _child;
 
-        public Decorator(INode node) { _child = node; }
+        public Decorator(Node node) { _child = node; }
         
         public override Status OnTick() { return _child == null ? Status.Success : Tick(); }
         
@@ -15,6 +15,11 @@
         {
             base.RegisterBlackboard(sbtBlackboard);
             _child.RegisterBlackboard(sbtBlackboard);
+        }
+
+        public override void AddChild(Node child)
+        {
+            _child = child;
         }
     }
 }

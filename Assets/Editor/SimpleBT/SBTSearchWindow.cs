@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using SimpleBT.Editor.GraphNodes;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -73,10 +74,20 @@ namespace SimpleBT.Editor
             if ((string)searchTreeEntry.userData == "RootNode")
             {
                 bool rootLocated = false;
-                _graph.graphElements.ForEach(element => { if (element is RootNode) { rootLocated = true; } });
+                _graph.graphElements.ForEach(element => { if (element is RootNode) { rootLocated = true; return; } });
 
                 if (rootLocated == true) {
                     EditorUtility.DisplayDialog("Error", "There is already a Root node in the graph!", "OK");
+                    return false;
+                }
+            }
+            else
+            {
+                bool rootLocated = false;
+                _graph.graphElements.ForEach(element => { if (element is RootNode) { rootLocated = true; return; } });
+
+                if (rootLocated == false) {
+                    EditorUtility.DisplayDialog("Error", "There is no Root node! Add it first!", "OK");
                     return false;
                 }
             }

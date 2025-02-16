@@ -1,13 +1,16 @@
 ﻿using SimpleBT.Core;
 
-namespace SimpleBT.Composite.Prebuilt
+namespace SimpleBT.NonEditor.Nodes
 {
     // Ticks children in order, goes to the next if it returns Failure, stops if it returns Success.
     // If no children succeeded, it will return Failure.
+    
+    using Composite;
+    
     public class Selector : Composite
     {
         public Selector() : base() { }
-        public Selector(params INode[] nodes) : base (nodes) { }
+        public Selector(params Node[] nodes) : base (nodes) { }
         
         protected override Status Tick()
         {

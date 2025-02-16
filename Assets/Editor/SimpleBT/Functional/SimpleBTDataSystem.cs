@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using SimpleBT.Editor.Utils;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -18,8 +19,8 @@ namespace SimpleBT.Editor.Data
             NodeData[] nodeData, 
             List<ExposedProperty> exposedProperties)
         {
-            CreateFolder("Assets", "SimpleBT");
-            CreateFolder("Assets/SimpleBT", "GraphData");
+            SBTUtils.CreateFolder("Assets", "SimpleBT");
+            SBTUtils.CreateFolder("Assets/SimpleBT", "GraphData");
             
             BehaviorCollection collection = new BehaviorCollection()
             {
@@ -55,7 +56,7 @@ namespace SimpleBT.Editor.Data
 
         public static void SaveEditorToJson(SBTEditorWindow window)
         {
-            CreateFolder("Assets/SimpleBT", "EditorData");
+            SBTUtils.CreateFolder("Assets/SimpleBT", "EditorData");
 
             SBTEditorData data = new SBTEditorData() { LastFileName = window.LastFieldValue, };
             
@@ -81,11 +82,6 @@ namespace SimpleBT.Editor.Data
             catch { Debug.LogError($"Error parsing JSON file EditorData"); return null; }
 
             return editorData;
-        }
-        
-        private static void CreateFolder(string path, string folderName)
-        {
-            if (AssetDatabase.IsValidFolder($"{path}/{folderName}") == false) { AssetDatabase.CreateFolder(path, folderName); }
         }
     }
 

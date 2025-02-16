@@ -8,7 +8,7 @@ namespace SimpleBT.NonEditor.Tree
     
     public class TreeExecutor : MonoBehaviour
     {
-        public BehaviourTree BT;
+        public Node BT;
         private SBTBlackboard _sbtBlackboard;
         private bool _succeeded = false;
 
@@ -21,7 +21,6 @@ namespace SimpleBT.NonEditor.Tree
 
         private void Start()
         {
-            BT = (BehaviourTree)ScriptableObject.CreateInstance(BT.GetType());
             BT.RegisterBlackboard(_sbtBlackboard);
         }
 

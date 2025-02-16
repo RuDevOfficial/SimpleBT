@@ -1,7 +1,5 @@
 ﻿using System;
-using SimpleBT.Editor.Utils;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor
 {

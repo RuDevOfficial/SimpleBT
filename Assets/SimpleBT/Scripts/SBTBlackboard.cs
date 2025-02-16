@@ -7,8 +7,6 @@ namespace SimpleBT.NonEditor
     {
         public List<BlackboardData> Data = new List<BlackboardData>();
         
-        void Start() { Debug.Log(Data[1].Value); }
-        
         public T GetValue<T>(string keyToGet)
         {
             

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace SimpleBT.Core
@@ -12,6 +13,7 @@ namespace SimpleBT.Core
     
     public abstract class Node : ScriptableObject, INode
     {
+        public string GUID;
         protected SBTBlackboard blackboard;
 
         public Node() { }
@@ -29,6 +31,8 @@ namespace SimpleBT.Core
 
         // Every child node of a composite will have the blackboard registered
         // thanks to a recursive call
+        
+        public virtual void AddChild(Node child) { }
     }
     
     

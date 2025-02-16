@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using SimpleBT.Editor.BehaviorGeneration;
 using SimpleBT.Editor.Utils;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -81,15 +82,16 @@ namespace SimpleBT.Editor
             }
             
             if (AssetDatabase.Contains(selectedObject)) {
-                
                 OverwriteGraph(selectedObject);
-                
                 _generateButton.SetEnabled(false);
             }
             else
             {
                 // Update respective buttons
                 GameObject selectedGameObject = Selection.activeGameObject;
+
+                if (selectedGameObject == null) { return; }
+                
                 selectedGameObject.TryGetComponent<TreeExecutor>(out TreeExecutor treeExecutor);
                 selectedGameObject.TryGetComponent<SBTBlackboard>(out SBTBlackboard blackboard);
 
@@ -331,21 +333,22 @@ namespace SimpleBT.Editor
             // Editor Part
             GameObject selectedObject = Selection.activeGameObject;
 
-            if (selectedObject.GetComponent<TreeExecutor>() != null) { return; }
-            selectedObject.AddComponent<TreeExecutor>();
+            TreeExecutor executor = null;
+            if (selectedObject.TryGetComponent(out TreeExecutor component)) { executor = component; }
+            executor = selectedObject.AddComponent<TreeExecutor>();
             
             _removeComponentsButton.SetEnabled(true);
             _regenerateBlackboardButton.SetEnabled(true);
             _generateButton.SetEnabled(false);
             
             //TODO Tree Generation Part
-            GenerateBehaviorTree(selectedObject);
+            GenerateBehaviorTree(executor);
 
             //TODO Blackboard Generation
             GenerateBlackboard();
         }
 
-        private static void GenerateBehaviorTree(GameObject selectedObject)
+        private void GenerateBehaviorTree(TreeExecutor executor)
         {
             BehaviorCollection collection = SimpleBTDataSystem.LoadBehaviorCollectionToJson(_lastFieldValue);
 
@@ -356,8 +359,8 @@ namespace SimpleBT.Editor
                     "OK");
                 return;
             }
-            
-            SBTBehaviorGeneration.Generate(selectedObject, collection);
+
+            SBTBehaviorGeneration.Generate(_graph, collection.NodeCollection, executor);
             return;
         }
 
