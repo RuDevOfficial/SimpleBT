@@ -1,0 +1,208 @@
+{
+    "NodeCollection": {
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "3eaf30cc-3f2e-41e5-8653-28ac81b3e648",
+                "toGUIDs": [
+                    "41afc7db-f152-436a-bb0e-0d25b325b19a"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "41afc7db-f152-436a-bb0e-0d25b325b19a",
+                "toGUIDs": [
+                    "f861f5cc-8658-4c59-8733-61188b0bd3e8",
+                    "23018dfc-af4c-42d8-9afb-3c30c3dda23e"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "f861f5cc-8658-4c59-8733-61188b0bd3e8",
+                "toGUIDs": [],
+                "Values": [
+                    "DISTANCE",
+                    "Equal",
+                    "3"
+                ],
+                "VariableName": "DISTANCE",
+                "Condition": 0,
+                "VariableCheckName": "3"
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
+                "fromGUID": "23018dfc-af4c-42d8-9afb-3c30c3dda23e",
+                "toGUIDs": [],
+                "Values": [
+                    "it was not null yay",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": 11.0,
+            "y": -68.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": [
+            {
+                "PropertyName": "Self",
+                "PropertyRawValue": "",
+                "PropertyType": 4
+            },
+            {
+                "PropertyName": "DISTANCE",
+                "PropertyRawValue": "5",
+                "PropertyType": 1
+            }
+        ]
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3eaf30cc-3f2e-41e5-8653-28ac81b3e648",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 369.0,
+                        "y": 151.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    }
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "SequenceGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "41afc7db-f152-436a-bb0e-0d25b325b19a",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 442.0,
+                        "y": 277.0,
+                        "width": 103.0,
+                        "height": 77.0
+                    }
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "ConditionGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "f861f5cc-8658-4c59-8733-61188b0bd3e8",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 378.0,
+                        "y": 404.0,
+                        "width": 101.0,
+                        "height": 136.0
+                    },
+                    "ConditionBox": {
+                        "VariableName": {
+                            "rid": 1004
+                        },
+                        "DropDown": {
+                            "rid": 1005
+                        },
+                        "VariableChecked": {
+                            "rid": 1006
+                        },
+                        "Condition": 0
+                    }
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "GraphAction_Debug",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "23018dfc-af4c-42d8-9afb-3c30c3dda23e",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 545.0,
+                        "y": 414.0,
+                        "width": 125.0,
+                        "height": 131.0
+                    },
+                    "DebugMessage": "it was not null yay",
+                    "Status": 0
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "DISTANCE"
+                }
+            },
+            {
+                "rid": 1005,
+                "type": {
+                    "class": "DropdownField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Equal"
+                }
+            },
+            {
+                "rid": 1006,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "3"
+                }
+            }
+        ]
+    }
+}

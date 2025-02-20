@@ -112,14 +112,22 @@ public static class SBTNonEditorUtils
     public static void PopulateTreeList(
         string name,
         string guid,
+        List<string> values,
         BehaviourTree tree)
     {
         Type toNodeType = Type.GetType($"SimpleBT.NonEditor.Nodes.{name}");
         Node generatedNode = (Node)ScriptableObject.CreateInstance(toNodeType);
         generatedNode.GUID = guid;
         generatedNode.name = (tree.CompleteNodeList.Count + 1).ToString();
+        generatedNode.AssignValues(values);
         tree.CompleteNodeList.Add(generatedNode);
     }
 
+    public static bool IsNumber(VariableType a, VariableType b)
+    {
+        if ((a != VariableType.Int || a != VariableType.Float) && 
+            (b != VariableType.Int || b != VariableType.Float)) { return false; }
 
+        return true;
+    }
 }

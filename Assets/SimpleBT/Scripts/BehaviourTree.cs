@@ -13,13 +13,13 @@ namespace SimpleBT.NonEditor.Tree
         public Node Root = null;
         public List<Node> CompleteNodeList = new List<Node>();
         
-        public Status OnTick() { return Tick(); }
+        public override Status OnTick() { return Tick(); }
         
         protected override Status Tick() { return Root == null ? Status.Failure : Root.OnTick(); }
         
         private void Awake() { Build(); }
 
-        public void RegisterBlackboard(SBTBlackboard sbtBlackboard) { Root.RegisterBlackboard(sbtBlackboard); }
+        public override void RegisterBlackboard(SBTBlackboard sbtBlackboard) { Root?.RegisterBlackboard(sbtBlackboard); }
 
         protected virtual void Build() { }
 
@@ -39,9 +39,6 @@ namespace SimpleBT.NonEditor.Tree
             fromNode.AddChild(toNode);
         }
 
-        public void AssignRoot(Node node)
-        {
-            Root = node;
-        }
+        public void AssignRoot(Node node) { Root = node; }
     }
 }

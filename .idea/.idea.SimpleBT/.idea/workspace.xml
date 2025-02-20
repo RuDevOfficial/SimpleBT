@@ -5,55 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="227eb850-3e24-477a-8760-e6199cf36f52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/SBTNonEditorUtils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/SBTNonEditorUtils.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ParallelMinSelectorGraphNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ParallelMinSelectorGraphNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ParallelMinSequenceGraphNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ParallelMinSequenceGraphNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ParallelSelectorGraphNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ParallelSelectorGraphNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ParallelSequenceGraphNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ParallelSequenceGraphNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RandomSequenceGraphNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RandomSequenceGraphNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/SelectorGraphNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/SelectorGraphNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/SequenceGraphNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTBehaviorGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTBehaviorGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SimpleBTDataSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SimpleBTDataSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/CustomElements/ConditionBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/CustomElements/ConditionBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ConditionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ConditionGraphNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ConditionNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/ConditionGraphNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RootNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RootGraphNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RootNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RootGraphNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/SequenceNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/SequenceNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/SequenceGraphNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/ExecutionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/ExecutionGraphNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/ExecutionNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/ExecutionGraphNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphTreeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphTreeNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/BackAndForthBT.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/BackAndForthBT.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/BackAndForthBT.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/BackAndForthBT.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/ExampleBT.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/ExampleBT.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/ReusedBT.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/ReusedBT.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/ReusedBT.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/ReusedBT.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/SimpleDebugActionBT.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Behaviors/SimpleDebugActionBT.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/SBTNonEditorUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/SBTNonEditorUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/ActionTemplate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/ActionTemplate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_BlackboardAddNumericValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_BlackboardAddNumericValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_DebugAndFail.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_DebugAndFail.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_DebugAndSucceed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_DebugAndSucceed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_Rigidbody2DJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_Rigidbody2DJump.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_Wait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Actions/ACTION_Wait.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/BehaviourTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/BehaviourTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/BlackboardData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/BlackboardData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/ParallelMinSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/ParallelMinSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/ParallelMinSelector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/ParallelMinSelector.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/ParallelMinSequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/ParallelMinSequence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/ParallelMinSequence.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/ParallelMinSequence.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/ParallelSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/ParallelSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/ParallelSelector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/ParallelSelector.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/ParallelSequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/ParallelSequence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/ParallelSequence.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/ParallelSequence.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/RandomSequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/RandomSequence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/RandomSequence.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/RandomSequence.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/Selector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Selector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/Selector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Selector.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/Sequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Sequence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Composites/Sequence.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Sequence.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Conditions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Conditions/CONDITION_Fail.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Conditions/CONDITION_Fail.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Conditions/CONDITION_Succeed.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Conditions/CONDITION_Succeed.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Core.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Decorator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Decorator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Decorators/RepeatForever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/RepeatForever.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Decorators/RepeatForever.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/RepeatForever.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTBlackboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTBlackboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTUtils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTUtils.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/TreeExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/TreeExecutor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +73,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c0c221501f3a41f8ac0af9d6a9dc9ff335fd90/77/b83a0913/GenericUriParser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eebf6a509b354512a5d405c8a7dd6f889b6600/53/61297566/EditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Action_DebugAndSucceed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Core.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Sequence.cs" root0="FORCE_HIGHLIGHTING" />
@@ -181,6 +179,12 @@
       <workItem from="1739454465083" duration="2802000" />
       <workItem from="1739528205267" duration="6882000" />
       <workItem from="1739716281383" duration="11170000" />
+      <workItem from="1739743942262" duration="989000" />
+      <workItem from="1739744961675" duration="2556000" />
+      <workItem from="1739801823578" duration="1266000" />
+      <workItem from="1739971823588" duration="5038000" />
+      <workItem from="1739976966857" duration="398000" />
+      <workItem from="1740049270992" duration="9878000" />
     </task>
     <servers />
   </component>

@@ -25,6 +25,7 @@ namespace SimpleBT.Editor.BehaviorGeneration
 
             List<GraphElement> elements = graph.graphElements.ToList();
 
+            // First, generate and add these nodes to a list
             for (int i = 0; i < elements.Count; i++)
             {
                 if (elements[i] is GraphTreeNode node)
@@ -38,11 +39,14 @@ namespace SimpleBT.Editor.BehaviorGeneration
                     SBTNonEditorUtils.PopulateTreeList(
                         node.title,
                         node.GUID,
+                        node.GetValues(),
                         behaviourTree
                     );
                 }
             }
 
+            // Second, check the GUID of each node, see if they have outgoing connections
+            // and link them
             for (int i = 0; i < collection.Nodes.Length; i++)
             { 
                 NodeData data = collection.Nodes[i];
@@ -60,6 +64,8 @@ namespace SimpleBT.Editor.BehaviorGeneration
                 }
             }
 
+            // Finally check who is connected to the root graph node and assign it
+            // as root of the behavior tree
             for (int i = 0; i < collection.Nodes.Length; i++)
             { 
                 NodeData data = collection.Nodes[i];
@@ -72,36 +78,6 @@ namespace SimpleBT.Editor.BehaviorGeneration
                 }
                 break;
             }
-
-            // Populate the tree first
-            /*
-            foreach (NodeData data in collection.Nodes)
-            {
-                if (data.Node.title == "Root") { continue; }
-
-
-
-                SBTNonEditorUtils.PopulateTreeList(
-                    data.Node.title,
-                    data.fromGUID,
-                    behaviourTree);
-                break;
-
-                foreach (GraphElement element in elements)
-                {
-                    if (element is not GraphTreeNode node) continue;
-
-                    if (node.GUID == data.fromGUID)
-                    {
-                        SBTNonEditorUtils.PopulateTreeList(
-                            node.title,
-                            node.GUID,
-                            behaviourTree);
-                        break;
-                    }
-                }
-            }
-            */
         }
     }
 }

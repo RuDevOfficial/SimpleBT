@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -11,20 +10,19 @@ namespace SimpleBT.Editor.GraphNodes
     public class ConditionBox : VisualElement
     {
         [SerializeReference] public TextField VariableName;
-        private string _lastVariableNameValue;
-        
-        [SerializeReference] public DropdownField DropDown;
+        [SerializeReference] public DropdownField DropDown; 
         [SerializeReference] public TextField VariableChecked;
         private string _lastVariableCheckedValue;
+        private string _lastVariableNameValue;
         
-        public Condition ConditionType = Condition.Equal;
-        
-        public ConditionBox()
+        [FormerlySerializedAs("condition")] public ConditionType Condition;
+
+        public void Instantiate()
         {
             VariableName = new TextField();
             VariableName.value = "Variable Name or Value";
 
-            string[] conditions = Enum.GetNames(typeof(Condition));
+            string[] conditions = Enum.GetNames(typeof(ConditionType));
             DropDown = new DropdownField(conditions.ToList(), 0, FormatSelectedValueCallback);
 
             VariableChecked = new TextField();
@@ -42,23 +40,13 @@ namespace SimpleBT.Editor.GraphNodes
             Add(DropDown);
             Add(VariableChecked);
         }
-
+        
         private string FormatSelectedValueCallback(string arg)
         {
-            ConditionType = (Condition)Enum.Parse(typeof(Condition), arg);
-            if (ConditionType == Condition.Null) { VariableChecked.value = null; }
+            Condition = (ConditionType)Enum.Parse(typeof(ConditionType), arg);
+            if (Condition == ConditionType.Null) { VariableChecked.value = null; }
             
             return arg;
-        }
-        
-        public enum Condition
-        {
-            Equal,
-            Less_Than,
-            Less_Or_Equal_Than,
-            More_Than,
-            More_Or_Equal_Than,
-            Null
         }
     }
 }

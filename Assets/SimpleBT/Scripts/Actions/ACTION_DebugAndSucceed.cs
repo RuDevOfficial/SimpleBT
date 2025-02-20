@@ -1,7 +1,7 @@
 using UnityEngine;
 using SimpleBT.Core;
 
-public class ACTION_DebugAndSucceed : ActionNode
+public class ACTION_DebugAndSucceed : Action_Node
 {
     private string _keyMessage;
     public ACTION_DebugAndSucceed() { _keyMessage = "Default message"; }

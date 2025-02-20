@@ -28,27 +28,21 @@ namespace SimpleBT.Editor
             List<SearchTreeEntry> entries = new List<SearchTreeEntry>()
             {
                 new SearchTreeGroupEntry(new GUIContent("Create Node")),
-                new SearchTreeEntry(new GUIContent("Root", _icon))
-                {
-                    level = 1,
-                    userData = "RootNode"
-                },
+                new SearchTreeEntry(new GUIContent("Root", _icon)) { level = 1, userData = "RootGraphNode" },
+                
+                new SearchTreeEntry(new GUIContent("Condition", _icon)) { level = 1, userData = "ConditionGraphNode" },
+                
                 new SearchTreeGroupEntry(new GUIContent("Composite"), 1),
-                new SearchTreeEntry(new GUIContent("Sequence", _icon))
-                {
-                    level = 2,
-                    userData = "SequenceNode"
-                },
-                new SearchTreeEntry(new GUIContent("Selector", _icon))
-                {
-                    level = 2,
-                    userData = "SelectorNode"
-                },
-                new SearchTreeEntry(new GUIContent("Condition", _icon))
-                {
-                    level = 1,
-                    userData = "ConditionNode"
-                }
+                new SearchTreeEntry(new GUIContent("Sequence", _icon)) { level = 2, userData = "SequenceGraphNode" },
+                new SearchTreeEntry(new GUIContent("Selector", _icon)) { level = 2, userData = "SelectorGraphNode" },
+                new SearchTreeEntry(new GUIContent("ParallelSequenceNode", _icon)) { level = 2, userData = "ParallelSequenceGraphNode" },
+                new SearchTreeEntry(new GUIContent("ParallelSelectorNode", _icon)) { level = 2, userData = "ParallelSelectorGraphNode" },
+                new SearchTreeEntry(new GUIContent("RandomSequenceNode", _icon)) { level = 2, userData = "RandomSequenceGraphNode" },
+                new SearchTreeEntry(new GUIContent("ParallelMinSequenceNode", _icon)) { level = 2, userData = "ParallelMinSequenceGraphNode" },
+                new SearchTreeEntry(new GUIContent("ParallelMinSelectorNode", _icon)) { level = 2, userData = "ParallelMinSelectorGraphNode" },
+                
+                new SearchTreeGroupEntry(new GUIContent("Actions"), 1),
+                new SearchTreeEntry(new GUIContent("Debug", _icon)) { level = 2, userData = "GraphAction_Debug" }
             };
 
             AddCustomEntries(context, entries);
@@ -71,10 +65,10 @@ namespace SimpleBT.Editor
         public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
         {
             // Check if there was already a root node on the graph
-            if ((string)searchTreeEntry.userData == "RootNode")
+            if ((string)searchTreeEntry.userData == "RootGraphNode")
             {
                 bool rootLocated = false;
-                _graph.graphElements.ForEach(element => { if (element is RootNode) { rootLocated = true; return; } });
+                _graph.graphElements.ForEach(element => { if (element is RootGraphNode) { rootLocated = true; return; } });
 
                 if (rootLocated == true) {
                     EditorUtility.DisplayDialog("Error", "There is already a Root node in the graph!", "OK");
@@ -84,7 +78,7 @@ namespace SimpleBT.Editor
             else
             {
                 bool rootLocated = false;
-                _graph.graphElements.ForEach(element => { if (element is RootNode) { rootLocated = true; return; } });
+                _graph.graphElements.ForEach(element => { if (element is RootGraphNode) { rootLocated = true; return; } });
 
                 if (rootLocated == false) {
                     EditorUtility.DisplayDialog("Error", "There is no Root node! Add it first!", "OK");

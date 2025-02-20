@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace SimpleBT.Editor.GraphNodes
         [SerializeField] public string GUID;
         [SerializeField] public Rect Rect;
 
-        public string NodeName;
+        protected string NodeName;
     
         public GraphTreeNode() { }
 
@@ -20,6 +21,10 @@ namespace SimpleBT.Editor.GraphNodes
         }
 
         public virtual void Draw() { title = NodeName; }
+        
+        public virtual List<string> GetValues() { return new List<string>(); }
+
+        public virtual void ReloadValues(List<string> values) { }
     }
 }
 

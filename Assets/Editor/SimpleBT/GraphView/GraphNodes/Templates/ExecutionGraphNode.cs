@@ -5,26 +5,15 @@ using UnityEngine.UIElements;
 namespace SimpleBT.Editor.GraphNodes
 {
     [System.Serializable]
-    public class ExecutionNode : GraphTreeNode
+    public class ExecutionGraphNode : GraphTreeNode
     {
-        public ExecutionNode() { NodeName = "ExecutionNode"; }
+        public ExecutionGraphNode() { NodeName = "ExecutionNode"; }
         
         public override void Draw()
         {
             base.Draw();
             
             this.GeneratePort(Direction.Input, Port.Capacity.Single);
-        }
-    }
-
-    public class DebugActionNode : ExecutionNode
-    {
-        public string Message;
-        public DebugActionNode() { NodeName = "DebugActionNode"; }
-
-        public override void Draw()
-        {
-            base.Draw();
         }
     }
 }

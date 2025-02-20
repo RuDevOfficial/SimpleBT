@@ -1,6 +1,6 @@
 ﻿using SimpleBT.Core;
 using UnityEngine;
-public class ACTION_Rigidbody2DJump : ActionNode
+public class ACTION_Rigidbody2DJump : Action_Node
 {
     private Rigidbody2D _rb2D;
     private string _keyX, _keyY;

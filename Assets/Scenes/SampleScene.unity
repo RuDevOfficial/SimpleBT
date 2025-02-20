@@ -119,22 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &21479605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
-  m_Name: Self
-  m_EditorClassIdentifier: 
-  Key: Self
-  RawValue: Square
-  VariableType: 4
---- !u!114 &860147380
+--- !u!114 &1202795404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,12 +131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c669c04ccc4e09b6a9cd15a1695354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GUID: dbea5b8d-0c5c-41b7-abdc-d77f8a6c9dce
-  Root: {fileID: 1152838257}
+  GUID: 3eaf30cc-3f2e-41e5-8653-28ac81b3e648
+  Root: {fileID: 1724481346}
   CompleteNodeList:
-  - {fileID: 1152838257}
-  - {fileID: 897316327}
---- !u!114 &897316327
+  - {fileID: 1724481346}
+--- !u!114 &1519817354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,26 +144,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7e1131228e340d6b8003fcaa98c7570, type: 3}
-  m_Name: 2
+  m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
+  m_Name: SELF
   m_EditorClassIdentifier: 
-  GUID: 753efffd-855c-48d6-b298-6dc04d722a93
-  _children: []
---- !u!114 &1152838257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1702c3ac5444cfc92b4b8840c84e71f, type: 3}
-  m_Name: 1
-  m_EditorClassIdentifier: 
-  GUID: 7f9409ed-2b9c-47c7-9cfc-7240681ee703
-  _children:
-  - {fileID: 897316327}
+  Key: SELF
+  RawValue: Square
+  VariableType: 4
 --- !u!1 &1541622753
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,8 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253985aff45e7e24e85a331e4c449f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data:
-  - {fileID: 21479605}
+  GraphData:
+  - {fileID: 1519817354}
+  - {fileID: 2126844286}
 --- !u!114 &1541622757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +266,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2924091bdb827439206f7535467acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BT: {fileID: 860147380}
+  BT: {fileID: 1202795404}
+--- !u!114 &1724481346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6190909e2b646d08a60b25a91a3165f, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  GUID: f861f5cc-8658-4c59-8733-61188b0bd3e8
+  KeyFirstVariable: 3
+  KeySecondVariable: DISTANCE
+  condition: 4
 --- !u!1 &1739251521
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +420,21 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &2126844286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
+  m_Name: DISTANCE
+  m_EditorClassIdentifier: 
+  Key: DISTANCE
+  RawValue: 2
+  VariableType: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

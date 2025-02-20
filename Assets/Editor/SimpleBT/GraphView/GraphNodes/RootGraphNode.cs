@@ -4,9 +4,9 @@ using UnityEditor.Experimental.GraphView;
 namespace SimpleBT.Editor.GraphNodes
 {
     [System.Serializable]
-    public class RootNode : GraphTreeNode
+    public class RootGraphNode : GraphTreeNode
     {
-        public RootNode() { NodeName = "Root"; }
+        public RootGraphNode() { NodeName = "Root"; }
     
         public override void Draw()
         {

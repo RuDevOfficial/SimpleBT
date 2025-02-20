@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SimpleBT.Core
@@ -33,6 +34,8 @@ namespace SimpleBT.Core
         // thanks to a recursive call
         
         public virtual void AddChild(Node child) { }
+
+        public virtual void AssignValues(List<string> values) { }
     }
     
     
@@ -59,21 +62,10 @@ namespace SimpleBT.Core
         }
     }
 
-    public abstract class ConditionNode : ExecutionNode
-    {
-        public ConditionNode() : base() { }
-        
-        // This method converts a bool value into the necessary enum values
-        protected override Status Tick() { return Check() == true ? Status.Success : Status.Failure; }
-        
-        // This method is meant to be overwritten
-        protected abstract bool Check();
-    }
-
     // This class is meant to be there for readability
-    public abstract class ActionNode : ExecutionNode
+    public abstract class Action_Node : ExecutionNode
     {
-        public ActionNode() : base() {}
+        public Action_Node() : base() {}
     }
 
     public enum Status

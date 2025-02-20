@@ -2,7 +2,7 @@
 using SimpleBT.Core;
 using UnityEngine;
 
-public class ACTION_BlackboardAddNumericValue : ActionNode
+public class ACTION_BlackboardAddNumericValue : Action_Node
 {
     private string _keyName;
     private string _value;

@@ -1,6 +1,6 @@
 ﻿using SimpleBT.Core;
 using UnityEngine;
-public class ACTION_Wait : ActionNode
+public class ACTION_Wait : Action_Node
 {
     private string _keyTime;
 
