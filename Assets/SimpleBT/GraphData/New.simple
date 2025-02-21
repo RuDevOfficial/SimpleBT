@@ -36,11 +36,11 @@
                 "toGUIDs": [],
                 "Values": [
                     "DISTANCE",
-                    "Equal",
+                    "More_Than",
                     "3"
                 ],
                 "VariableName": "DISTANCE",
-                "Condition": 0,
+                "Condition": 4,
                 "VariableCheckName": "3"
             },
             {
@@ -50,7 +50,7 @@
                 "fromGUID": "23018dfc-af4c-42d8-9afb-3c30c3dda23e",
                 "toGUIDs": [],
                 "Values": [
-                    "it was not null yay",
+                    "you succeeded on distance :D",
                     "Success"
                 ],
                 "VariableName": "",
@@ -76,8 +76,8 @@
             },
             {
                 "PropertyName": "DISTANCE",
-                "PropertyRawValue": "5",
-                "PropertyType": 1
+                "PropertyRawValue": "5.6",
+                "PropertyType": 2
             }
         ]
     },
@@ -146,7 +146,7 @@
                         "VariableChecked": {
                             "rid": 1006
                         },
-                        "Condition": 0
+                        "Condition": 4
                     }
                 }
             },
@@ -163,10 +163,10 @@
                         "serializedVersion": "2",
                         "x": 545.0,
                         "y": 414.0,
-                        "width": 125.0,
+                        "width": 181.0,
                         "height": 131.0
                     },
-                    "DebugMessage": "it was not null yay",
+                    "DebugMessage": "you succeeded on distance :D",
                     "Status": 0
                 }
             },
@@ -189,7 +189,7 @@
                     "asm": "UnityEngine.UIElementsModule"
                 },
                 "data": {
-                    "m_Value": "Equal"
+                    "m_Value": "More_Than"
                 }
             },
             {

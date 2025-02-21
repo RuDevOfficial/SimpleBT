@@ -24,8 +24,8 @@ public static class SBTNonEditorUtils
     {
         string errorPopupDialogue = "";
             
-        if (type == typeof(int)) { return int.Parse(valueToConvert); }
-        if (type == typeof(float)) { return float.Parse(valueToConvert); }
+        if (type == typeof(int)) { return int.Parse(valueToConvert, NumberStyles.Integer, CultureInfo.InvariantCulture); }
+        if (type == typeof(float)) { return float.Parse(valueToConvert, NumberStyles.Float, CultureInfo.InvariantCulture); }
         if (type == typeof(bool)) { return bool.Parse(valueToConvert); }
         if (type == typeof(string)) { return valueToConvert; }
         if (type == typeof(GameObject)) { return GameObject.Find(valueToConvert); }

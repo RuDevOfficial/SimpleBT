@@ -15,7 +15,7 @@ namespace SimpleBT.Editor.GraphNodes
         private string _lastVariableCheckedValue;
         private string _lastVariableNameValue;
         
-        [FormerlySerializedAs("condition")] public ConditionType Condition;
+        public ConditionType Condition;
 
         public void Instantiate()
         {
@@ -30,7 +30,7 @@ namespace SimpleBT.Editor.GraphNodes
             VariableChecked.RegisterValueChangedCallback(evt => {
                 if (string.IsNullOrEmpty(evt.newValue)) { DropDown.value = "Null"; }
                 else if (string.IsNullOrEmpty(_lastVariableCheckedValue)) {
-                    if (DropDown.value == "Null") { DropDown.value = "Equal"; }
+                    if (DropDown.value is "Null" or "NotNull") { DropDown.value = "Equal"; }
                 }
                 
                 _lastVariableCheckedValue = evt.newValue;
@@ -44,7 +44,7 @@ namespace SimpleBT.Editor.GraphNodes
         private string FormatSelectedValueCallback(string arg)
         {
             Condition = (ConditionType)Enum.Parse(typeof(ConditionType), arg);
-            if (Condition == ConditionType.Null) { VariableChecked.value = null; }
+            if (Condition is ConditionType.Null or ConditionType.NotNull) { VariableChecked.value = null; }
             
             return arg;
         }

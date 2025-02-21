@@ -42,6 +42,7 @@ namespace SimpleBT.NonEditor.Nodes
             {
                 float valueA = Convert.ToSingle(varAObject);
                 float valueB = Convert.ToSingle(varBObject);
+                Debug.Log(valueA);
                 
                 switch (condition)
                 {
