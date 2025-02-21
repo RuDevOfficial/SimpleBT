@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using SimpleBT.Editor.Utils;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor.GraphNodes
 {
-    public class GraphAction_Debug : GraphTreeNode
+    public class GraphAction_Debug : GraphAction
     {
         public string DebugMessage = "Default Message";
         public ActionStatus Status = ActionStatus.Success;
@@ -19,8 +17,6 @@ namespace SimpleBT.Editor.GraphNodes
         public override void Draw()
         {
             base.Draw();
-            
-            this.GeneratePort(Direction.Input, Port.Capacity.Single);
 
             TextElement title = new TextElement();
             title.text = "  Message: ";
@@ -66,4 +62,5 @@ namespace SimpleBT.Editor.GraphNodes
         Success,
         Failure
     }
+
 }

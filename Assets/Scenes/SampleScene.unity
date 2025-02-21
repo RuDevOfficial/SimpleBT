@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &34103876
+--- !u!114 &132259990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,12 +128,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
-  m_Name: DISTANCE
+  m_Script: {fileID: 11500000, guid: 23c669c04ccc4e09b6a9cd15a1695354, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  Key: DISTANCE
-  RawValue: 5.6
-  VariableType: 2
+  GUID: 3eaf30cc-3f2e-41e5-8653-28ac81b3e648
+  Root: {fileID: 1512932139}
+  CompleteNodeList:
+  - {fileID: 1512932139}
+  - {fileID: 480949896}
+  - {fileID: 967229303}
 --- !u!1 &173821253
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +149,7 @@ GameObject:
   - component: {fileID: 173821254}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +224,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &522935437
+--- !u!114 &480949896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,9 +238,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GUID: f861f5cc-8658-4c59-8733-61188b0bd3e8
   KeyFirstVariable: DISTANCE
-  KeySecondVariable: 10
-  condition: 2
---- !u!114 &917392048
+  KeySecondVariable: 3
+  condition: 4
+--- !u!114 &923948924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,32 +249,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c669c04ccc4e09b6a9cd15a1695354, type: 3}
-  m_Name: 
+  m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
+  m_Name: DISTANCE
   m_EditorClassIdentifier: 
-  GUID: 3eaf30cc-3f2e-41e5-8653-28ac81b3e648
-  Root: {fileID: 1142943161}
-  CompleteNodeList:
-  - {fileID: 1142943161}
-  - {fileID: 522935437}
-  - {fileID: 1584406341}
---- !u!114 &1142943161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7e1131228e340d6b8003fcaa98c7570, type: 3}
-  m_Name: 1
-  m_EditorClassIdentifier: 
-  GUID: 41afc7db-f152-436a-bb0e-0d25b325b19a
-  _children:
-  - {fileID: 522935437}
-  - {fileID: 1584406341}
---- !u!114 &1183034780
+  Key: DISTANCE
+  RawValue: 5.6
+  VariableType: 2
+--- !u!114 &960495553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,6 +270,37 @@ MonoBehaviour:
   Key: SELF
   RawValue: Square
   VariableType: 4
+--- !u!114 &967229303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b11c9c4de44c9e9ee9b7bfe7c57e0b, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  GUID: 23018dfc-af4c-42d8-9afb-3c30c3dda23e
+  _message: you succeeded on distance :D
+  _result: Success
+--- !u!114 &1512932139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e1131228e340d6b8003fcaa98c7570, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  GUID: 41afc7db-f152-436a-bb0e-0d25b325b19a
+  _children:
+  - {fileID: 480949896}
+  - {fileID: 967229303}
 --- !u!1 &1541622753
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,8 +403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GraphData:
-  - {fileID: 1183034780}
-  - {fileID: 34103876}
+  - {fileID: 960495553}
+  - {fileID: 923948924}
 --- !u!114 &1541622757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,22 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2924091bdb827439206f7535467acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BT: {fileID: 917392048}
---- !u!114 &1584406341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0b11c9c4de44c9e9ee9b7bfe7c57e0b, type: 3}
-  m_Name: 3
-  m_EditorClassIdentifier: 
-  GUID: 23018dfc-af4c-42d8-9afb-3c30c3dda23e
-  _message: you succeeded on distance :D
-  _result: Success
+  BT: {fileID: 132259990}
 --- !u!1 &1739251521
 GameObject:
   m_ObjectHideFlags: 0

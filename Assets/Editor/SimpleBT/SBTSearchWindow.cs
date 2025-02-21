@@ -42,7 +42,8 @@ namespace SimpleBT.Editor
                 new SearchTreeEntry(new GUIContent("ParallelMinSelectorNode", _icon)) { level = 2, userData = "ParallelMinSelectorGraphNode" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Actions"), 1),
-                new SearchTreeEntry(new GUIContent("Debug", _icon)) { level = 2, userData = "GraphAction_Debug" }
+                new SearchTreeEntry(new GUIContent("Debug", _icon)) { level = 2, userData = "GraphAction_Debug" },
+                new SearchTreeEntry(new GUIContent("SetActive", _icon)) { level = 2, userData = "GraphAction_SetActive" },
             };
 
             AddCustomEntries(context, entries);

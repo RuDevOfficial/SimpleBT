@@ -235,13 +235,6 @@ namespace SimpleBT.Editor
                     toGUIDs = new List<string>(toGUIDs),
                     Values = node.GetValues()
                 };
-
-                if (node is ConditionGraphNode condNode)
-                {
-                    nodeData.VariableName = condNode.ConditionBox.VariableName.value;
-                    nodeData.Condition = condNode.ConditionBox.Condition;
-                    nodeData.VariableCheckName = condNode.ConditionBox.VariableChecked.value;
-                }
                 
                 nodesDatas[i] = nodeData;
             }
