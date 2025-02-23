@@ -11,7 +11,8 @@ namespace SimpleBT.Editor.GraphNodes
         [SerializeField] public string GUID;
         [SerializeField] public Rect Rect;
 
-        protected string NodeName;
+        public string ClassReference;
+        protected string Title;
     
         public GraphTreeNode() { }
 
@@ -20,11 +21,13 @@ namespace SimpleBT.Editor.GraphNodes
             GUID = Guid.NewGuid().ToString();
         }
 
-        public virtual void Draw() { title = NodeName; }
-        
-        public virtual List<string> GetValues() { return new List<string>(); }
+        public virtual void Set() { title = Title; }
 
-        public virtual void ReloadValues(List<string> values) { }
+        public abstract void GenerateInterface();
+        
+        public abstract List<string> GetValues();
+
+        public abstract void ReloadValues(List<string> values);
     }
 }
 

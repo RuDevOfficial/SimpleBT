@@ -11,12 +11,20 @@ namespace SimpleBT.NonEditor.Nodes
     {
         public string KeyFirstVariable;
         public string KeySecondVariable;
+        public string KeyCondition;
 
         private object varAObject, varBObject;
         private Type varAType, varBType;
         
         public ConditionType condition;
 
+        public override void AssignKeys(List<string> values)
+        {
+            KeyFirstVariable = values[0];
+            KeyCondition = values[1];
+            KeySecondVariable = values[2];
+        }
+        
         protected override void Initialize()
         {
             if (blackboard.GetRawValue(KeyFirstVariable, out varAObject) == false) {
@@ -31,6 +39,8 @@ namespace SimpleBT.NonEditor.Nodes
             }
             
             if (condition != ConditionType.Null && condition != ConditionType.NotNull) { varBType = varBObject?.GetType(); }
+            
+            condition = blackboard.GetValue<ConditionType>(KeyCondition);
         }
         
         protected override Status Tick() { return Check() == true ? Status.Success : Status.Failure; }
@@ -68,12 +78,7 @@ namespace SimpleBT.NonEditor.Nodes
             }
         }
 
-        public override void AssignValues(List<string> values)
-        {
-            KeyFirstVariable = values[0]?.ToUpper();
-            condition = (ConditionType)Enum.Parse(typeof(ConditionType), values[1]);
-            KeySecondVariable = values[2]?.ToUpper();
-        }
+
     }
 }
 

@@ -5,9 +5,9 @@
                 "Node": {
                     "rid": 1000
                 },
-                "fromGUID": "f810a719-70c2-4744-b823-38e4b78e05bb",
+                "fromGUID": "b7004c4c-e2d6-498a-a771-0511d4077163",
                 "toGUIDs": [
-                    "c1a742a3-6926-4738-b3a1-80bbf6e81dd2"
+                    "91fabe3b-5ff5-4453-bddd-ffa164b7b231"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -18,11 +18,53 @@
                 "Node": {
                     "rid": 1001
                 },
-                "fromGUID": "c1a742a3-6926-4738-b3a1-80bbf6e81dd2",
+                "fromGUID": "91fabe3b-5ff5-4453-bddd-ffa164b7b231",
+                "toGUIDs": [
+                    "bb45913f-2fa3-47c4-924c-6e920f2f392e"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "bb45913f-2fa3-47c4-924c-6e920f2f392e",
+                "toGUIDs": [
+                    "b6558f89-2f0d-4f72-ac42-5b80ab266226",
+                    "f9a917df-1c03-4827-a5ea-dd298bd26891"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
+                "fromGUID": "b6558f89-2f0d-4f72-ac42-5b80ab266226",
                 "toGUIDs": [],
                 "Values": [
-                    "Untagged",
-                    "Square"
+                    "1"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1004
+                },
+                "fromGUID": "f9a917df-1c03-4827-a5ea-dd298bd26891",
+                "toGUIDs": [],
+                "Values": [
+                    "Pepito griego",
+                    "Player",
+                    "False",
+                    "44774"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -30,12 +72,12 @@
             }
         ],
         "ViewportPosition": {
-            "x": 0.0,
-            "y": 0.0
+            "x": 99.0,
+            "y": -34.0
         },
         "ViewportScale": {
-            "x": 1.0,
-            "y": 1.0
+            "x": 0.7561436891555786,
+            "y": 0.7561436891555786
         }
     },
     "BlackboardCollection": {
@@ -58,32 +100,91 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "f810a719-70c2-4744-b823-38e4b78e05bb",
+                    "GUID": "b7004c4c-e2d6-498a-a771-0511d4077163",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 309.0,
-                        "y": 112.0,
+                        "x": 365.0,
+                        "y": 117.0,
                         "width": 73.0,
                         "height": 77.0
-                    }
+                    },
+                    "ClassReference": "Root"
                 }
             },
             {
                 "rid": 1001,
                 "type": {
-                    "class": "GraphAction_SetActive",
+                    "class": "GraphDecorator_RepeatForever",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "c1a742a3-6926-4738-b3a1-80bbf6e81dd2",
+                    "GUID": "91fabe3b-5ff5-4453-bddd-ffa164b7b231",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 400.0,
-                        "y": 233.0,
-                        "width": 183.0,
-                        "height": 117.0
-                    }
+                        "x": 474.0,
+                        "y": 216.0,
+                        "width": 133.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Decorator_RepeatForever"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "SequenceGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "bb45913f-2fa3-47c4-924c-6e920f2f392e",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 625.0,
+                        "y": 338.0,
+                        "width": 103.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence"
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "GraphAction_Wait",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "b6558f89-2f0d-4f72-ac42-5b80ab266226",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 565.0,
+                        "y": 457.0,
+                        "width": 84.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Action_Wait"
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "GraphAction_SetActiveToggle",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "f9a917df-1c03-4827-a5ea-dd298bd26891",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 728.0,
+                        "y": 457.0,
+                        "width": 201.0,
+                        "height": 131.0
+                    },
+                    "ClassReference": "Action_SetActiveToggle"
                 }
             }
         ]

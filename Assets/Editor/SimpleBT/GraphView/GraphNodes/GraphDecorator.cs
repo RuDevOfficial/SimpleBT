@@ -3,17 +3,18 @@ using UnityEditor.Experimental.GraphView;
 
 namespace SimpleBT.Editor.GraphNodes
 {
-    public abstract class GraphAction : GraphTreeNode
+    public abstract class GraphDecorator : GraphTreeNode
     {
-        public GraphAction()
+        public GraphDecorator()
         {
-            Title = "Action";
-            ClassReference = "Action_Node";
+            Title = "Decorator";
+            ClassReference = "Decorator";
         }
 
         public override void GenerateInterface()
         {
             this.GeneratePort(Direction.Input, Port.Capacity.Single);
+            this.GeneratePort(Direction.Output, Port.Capacity.Single);
         }
     }
 

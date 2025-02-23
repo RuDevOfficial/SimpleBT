@@ -278,8 +278,9 @@ namespace SimpleBT.Editor
                 // Generate all nodes First
                 GraphTreeNode node = data.Node;
                 node.SetPosition(node.Rect);
-                node.Draw();
-                node.ReloadValues(data.Values);
+                node.Set();
+                node.GenerateInterface();
+                try { node.ReloadValues(data.Values); } catch { Debug.LogWarning($"Could not reload values of node type {node.GetType()}"); }
                 node.RefreshPorts();
                 node.RefreshExpandedState();
 

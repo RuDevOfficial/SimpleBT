@@ -3,6 +3,10 @@
     [System.Serializable]
     public class ParallelSelectorGraphNode : CompositeNode
     {
-        public ParallelSelectorGraphNode() { NodeName = "ParallelSelector"; }
+        public ParallelSelectorGraphNode()
+        {
+            Title = "Parallel Selector";
+            ClassReference = "ParallelSelector";
+        }
     }
 }

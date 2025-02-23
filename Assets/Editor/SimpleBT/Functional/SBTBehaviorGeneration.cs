@@ -37,7 +37,7 @@ namespace SimpleBT.Editor.BehaviorGeneration
                     }
                     
                     SBTNonEditorUtils.PopulateTreeList(
-                        node.title,
+                        node.ClassReference,
                         node.GUID,
                         node.GetValues(),
                         behaviourTree

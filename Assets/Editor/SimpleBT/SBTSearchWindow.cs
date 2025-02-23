@@ -35,15 +35,23 @@ namespace SimpleBT.Editor
                 new SearchTreeGroupEntry(new GUIContent("Composite"), 1),
                 new SearchTreeEntry(new GUIContent("Sequence", _icon)) { level = 2, userData = "SequenceGraphNode" },
                 new SearchTreeEntry(new GUIContent("Selector", _icon)) { level = 2, userData = "SelectorGraphNode" },
-                new SearchTreeEntry(new GUIContent("ParallelSequenceNode", _icon)) { level = 2, userData = "ParallelSequenceGraphNode" },
-                new SearchTreeEntry(new GUIContent("ParallelSelectorNode", _icon)) { level = 2, userData = "ParallelSelectorGraphNode" },
-                new SearchTreeEntry(new GUIContent("RandomSequenceNode", _icon)) { level = 2, userData = "RandomSequenceGraphNode" },
-                new SearchTreeEntry(new GUIContent("ParallelMinSequenceNode", _icon)) { level = 2, userData = "ParallelMinSequenceGraphNode" },
-                new SearchTreeEntry(new GUIContent("ParallelMinSelectorNode", _icon)) { level = 2, userData = "ParallelMinSelectorGraphNode" },
+                //new SearchTreeEntry(new GUIContent("ParallelSequenceNode", _icon)) { level = 2, userData = "ParallelSequenceGraphNode" },
+                //new SearchTreeEntry(new GUIContent("ParallelSelectorNode", _icon)) { level = 2, userData = "ParallelSelectorGraphNode" },
+                new SearchTreeEntry(new GUIContent("Random Sequence", _icon)) { level = 2, userData = "RandomSequenceGraphNode" },
+                //new SearchTreeEntry(new GUIContent("ParallelMinSequenceNode", _icon)) { level = 2, userData = "ParallelMinSequenceGraphNode" },
+                //new SearchTreeEntry(new GUIContent("ParallelMinSelectorNode", _icon)) { level = 2, userData = "ParallelMinSelectorGraphNode" },
                 
+                new SearchTreeGroupEntry(new GUIContent("Decorators"), 1),
+                new SearchTreeEntry(new GUIContent("Repeat Forever", _icon)) { level = 2, userData = "GraphDecorator_RepeatForever" },
+
                 new SearchTreeGroupEntry(new GUIContent("Actions"), 1),
+                new SearchTreeEntry(new GUIContent("Wait", _icon)) { level = 2, userData = "GraphAction_Wait" },
+                new SearchTreeEntry(new GUIContent("Set Active", _icon)) { level = 2, userData = "GraphAction_SetActive" },
+                new SearchTreeEntry(new GUIContent("Set Active (Toggle)", _icon)) { level = 2, userData = "GraphAction_SetActiveToggle" },
                 new SearchTreeEntry(new GUIContent("Debug", _icon)) { level = 2, userData = "GraphAction_Debug" },
-                new SearchTreeEntry(new GUIContent("SetActive", _icon)) { level = 2, userData = "GraphAction_SetActive" },
+                
+                new SearchTreeGroupEntry(new GUIContent("Movement"), 2),
+                new SearchTreeEntry(new GUIContent("Override Velocity", _icon)) { level = 3, userData = "GraphAction_OverrideVelocity" },
             };
 
             AddCustomEntries(context, entries);
@@ -94,7 +102,8 @@ namespace SimpleBT.Editor
             
             node.Instantiate();
             node.SetPosition(new Rect(localMousePosition, Vector2.zero));
-            node.Draw();
+            node.Set();
+            node.GenerateInterface();
             node.RefreshPorts();
             node.RefreshExpandedState();
             

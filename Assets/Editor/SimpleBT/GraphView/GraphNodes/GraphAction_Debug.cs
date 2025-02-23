@@ -11,12 +11,16 @@ namespace SimpleBT.Editor.GraphNodes
         public ActionStatus Status = ActionStatus.Success;
         private TextField messageField;
         private DropdownField DropDown;
-        
-        public GraphAction_Debug() { NodeName = "Action_Debug"; }
-        
-        public override void Draw()
+
+        public GraphAction_Debug()
         {
-            base.Draw();
+            Title = "Debug";
+            ClassReference = "Action_Debug";
+        }
+        
+        public override void GenerateInterface()
+        {
+            base.GenerateInterface();
 
             TextElement title = new TextElement();
             title.text = "  Message: ";

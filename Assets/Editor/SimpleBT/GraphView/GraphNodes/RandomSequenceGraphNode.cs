@@ -3,6 +3,10 @@
     [System.Serializable]
     public class RandomSequenceGraphNode : CompositeNode
     {
-        public RandomSequenceGraphNode() { NodeName = "RandomSequence"; }
+        public RandomSequenceGraphNode()
+        {
+            Title = "Random Sequence";
+            ClassReference = "RandomSequence";
+        }
     }
 }

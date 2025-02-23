@@ -11,64 +11,51 @@ namespace SimpleBT.Editor.GraphNodes
     public class ParallelMinSequenceGraphNode : CompositeNode
     {
         public int MinimumAmount = 0;
-        private Port outputPort;
-        private TextField field;
-        
-        public ParallelMinSequenceGraphNode() { NodeName = "ParallelMinSequence"; }
+        private Port _outputPort;
+        private IntegerField _intField;
 
-        public override void Draw()
+        public ParallelMinSequenceGraphNode()
         {
-            base.Draw();
-            outputPort ??= outputContainer.Q<Port>("");
-            
-            field = new TextField("Minimum: ");
-            field.value = MinimumAmount.ToString();
-            field.SetEnabled(false);
-            field.RegisterValueChangedCallback((evt) =>
-            {
-                string newValue = evt.newValue;
+            Title = "Parallel Min Sequence";
+            ClassReference = "ParallelMinSequence";
+        }
 
-                if (int.TryParse(newValue, 
-                        NumberStyles.Integer, 
-                        CultureInfo.InvariantCulture.NumberFormat,
-                        out int number) == false)
-                {
-                    EditorUtility.DisplayDialog("Error", "Value must be an integer", "OK");
-                    field.value = evt.previousValue;
-                    return;
-                }
+        public override void GenerateInterface()
+        {
+            base.GenerateInterface();
+            _outputPort ??= outputContainer.Q<Port>("");
+            
+            _intField = new IntegerField("Minimum: ");
+            _intField.value = MinimumAmount;
+            _intField.SetEnabled(false);
+            _intField.RegisterValueChangedCallback((evt) =>
+            {
+                if (evt.newValue < 0) { return; }
                 else
                 {
-                    if (number >= 1)
-                    {
-                        int connectionCount = outputPort.connections.Count();
-                        number = Mathf.Min(connectionCount, number);
-                        Debug.Log(number);
-                        
-                        MinimumAmount = number;
-                        field.value = MinimumAmount.ToString();
-                        return; 
+                    int connectionCount = _outputPort.connections.Count();
+                    if (evt.newValue > connectionCount) { 
+                        EditorUtility.DisplayDialog("Error", "Can't add a minimum superior to the current connections!", "OK");
+                        _intField.value = connectionCount;
+                        return;
                     }
-                    
-                    EditorUtility.DisplayDialog("Error", "Minimum can't be less than 1", "OK");
-                    field.value = evt.previousValue;
-                    MinimumAmount = int.Parse(evt.previousValue);
-                    return;
                 }
+                
+                MinimumAmount = evt.newValue;
             });
-            extensionContainer.Add(field);
+            extensionContainer.Add(_intField);
             
             // This listener will enable the port if there is a connection, opposite if none
-            outputPort.AddManipulator(new EdgeConnector<Edge>(new ParrallelMinListener(field, outputPort)));
+            _outputPort.AddManipulator(new EdgeConnector<Edge>(new ParrallelMinListener(_intField, _outputPort)));
         }
     }
     
     public class ParrallelMinListener : IEdgeConnectorListener
     {
-        private TextField _field = null;
+        private IntegerField _field = null;
         private Port _port;
 
-        public ParrallelMinListener(TextField field, Port port)
+        public ParrallelMinListener(IntegerField field, Port port)
         {
             this._field = field;
             this._port = port;

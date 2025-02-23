@@ -13,15 +13,13 @@ namespace SimpleBT.NonEditor.Nodes
     public class ParallelSequence : Composite
     {
         private Status[] _previousStatusCollection;
-        
-        public ParallelSequence() : base() { }
 
-        public ParallelSequence(params Node[] nodes) : base(nodes)
+        public ParallelSequence() : base()
         {
             _previousStatusCollection = new Status[_children.Count];
             for (int i = 0; i < _children.Count; i++) { _previousStatusCollection[i] = Status.Running; }
         }
-        
+
         protected override Status Tick()
         {
             for (int i = 0; i < _children.Count; i++) {

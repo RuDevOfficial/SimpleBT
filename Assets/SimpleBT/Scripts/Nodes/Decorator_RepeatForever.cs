@@ -5,13 +5,13 @@ namespace SimpleBT.NonEditor.Nodes
 {
     using Decorator;
     
-    public class RepeatForever : Decorator
+    public class Decorator_RepeatForever : Decorator
     {
-        public RepeatForever(Node node) : base(node) { }
+        public Decorator_RepeatForever(Node node) : base(node) { }
 
         protected override Status Tick()
         {
-            _child.OnTick();
+            Child.OnTick();
 
             return Status.Running;
         }

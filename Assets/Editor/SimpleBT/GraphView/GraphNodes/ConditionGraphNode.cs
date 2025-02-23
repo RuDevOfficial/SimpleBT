@@ -7,12 +7,16 @@ namespace SimpleBT.Editor.GraphNodes
     public class ConditionGraphNode : ExecutionGraphNode
     {
         public ConditionBox ConditionBox;
-        
-        public ConditionGraphNode() { NodeName = "Condition"; }
-        
-        public override void Draw()
+
+        public ConditionGraphNode()
         {
-            base.Draw();
+            Title = "Condition";
+            ClassReference = "Condition";
+        }
+        
+        public override void GenerateInterface()
+        {
+            base.GenerateInterface();
 
             ConditionBox = new ConditionBox();
             ConditionBox.Instantiate();

@@ -34,8 +34,8 @@ namespace SimpleBT.Core
         // thanks to a recursive call
         
         public virtual void AddChild(Node child) { }
-
-        public virtual void AssignValues(List<string> values) { }
+        
+        public virtual void AssignKeys(List<string> keys) { }
     }
     
     
@@ -44,6 +44,7 @@ namespace SimpleBT.Core
         protected bool _initialized = false;
         
         public ExecutionNode() : base () { }
+
         
         // This method is meant to be overwritten
         protected abstract void Initialize();

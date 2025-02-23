@@ -2,28 +2,36 @@
 using System.Collections.Generic;
 using SimpleBT.Core;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor.Nodes
 {
     public class Action_Debug : Action_Node
     {
-        [SerializeField] private string _message;
-        [SerializeField] private string _result;
+        [SerializeField] private string KeyMessage;
+        [SerializeField] private string KeyResult;
 
-        protected override void Initialize() { }
+        private Status _result;
 
-        public override void AssignValues(List<string> values)
+        public override void AssignKeys(List<string> keys)
         {
-            _message = values[0];
-            _result = values[1];
+            KeyMessage = keys[0];
+            KeyResult = keys[1];
+        }
+        
+        protected override void Initialize()
+        {
+            KeyMessage = blackboard.GetValue<string>(KeyMessage);
+            _result = blackboard.GetValue<Status>(KeyResult);
         }
 
         protected override Status Tick()
         {
-            Debug.Log(_message);
-            Status status = (Status)Enum.Parse(typeof(Status), _result);
+            Debug.Log(KeyMessage);
+            Status status = (Status)Enum.Parse(typeof(Status), KeyResult);
             return status;
         }
     }
+
 }
 

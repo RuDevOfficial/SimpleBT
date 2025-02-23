@@ -3,6 +3,10 @@
     [System.Serializable]
     public class SelectorGraphNode : CompositeNode
     {
-        public SelectorGraphNode() { NodeName = "Selector"; }
+        public SelectorGraphNode()
+        {
+            Title = "Selector";
+            ClassReference = "Selector";
+        }
     }
 }

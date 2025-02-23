@@ -115,19 +115,20 @@ public static class SBTNonEditorUtils
         List<string> values,
         BehaviourTree tree)
     {
-        Type toNodeType = Type.GetType($"SimpleBT.NonEditor.Nodes.{name}");
-        Node generatedNode = (Node)ScriptableObject.CreateInstance(toNodeType);
-        generatedNode.GUID = guid;
-        generatedNode.name = (tree.CompleteNodeList.Count + 1).ToString();
-        generatedNode.AssignValues(values);
-        tree.CompleteNodeList.Add(generatedNode);
-    }
-
-    public static bool IsNumber(VariableType a, VariableType b)
-    {
-        if ((a != VariableType.Int || a != VariableType.Float) && 
-            (b != VariableType.Int || b != VariableType.Float)) { return false; }
-
-        return true;
+        try
+        {
+            Type toNodeType = Type.GetType($"SimpleBT.NonEditor.Nodes.{name}");
+            Node generatedNode = (Node)ScriptableObject.CreateInstance(toNodeType);
+            generatedNode.GUID = guid;
+            generatedNode.name = (tree.CompleteNodeList.Count + 1).ToString();
+            generatedNode.AssignKeys(values);
+            tree.CompleteNodeList.Add(generatedNode);
+        }
+        catch
+        {
+            Debug.LogError($"Error generating tree because of node {name}\n" +
+                      "Are you sure its inside the namespace SimpleBT.NonEditor.Nodes?\n" +
+                      "Are you sure the GraphNode title matches the other class?");
+        }
     }
 }

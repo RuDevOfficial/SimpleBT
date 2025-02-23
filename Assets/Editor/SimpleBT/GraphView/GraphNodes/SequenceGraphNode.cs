@@ -9,6 +9,10 @@ namespace SimpleBT.Editor.GraphNodes
     [System.Serializable]
     public class SequenceGraphNode : CompositeNode
     {
-        public SequenceGraphNode() { NodeName = "Sequence"; }
+        public SequenceGraphNode()
+        {
+            Title = "Sequence";
+            ClassReference = "Sequence";
+        }
     }
 }

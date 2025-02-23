@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using SimpleBT.Core;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -20,6 +21,13 @@ namespace SimpleBT.NonEditor
             }
         }
 
+        /// <summary>
+        /// Returns a literal value of T if there is no key in the Dictionary.
+        /// Use this for simple classes such as int, float, bool or Vectors.
+        /// </summary>
+        /// <param name="keyToGet">Dictionary Key</param>
+        /// <typeparam name="T">Type Returned</typeparam>
+        /// <returns></returns>
         public T GetValue<T>(string keyToGet)
         {
             object value = null;
@@ -60,8 +68,59 @@ namespace SimpleBT.NonEditor
                 }
             }
             
+            else if (typeof(T) == typeof(Vector2))
+            {
+                value = keyToGet.ConvertValue(typeof(Vector2), keyToGet.ToUpper());
+                return (T)value;
+            }
+
+            // ENUMS
+            
+            else if (typeof(T) == typeof(Status))
+            {
+                value = Enum.Parse<Status>(keyToGet);
+                return (T)value;
+            }
+            
+            else if (typeof(T) == typeof(ConditionType))
+            {
+                value = Enum.Parse<ConditionType>(keyToGet);
+                return (T)value;
+            }
+            
             string key = keyToGet.ToUpper();
             _data.TryGetValue(key, out value);
+            return (T)value;
+        }
+
+        /// <summary>
+        /// Returns a literal value of T if the key is not in the dictionary.
+        /// Use this instead of GetValue for complex classes such as GameObject
+        /// </summary>
+        /// <param name="keyToGet">Key of the dictionary</param>
+        /// <param name="parameters">Array of extra parameters</param>
+        /// <typeparam name="T">Type Returned</typeparam>
+        /// <returns></returns>
+        public T GetComplexValue<T>(string keyToGet, params string[] parameters)
+        {
+            object value = null;
+
+            if (typeof(T) == typeof(GameObject))
+            {
+                string name = parameters[0];
+                string tag = parameters[1];
+                int instanceID = int.Parse(parameters[2]);
+                
+                foreach (GameObject obj in GameObject.FindGameObjectsWithTag(tag)) {
+                    if (instanceID != 0) { if(obj.GetInstanceID() == instanceID) { value = obj; break; } }
+                    else if (tag != "Untagged") { if (obj.CompareTag(tag)) { value = GameObject.Find(name); break; } }
+                    else { value = GameObject.Find(name); break; }
+                }
+            }
+            
+            string key = keyToGet.ToUpper();
+            if (_data.TryGetValue(key, out object newValue)) { value = newValue; }
+
             return (T)value;
         }
 
@@ -69,13 +128,6 @@ namespace SimpleBT.NonEditor
         {
             bool success = _data.TryGetValue(keyToGet.ToUpper(), out value);
             return success;
-        }
-        
-        public Type GetValueType(string key)
-        {
-            if(_data.ContainsKey(key)) { return _data[key].GetType(); }
-
-            return null;
         }
         
         public void AddValue(string key, object value) { _data.Add(key, value); }

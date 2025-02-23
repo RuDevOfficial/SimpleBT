@@ -3,6 +3,10 @@
     [System.Serializable]
     public class ParallelMinSelectorGraphNode : ParallelMinSequenceGraphNode
     {
-        public ParallelMinSelectorGraphNode() { NodeName = "ParallelMinSelector"; }
+        public ParallelMinSelectorGraphNode()
+        {
+            Title = "Parallel Min Selector";
+            ClassReference = "ParallelMinSelector";
+        }
     }
 }
