@@ -34,7 +34,7 @@
                 "fromGUID": "bb45913f-2fa3-47c4-924c-6e920f2f392e",
                 "toGUIDs": [
                     "b6558f89-2f0d-4f72-ac42-5b80ab266226",
-                    "f9a917df-1c03-4827-a5ea-dd298bd26891"
+                    "4792eeb1-4a7b-4dc2-a629-e1267ca76968"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -58,13 +58,13 @@
                 "Node": {
                     "rid": 1004
                 },
-                "fromGUID": "f9a917df-1c03-4827-a5ea-dd298bd26891",
+                "fromGUID": "4792eeb1-4a7b-4dc2-a629-e1267ca76968",
                 "toGUIDs": [],
                 "Values": [
-                    "Pepito griego",
+                    "Enemigo",
                     "Player",
                     "False",
-                    "44774"
+                    "44790"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -72,12 +72,12 @@
             }
         ],
         "ViewportPosition": {
-            "x": 99.0,
-            "y": -34.0
+            "x": -24.0,
+            "y": 9.0
         },
         "ViewportScale": {
-            "x": 0.7561436891555786,
-            "y": 0.7561436891555786
+            "x": 1.0,
+            "y": 1.0
         }
     },
     "BlackboardCollection": {
@@ -103,8 +103,8 @@
                     "GUID": "b7004c4c-e2d6-498a-a771-0511d4077163",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 365.0,
-                        "y": 117.0,
+                        "x": 362.0,
+                        "y": 105.0,
                         "width": 73.0,
                         "height": 77.0
                     },
@@ -122,8 +122,8 @@
                     "GUID": "91fabe3b-5ff5-4453-bddd-ffa164b7b231",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 474.0,
-                        "y": 216.0,
+                        "x": 467.0,
+                        "y": 211.0,
                         "width": 133.0,
                         "height": 77.0
                     },
@@ -142,7 +142,7 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 625.0,
-                        "y": 338.0,
+                        "y": 332.0,
                         "width": 103.0,
                         "height": 77.0
                     },
@@ -160,7 +160,7 @@
                     "GUID": "b6558f89-2f0d-4f72-ac42-5b80ab266226",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 565.0,
+                        "x": 531.0,
                         "y": 457.0,
                         "width": 84.0,
                         "height": 97.0
@@ -176,12 +176,12 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "f9a917df-1c03-4827-a5ea-dd298bd26891",
+                    "GUID": "4792eeb1-4a7b-4dc2-a629-e1267ca76968",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 728.0,
+                        "x": 738.0,
                         "y": 457.0,
-                        "width": 201.0,
+                        "width": 176.0,
                         "height": 131.0
                     },
                     "ClassReference": "Action_SetActiveToggle"

@@ -65,7 +65,7 @@ namespace SimpleBT.Editor
 
         private void OnDisable() {
             // Make sure to save any necessary data before its serialized
-            SimpleBTDataSystem.SaveEditorToJson(this);
+            SBTDataManager.SaveEditorToJson(this);
         }
 
         #endregion
@@ -169,7 +169,7 @@ namespace SimpleBT.Editor
         
         private void LoadEditorData()
         {
-            SBTEditorData editorData = SimpleBTDataSystem.LoadEditorFromJson();
+            SBTEditorData editorData = SBTDataManager.LoadEditorFromJson();
 
             _lastFieldValue = editorData.LastFileName;
             _field.value = _lastFieldValue;
@@ -188,7 +188,7 @@ namespace SimpleBT.Editor
             NodeData[] nodesDataArray = SaveNodes();
             List<ExposedProperty> exposedProperties = SaveBlackboardProperties();
 
-            SimpleBTDataSystem.SaveBehaviorCollectionToJson(
+            SBTDataManager.SaveBehaviorCollectionToJson(
                 _field.value,
                 _graph,
                 nodesDataArray,
@@ -252,7 +252,7 @@ namespace SimpleBT.Editor
         /// </summary>
         private void Load(string fieldValue = null)
         {
-            BehaviorCollection collection = SimpleBTDataSystem.LoadBehaviorCollectionToJson(fieldValue);
+            BehaviorCollection collection = SBTDataManager.LoadBehaviorCollectionToJson(fieldValue);
             
             //Delete all previous elements to not generate duplicates and empty the blackboard
             _graph.DeleteElements(_graph.graphElements);
@@ -311,7 +311,7 @@ namespace SimpleBT.Editor
         
         //Method to save on domain reload
         public void OnBeforeSerialize() {
-            if(!string.IsNullOrEmpty(_lastFieldValue)) { SimpleBTDataSystem.SaveEditorToJson(this); }
+            if(!string.IsNullOrEmpty(_lastFieldValue)) { SBTDataManager.SaveEditorToJson(this); }
         }
 
         //Left blank
@@ -343,7 +343,7 @@ namespace SimpleBT.Editor
 
         private void GenerateBehaviorTree(TreeExecutor executor)
         {
-            BehaviorCollection collection = SimpleBTDataSystem.LoadBehaviorCollectionToJson(_lastFieldValue);
+            BehaviorCollection collection = SBTDataManager.LoadBehaviorCollectionToJson(_lastFieldValue);
 
             if (collection == null)
             {

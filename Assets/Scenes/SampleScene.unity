@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 173821255}
   - component: {fileID: 173821254}
   m_Layer: 0
-  m_Name: Pepito griego
+  m_Name: Enemigo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,7 +206,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &455540053
+--- !u!114 &350369174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,7 +221,7 @@ MonoBehaviour:
   Key: SELF
   RawValue: Square
   VariableType: 4
---- !u!114 &928023441
+--- !u!114 &444807629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,26 +230,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798821543ef74a78809f50c98d396976, type: 3}
-  m_Name: 4
+  m_Script: {fileID: 11500000, guid: c7e1131228e340d6b8003fcaa98c7570, type: 3}
+  m_Name: 2
   m_EditorClassIdentifier: 
-  GUID: b4d0e211-9592-4e7c-be78-03cc45b1a4d9
---- !u!114 &1135153105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ec8cab9af9e47edbdc7e4c3649ea788, type: 3}
-  m_Name: PUTASO
-  m_EditorClassIdentifier: 
-  Key: PUTASO
-  RawValue: 5
-  VariableType: 2
---- !u!114 &1154173940
+  GUID: bb45913f-2fa3-47c4-924c-6e920f2f392e
+  _children:
+  - {fileID: 533258535}
+  - {fileID: 1800250433}
+--- !u!114 &533258535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,11 +247,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c19838273d441fbaaabbeec50b733fe, type: 3}
-  m_Name: 2
+  m_Name: 3
   m_EditorClassIdentifier: 
-  GUID: 909d0e69-455b-4172-a6a0-4d48a51a7639
-  keyTime: putaso
---- !u!114 &1335300688
+  GUID: b6558f89-2f0d-4f72-ac42-5b80ab266226
+  keyTime: 1
+--- !u!114 &859215453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,15 +260,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 859e0ec7ff0044da925014bbe7ea8443, type: 3}
-  m_Name: 3
+  m_Script: {fileID: 11500000, guid: 798821543ef74a78809f50c98d396976, type: 3}
+  m_Name: 1
   m_EditorClassIdentifier: 
-  GUID: 8e5ed232-6960-49eb-8f76-37c29520c0fe
-  Key: 
-  KeyGameobjectName: Pepito griego
-  KeyTag: Player
-  KeyInstanceID: 44766
-  KeySetActive: False
+  GUID: 91fabe3b-5ff5-4453-bddd-ffa164b7b231
+  Child: {fileID: 444807629}
+--- !u!114 &1411358816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c669c04ccc4e09b6a9cd15a1695354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GUID: b7004c4c-e2d6-498a-a771-0511d4077163
+  Root: {fileID: 859215453}
+  CompleteNodeList:
+  - {fileID: 859215453}
+  - {fileID: 444807629}
+  - {fileID: 533258535}
+  - {fileID: 1800250433}
 --- !u!1 &1541622753
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,8 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GraphData:
-  - {fileID: 455540053}
-  - {fileID: 1135153105}
+  - {fileID: 350369174}
 --- !u!114 &1541622757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2924091bdb827439206f7535467acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BT: {fileID: 1583360137}
+  BT: {fileID: 1411358816}
 --- !u!61 &1541622758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -473,25 +475,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1583360137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c669c04ccc4e09b6a9cd15a1695354, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GUID: 7cbe5d3b-3803-4cb8-a53a-215d75953b09
-  Root: {fileID: 928023441}
-  CompleteNodeList:
-  - {fileID: 1756088941}
-  - {fileID: 1154173940}
-  - {fileID: 1335300688}
-  - {fileID: 928023441}
 --- !u!1 &1603126955
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,7 +746,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &1756088941
+--- !u!114 &1800250433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -772,13 +755,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7e1131228e340d6b8003fcaa98c7570, type: 3}
-  m_Name: 1
+  m_Script: {fileID: 11500000, guid: f6c0ce56b7b1440891412f495b885812, type: 3}
+  m_Name: 4
   m_EditorClassIdentifier: 
-  GUID: 673c083f-1fb5-41ea-b6a9-c6f95a7f3f29
-  _children:
-  - {fileID: 1154173940}
-  - {fileID: 1335300688}
+  GUID: 4792eeb1-4a7b-4dc2-a629-e1267ca76968
+  Key: 
+  KeyGameobjectName: Enemigo
+  KeyTag: Player
+  KeyInstanceID: 44790
+  KeySetActive: False
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

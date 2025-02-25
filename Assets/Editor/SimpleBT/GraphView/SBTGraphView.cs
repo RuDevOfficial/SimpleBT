@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using SimpleBT;
 using SimpleBT.Editor.GraphNodes;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -9,7 +8,7 @@ using UnityEngine.UIElements;
 namespace SimpleBT.Editor
 {
     [System.Serializable]
-    public class SBTGraphView : UnityEditor.Experimental.GraphView.GraphView
+    public class SBTGraphView : GraphView
     {
         private UnityEditor.Experimental.GraphView.Blackboard _blackboard;
         private SBTEditorWindow _editor;
@@ -58,12 +57,6 @@ namespace SimpleBT.Editor
         }
 
         #region Repositioning Methods
-        
-        public Vector2 GetPrecisePosition(DropdownMenuAction actionEvent)
-        {
-            var viewPosition = new Vector2(viewTransform.position.x, viewTransform.position.y);
-            return (actionEvent.eventInfo.localMousePosition - viewPosition) / viewTransform.scale;
-        }
         
         public Vector2 GetLocalMousePosition(Vector2 position, bool isSearchWindow = false)
         {

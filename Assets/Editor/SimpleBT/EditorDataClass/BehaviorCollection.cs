@@ -23,7 +23,7 @@ namespace SimpleBT.Editor.Data
             NodeCollection = new NodeCollection();
             BlackboardCollection = new BlackboardCollection();
             
-            BehaviorCollection collection = SimpleBTDataSystem.LoadBehaviorCollectionToJson(fileName);
+            BehaviorCollection collection = SBTDataManager.LoadBehaviorCollectionToJson(fileName);
             
             //GraphCollection
             NodeCollection.Nodes = collection.NodeCollection.Nodes != null ? collection.NodeCollection.Nodes : Array.Empty<NodeData>();

@@ -11,7 +11,7 @@ namespace SimpleBT.Editor.Data
 {
     using Editor.Blackboard;
     
-    public static class SimpleBTDataSystem
+    public static class SBTDataManager
     {
         public static void SaveBehaviorCollectionToJson(
             string fileName, 
