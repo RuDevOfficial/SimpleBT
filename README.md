@@ -1,1 +1,126 @@
-# SimpleBT
+
+# SimpleBT - Simple Behavior Tree for Unity 6
+
+SBT is a basic graph view tool to develop behaviors for AI focused on easy shareable behaviors with JsonUtility. 
+
+**Note**: This is a tool developed as a final assignment for University in 2025. This asset comes with a minimal set of features.
+
+
+
+
+
+
+## What are Behavior Trees?
+
+Behavior Trees (shortened as “BTs”) are trees of hierarchical nodes that control the flow of decision making of an AI entity. Compared to FSMs these do not require programmed transitions between states, but rather flows from one node to another in a branching tree fashion.
+
+This flow is decided by the interaction between the **composite** nodes, **decorator** nodes and **execution** nodes. Composite nodes can branch and determine the order in which their child nodes are executed, decorator nodes alter the result of their child node and execution nodes run actions (like moving to a new position) or conditions (checking if something is true or not).
+
+Ticking is an essential part of this model, and every time the behavior ticks (updates) it has to return 1 of 3 states: Success, Failure or Running.
+
+For further information you can read *Michele Colledanchise and Petter ¨Ogren"'s Behavior Trees in Robotics and AI An Introduction* here: https://arxiv.org/pdf/1709.00084
+## How to Install the Package
+
+Work in progress
+
+## Creating a Behavior
+
+First, open the window located at the top bar called *SimpleBT*->*Window*.
+
+![SBTEditorWindow](https://i.imgur.com/yJLVfGu.png)
+
+Once open you can write a new name for the behavior  and start adding nodes by pressing **space** or **right-clicking**->**Create Node**. A search window will show up.
+
+**Note**: 
+- It is required to create a Root node first before any other, and there cannot be more than 1. If you try to add another you'll get a popup
+- Behavior names **can only contain** numbers and '_' characters
+
+![SBTSearchWindow](https://i.imgur.com/bFJnXE5.png)
+
+![Populating the Behavior](https://i.imgur.com/CADupkk.png)
+
+At any point you can press the button **Save** to save the behavior onto a JSON file which will be located in *Assets->SimpleBT->GraphData*. 
+
+**To load the behavior** you can:
+- Type the name manually first (Not recommended)
+- Select the JSON File (.simple) (Recommended)
+
+## Using the Blackboard
+
+To create a new variable press the **+** icon, you can rename it by double-click. Modify its value type or content by accessing the expanded section (">" icon on the left).
+
+![Blackboard](https://i.imgur.com/ksfQtp8.png)
+
+To delete a variable select the respective field and press **delete** (not backspace).
+
+### Currently Supported Types
+
+| Type  | Syntax |
+| ------------- | ------------- |
+| int  | 3  |
+| float  | 3.2  |
+| bool  | true  |
+| string  | something |
+| Vector2  | 3, 3.9  |
+| Vector3  | 21.1, 3, 90  |
+
+## Generating the Tree and Blackboard
+
+To generate the tree select a GameObject and then press "*Generate Tree & Blackboard*". If the behavior has changed you can press *"Regenerate*".
+If you want to get rid of the components you can press "*Remove Components*".
+
+![Generation](https://i.imgur.com/lhvxWX6.png)
+
+![Generation2](https://i.imgur.com/eX6drtf.png)
+
+**Note**: 
+- To properly generate it you **must save beforehand**.
+- After generation you can modify the values by hand on each ScriptableObject if they contain values (Not recommended, will be overwritten on regeneration)
+
+## Creating Custom Nodes
+
+WIP
+
+Currently there is no automatic process that creates all the classes for you, so it requires a bit of manual labor to implement.
+
+### Creating a new Graph Node
+### Creating a new Non-Graph Node
+### Adding the Graph Node to the Search Window
+
+## Available Nodes
+
+These are the current available notes split in categories.
+
+### Core
+| Name  | Description |
+| ------------- | ------------- |
+| Root  | Acts as the tree root  |
+| Condition  | Compares numerical or object values  |
+
+### Actions
+| Name  | Description |
+| ------------- | ------------- |
+| SetActive  | Disables or enables the GameObject |
+| SetActive (Toggle)  | Toggles the active state of the GameObject  |
+| Wait  | Waits a specific amount of time  |
+| Debug  | Prints a message, can choose if Succeeds or Fails after  |
+
+### Composites
+| Name  | Description |
+| ------------- | ------------- |
+| Sequence  | Ticks each children in order, fails if one fails, succeeds if all succeed  |
+| Selector  | Ticks each children in order, succeeds if one succeeds, fails if all fail  |
+
+### Decorators
+| Name  | Description |
+| ------------- | ------------- |
+| Repeat Forever  | Always returns "Running", preventing the behavior from finishing |
+
+## Future Updates
+- Implement Behavior Node (For behavior nesting)
+- Implement Unity related Action Nodes
+- Implement Repeat Until Failure, Repeat Until Success, Repeat X Times *decorators*
+- Implement Parallel, Random *Sequences* and *Selectors*.
+## Known Issues
+
+Pending
