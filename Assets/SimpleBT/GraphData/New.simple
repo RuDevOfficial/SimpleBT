@@ -33,8 +33,8 @@
                 },
                 "fromGUID": "bb45913f-2fa3-47c4-924c-6e920f2f392e",
                 "toGUIDs": [
-                    "b6558f89-2f0d-4f72-ac42-5b80ab266226",
-                    "4792eeb1-4a7b-4dc2-a629-e1267ca76968"
+                    "77c955fc-12f8-4eb4-a252-c78d3ce9012b",
+                    "a83a756c-784e-4b3a-beea-f5316309d099"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -45,7 +45,7 @@
                 "Node": {
                     "rid": 1003
                 },
-                "fromGUID": "b6558f89-2f0d-4f72-ac42-5b80ab266226",
+                "fromGUID": "77c955fc-12f8-4eb4-a252-c78d3ce9012b",
                 "toGUIDs": [],
                 "Values": [
                     "1"
@@ -58,13 +58,13 @@
                 "Node": {
                     "rid": 1004
                 },
-                "fromGUID": "4792eeb1-4a7b-4dc2-a629-e1267ca76968",
+                "fromGUID": "a83a756c-784e-4b3a-beea-f5316309d099",
                 "toGUIDs": [],
                 "Values": [
                     "Enemigo",
                     "Player",
                     "False",
-                    "44790"
+                    "44778"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -72,8 +72,8 @@
             }
         ],
         "ViewportPosition": {
-            "x": -24.0,
-            "y": 9.0
+            "x": -131.0,
+            "y": -175.0
         },
         "ViewportScale": {
             "x": 1.0,
@@ -157,10 +157,10 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "b6558f89-2f0d-4f72-ac42-5b80ab266226",
+                    "GUID": "77c955fc-12f8-4eb4-a252-c78d3ce9012b",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 531.0,
+                        "x": 479.0,
                         "y": 457.0,
                         "width": 84.0,
                         "height": 97.0
@@ -176,10 +176,10 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "4792eeb1-4a7b-4dc2-a629-e1267ca76968",
+                    "GUID": "a83a756c-784e-4b3a-beea-f5316309d099",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 738.0,
+                        "x": 719.0,
                         "y": 457.0,
                         "width": 176.0,
                         "height": 131.0

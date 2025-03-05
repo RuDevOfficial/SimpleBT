@@ -15,21 +15,16 @@ namespace SimpleBT.NonEditor.Tree
         private void Awake()
         {
             _sbtBlackboard = GetComponent<SBTBlackboard>();
-
             if (_sbtBlackboard == null) { Debug.Log("Couldn't get the Blackboard, is it attached to the GameObject?"); }
         }
 
-        private void Start()
-        {
-            BT.RegisterBlackboard(_sbtBlackboard);
-        }
+        private void Start() { BT.RegisterBlackboard(_sbtBlackboard); }
 
         private void Update()
         {
             if (_succeeded != false) return;
             
             Status state = BT.OnTick();
-
             if (state != Status.Running)
             {
                 Debug.Log("I finished the execution");
@@ -39,3 +34,6 @@ namespace SimpleBT.NonEditor.Tree
     }
 
 }
+
+
+

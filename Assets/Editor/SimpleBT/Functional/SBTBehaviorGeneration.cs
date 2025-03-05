@@ -18,8 +18,8 @@ namespace SimpleBT.Editor.BehaviorGeneration
             SBTUtils.CreateFolder("Assets/SimpleBT", "Behaviors");
             
             // Create the root SO and assign it to the treeExecutor class 
-            BehaviourTree behaviourTree = ScriptableObject.CreateInstance<BehaviourTree>();
-            executor.BT = behaviourTree;
+            BehaviorTree behaviorTree = ScriptableObject.CreateInstance<BehaviorTree>();
+            executor.BT = behaviorTree;
 
             GraphTreeNode root = null;
 
@@ -33,14 +33,13 @@ namespace SimpleBT.Editor.BehaviorGeneration
                     if (node.title == "Root")
                     {
                         root = node;
-                        behaviourTree.GUID = node.GUID; continue;
+                        behaviorTree.GUID = node.GUID; continue;
                     }
                     
-                    SBTNonEditorUtils.PopulateTreeList(
+                    behaviorTree.PopulateTreeList(
                         node.ClassReference,
                         node.GUID,
-                        node.GetValues(),
-                        behaviourTree
+                        node.GetValues()
                     );
                 }
             }
@@ -56,10 +55,10 @@ namespace SimpleBT.Editor.BehaviorGeneration
                 
                 foreach (string toGuid in data.toGUIDs)
                 {
-                    behaviourTree.LinkNodes(
+                    behaviorTree.LinkNodes(
                         fromGuid,
                         toGuid,
-                        behaviourTree
+                        behaviorTree
                         );
                 }
             }
@@ -69,12 +68,12 @@ namespace SimpleBT.Editor.BehaviorGeneration
             for (int i = 0; i < collection.Nodes.Length; i++)
             { 
                 NodeData data = collection.Nodes[i];
-                if (data.fromGUID != behaviourTree.GUID) { continue; }
+                if (data.fromGUID != behaviorTree.GUID) { continue; }
                 
                 if (data.toGUIDs.Count > 0)
                 {
-                    Core.Node node = behaviourTree.GetNodeByGuid(data.toGUIDs[0]);
-                    behaviourTree.AssignRoot(node);
+                    Core.Node node = behaviorTree.GetNodeByGUID(data.toGUIDs[0]);
+                    behaviorTree.AssignRoot(node);
                 }
                 break;
             }
