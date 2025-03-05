@@ -64,6 +64,8 @@ To delete a variable select the respective field and press **delete** (not backs
 | Vector2  | 3, 3.9  |
 | Vector3  | 21.1, 3, 90  |
 
+**Note**: Currently supported types *in* the SBTBlackboardGraph, any type can be store on the Blackboard's dictionary at behavior runtime.
+
 ## Generating the Tree and Blackboard
 
 To generate the tree select a GameObject and then press "*Generate Tree & Blackboard*". If the behavior has changed you can press *"Regenerate*".
