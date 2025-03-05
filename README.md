@@ -123,11 +123,18 @@ These are the current available notes split in categories.
 - Implement Unity related Action Nodes
 - Implement Repeat Until Failure, Repeat Until Success, Repeat X Times *decorators*
 - Implement Parallel, Random *Sequences* and *Selectors*.
+
 ## Known Issues
 
 Pending
 
+## Special Thanks
+
+- Indie Wafflus on “Unity Dialogue System - Creating the Search Window”: https://www.youtube.com/c/IndieWafflus
+- Mert Kirimgeri: UNITY DIALOGUE GRAPH TUTORIAL - Variables and Search Window: https://youtu.be/F4cTWOxMjMY?si=_NuLrvaJIA7bOOhd
+
 ## License
+
 MIT License
 
 Copyright (c) [2025] [RuDev]
