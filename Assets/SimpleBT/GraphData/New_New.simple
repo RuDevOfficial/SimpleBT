@@ -1,0 +1,185 @@
+{
+    "BehaviorName": "New_New",
+    "NodeCollection": {
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "747d6d7e-48e1-4123-be66-80667bb2be2d",
+                "toGUIDs": [
+                    "2469ca16-dc37-4a03-8642-a86a3b6bf8df"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "2469ca16-dc37-4a03-8642-a86a3b6bf8df",
+                "toGUIDs": [
+                    "851ae13e-3b79-4981-aff5-8d798ab81e02"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "851ae13e-3b79-4981-aff5-8d798ab81e02",
+                "toGUIDs": [],
+                "Values": [
+                    "Enemigo",
+                    "Enemy",
+                    "False",
+                    "44750"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": 32.0,
+            "y": 21.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": [
+            {
+                "PropertyName": "Self",
+                "PropertyRawValue": "",
+                "PropertyType": 4
+            }
+        ]
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "747d6d7e-48e1-4123-be66-80667bb2be2d",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 340.0,
+                        "y": 50.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "SequenceGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "2469ca16-dc37-4a03-8642-a86a3b6bf8df",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 468.0,
+                        "y": 153.0,
+                        "width": 103.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence",
+                    "Title": "Sequence"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "GraphAction_SetActive",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "851ae13e-3b79-4981-aff5-8d798ab81e02",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 644.0,
+                        "y": 291.0,
+                        "width": 176.0,
+                        "height": 131.0
+                    },
+                    "ClassReference": "Action_SetActive",
+                    "Title": "Set Active",
+                    "Dropdown": {
+                        "rid": 1003
+                    },
+                    "Field": {
+                        "rid": 1004
+                    },
+                    "SetActiveToggle": {
+                        "rid": 1005
+                    },
+                    "InstanceIDLabel": {
+                        "rid": 1006
+                    }
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "DropdownField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Enemy"
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Enemigo"
+                }
+            },
+            {
+                "rid": 1005,
+                "type": {
+                    "class": "Toggle",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": false
+                }
+            },
+            {
+                "rid": 1006,
+                "type": {
+                    "class": "Label",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {}
+            }
+        ]
+    }
+}

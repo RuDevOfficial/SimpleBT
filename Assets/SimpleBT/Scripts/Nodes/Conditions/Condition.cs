@@ -16,7 +16,7 @@ namespace SimpleBT.NonEditor.Nodes
         private object varAObject, varBObject;
         private Type varAType, varBType;
         
-        public ConditionType condition;
+        private ConditionType condition;
 
         public override void AssignKeys(List<string> values)
         {

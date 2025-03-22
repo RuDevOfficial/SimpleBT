@@ -12,12 +12,11 @@ namespace SimpleBT.Editor.GraphNodes
         [SerializeField] public Rect Rect;
 
         public string ClassReference;
-        protected string Title;
+        public string Title;
     
         public GraphTreeNode() { }
 
-        public virtual void Instantiate()
-        {
+        public virtual void Instantiate() {
             GUID = Guid.NewGuid().ToString();
         }
 

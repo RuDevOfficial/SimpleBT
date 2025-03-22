@@ -5,13 +5,14 @@ using SimpleBT.Core;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace SimpleBT.NonEditor.Tree
+namespace SimpleBT.NonEditor.Nodes
 {
     [System.Serializable]
-    public class BehaviorTree : Node
+    public class BehaviorTree : Node, INodeKeyAssignable
     {
         public Node Root = null;
         public List<Node> CompleteNodeList = new List<Node>();
+        public string RelatedBranch;
         
         public override Status OnTick() { return Tick(); }
         protected override Status Tick() { return Root == null ? Status.Failure : Root.OnTick(); }
@@ -26,10 +27,10 @@ namespace SimpleBT.NonEditor.Tree
             return null;
         }
         
-        public void LinkNodes(string fromGuid, string toGuid, BehaviorTree tree)
+        public void LinkNodes(string fromGuid, string toGuid)
         {
-            Node fromNode = tree.GetNodeByGUID(fromGuid);
-            Node toNode = tree.GetNodeByGUID(toGuid);
+            Node fromNode = this.GetNodeByGUID(fromGuid);
+            Node toNode = this.GetNodeByGUID(toGuid);
 
             if (fromNode is INodeMother nodeMother) {
                 nodeMother.AddChild(toNode);
@@ -37,5 +38,9 @@ namespace SimpleBT.NonEditor.Tree
         }
 
         public void AssignRoot(Node node) { Root = node; }
+        public void AssignKeys(List<string> keys)
+        {
+            RelatedBranch = keys[0];
+        }
     }
 }

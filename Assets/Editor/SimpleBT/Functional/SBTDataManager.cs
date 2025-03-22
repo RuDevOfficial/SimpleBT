@@ -24,6 +24,7 @@ namespace SimpleBT.Editor.Data
             
             BehaviorCollection collection = new BehaviorCollection()
             {
+                BehaviorName = fileName,
                 NodeCollection = new NodeCollection(nodeData, graph)
                 {
                     Nodes = nodeData,

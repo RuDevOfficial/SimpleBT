@@ -353,7 +353,7 @@ namespace SimpleBT.Editor
                 return;
             }
 
-            SBTBehaviorGeneration.Generate(_graph, collection.NodeCollection, executor);
+            SBTBehaviorGeneration.Generate(collection.NodeCollection, executor);
             return;
         }
 

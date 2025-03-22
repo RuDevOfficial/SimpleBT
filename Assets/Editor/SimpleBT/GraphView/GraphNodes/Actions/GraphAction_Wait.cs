@@ -5,10 +5,11 @@ using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor.GraphNodes
 {
+    [System.Serializable]
     public class GraphAction_Wait : GraphAction
     {
-        private TextField _textField;
-
+        [SerializeReference] public TextField TextField;
+        
         public GraphAction_Wait()
         {
             Title = "Wait";
@@ -19,30 +20,30 @@ namespace SimpleBT.Editor.GraphNodes
         {
             base.GenerateInterface();
             
-            _textField = new TextField("Seconds: ");
-            _textField.value = "0";
-            _textField.ElementAt(0).style.minWidth = 10;
-            _textField.RegisterValueChangedCallback(evt =>
+            TextField = new TextField("Seconds: ");
+            TextField.value = "0";
+            TextField.ElementAt(0).style.minWidth = 10;
+            TextField.RegisterValueChangedCallback(evt =>
             {
                 if (int.TryParse(evt.newValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out int seconds)) {
-                    _textField.value = Mathf.Max(0, seconds).ToString();
+                    TextField.value = Mathf.Max(0, seconds).ToString();
                 }
             });
             
-            extensionContainer.Add(_textField);
+            extensionContainer.Add(TextField);
         }
 
         public override List<string> GetValues()
         {
             return new List<string>()
             {
-                _textField.value
+                TextField.value
             };
         }
 
         public override void ReloadValues(List<string> values)
         {
-            _textField.value = values[0];
+            TextField.value = values[0];
         }
     }
 

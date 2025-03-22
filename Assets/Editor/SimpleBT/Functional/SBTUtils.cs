@@ -1,6 +1,6 @@
-﻿using SimpleBT.NonEditor.Tree;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using Node = UnityEditor.Experimental.GraphView.Node;
 
 namespace SimpleBT.Editor.Utils
 {

@@ -31,22 +31,15 @@ namespace SimpleBT.NonEditor
         /// <returns></returns>
         public T GetValue<T>(string keyToGet)
         {
-            object value = null;
-
-            value = SBTNonEditorUtils.GetLiteral<T>(keyToGet);
-            
-            if (typeof(T) == typeof(string))
-            {
-                if(!_data.ContainsKey(keyToGet.ToUpper()))
-                {
-                    value = keyToGet;
-                    return (T)value;
-                }
+            if (_data.ContainsKey(keyToGet.ToUpper())) {
+                _data.TryGetValue(keyToGet.ToUpper(), out object value);
+                return (T)value;
             }
-            
-            string key = keyToGet.ToUpper();
-            _data.TryGetValue(key, out value);
-            return (T)value;
+            else
+            {
+                object value = SBTNonEditorUtils.GetLiteral<T>(keyToGet);
+                return (T)value;
+            }
         }
 
         /// <summary>
@@ -65,7 +58,7 @@ namespace SimpleBT.NonEditor
             {
                 string name = parameters[0];
                 string tag = parameters[1];
-                int instanceID = int.Parse(parameters[2]);
+                int.TryParse(parameters[2], out int instanceID);
                 
                 foreach (GameObject obj in GameObject.FindGameObjectsWithTag(tag)) {
                     if (instanceID != 0) { if(obj.GetInstanceID() == instanceID) { value = obj; break; } }

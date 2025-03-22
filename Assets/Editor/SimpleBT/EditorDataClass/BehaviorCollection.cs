@@ -8,12 +8,14 @@ namespace SimpleBT.Editor.Data
     [System.Serializable]
     public class BehaviorCollection
     {
+        public string BehaviorName;
         public NodeCollection NodeCollection;
-        [FormerlySerializedAs("blackboardCollection")] public BlackboardCollection BlackboardCollection;
+        public BlackboardCollection BlackboardCollection;
         
         public BehaviorCollection() { }
-        public BehaviorCollection(NodeData[] nodeDatas, List<ExposedProperty> exposedProperties, Vector2 blackboardPosition, Vector2 blackboardScale)
+        public BehaviorCollection(string name, NodeData[] nodeDatas, List<ExposedProperty> exposedProperties)
         {
+            BehaviorName = name;
             NodeCollection = new NodeCollection(nodeDatas);
             BlackboardCollection = new BlackboardCollection(exposedProperties);
         }
@@ -24,6 +26,8 @@ namespace SimpleBT.Editor.Data
             BlackboardCollection = new BlackboardCollection();
             
             BehaviorCollection collection = SBTDataManager.LoadBehaviorCollectionToJson(fileName);
+            
+            BehaviorName = collection.BehaviorName;
             
             //GraphCollection
             NodeCollection.Nodes = collection.NodeCollection.Nodes != null ? collection.NodeCollection.Nodes : Array.Empty<NodeData>();

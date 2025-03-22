@@ -32,6 +32,8 @@ namespace SimpleBT.Editor
                 
                 new SearchTreeEntry(new GUIContent("Condition", _icon)) { level = 1, userData = "ConditionGraphNode" },
                 
+                new SearchTreeEntry(new GUIContent("Branch", _icon)) { level = 1, userData = "BehaviorTreeGraphNode" },
+                
                 new SearchTreeGroupEntry(new GUIContent("Composite"), 1),
                 new SearchTreeEntry(new GUIContent("Sequence", _icon)) { level = 2, userData = "SequenceGraphNode" },
                 new SearchTreeEntry(new GUIContent("Selector", _icon)) { level = 2, userData = "SelectorGraphNode" },

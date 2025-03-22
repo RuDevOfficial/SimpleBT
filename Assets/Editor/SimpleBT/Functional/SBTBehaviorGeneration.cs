@@ -1,49 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using SimpleBT.Editor.Data;
+﻿using SimpleBT.Editor.Data;
+using SimpleBT.NonEditor.Tree;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace SimpleBT.Editor.BehaviorGeneration
 {
     using GraphNodes;
-    using SimpleBT.NonEditor.Tree;
+    using SimpleBT.NonEditor.Nodes;
     using Utils;
     
     public static class SBTBehaviorGeneration
     {
-        public static void Generate(SBTGraphView graph, NodeCollection collection, TreeExecutor executor)
+        public static void GenerateSubTree(NodeCollection collection, BehaviorTree parent)
         {
             SBTUtils.CreateFolder("Assets", "SimpleBT");
             SBTUtils.CreateFolder("Assets/SimpleBT", "Behaviors");
             
-            // Create the root SO and assign it to the treeExecutor class 
-            BehaviorTree behaviorTree = ScriptableObject.CreateInstance<BehaviorTree>();
-            executor.BT = behaviorTree;
-
             GraphTreeNode root = null;
 
-            List<GraphElement> elements = graph.graphElements.ToList();
-
-            // First, generate and add these nodes to a list
-            for (int i = 0; i < elements.Count; i++)
-            {
-                if (elements[i] is GraphTreeNode node)
+            for (int i = 0; i < collection.Nodes.Length; i++)
+            {   
+                var node = collection.Nodes[i].Node;
+                
+                if (node is RootGraphNode)
                 {
-                    if (node.title == "Root")
-                    {
-                        root = node;
-                        behaviorTree.GUID = node.GUID; continue;
-                    }
-                    
-                    behaviorTree.PopulateTreeList(
-                        node.ClassReference,
-                        node.GUID,
-                        node.GetValues()
-                    );
+                    root = node;
+                    parent.GUID = node.GUID; 
+                    continue;
                 }
-            }
 
+                parent.PopulateTreeList(
+                    node.ClassReference,
+                    node.GUID,
+                    node.GetValues()
+                );
+            }
+            
             // Second, check the GUID of each node, see if they have outgoing connections
             // and link them
             for (int i = 0; i < collection.Nodes.Length; i++)
@@ -55,10 +47,9 @@ namespace SimpleBT.Editor.BehaviorGeneration
                 
                 foreach (string toGuid in data.toGUIDs)
                 {
-                    behaviorTree.LinkNodes(
+                    parent.LinkNodes(
                         fromGuid,
-                        toGuid,
-                        behaviorTree
+                        toGuid
                         );
                 }
             }
@@ -68,14 +59,95 @@ namespace SimpleBT.Editor.BehaviorGeneration
             for (int i = 0; i < collection.Nodes.Length; i++)
             { 
                 NodeData data = collection.Nodes[i];
-                if (data.fromGUID != behaviorTree.GUID) { continue; }
+                if (data.fromGUID != parent.GUID) { continue; }
                 
                 if (data.toGUIDs.Count > 0)
                 {
-                    Core.Node node = behaviorTree.GetNodeByGUID(data.toGUIDs[0]);
-                    behaviorTree.AssignRoot(node);
+                    Core.Node node = parent.GetNodeByGUID(data.toGUIDs[0]);
+                    parent.AssignRoot(node);
                 }
                 break;
+            }
+
+            foreach (var node in parent.CompleteNodeList)
+            {
+                if (node is BehaviorTree tree)
+                {
+                    BehaviorCollection subCollection = SBTDataManager.LoadBehaviorCollectionToJson(tree.RelatedBranch);
+                    GenerateSubTree(subCollection.NodeCollection, tree);
+                }
+            }
+        }
+        
+        public static void Generate(NodeCollection collection, TreeExecutor executor)
+        {
+            SBTUtils.CreateFolder("Assets", "SimpleBT");
+            SBTUtils.CreateFolder("Assets/SimpleBT", "Behaviors");
+            
+            // Create the root SO and assign it to the treeExecutor class 
+            BehaviorTree BT = ScriptableObject.CreateInstance<BehaviorTree>();
+            executor.BT = BT;
+            
+            GraphTreeNode root = null;
+
+            for (int i = 0; i < collection.Nodes.Length; i++)
+            {   
+                var node = collection.Nodes[i].Node;
+                
+                if (node is RootGraphNode)
+                {
+                    root = node;
+                    BT.GUID = node.GUID; 
+                    continue;
+                }
+
+                BT.PopulateTreeList(
+                    node.ClassReference,
+                    node.GUID,
+                    node.GetValues()
+                );
+            }
+            
+            // Second, check the GUID of each node, see if they have outgoing connections
+            // and link them
+            for (int i = 0; i < collection.Nodes.Length; i++)
+            { 
+                NodeData data = collection.Nodes[i];
+                string fromGuid = data.fromGUID;
+
+                if (data.fromGUID == root.GUID) { continue; }
+                
+                foreach (string toGuid in data.toGUIDs)
+                {
+                    BT.LinkNodes(
+                        fromGuid,
+                        toGuid
+                        );
+                }
+            }
+
+            // Finally check who is connected to the root graph node and assign it
+            // as root of the behavior tree
+            for (int i = 0; i < collection.Nodes.Length; i++)
+            { 
+                NodeData data = collection.Nodes[i];
+                if (data.fromGUID != BT.GUID) { continue; }
+                
+                if (data.toGUIDs.Count > 0)
+                {
+                    Core.Node node = BT.GetNodeByGUID(data.toGUIDs[0]);
+                    BT.AssignRoot(node);
+                }
+                break;
+            }
+
+            foreach (var node in BT.CompleteNodeList)
+            {
+                if (node is BehaviorTree tree)
+                {
+                    BehaviorCollection subCollection = SBTDataManager.LoadBehaviorCollectionToJson(tree.RelatedBranch);
+                    GenerateSubTree(subCollection.NodeCollection, tree);
+                }
             }
         }
     }

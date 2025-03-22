@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace SimpleBT.Editor.GraphNodes
 {
     [System.Serializable]
     public class ConditionGraphNode : ExecutionGraphNode
     {
-        public ConditionBox ConditionBox;
+        [SerializeReference] public ConditionBox ConditionBox;
 
         public ConditionGraphNode()
         {

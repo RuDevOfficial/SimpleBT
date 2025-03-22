@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor.GraphNodes
 {
+    [System.Serializable]
     public class GraphAction_SetActiveToggle : GraphAction_SetActive
     {
         public GraphAction_SetActiveToggle()
