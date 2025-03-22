@@ -64,6 +64,8 @@ To delete a variable select the respective field and press **delete** (not backs
 | Vector2  | 3, 3.9  |
 | Vector3  | 21.1, 3, 90  |
 
+**Note**: Currently supported types *in* the SBTBlackboardGraph, any type can be store on the Blackboard's dictionary at behavior runtime.
+
 ## Generating the Tree and Blackboard
 
 To generate the tree select a GameObject and then press "*Generate Tree & Blackboard*". If the behavior has changed you can press *"Regenerate*".
@@ -121,6 +123,36 @@ These are the current available notes split in categories.
 - Implement Unity related Action Nodes
 - Implement Repeat Until Failure, Repeat Until Success, Repeat X Times *decorators*
 - Implement Parallel, Random *Sequences* and *Selectors*.
+
 ## Known Issues
 
 Pending
+
+## Special Thanks
+
+- Indie Wafflus on “Unity Dialogue System - Creating the Search Window”: https://www.youtube.com/c/IndieWafflus
+- Mert Kirimgeri: UNITY DIALOGUE GRAPH TUTORIAL - Variables and Search Window: https://youtu.be/F4cTWOxMjMY?si=_NuLrvaJIA7bOOhd
+
+## License
+
+MIT License
+
+Copyright (c) [2025] [RuDev]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
