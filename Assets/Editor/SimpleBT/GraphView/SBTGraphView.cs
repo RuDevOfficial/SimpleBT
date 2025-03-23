@@ -3,6 +3,7 @@ using SimpleBT.Editor.GraphNodes;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor
@@ -11,12 +12,12 @@ namespace SimpleBT.Editor
     public class SBTGraphView : GraphView
     {
         private UnityEditor.Experimental.GraphView.Blackboard _blackboard;
-        private SBTEditorWindow _editor;
+        [FormerlySerializedAs("Editor")] public SBTEditorWindow EditorReference;
         private SBTSearchWindow _searchWindow;
         
-        public SBTGraphView(SBTEditorWindow editor)
+        public SBTGraphView(SBTEditorWindow editorReference)
         {
-            _editor = editor;
+            EditorReference = editorReference;
             
             Insert(0, new GridBackground());
             
@@ -63,7 +64,7 @@ namespace SimpleBT.Editor
             Vector2 worldMousePosition = position;
 
             if (isSearchWindow) {
-                worldMousePosition -= _editor.position.position;
+                worldMousePosition -= EditorReference.position.position;
             }
 
             Vector2 localMousePosition = contentViewContainer.WorldToLocal(worldMousePosition);

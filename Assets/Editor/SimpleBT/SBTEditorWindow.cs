@@ -21,6 +21,7 @@ namespace SimpleBT.Editor
     //Non-Editor
     using NonEditor.Tree;
     using NonEditor;
+    using System.IO;
     
     [System.Serializable]
     public class SBTEditorWindow : EditorWindow, ISerializationCallbackReceiver
@@ -103,12 +104,8 @@ namespace SimpleBT.Editor
         
         private void OverwriteGraph(Object selectedObject)
         {
-            string path = AssetDatabase.GetAssetPath(selectedObject);
-            string fileNameAndPath = Path.GetFileName(path);
-
-            if (fileNameAndPath.Contains(".simple"))
+            if (SBTUtils.TryGetBehaviorFile(selectedObject, out string fileName))
             {
-                string fileName = Path.GetFileNameWithoutExtension(path);
                 if (fileName != _field.value)
                 {
                     Load(fileName);

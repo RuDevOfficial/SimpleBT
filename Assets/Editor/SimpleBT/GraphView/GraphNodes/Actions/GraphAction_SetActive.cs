@@ -22,8 +22,6 @@ namespace SimpleBT.Editor.GraphNodes
         [SerializeReference] public Toggle SetActiveToggle;
         [SerializeReference] public Label InstanceIDLabel;
 
-        private bool _gameObjectDropped = false;
-        
         /*
          * TODO make it so if you modify manually the graph node values
          * it makes sure to remove the reference ID
@@ -96,11 +94,9 @@ namespace SimpleBT.Editor.GraphNodes
             foreach (Object obj in DragAndDrop.objectReferences) {
                 if (obj is GameObject gameObject)
                 {
-                    _gameObjectDropped = true;
                     Field.value = gameObject.name;
                     Dropdown.value = gameObject.tag;
                     InstanceIDLabel.text = gameObject.GetInstanceID().ToString();
-                    _gameObjectDropped = false;
                     break;
                 }
             }

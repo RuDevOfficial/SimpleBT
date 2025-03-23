@@ -14,11 +14,11 @@ namespace SimpleBT.Editor
     {
         private SBTGraphView _graph;
         private Texture2D _icon;
+        private string ParentBehaviorName;
     
         public void Initialize(SBTGraphView graph)
         {
             _graph = graph;
-            
             _icon = new Texture2D(1, 1);
             _icon.SetPixel(0, 0, Color.clear); // Currently bugged
         }
@@ -101,7 +101,7 @@ namespace SimpleBT.Editor
             Type type = Type.GetType($"SimpleBT.Editor.GraphNodes.{searchTreeEntry.userData}");
             
             var node = (GraphTreeNode)Activator.CreateInstance(type);
-            
+            if (node is BehaviorTreeGraphNode btNode) { btNode.ParentBehaviorName = _graph.EditorReference.LastFieldValue; }
             node.Instantiate();
             node.SetPosition(new Rect(localMousePosition, Vector2.zero));
             node.Set();

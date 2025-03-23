@@ -1,5 +1,5 @@
 {
-    "BehaviorName": "New",
+    "BehaviorName": "Enemy_Zombie_Idle",
     "NodeCollection": {
         "Nodes": [
             {
@@ -8,7 +8,7 @@
                 },
                 "fromGUID": "3a5c60e3-c3a8-4603-86ee-cdc5d29ccd0e",
                 "toGUIDs": [
-                    "a59c539a-bae8-44df-a529-a675306290e3"
+                    "153b3602-cc7a-4c19-a1bc-743f3eac36f8"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -19,10 +19,11 @@
                 "Node": {
                     "rid": 1001
                 },
-                "fromGUID": "a59c539a-bae8-44df-a529-a675306290e3",
+                "fromGUID": "153b3602-cc7a-4c19-a1bc-743f3eac36f8",
                 "toGUIDs": [],
                 "Values": [
-                    "New_New"
+                    "Enemy_Zombie_Idle",
+                    "Enemy_Zombie_Aggresive"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -78,17 +79,32 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "a59c539a-bae8-44df-a529-a675306290e3",
+                    "GUID": "153b3602-cc7a-4c19-a1bc-743f3eac36f8",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 545.0,
-                        "y": 301.0,
-                        "width": 86.0,
-                        "height": 97.0
+                        "x": 515.0,
+                        "y": 255.0,
+                        "width": 169.0,
+                        "height": 98.0
                     },
                     "ClassReference": "BehaviorTree",
                     "Title": "Branch",
-                    "BranchName": "New_New"
+                    "_dropdown": {
+                        "rid": 1002
+                    },
+                    "ParentBehaviorName": "Enemy_Zombie_Idle",
+                    "lastDropDownValue": "Enemy_Zombie_Aggresive"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "DropdownField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Enemy_Zombie_Idle"
                 }
             }
         ]
