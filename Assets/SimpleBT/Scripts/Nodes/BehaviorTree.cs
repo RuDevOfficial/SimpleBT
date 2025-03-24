@@ -40,7 +40,7 @@ namespace SimpleBT.NonEditor.Nodes
         public void AssignRoot(Node node) { Root = node; }
         public void AssignKeys(List<string> keys)
         {
-            RelatedBranch = keys[0];
+            RelatedBranch = keys[1];
         }
     }
 }

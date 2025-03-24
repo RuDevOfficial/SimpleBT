@@ -1,0 +1,99 @@
+{
+    "BehaviorName": "final",
+    "NodeCollection": {
+        "BehaviorName": "final",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "500cffe6-6a2d-4b2d-8ecc-28f168458adc",
+                "toGUIDs": [
+                    "8453cf34-f16e-4f08-8eff-cb9889a9a1cd"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "8453cf34-f16e-4f08-8eff-cb9889a9a1cd",
+                "toGUIDs": [],
+                "Values": [
+                    "pepe",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": [
+            {
+                "PropertyName": "Self",
+                "PropertyRawValue": "",
+                "PropertyType": 4
+            }
+        ]
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "500cffe6-6a2d-4b2d-8ecc-28f168458adc",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 362.0,
+                        "y": 128.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphAction_Debug",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "8453cf34-f16e-4f08-8eff-cb9889a9a1cd",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 502.0,
+                        "y": 238.0,
+                        "width": 84.0,
+                        "height": 131.0
+                    },
+                    "ClassReference": "Action_Debug",
+                    "Title": "Debug",
+                    "DebugMessage": "pepe",
+                    "Status": 0
+                }
+            }
+        ]
+    }
+}

@@ -1,14 +1,15 @@
 {
-    "BehaviorName": "Enemy_Zombie_Idle",
+    "BehaviorName": "New_New",
     "NodeCollection": {
+        "BehaviorName": "New_New",
         "Nodes": [
             {
                 "Node": {
                     "rid": 1000
                 },
-                "fromGUID": "3a5c60e3-c3a8-4603-86ee-cdc5d29ccd0e",
+                "fromGUID": "500cffe6-6a2d-4b2d-8ecc-28f168458adc",
                 "toGUIDs": [
-                    "153b3602-cc7a-4c19-a1bc-743f3eac36f8"
+                    "c700bba3-5318-42ea-9bcd-505041f47147"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -19,11 +20,11 @@
                 "Node": {
                     "rid": 1001
                 },
-                "fromGUID": "153b3602-cc7a-4c19-a1bc-743f3eac36f8",
+                "fromGUID": "c700bba3-5318-42ea-9bcd-505041f47147",
                 "toGUIDs": [],
                 "Values": [
-                    "Enemy_Zombie_Idle",
-                    "Enemy_Zombie_Aggresive"
+                    "New_New",
+                    "New"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -59,11 +60,11 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "3a5c60e3-c3a8-4603-86ee-cdc5d29ccd0e",
+                    "GUID": "500cffe6-6a2d-4b2d-8ecc-28f168458adc",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 391.0,
-                        "y": 178.0,
+                        "x": 362.0,
+                        "y": 128.0,
                         "width": 73.0,
                         "height": 77.0
                     },
@@ -79,12 +80,12 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "153b3602-cc7a-4c19-a1bc-743f3eac36f8",
+                    "GUID": "c700bba3-5318-42ea-9bcd-505041f47147",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 515.0,
-                        "y": 255.0,
-                        "width": 169.0,
+                        "x": 497.0,
+                        "y": 243.0,
+                        "width": 86.0,
                         "height": 98.0
                     },
                     "ClassReference": "BehaviorTree",
@@ -92,8 +93,8 @@
                     "_dropdown": {
                         "rid": 1002
                     },
-                    "ParentBehaviorName": "Enemy_Zombie_Idle",
-                    "lastDropDownValue": "Enemy_Zombie_Aggresive"
+                    "lastDropDownValue": "New",
+                    "ReferencedBehaviorName": "New_New"
                 }
             },
             {
@@ -104,7 +105,7 @@
                     "asm": "UnityEngine.UIElementsModule"
                 },
                 "data": {
-                    "m_Value": "Enemy_Zombie_Idle"
+                    "m_Value": "New"
                 }
             }
         ]

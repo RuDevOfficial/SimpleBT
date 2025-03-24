@@ -25,8 +25,9 @@ namespace SimpleBT.Editor.Data
             BehaviorCollection collection = new BehaviorCollection()
             {
                 BehaviorName = fileName,
-                NodeCollection = new NodeCollection(nodeData, graph)
+                NodeCollection = new NodeCollection()
                 {
+                    BehaviorName = fileName,
                     Nodes = nodeData,
                     ViewportPosition = graph.viewTransform.position,
                     ViewportScale = graph.viewTransform.scale

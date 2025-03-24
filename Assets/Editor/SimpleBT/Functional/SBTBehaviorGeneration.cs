@@ -71,7 +71,7 @@ namespace SimpleBT.Editor.BehaviorGeneration
 
             foreach (var node in parent.CompleteNodeList)
             {
-                if (node is BehaviorTree tree)
+                if (node is BehaviorTree tree && node != parent)
                 {
                     BehaviorCollection subCollection = SBTDataManager.LoadBehaviorCollectionToJson(tree.RelatedBranch);
                     GenerateSubTree(subCollection.NodeCollection, tree);
@@ -86,6 +86,7 @@ namespace SimpleBT.Editor.BehaviorGeneration
             
             // Create the root SO and assign it to the treeExecutor class 
             BehaviorTree BT = ScriptableObject.CreateInstance<BehaviorTree>();
+            BT.name = collection.BehaviorName;
             executor.BT = BT;
             
             GraphTreeNode root = null;

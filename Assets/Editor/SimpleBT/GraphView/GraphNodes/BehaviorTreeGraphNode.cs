@@ -20,8 +20,8 @@ namespace SimpleBT.Editor.GraphNodes
     public class BehaviorTreeGraphNode : GraphTreeNode
     {
         [SerializeReference] private DropdownField _dropdown;
-        public string ParentBehaviorName;
         [SerializeField] private string lastDropDownValue;
+        public string ReferencedBehaviorName;
         
         public BehaviorTreeGraphNode()
         {
@@ -36,7 +36,7 @@ namespace SimpleBT.Editor.GraphNodes
             this.GeneratePort(Direction.Input, Port.Capacity.Single);
             _dropdown = new DropdownField(SBTUtils.GetAllBehaviorNames(), 0, name =>
             {
-                if (name == ParentBehaviorName)
+                if (name == ReferencedBehaviorName)
                 {   
                     EditorUtility.DisplayDialog("Recursive Error", "Cannot call itself as a branch. Memory leak would occur", "OK");
                     return string.IsNullOrEmpty(lastDropDownValue) ? "Choose Behavior" : lastDropDownValue;
@@ -49,11 +49,12 @@ namespace SimpleBT.Editor.GraphNodes
         }
 
         public override List<string> GetValues() {
-            return new List<string>() { ParentBehaviorName, lastDropDownValue };
+            return new List<string>() { ReferencedBehaviorName, lastDropDownValue };
         }
 
-        public override void ReloadValues(List<string> values) {
-            ParentBehaviorName = values[0];
+        public override void ReloadValues(List<string> values)
+        {
+            ReferencedBehaviorName = values[0];
             lastDropDownValue = values[1];
             _dropdown.value = values[1];
         }

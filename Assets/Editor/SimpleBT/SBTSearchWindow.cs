@@ -101,7 +101,7 @@ namespace SimpleBT.Editor
             Type type = Type.GetType($"SimpleBT.Editor.GraphNodes.{searchTreeEntry.userData}");
             
             var node = (GraphTreeNode)Activator.CreateInstance(type);
-            if (node is BehaviorTreeGraphNode btNode) { btNode.ParentBehaviorName = _graph.EditorReference.LastFieldValue; }
+            if (node is BehaviorTreeGraphNode btNode) { btNode.ReferencedBehaviorName = _graph.EditorReference.LastFieldValue; }
             node.Instantiate();
             node.SetPosition(new Rect(localMousePosition, Vector2.zero));
             node.Set();

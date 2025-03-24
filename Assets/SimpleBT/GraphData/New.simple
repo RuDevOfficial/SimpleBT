@@ -1,14 +1,15 @@
 {
-    "BehaviorName": "cachitopito",
+    "BehaviorName": "New",
     "NodeCollection": {
+        "BehaviorName": "New",
         "Nodes": [
             {
                 "Node": {
                     "rid": 1000
                 },
-                "fromGUID": "3a5c60e3-c3a8-4603-86ee-cdc5d29ccd0e",
+                "fromGUID": "500cffe6-6a2d-4b2d-8ecc-28f168458adc",
                 "toGUIDs": [
-                    "7e1719f0-1dce-49f8-b2ce-287bed6d2005"
+                    "2b89e814-b7c5-4287-8460-dce3f2fbe097"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -19,23 +20,11 @@
                 "Node": {
                     "rid": 1001
                 },
-                "fromGUID": "7e1719f0-1dce-49f8-b2ce-287bed6d2005",
-                "toGUIDs": [
-                    "542c05cc-19b8-4f98-8d52-7f89465893b8"
-                ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1002
-                },
-                "fromGUID": "542c05cc-19b8-4f98-8d52-7f89465893b8",
+                "fromGUID": "2b89e814-b7c5-4287-8460-dce3f2fbe097",
                 "toGUIDs": [],
                 "Values": [
-                    "0"
+                    "New",
+                    "final"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -71,11 +60,11 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "3a5c60e3-c3a8-4603-86ee-cdc5d29ccd0e",
+                    "GUID": "500cffe6-6a2d-4b2d-8ecc-28f168458adc",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 391.0,
-                        "y": 178.0,
+                        "x": 405.0,
+                        "y": 191.0,
                         "width": 73.0,
                         "height": 77.0
                     },
@@ -86,55 +75,37 @@
             {
                 "rid": 1001,
                 "type": {
-                    "class": "SequenceGraphNode",
+                    "class": "BehaviorTreeGraphNode",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "7e1719f0-1dce-49f8-b2ce-287bed6d2005",
+                    "GUID": "2b89e814-b7c5-4287-8460-dce3f2fbe097",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 514.0,
-                        "y": 237.0,
-                        "width": 103.0,
-                        "height": 77.0
+                        "x": 508.0,
+                        "y": 293.0,
+                        "width": 86.0,
+                        "height": 98.0
                     },
-                    "ClassReference": "Sequence",
-                    "Title": "Sequence"
+                    "ClassReference": "BehaviorTree",
+                    "Title": "Branch",
+                    "_dropdown": {
+                        "rid": 1002
+                    },
+                    "lastDropDownValue": "final",
+                    "ReferencedBehaviorName": "New"
                 }
             },
             {
                 "rid": 1002,
                 "type": {
-                    "class": "GraphAction_Wait",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "542c05cc-19b8-4f98-8d52-7f89465893b8",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 659.0,
-                        "y": 319.0,
-                        "width": 85.0,
-                        "height": 97.0
-                    },
-                    "ClassReference": "Action_Wait",
-                    "Title": "Wait",
-                    "TextField": {
-                        "rid": 1003
-                    }
-                }
-            },
-            {
-                "rid": 1003,
-                "type": {
-                    "class": "TextField",
+                    "class": "DropdownField",
                     "ns": "UnityEngine.UIElements",
                     "asm": "UnityEngine.UIElementsModule"
                 },
                 "data": {
-                    "m_Value": "0"
+                    "m_Value": "final"
                 }
             }
         ]
