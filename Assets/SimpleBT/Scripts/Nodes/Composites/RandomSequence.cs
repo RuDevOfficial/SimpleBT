@@ -5,7 +5,7 @@ using Random = System.Random;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class RandomSequence : CompositeNode, INodeKeyAssignable
+    public class RandomSequence : Composite, INodeKeyAssignable
     {
         private List<int>  _generatedOrder;
         private List<int> _numberList;
@@ -13,10 +13,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         private void OnEnable() { GenerateRandomSequence(); }
 
-        public void AssignKeys(List<string> keys)
-        {
-            // TODO
-        }
+        public void AssignKeys(List<string> keys) { }
         
         protected override Status Tick()
         {
@@ -62,11 +59,12 @@ namespace SimpleBT.NonEditor.Nodes
         {
             _numberList = new List<int>();
             _generatedOrder = new List<int>(_children.Count);
-            _randomGenerator = new Random(Guid.NewGuid().GetHashCode());
+            _randomGenerator ??= new Random(Guid.NewGuid().GetHashCode());
             
             Repopulate();
         }
         
 
     }
+
 }

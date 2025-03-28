@@ -42,6 +42,8 @@ namespace SimpleBT.NonEditor
             }
         }
 
+        public bool ContainsKey(string key) { return _data.ContainsKey(key.ToUpper()); }
+
         /// <summary>
         /// Returns a literal value of T if the key is not in the dictionary.
         /// Use this instead of GetValue for complex classes such as GameObject
@@ -78,8 +80,14 @@ namespace SimpleBT.NonEditor
             bool success = _data.TryGetValue(keyToGet.ToUpper(), out value);
             return success;
         }
-        
-        public void AddValue(string key, object value) { _data.Add(key, value); }
+
+        public void AddValue(string key, object value)
+        {
+            key = key.ToUpper();
+            
+            if (_data.ContainsKey(key)) { _data[key] = value; }
+            else { _data.Add(key, value); }
+        }
         
         public void Set()
         {

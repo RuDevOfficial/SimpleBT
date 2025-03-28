@@ -13,6 +13,8 @@ namespace SimpleBT.Editor.GraphNodes
 
         public override void GenerateInterface()
         {
+            AddToClassList("Decorator");
+            
             this.GeneratePort(Direction.Input, Port.Capacity.Single);
             this.GeneratePort(Direction.Output, Port.Capacity.Single);
         }

@@ -25,7 +25,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected GameObject _gameObject;
         
-        public override void AssignKeys(List<string> values)
+        public void AssignKeys(List<string> values)
         {
             KeyGameobjectName = values[0];
             KeyTag = values[1];

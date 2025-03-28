@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,8 +11,9 @@ namespace SimpleBT.Editor.GraphNodes
     public class GraphAction_Wait : GraphAction
     {
         [SerializeReference] public TextField TextField;
-        
-        public GraphAction_Wait()
+        [SerializeReference] public DropdownField DropDown;
+
+        public GraphAction_Wait() : base()
         {
             Title = "Wait";
             ClassReference = "Action_Wait";
@@ -30,20 +33,26 @@ namespace SimpleBT.Editor.GraphNodes
                 }
             });
             
+            string[] conditions = Enum.GetNames(typeof(ActionStatus));
+            DropDown = new DropdownField(conditions.ToList(), 0);
+            
             extensionContainer.Add(TextField);
+            extensionContainer.Add(DropDown);
         }
 
         public override List<string> GetValues()
         {
             return new List<string>()
             {
-                TextField.value
+                TextField.value,
+                DropDown.value
             };
         }
 
         public override void ReloadValues(List<string> values)
         {
             TextField.value = values[0];
+            DropDown.value = values[1];
         }
     }
 

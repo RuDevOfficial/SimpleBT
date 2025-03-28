@@ -5,9 +5,9 @@ using UnityEditor.Experimental.GraphView;
 namespace SimpleBT.Editor.GraphNodes
 {
     [System.Serializable]
-    public class CompositeNode : GraphTreeNode
+    public class GraphCompositeNode : GraphTreeNode
     {
-        public CompositeNode()
+        public GraphCompositeNode()
         {
             Title = "Composite";
             ClassReference = "Composite";
@@ -15,11 +15,12 @@ namespace SimpleBT.Editor.GraphNodes
 
         public override void GenerateInterface()
         {
+            AddToClassList("Composite");
+            
             this.GeneratePort(Direction.Input, Port.Capacity.Single);
             this.GeneratePort(Direction.Output, Port.Capacity.Multi);
         }
-
-        // Both are and will always be null
+        
         public override List<string> GetValues() { return null; }
         public override void ReloadValues(List<string> values) { }
     }

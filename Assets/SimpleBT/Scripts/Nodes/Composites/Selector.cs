@@ -2,7 +2,7 @@
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Selector : CompositeNode
+    public class Selector : Composite
     {
         protected override Status Tick()
         {

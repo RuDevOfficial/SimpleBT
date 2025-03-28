@@ -5,19 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="227eb850-3e24-477a-8760-e6199cf36f52" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_InvertNumValue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_InvertNumValue.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_LinearMove2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_LinearMove2D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_ParallelSequence.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_ParallelSequence.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_Priority.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_Priority.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_AlwaysFail.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_AlwaysFail.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_AlwaysSucceed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_AlwaysSucceed.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_IsNearLedge2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_IsNearLedge2D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphCondition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphCondition.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphDecorator_ExecuteOnceWithDelay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphDecorator_ExecuteOnceWithDelay.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_InvertNumValue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_InvertNumValue.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_LinearMove2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_LinearMove2D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Composite_Priority.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Composite_Priority.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/ParallelSequence.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/ParallelSequence.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_AlwaysFail.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_AlwaysFail.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_AlwaysSucceed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_AlwaysSucceed.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsNearLedge2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsNearLedge2D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Decorators/Decorator_ExecuteOnceWithDelay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Decorators/Decorator_ExecuteOnceWithDelay.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/NodeCollection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTBehaviorGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTBehaviorGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/BehaviorTreeGraphNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/BehaviorTreeGraphNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_OverrideVelocity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_OverrideVelocity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Wait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Wait.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/RandomSequenceGraphNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_RandomSequence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/RandomSequenceGraphNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_RandomSequence.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/SelectorGraphNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_Selector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/SelectorGraphNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_Selector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/SequenceGraphNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_Sequence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/SequenceGraphNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Composites/GraphComposite_Sequence.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/ConditionGraphNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_Comparison.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/ConditionGraphNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_Comparison.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Decorators/GraphDecorator_RepeatForever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Decorators/GraphDecorator_RepeatForever.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RootGraphNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/RootGraphNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/CompositeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphCompositeNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/CompositeNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphCompositeNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphDecorator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphDecorator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphTreeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Templates/GraphTreeNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTStyles.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTStyles.uss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Enemy_Zombie_Aggresive.simple" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Enemy_Zombie_Aggresive.simple.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Enemy_Zombie_Attack.simple" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Enemy_Zombie_Attack.simple.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Enemy_Zombie_Idle.simple" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Enemy_Zombie_Idle.simple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/New.simple" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/New.simple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/New_New.simple" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/New_New.simple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/final.simple" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/final.simple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Blackboard/SBTBlackboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Blackboard/SBTBlackboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Debug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Debug.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_RigidbodyOverrideVelocity2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_RigidbodyOverrideVelocity2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_SetActive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_SetActive.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Wait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Wait.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/RandomSequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/RandomSequence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Selector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Selector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Sequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Sequence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_Comparison.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_Comparison.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/CompositeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Composite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/CompositeNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Composite.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/ExecutionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/ExecutionNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +109,14 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/fd/08ecc396/List`1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/0c/a75fe4c0/Edge.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/3c/933571a2/BlackboardSection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/a0/63e6b948/Node.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/ee/c6d7e640/BlackboardRow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7fd37b296550485d95ecaf5a50ed53b21f4200/13/82579e41/TextElement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b18a8b3398e74bca86895881dd02956c573648/7c/489b15df/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/69/342c5738/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/98/d9b66875/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/c2/cd46938b/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/fb/7c1ca1da/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c0c221501f3a41f8ac0af9d6a9dc9ff335fd90/77/b83a0913/GenericUriParser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eebf6a509b354512a5d405c8a7dd6f889b6600/53/61297566/EditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/a0/63e6b948/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c2e566b854f4b10b3baf92cd237ade83ea00/c3/d51a0fbe/GraphElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7fd37b296550485d95ecaf5a50ed53b21f4200/1c/96f298ff/UxmlFactory`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7fd37b296550485d95ecaf5a50ed53b21f4200/59/f0576fcb/DropdownField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/CompositeNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_Comparison.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Composite.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -81,6 +139,7 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Attach to Unity Editor.Attach to Unity Editor &amp; Play.executor&quot;: &quot;Debug&quot;,
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;Attach to Unity Player.Unity.exe (AssetImportWorker0).executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -145,6 +204,21 @@
       </option>
       <method v="2" />
     </configuration>
+    <configuration name="Unity.exe (AssetImportWorker0)" type="UnityPlayer" factoryName="UnityAttachToPlayer" temporary="true">
+      <option name="host" value="127.0.0.1" />
+      <option name="pid" value="7392" />
+      <option name="playerId" value="EditorHelper(Unity.exe-AssetImportWorker0-SimpleBT)" />
+      <option name="playerInstanceId" value="SimpleBT" />
+      <option name="port" value="56392" />
+      <option name="projectName" value="SimpleBT" />
+      <option name="roleName" value="AssetImportWorker0" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Attach to Unity Player.Unity.exe (AssetImportWorker0)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -192,6 +266,13 @@
       <workItem from="1742759257769" duration="5498000" />
       <workItem from="1742765729279" duration="1460000" />
       <workItem from="1742821611537" duration="1486000" />
+      <workItem from="1742824080241" duration="2624000" />
+      <workItem from="1742900580826" duration="1601000" />
+      <workItem from="1742902223202" duration="938000" />
+      <workItem from="1742989993340" duration="7774000" />
+      <workItem from="1743019407748" duration="5709000" />
+      <workItem from="1743075637489" duration="6081000" />
+      <workItem from="1743181181133" duration="7869000" />
     </task>
     <servers />
   </component>

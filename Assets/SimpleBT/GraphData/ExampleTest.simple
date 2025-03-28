@@ -1,15 +1,15 @@
 {
-    "BehaviorName": "final",
+    "BehaviorName": "ExampleTest",
     "NodeCollection": {
-        "BehaviorName": "final",
+        "BehaviorName": "ExampleTest",
         "Nodes": [
             {
                 "Node": {
                     "rid": 1000
                 },
-                "fromGUID": "500cffe6-6a2d-4b2d-8ecc-28f168458adc",
+                "fromGUID": "32842825-e4ed-40ab-98ea-1661df52ef1f",
                 "toGUIDs": [
-                    "8453cf34-f16e-4f08-8eff-cb9889a9a1cd"
+                    "c3924809-08fd-4ee3-b2ff-56f5e79723aa"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -20,11 +20,11 @@
                 "Node": {
                     "rid": 1001
                 },
-                "fromGUID": "8453cf34-f16e-4f08-8eff-cb9889a9a1cd",
+                "fromGUID": "c3924809-08fd-4ee3-b2ff-56f5e79723aa",
                 "toGUIDs": [],
                 "Values": [
-                    "pepe",
-                    "Success"
+                    "ExampleTest",
+                    "ExampleBehavior_Goomba"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -32,8 +32,8 @@
             }
         ],
         "ViewportPosition": {
-            "x": 0.0,
-            "y": 0.0
+            "x": -17.0,
+            "y": 58.0
         },
         "ViewportScale": {
             "x": 1.0,
@@ -46,6 +46,11 @@
                 "PropertyName": "Self",
                 "PropertyRawValue": "",
                 "PropertyType": 4
+            },
+            {
+                "PropertyName": "SPEED",
+                "PropertyRawValue": "2",
+                "PropertyType": 2
             }
         ]
     },
@@ -60,11 +65,11 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "500cffe6-6a2d-4b2d-8ecc-28f168458adc",
+                    "GUID": "32842825-e4ed-40ab-98ea-1661df52ef1f",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 362.0,
-                        "y": 128.0,
+                        "x": 462.0,
+                        "y": 97.0,
                         "width": 73.0,
                         "height": 77.0
                     },
@@ -75,23 +80,37 @@
             {
                 "rid": 1001,
                 "type": {
-                    "class": "GraphAction_Debug",
+                    "class": "BehaviorTreeGraphNode",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "8453cf34-f16e-4f08-8eff-cb9889a9a1cd",
+                    "GUID": "c3924809-08fd-4ee3-b2ff-56f5e79723aa",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 502.0,
-                        "y": 238.0,
-                        "width": 84.0,
-                        "height": 131.0
+                        "x": 570.0,
+                        "y": 174.0,
+                        "width": 172.0,
+                        "height": 98.0
                     },
-                    "ClassReference": "Action_Debug",
-                    "Title": "Debug",
-                    "DebugMessage": "pepe",
-                    "Status": 0
+                    "ClassReference": "BehaviorTree",
+                    "Title": "Branch",
+                    "_dropdown": {
+                        "rid": 1002
+                    },
+                    "lastDropDownValue": "ExampleBehavior_Goomba",
+                    "ReferencedBehaviorName": "ExampleTest"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "DropdownField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "ExampleBehavior_Goomba"
                 }
             }
         ]

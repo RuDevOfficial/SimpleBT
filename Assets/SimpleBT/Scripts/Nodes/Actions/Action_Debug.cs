@@ -11,7 +11,7 @@ namespace SimpleBT.NonEditor.Nodes
         [SerializeField] private string KeyMessage;
         [SerializeField] private string KeyResult;
 
-        public override void AssignKeys(List<string> keys)
+        public void AssignKeys(List<string> keys)
         {
             KeyMessage = keys[0];
             KeyResult = keys[1];

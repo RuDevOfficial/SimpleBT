@@ -2,7 +2,7 @@
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Sequence : CompositeNode
+    public class Sequence : Composite
     {
         protected override Status Tick()
         {
@@ -27,4 +27,5 @@ namespace SimpleBT.NonEditor.Nodes
             }
         }
     }
+
 }

@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using SimpleBT.Editor.Utils;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor.GraphNodes
 {
     [System.Serializable]
-    public class RootGraphNode : GraphTreeNode
+    [UxmlElement]
+    public partial class RootGraphNode : GraphTreeNode
     {
         public RootGraphNode()
         {

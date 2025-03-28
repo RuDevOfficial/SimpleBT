@@ -1,8 +1,8 @@
 ﻿namespace SimpleBT.Editor.GraphNodes
 {
-    public class RandomSequenceGraphNode : CompositeNode
+    public class GraphComposite_RandomSequence : GraphCompositeNode
     {
-        public RandomSequenceGraphNode()
+        public GraphComposite_RandomSequence()
         {
             Title = "Random Sequence";
             ClassReference = "RandomSequence";

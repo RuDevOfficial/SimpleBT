@@ -118,7 +118,7 @@ namespace SimpleBT.Editor
         #endregion
         
         #region Initialization
-        
+
         private void GenerateGraph()
         {
             _graph = new SBTGraphView(this);
@@ -144,12 +144,13 @@ namespace SimpleBT.Editor
             
             Button saveButton = new Button(Save) { text = "Save" };
             Button loadButton = new Button(() => { Load(_field.value); }) { text = "Load" };
-            _generateButton = new Button(GenerateGameObjectComponents) { text = "Generate Tree & Blackboard" };
+            _generateButton = new Button(GenerateGameObjectComponents) { text = "Generate" };
             _regenerateButton = new Button(() =>
             {
+                Save();
                 GenerateBlackboard();
                 GenerateBehaviorTree();
-            }) { text = "Regenerate" }; 
+            }) { text = "Save & Regenerate" }; 
             _removeComponentsButton = new Button(RemoveComponents) { text = "Remove Components" };
             
             toolbar.Add(saveButton);

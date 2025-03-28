@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor.GraphNodes
 {
-    [System.Serializable]
     public abstract class GraphTreeNode : Node
     {
         [SerializeField] public string GUID;
@@ -13,9 +13,11 @@ namespace SimpleBT.Editor.GraphNodes
 
         public string ClassReference;
         public string Title;
-    
-        public GraphTreeNode() { }
 
+        public GraphTreeNode() { }
+        
+        public GraphTreeNode(string path) : base(path) { }
+        
         public virtual void Instantiate() {
             GUID = Guid.NewGuid().ToString();
         }
@@ -23,7 +25,7 @@ namespace SimpleBT.Editor.GraphNodes
         public virtual void Set() { title = Title; }
 
         public abstract void GenerateInterface();
-        
+
         public abstract List<string> GetValues();
 
         public abstract void ReloadValues(List<string> values);

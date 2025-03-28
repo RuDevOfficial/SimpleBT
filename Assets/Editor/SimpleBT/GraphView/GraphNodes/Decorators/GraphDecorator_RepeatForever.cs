@@ -7,7 +7,7 @@ namespace SimpleBT.Editor.GraphNodes
         public GraphDecorator_RepeatForever()
         {
             Title = "Repeat Forever";
-            ClassReference = "Decorator_RepeatForever";
+            ClassReference = "Decorator_AlwaysSucceed";
         }
         
         public override List<string> GetValues() { return null; }

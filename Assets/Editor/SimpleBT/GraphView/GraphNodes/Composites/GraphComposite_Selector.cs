@@ -1,11 +1,12 @@
 ﻿namespace SimpleBT.Editor.GraphNodes
 {
-    public class SelectorGraphNode : CompositeNode
+    public class GraphComposite_Selector : GraphCompositeNode
     {
-        public SelectorGraphNode()
+        public GraphComposite_Selector()
         {
             Title = "Selector";
             ClassReference = "Selector";
         }
     }
+
 }

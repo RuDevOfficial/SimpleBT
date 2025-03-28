@@ -5,14 +5,14 @@ using UnityEngine;
 namespace SimpleBT.Editor.GraphNodes
 {
     [System.Serializable]
-    public class ConditionGraphNode : ExecutionGraphNode
+    public class GraphCondition_Comparison : GraphCondition
     {
         [SerializeReference] public ConditionBox ConditionBox;
 
-        public ConditionGraphNode()
+        public GraphCondition_Comparison()
         {
-            Title = "Condition";
-            ClassReference = "Condition";
+            Title = "Comparison Condition";
+            ClassReference = "Condition_Comparison";
         }
         
         public override void GenerateInterface()
