@@ -3,6 +3,7 @@ using UnityEditor.Experimental.GraphView;
 
 namespace SimpleBT.Editor.GraphNodes
 {
+    [System.Serializable]
     public abstract class GraphAction : GraphTreeNode
     {
         public GraphAction()

@@ -1,0 +1,417 @@
+{
+    "BehaviorName": "Example_Zombie",
+    "NodeCollection": {
+        "BehaviorName": "Example_Zombie",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
+                "toGUIDs": [
+                    "e457a64b-6dad-43a3-bc6c-88360bbdd0f6"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "92343789-6c5e-42ac-8a76-4c8937dbf446",
+                "toGUIDs": [
+                    "509162d5-a233-4fa8-a676-3527ea36fc47",
+                    "617a7167-f4ff-4b9a-9493-cbc10bb5c5e5"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "4b6e415f-dbc5-4204-a026-be4b377f7ae8",
+                "toGUIDs": [
+                    "92343789-6c5e-42ac-8a76-4c8937dbf446",
+                    "aa55072d-3ba0-4526-8263-e8773bf5563a"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
+                "fromGUID": "e457a64b-6dad-43a3-bc6c-88360bbdd0f6",
+                "toGUIDs": [
+                    "4b6e415f-dbc5-4204-a026-be4b377f7ae8"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1004
+                },
+                "fromGUID": "617a7167-f4ff-4b9a-9493-cbc10bb5c5e5",
+                "toGUIDs": [],
+                "Values": [
+                    "attack",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1005
+                },
+                "fromGUID": "aa55072d-3ba0-4526-8263-e8773bf5563a",
+                "toGUIDs": [
+                    "3eeb5b85-810b-4167-8152-ae31da13b727",
+                    "5bff6128-6c14-4bca-97e1-ee4339f0bdcf"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1006
+                },
+                "fromGUID": "3eeb5b85-810b-4167-8152-ae31da13b727",
+                "toGUIDs": [
+                    "952ec381-a3fc-4bbd-acdd-62af3f74c4f6",
+                    "52cd7a3c-0530-4772-bb76-11996ac43d86"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1007
+                },
+                "fromGUID": "52cd7a3c-0530-4772-bb76-11996ac43d86",
+                "toGUIDs": [],
+                "Values": [
+                    "moving",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1008
+                },
+                "fromGUID": "5bff6128-6c14-4bca-97e1-ee4339f0bdcf",
+                "toGUIDs": [],
+                "Values": [
+                    "nothing",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1009
+                },
+                "fromGUID": "509162d5-a233-4fa8-a676-3527ea36fc47",
+                "toGUIDs": [],
+                "Values": [
+                    "TARGET",
+                    "1"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1010
+                },
+                "fromGUID": "952ec381-a3fc-4bbd-acdd-62af3f74c4f6",
+                "toGUIDs": [],
+                "Values": [
+                    "TARGET",
+                    "4"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": -128.0,
+            "y": -375.0
+        },
+        "ViewportScale": {
+            "x": 0.8695651888847351,
+            "y": 0.8695651888847351
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": [
+            {
+                "PropertyName": "Self",
+                "PropertyRawValue": "",
+                "PropertyType": 4
+            },
+            {
+                "PropertyName": "TARGET",
+                "PropertyRawValue": "Player, Player",
+                "PropertyType": 4
+            }
+        ]
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 670.0,
+                        "y": 215.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphComposite_Sequence",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "92343789-6c5e-42ac-8a76-4c8937dbf446",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 684.0,
+                        "y": 576.0,
+                        "width": 77.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence",
+                    "Title": "Sequence"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "GraphComposite_Selector",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "4b6e415f-dbc5-4204-a026-be4b377f7ae8",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 773.0,
+                        "y": 446.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Selector",
+                    "Title": "Selector"
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "GraphDecorator_RepeatForever",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "e457a64b-6dad-43a3-bc6c-88360bbdd0f6",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 694.0,
+                        "y": 331.0,
+                        "width": 134.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Decorator_RepeatForever",
+                    "Title": "Repeat Forever"
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "GraphAction_Debug",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "617a7167-f4ff-4b9a-9493-cbc10bb5c5e5",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 704.0,
+                        "y": 701.0,
+                        "width": 85.0,
+                        "height": 131.0
+                    },
+                    "ClassReference": "Action_Debug",
+                    "Title": "Debug",
+                    "DebugMessage": "attack",
+                    "Status": 0
+                }
+            },
+            {
+                "rid": 1005,
+                "type": {
+                    "class": "GraphComposite_Selector",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "aa55072d-3ba0-4526-8263-e8773bf5563a",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 945.0,
+                        "y": 576.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Selector",
+                    "Title": "Selector"
+                }
+            },
+            {
+                "rid": 1006,
+                "type": {
+                    "class": "GraphComposite_Sequence",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3eeb5b85-810b-4167-8152-ae31da13b727",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 846.0,
+                        "y": 766.0,
+                        "width": 77.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence",
+                    "Title": "Sequence"
+                }
+            },
+            {
+                "rid": 1007,
+                "type": {
+                    "class": "GraphAction_Debug",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "52cd7a3c-0530-4772-bb76-11996ac43d86",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 938.0,
+                        "y": 903.0,
+                        "width": 85.0,
+                        "height": 131.0
+                    },
+                    "ClassReference": "Action_Debug",
+                    "Title": "Debug",
+                    "DebugMessage": "moving",
+                    "Status": 0
+                }
+            },
+            {
+                "rid": 1008,
+                "type": {
+                    "class": "GraphAction_Debug",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "5bff6128-6c14-4bca-97e1-ee4339f0bdcf",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 1088.0,
+                        "y": 772.0,
+                        "width": 85.0,
+                        "height": 131.0
+                    },
+                    "ClassReference": "Action_Debug",
+                    "Title": "Debug",
+                    "DebugMessage": "nothing",
+                    "Status": 0
+                }
+            },
+            {
+                "rid": 1009,
+                "type": {
+                    "class": "GraphCondition_IsAtMinimumDistance",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "509162d5-a233-4fa8-a676-3527ea36fc47",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 503.0,
+                        "y": 701.0,
+                        "width": 181.0,
+                        "height": 116.0
+                    },
+                    "ClassReference": "Condition_IsAtMinimumDistance",
+                    "Title": "Is at Minimum Distance",
+                    "KeyTarget": "TARGET",
+                    "KeyDistance": "1"
+                }
+            },
+            {
+                "rid": 1010,
+                "type": {
+                    "class": "GraphCondition_IsAtMinimumDistance",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "952ec381-a3fc-4bbd-acdd-62af3f74c4f6",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 701.0,
+                        "y": 918.0,
+                        "width": 181.0,
+                        "height": 116.0
+                    },
+                    "ClassReference": "Condition_IsAtMinimumDistance",
+                    "Title": "Is at Minimum Distance",
+                    "KeyTarget": "TARGET",
+                    "KeyDistance": "4"
+                }
+            }
+        ]
+    }
+}

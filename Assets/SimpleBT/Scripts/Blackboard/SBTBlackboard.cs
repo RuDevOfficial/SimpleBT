@@ -52,27 +52,17 @@ namespace SimpleBT.NonEditor
         /// <param name="parameters">Array of extra parameters</param>
         /// <typeparam name="T">Type Returned</typeparam>
         /// <returns></returns>
-        public T GetComplexValue<T>(string keyToGet, params string[] parameters)
+        public T GetComplexValue<T>(string keyToGet)
         {
-            object value = null;
-
-            if (typeof(T) == typeof(GameObject))
-            {
-                string name = parameters[0];
-                string tag = parameters[1];
-                int.TryParse(parameters[2], out int instanceID);
-                
-                foreach (GameObject obj in GameObject.FindGameObjectsWithTag(tag)) {
-                    if (instanceID != 0) { if(obj.GetInstanceID() == instanceID) { value = obj; break; } }
-                    else if (tag != "Untagged") { if (obj.CompareTag(tag)) { value = GameObject.Find(name); break; } }
-                    else { value = GameObject.Find(name); break; }
-                }
+            if (_data.ContainsKey(keyToGet.ToUpper())) {
+                _data.TryGetValue(keyToGet.ToUpper(), out object value);
+                return (T)value;
             }
-            
-            string key = keyToGet.ToUpper();
-            if (_data.TryGetValue(key, out object newValue)) { value = newValue; }
-
-            return (T)value;
+            else
+            {
+                object value = SBTNonEditorUtils.GetComplexLiteral<T>(keyToGet);
+                return (T)value;
+            }
         }
 
         public bool GetRawValue(string keyToGet, out object value)
@@ -87,18 +77,6 @@ namespace SimpleBT.NonEditor
             
             if (_data.ContainsKey(key)) { _data[key] = value; }
             else { _data.Add(key, value); }
-        }
-        
-        public void Set()
-        {
-            BlackboardData blackboardData = ScriptableObject.CreateInstance<BlackboardData>();
-            blackboardData.name = "SELF";
-            blackboardData.Key = "SELF";
-            blackboardData.RawValue = gameObject.name;
-            blackboardData.VariableType = VariableType.GameObject;
-            blackboardData.Value = this;
-            
-            GraphData.Add(blackboardData);
         }
     }
 

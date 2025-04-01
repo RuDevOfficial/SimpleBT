@@ -373,7 +373,6 @@ namespace SimpleBT.Editor
             }
             else { blackboard = selectedObject.AddComponent<SBTBlackboard>(); }
             
-            blackboard.Set(); // Adds "Self" to itself before any value
             foreach (ExposedProperty property in _blackboardGraph.ExposedProperties)
             {
                 if (property.PropertyName == "Self") { continue; }

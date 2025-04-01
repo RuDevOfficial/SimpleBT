@@ -5,10 +5,12 @@ using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor.GraphNodes
 {
+    [System.Serializable]
     public class GraphAction_Debug : GraphAction
     {
         public string DebugMessage = "Default Message";
         public ActionStatus Status = ActionStatus.Success;
+        
         private TextField messageField;
         private DropdownField DropDown;
 
@@ -47,10 +49,7 @@ namespace SimpleBT.Editor.GraphNodes
 
         public override void ReloadValues(List<string> values)
         {
-            DebugMessage = values[0];
-            messageField.value = DebugMessage;
-            
-            Status = (ActionStatus)Enum.Parse(typeof(ActionStatus), values[1]);
+            messageField.value = values[0];
             DropDown.value = values[1];
         }
         

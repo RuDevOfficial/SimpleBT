@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using SimpleBT.Core;
 using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_Wait : ExecutionNode
+    public class Action_Wait : ExecutionNode, INodeKeyAssignable
     {
         [SerializeField] private string keyTime;
         [SerializeField] private string keyStatus;

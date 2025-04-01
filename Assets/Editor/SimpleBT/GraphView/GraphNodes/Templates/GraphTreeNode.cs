@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor.GraphNodes
 {
+    [System.Serializable]
     public abstract class GraphTreeNode : Node
     {
         [SerializeField] public string GUID;

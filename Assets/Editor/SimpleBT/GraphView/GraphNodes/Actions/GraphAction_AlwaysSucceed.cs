@@ -2,14 +2,14 @@
 
 namespace SimpleBT.Editor.GraphNodes
 {
-    public class GraphDecorator_RepeatForever : GraphDecorator
+    public class GraphAction_AlwaysSucceed : GraphAction
     {
-        public GraphDecorator_RepeatForever()
+        public GraphAction_AlwaysSucceed()
         {
-            Title = "Repeat Forever";
-            ClassReference = "Decorator_RepeatForever";
+            Title = "Always Succeed";
+            ClassReference = "Action_AlwaysSucceed";
         }
-        
+
         public override List<string> GetValues() { return null; }
         public override void ReloadValues(List<string> values) { }
     }

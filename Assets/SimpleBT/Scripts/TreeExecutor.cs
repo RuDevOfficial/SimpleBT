@@ -10,7 +10,7 @@ namespace SimpleBT.NonEditor.Tree
     {
         public Node BT;
         private SBTBlackboard _sbtBlackboard;
-        private bool _succeeded = false;
+        private bool _finished = false;
 
         private void Awake()
         {
@@ -22,13 +22,13 @@ namespace SimpleBT.NonEditor.Tree
 
         private void Update()
         {
-            if (_succeeded != false) return;
+            if (_finished != false) return;
             
             Status state = BT.OnTick();
             if (state != Status.Running)
             {
-                Debug.Log("I finished the execution");
-                _succeeded = true;
+                Debug.Log("I finished the execution with... " + state);
+                _finished = true;
             }
         }
     }

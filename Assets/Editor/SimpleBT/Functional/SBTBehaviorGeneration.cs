@@ -28,7 +28,7 @@ namespace SimpleBT.Editor.BehaviorGeneration
                     parent.GUID = node.GUID; 
                     continue;
                 }
-
+                
                 parent.PopulateTreeList(
                     node.ClassReference,
                     node.GUID,

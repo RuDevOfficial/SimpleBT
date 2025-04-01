@@ -17,6 +17,6 @@ public enum ConditionType
     Less_Or_Equal_Than,
     More_Than,
     More_Or_Equal_Than,
-    Null,
-    NotNull
+    IsNull,
+    IsNotNull
 }

@@ -1,7 +1,7 @@
 {
-    "BehaviorName": "ExampleBehavior_Goomba",
+    "BehaviorName": "Example_BackAndForth",
     "NodeCollection": {
-        "BehaviorName": "ExampleBehavior_Goomba",
+        "BehaviorName": "Example_BackAndForth",
         "Nodes": [
             {
                 "Node": {
@@ -139,12 +139,12 @@
             }
         ],
         "ViewportPosition": {
-            "x": -91.0,
-            "y": -144.0
+            "x": 73.0,
+            "y": 19.0
         },
         "ViewportScale": {
-            "x": 0.8695651888847351,
-            "y": 0.8695651888847351
+            "x": 0.6575162410736084,
+            "y": 0.6575162410736084
         }
     },
     "BlackboardCollection": {
@@ -177,7 +177,7 @@
                         "serializedVersion": "2",
                         "x": 485.0,
                         "y": 352.0,
-                        "width": 148.0,
+                        "width": 122.0,
                         "height": 77.0
                     },
                     "ClassReference": "ParallelSequence",
@@ -197,7 +197,7 @@
                         "serializedVersion": "2",
                         "x": 485.0,
                         "y": 235.0,
-                        "width": 133.0,
+                        "width": 134.0,
                         "height": 77.0
                     },
                     "ClassReference": "Decorator_RepeatForever",
@@ -237,7 +237,7 @@
                         "serializedVersion": "2",
                         "x": 454.0,
                         "y": 487.0,
-                        "width": 164.0,
+                        "width": 166.0,
                         "height": 116.0
                     },
                     "ClassReference": "Action_LinearMove2D",
@@ -259,7 +259,7 @@
                         "serializedVersion": "2",
                         "x": 840.0,
                         "y": 487.0,
-                        "width": 87.0,
+                        "width": 73.0,
                         "height": 77.0
                     },
                     "ClassReference": "Composite_Priority",
@@ -279,7 +279,7 @@
                         "serializedVersion": "2",
                         "x": 1088.0,
                         "y": 620.0,
-                        "width": 103.0,
+                        "width": 77.0,
                         "height": 77.0
                     },
                     "ClassReference": "Sequence",
@@ -299,7 +299,7 @@
                         "serializedVersion": "2",
                         "x": 737.0,
                         "y": 620.0,
-                        "width": 103.0,
+                        "width": 77.0,
                         "height": 77.0
                     },
                     "ClassReference": "Sequence",
@@ -319,7 +319,7 @@
                         "serializedVersion": "2",
                         "x": 805.0,
                         "y": 736.0,
-                        "width": 174.0,
+                        "width": 178.0,
                         "height": 97.0
                     },
                     "ClassReference": "Action_InvertNumValue",
@@ -340,7 +340,7 @@
                         "serializedVersion": "2",
                         "x": 1083.0,
                         "y": 736.0,
-                        "width": 140.0,
+                        "width": 142.0,
                         "height": 77.0
                     },
                     "ClassReference": "Condition_AlwaysSucceed",

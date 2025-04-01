@@ -29,7 +29,6 @@ public static class SBTNonEditorUtils
         if (type == typeof(float)) { return float.Parse(valueToConvert, NumberStyles.Float, CultureInfo.InvariantCulture); }
         if (type == typeof(bool)) { return bool.Parse(valueToConvert); }
         if (type == typeof(string)) { return valueToConvert; }
-        if (type == typeof(GameObject)) { return GameObject.Find(valueToConvert); }
 
         if (type == typeof(Vector2))
         {
@@ -73,12 +72,32 @@ public static class SBTNonEditorUtils
             }
         }
 
-        if (string.IsNullOrEmpty(errorPopupDialogue))
+        return null;
+    }
+    
+    public static object ConvertComplexValue(this string valueToConvert, Type type, string variableName)
+    {
+        string[] substring = valueToConvert.Split(',');
+        
+        if (type == typeof(GameObject))
         {
-            errorPopupDialogue = $"Couldn't convert variable ({variableName}) of type ({type}). Not supported.\n"; 
-            Debug.LogError(errorPopupDialogue);
+            string name = "", tag = "", inID = "";
+            try { name = substring[0].FilterValue(false); } catch { }
+            try { tag = substring[1].FilterValue(false); } catch { }
+            try { inID = substring[2].FilterValue(false); } catch { }
+            
+            int.TryParse(inID, out int instanceID);
+
+            object value = null;
+            
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag(tag)) {
+                if (instanceID != 0) { if(obj.GetInstanceID() == instanceID) { value = obj; break; } }
+                else if (obj.name == name) { value = obj; break; }
+            }
+
+            return value;
         }
-        else { Debug.LogError("Conversion Error: " + errorPopupDialogue); }
+        
         return null;
     }
     
@@ -194,7 +213,32 @@ public static class SBTNonEditorUtils
             value = Enum.Parse<ConditionType>(keyToGet);
             return (T)value;
         }
+        
+        value = keyToGet;
 
+        return (T)value;
+    }
+
+    public static T GetComplexLiteral<T>(string parameters)
+    {
+        string[] substring = parameters.Split(',');
+        object value = null;
+
+        if (typeof(T) == typeof(GameObject))
+        {
+            string name = "", tag = "Untagged", inID = "";
+            try { name = substring[0].FilterValue(false); } catch { }
+            try { tag = substring[1].FilterValue(false); } catch { }
+            try { inID = substring[2].FilterValue(false); } catch { }
+            
+            int.TryParse(inID, out int instanceID);
+
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag(tag)) {
+                if (instanceID != 0) { if(obj.GetInstanceID() == instanceID) { value = obj; break; } }
+                else if (obj.name == name) { value = obj; break; }
+            }
+        }
+            
         return (T)value;
     }
 }

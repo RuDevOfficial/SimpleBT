@@ -19,31 +19,28 @@ namespace SimpleBT.NonEditor.Nodes
         public void AssignKeys(List<string> values)
         {
             KeyFirstVariable = values[0];
-            KeyCondition = values[1];
-            KeySecondVariable = values[2];
+            KeySecondVariable = values[1];
+            KeyCondition = values[2];
         }
 
         protected override void Initialize()
         {
-            if (blackboard.GetRawValue(KeyFirstVariable, out varAObject) == false)
-            {
+            condition = blackboard.GetValue<ConditionType>(KeyCondition);
+            
+            if (blackboard.GetRawValue(KeyFirstVariable, out varAObject) == false) {
                 varAObject = blackboard.GetValue<float>(KeyFirstVariable);
             }
 
             varAType = varAObject?.GetType();
 
             if (blackboard.GetRawValue(KeySecondVariable, out varBObject) == false
-                && condition != ConditionType.Null && condition != ConditionType.NotNull)
-            {
+                && condition != ConditionType.IsNull && condition != ConditionType.IsNotNull) {
                 varBObject = blackboard.GetValue<float>(KeySecondVariable);
             }
 
-            if (condition != ConditionType.Null && condition != ConditionType.NotNull)
-            {
+            if (condition != ConditionType.IsNull && condition != ConditionType.IsNotNull) {
                 varBType = varBObject?.GetType();
             }
-
-            condition = blackboard.GetValue<ConditionType>(KeyCondition);
         }
 
         public override bool Check()
@@ -71,8 +68,8 @@ namespace SimpleBT.NonEditor.Nodes
                 {
                     case ConditionType.Equal: return varAObject == varBObject;
                     case ConditionType.NotEqual: return varAObject != varBObject;
-                    case ConditionType.Null: return varAObject == null;
-                    case ConditionType.NotNull: return varAObject != null;
+                    case ConditionType.IsNull: return varAObject == null;
+                    case ConditionType.IsNotNull: return varAObject != null;
                     default: return false;
                 }
             }

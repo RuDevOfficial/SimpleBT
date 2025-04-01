@@ -37,7 +37,8 @@ namespace SimpleBT.NonEditor.Nodes
         {
             //_instanceID = blackboard.GetValue<int>(KeyInstanceID);
             _setActive = blackboard.GetValue<bool>(KeySetActive);
-            _gameObject = blackboard.GetComplexValue<GameObject>(Key, KeyGameobjectName, KeyTag, KeyInstanceID);
+            // TODO FIX THIS
+            //_gameObject = blackboard.GetComplexValue<GameObject>(Key, KeyGameobjectName, KeyTag, KeyInstanceID);
         }
         
         protected override Status Tick()

@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using SimpleBT.Core;
 using SimpleBT.Editor.Utils;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
-using UnityEditor.IMGUI.Controls;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
@@ -68,5 +61,13 @@ namespace SimpleBT.Editor.GraphNodes
                 }
             }
         }
+    }
+    
+    // TODO Modify the key assignment code so an interface is required in order to reload values
+    // Specially since some actions do not need to assign any data
+    public interface IGraphNodeKeyAssignable
+    {
+        public void ReloadValues(List<string> values);
+        public List<string> GetValues();
     }
 }

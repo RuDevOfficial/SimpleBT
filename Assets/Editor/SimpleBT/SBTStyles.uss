@@ -7,16 +7,40 @@ GridBackground {
 
 .Action #title {
     background-color: rgba(197, 59, 59, 0.82);
+    -unity-font-style: bold;
+    color: rgb(0, 0, 0);
 }
 
 .Composite #title {
-    background-color: rgba(59, 75, 197, 0.82);
+    background-color: rgba(43, 71, 224, 0.91);
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+    text-overflow: clip;
+}
+
+.Composite #title-button-container {
+    color: rgb(255, 255, 255);
+    display: none;
+    overflow: hidden;
+    visibility: hidden;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
 }
 
 .Decorator #title {
     background-color: rgba(37, 118, 26, 0.82);
+    -unity-font-style: bold;
 }
 
 .Condition #title {
-    background-color: rgba(128, 121, 22, 0.82);
+    background-color: rgba(91, 86, 15, 0.82);
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Condition .unity-label {
+    display: flex;
+    min-width: 10px;
 }

@@ -54,4 +54,5 @@ namespace SimpleBT.NonEditor.Nodes
             return leftHits.Count == 0;
         }
     }
+
 }

@@ -28,44 +28,45 @@ namespace SimpleBT.Editor
             List<SearchTreeEntry> entries = new List<SearchTreeEntry>()
             {
                 new SearchTreeGroupEntry(new GUIContent("Create Node")),
+                
                 new SearchTreeEntry(new GUIContent("Root", _icon)) { level = 1, userData = "RootGraphNode" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Conditions"), 1),
-                new SearchTreeEntry(new GUIContent("Always Succeed", _icon)) { level = 2, userData = "GraphCondition_AlwaysSucceed" },
-                new SearchTreeEntry(new GUIContent("Always Fail", _icon)) { level = 2, userData = "GraphCondition_AlwaysFail" },
-                new SearchTreeEntry(new GUIContent("Comparison Condition", _icon)) { level = 2, userData = "GraphCondition_Comparison" },
-                new SearchTreeEntry(new GUIContent("Is Near Ledge 2D", _icon)) { level = 2, userData = "GraphCondition_IsNearLedge2D" },
+                    new SearchTreeEntry(new GUIContent("Always Succeed", _icon)) { level = 2, userData = "GraphCondition_AlwaysSucceed" },
+                    new SearchTreeEntry(new GUIContent("Always Fail", _icon)) { level = 2, userData = "GraphCondition_AlwaysFail" },
+                    new SearchTreeEntry(new GUIContent("Comparison Condition", _icon)) { level = 2, userData = "GraphCondition_Comparison" },
+                    new SearchTreeEntry(new GUIContent("Is Near Ledge 2D", _icon)) { level = 2, userData = "GraphCondition_IsNearLedge2D" },
+                    new SearchTreeEntry(new GUIContent("Is at Minimum Distance", _icon)) { level = 2, userData = "GraphCondition_IsAtMinimumDistance" },
 
                 new SearchTreeEntry(new GUIContent("Branch", _icon)) { level = 1, userData = "BehaviorTreeGraphNode" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Blackboard"), 1),
-                new SearchTreeEntry(new GUIContent("Invert Numerical Value", _icon)) { level = 2, userData = "GraphAction_InvertNumValue" },
+                    new SearchTreeEntry(new GUIContent("Invert Numerical Value", _icon)) { level = 2, userData = "GraphAction_InvertNumValue" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Composite"), 1),
-                new SearchTreeEntry(new GUIContent("Sequence", _icon)) { level = 2, userData = "GraphComposite_Sequence" },
-                new SearchTreeEntry(new GUIContent("Selector", _icon)) { level = 2, userData = "GraphComposite_Selector" },
-                new SearchTreeEntry(new GUIContent("Parallel Sequence", _icon)) { level = 2, userData = "GraphComposite_ParallelSequence" },
-                new SearchTreeEntry(new GUIContent("Random Sequence", _icon)) { level = 2, userData = "GraphComposite_RandomSequence" },
-                new SearchTreeEntry(new GUIContent("Priority", _icon)) { level = 2, userData = "GraphComposite_Priority" },
+                    new SearchTreeEntry(new GUIContent("Sequence", _icon)) { level = 2, userData = "GraphComposite_Sequence" },
+                    new SearchTreeEntry(new GUIContent("Selector", _icon)) { level = 2, userData = "GraphComposite_Selector" },
+                    new SearchTreeEntry(new GUIContent("Parallel Sequence", _icon)) { level = 2, userData = "GraphComposite_ParallelSequence" },
+                    new SearchTreeEntry(new GUIContent("Random Sequence", _icon)) { level = 2, userData = "GraphComposite_RandomSequence" },
+                    new SearchTreeEntry(new GUIContent("Priority", _icon)) { level = 2, userData = "GraphComposite_Priority" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Decorators"), 1),
-                new SearchTreeEntry(new GUIContent("Repeat Forever", _icon)) { level = 2, userData = "GraphDecorator_RepeatForever" },
-                new SearchTreeEntry(new GUIContent("Execute Once With Delay", _icon)) { level = 2, userData = "GraphDecorator_ExecuteOnceWithDelay" },
+                    new SearchTreeEntry(new GUIContent("Repeat Forever", _icon)) { level = 2, userData = "GraphDecorator_RepeatForever" },
+                    new SearchTreeEntry(new GUIContent("Execute Once With Delay", _icon)) { level = 2, userData = "GraphDecorator_ExecuteOnceWithDelay" },
 
                 new SearchTreeGroupEntry(new GUIContent("Flow"), 1),
-                new SearchTreeEntry(new GUIContent("Wait X Seconds", _icon)) { level = 2, userData = "GraphAction_Wait" },
+                    new SearchTreeEntry(new GUIContent("Wait X Seconds", _icon)) { level = 2, userData = "GraphAction_Wait" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Actions"), 1),
                     new SearchTreeGroupEntry(new GUIContent("General"), 2),
+                        new SearchTreeEntry(new GUIContent("Always Succeed", _icon)) { level = 3, userData = "GraphAction_AlwaysSucceed" },
                         new SearchTreeEntry(new GUIContent("Set Active", _icon)) { level = 3, userData = "GraphAction_SetActive" },
                         new SearchTreeEntry(new GUIContent("Set Active (Toggle)", _icon)) { level = 3, userData = "GraphAction_SetActiveToggle" },
-                    new SearchTreeGroupEntry(new GUIContent("2D"), 2),
-                
-                new SearchTreeGroupEntry(new GUIContent("Movement"), 2),
-                new SearchTreeEntry(new GUIContent("LinearMove2D", _icon)) { level = 3, userData = "GraphAction_LinearMove2D" },
+                    new SearchTreeGroupEntry(new GUIContent("Movement"), 2),
+                        new SearchTreeEntry(new GUIContent("LinearMove2D", _icon)) { level = 3, userData = "GraphAction_LinearMove2D" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Other"), 1),
-                new SearchTreeEntry(new GUIContent("Debug", _icon)) { level = 2, userData = "GraphAction_Debug" },
+                    new SearchTreeEntry(new GUIContent("Debug", _icon)) { level = 2, userData = "GraphAction_Debug" },
             };
 
             AddCustomEntries(context, entries);
