@@ -44,3 +44,8 @@ GridBackground {
     display: flex;
     min-width: 10px;
 }
+
+.Action .unity-label {
+    display: flex;
+    min-width: 10px;
+}

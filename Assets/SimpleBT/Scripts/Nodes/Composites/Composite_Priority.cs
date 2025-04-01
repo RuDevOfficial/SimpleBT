@@ -29,7 +29,9 @@ namespace SimpleBT.NonEditor.Nodes
                     }
                 }
                 
-                // If this line is ran through code it means no condition on each composite has a conditiona clause or it doesn't have an "always succeed" decorator in the least important child
+                // If this line is ran through code it means no condition on
+                // each composite has a conditiona clause or it
+                // doesn't have an "always succeed" condition in the least important child
                 _lastIndex = -1;
             }
 

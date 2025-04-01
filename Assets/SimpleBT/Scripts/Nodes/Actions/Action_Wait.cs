@@ -32,5 +32,4 @@ namespace SimpleBT.NonEditor.Nodes
             }
         }
     }
-
 }

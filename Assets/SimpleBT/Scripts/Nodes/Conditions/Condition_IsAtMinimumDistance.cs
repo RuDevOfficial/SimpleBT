@@ -27,8 +27,9 @@ namespace SimpleBT.NonEditor.Nodes
         public override bool Check()
         {
             if (!target) { return false; }
-            
-            return (target.transform.position - blackboard.transform.position).magnitude <= distance;
+
+            float magnitude = ((Vector2)target.transform.position - (Vector2)blackboard.transform.position).magnitude;
+            return magnitude <= distance;
         }
     }
 }

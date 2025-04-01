@@ -104,7 +104,7 @@ namespace SimpleBT.Editor
         
         private void OverwriteGraph(Object selectedObject)
         {
-            if (SBTUtils.TryGetBehaviorFile(selectedObject, out string fileName))
+            if (SBTEditorUtils.TryGetBehaviorFile(selectedObject, out string fileName))
             {
                 if (fileName != _field.value)
                 {

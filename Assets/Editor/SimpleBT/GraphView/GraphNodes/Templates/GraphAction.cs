@@ -19,5 +19,4 @@ namespace SimpleBT.Editor.GraphNodes
             this.GeneratePort(Direction.Input, Port.Capacity.Single);
         }
     }
-
 }

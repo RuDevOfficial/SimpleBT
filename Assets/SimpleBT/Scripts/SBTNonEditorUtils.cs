@@ -81,7 +81,7 @@ public static class SBTNonEditorUtils
         
         if (type == typeof(GameObject))
         {
-            string name = "", tag = "", inID = "";
+            string name = "", tag = "Untagged", inID = "";
             try { name = substring[0].FilterValue(false); } catch { }
             try { tag = substring[1].FilterValue(false); } catch { }
             try { inID = substring[2].FilterValue(false); } catch { }

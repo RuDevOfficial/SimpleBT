@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
-using UnityEngine;
+using UnityEngine.UIElements;
 using Node = UnityEditor.Experimental.GraphView.Node;
+using Object = UnityEngine.Object;
 
 namespace SimpleBT.Editor.Utils
 {
-    public static class SBTUtils
+    public static class SBTEditorUtils
     {
         public static void GeneratePort(this Node node, Direction direction, Port.Capacity capacity, string name = "")
         {
@@ -37,6 +39,24 @@ namespace SimpleBT.Editor.Utils
             }
 
             return false;
+        }
+
+        public static TextField CreateTextField(this VisualElement element, string text, EventCallback<ChangeEvent<string>> actionEvent)
+        {
+            TextField field = new TextField(text + ": ");
+            field.UnregisterValueChangedCallback(actionEvent);
+            element.Add(field);
+
+            return field;
+        }
+
+        public static Toggle CreateToggle(this VisualElement element, string text, EventCallback<ChangeEvent<bool>> actionEvent)
+        {
+            Toggle toggle = new Toggle(text + ": ");
+            toggle.RegisterValueChangedCallback(actionEvent);
+            element.Add(toggle);
+
+            return toggle;
         }
 
         // Method by DanjelRicci in discussions.unity.com

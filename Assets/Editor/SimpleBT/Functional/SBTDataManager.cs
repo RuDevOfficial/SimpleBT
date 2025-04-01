@@ -19,8 +19,8 @@ namespace SimpleBT.Editor.Data
             NodeData[] nodeData, 
             List<ExposedProperty> exposedProperties)
         {
-            SBTUtils.CreateFolder("Assets", "SimpleBT");
-            SBTUtils.CreateFolder("Assets/SimpleBT", "GraphData");
+            SBTEditorUtils.CreateFolder("Assets", "SimpleBT");
+            SBTEditorUtils.CreateFolder("Assets/SimpleBT", "GraphData");
             
             BehaviorCollection collection = new BehaviorCollection()
             {
@@ -58,7 +58,7 @@ namespace SimpleBT.Editor.Data
 
         public static void SaveEditorToJson(SBTEditorWindow window)
         {
-            SBTUtils.CreateFolder("Assets/SimpleBT", "EditorData");
+            SBTEditorUtils.CreateFolder("Assets/SimpleBT", "EditorData");
 
             SBTEditorData data = new SBTEditorData() { LastFileName = window.LastFieldValue, };
             

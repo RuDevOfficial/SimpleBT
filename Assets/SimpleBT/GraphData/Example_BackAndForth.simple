@@ -102,19 +102,6 @@
                 "Node": {
                     "rid": 1007
                 },
-                "fromGUID": "eaed5a0d-defb-4699-b3ed-03e601ccf6ae",
-                "toGUIDs": [],
-                "Values": [
-                    "SPEED"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1008
-                },
                 "fromGUID": "c318ba99-776a-43ce-8564-dffdf1b90e89",
                 "toGUIDs": [],
                 "Values": [],
@@ -124,7 +111,7 @@
             },
             {
                 "Node": {
-                    "rid": 1009
+                    "rid": 1008
                 },
                 "fromGUID": "cbfdf721-8d46-4ca9-bb39-6de62ffccad7",
                 "toGUIDs": [],
@@ -136,27 +123,35 @@
                 "VariableName": "",
                 "Condition": 0,
                 "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1009
+                },
+                "fromGUID": "eaed5a0d-defb-4699-b3ed-03e601ccf6ae",
+                "toGUIDs": [],
+                "Values": [
+                    "SPEED"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
             }
         ],
         "ViewportPosition": {
-            "x": 73.0,
-            "y": 19.0
+            "x": -103.19999694824219,
+            "y": -246.39999389648438
         },
         "ViewportScale": {
-            "x": 0.6575162410736084,
-            "y": 0.6575162410736084
+            "x": 0.7561436891555786,
+            "y": 0.7561436891555786
         }
     },
     "BlackboardCollection": {
         "ExposedProperties": [
             {
-                "PropertyName": "Self",
-                "PropertyRawValue": "",
-                "PropertyType": 4
-            },
-            {
                 "PropertyName": "SPEED",
-                "PropertyRawValue": "2",
+                "PropertyRawValue": "50",
                 "PropertyType": 2
             }
         ]
@@ -175,10 +170,10 @@
                     "GUID": "0dd20307-f8ff-4437-8af8-db882c22a83b",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 485.0,
+                        "x": 485.6000061035156,
                         "y": 352.0,
-                        "width": 122.0,
-                        "height": 77.0
+                        "width": 123.19998168945313,
+                        "height": 76.79998779296875
                     },
                     "ClassReference": "ParallelSequence",
                     "Title": "Parallel Sequence"
@@ -195,10 +190,10 @@
                     "GUID": "4bd693c4-b8b3-42bc-b966-26fe0ea2fed8",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 485.0,
-                        "y": 235.0,
-                        "width": 134.0,
-                        "height": 77.0
+                        "x": 485.6000061035156,
+                        "y": 235.20001220703126,
+                        "width": 135.19998168945313,
+                        "height": 76.79998779296875
                     },
                     "ClassReference": "Decorator_RepeatForever",
                     "Title": "Repeat Forever"
@@ -215,10 +210,10 @@
                     "GUID": "32842825-e4ed-40ab-98ea-1661df52ef1f",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 462.0,
-                        "y": 97.0,
-                        "width": 73.0,
-                        "height": 77.0
+                        "x": 462.4000244140625,
+                        "y": 96.80000305175781,
+                        "width": 73.5999755859375,
+                        "height": 76.80000305175781
                     },
                     "ClassReference": "Root",
                     "Title": "Root"
@@ -235,10 +230,10 @@
                     "GUID": "0381004e-96db-4a51-937c-af9b1bce1ac1",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 454.0,
-                        "y": 487.0,
-                        "width": 166.0,
-                        "height": 116.0
+                        "x": 454.4000244140625,
+                        "y": 487.20001220703127,
+                        "width": 167.20001220703126,
+                        "height": 112.79998779296875
                     },
                     "ClassReference": "Action_LinearMove2D",
                     "Title": "Linear Movement 2D",
@@ -258,9 +253,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 840.0,
-                        "y": 487.0,
-                        "width": 73.0,
-                        "height": 77.0
+                        "y": 487.20001220703127,
+                        "width": 72.79998779296875,
+                        "height": 76.79998779296875
                     },
                     "ClassReference": "Composite_Priority",
                     "Title": "Priority"
@@ -279,8 +274,8 @@
                         "serializedVersion": "2",
                         "x": 1088.0,
                         "y": 620.0,
-                        "width": 77.0,
-                        "height": 77.0
+                        "width": 77.5999755859375,
+                        "height": 76.79998779296875
                     },
                     "ClassReference": "Sequence",
                     "Title": "Sequence"
@@ -297,10 +292,10 @@
                     "GUID": "1fdee680-ace1-43fd-9741-f784573d77a4",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 737.0,
+                        "x": 737.6000366210938,
                         "y": 620.0,
-                        "width": 77.0,
-                        "height": 77.0
+                        "width": 77.5999755859375,
+                        "height": 76.79998779296875
                     },
                     "ClassReference": "Sequence",
                     "Title": "Sequence"
@@ -308,27 +303,6 @@
             },
             {
                 "rid": 1007,
-                "type": {
-                    "class": "GraphAction_InvertNumValue",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "eaed5a0d-defb-4699-b3ed-03e601ccf6ae",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 805.0,
-                        "y": 736.0,
-                        "width": 178.0,
-                        "height": 97.0
-                    },
-                    "ClassReference": "Action_InvertNumValue",
-                    "Title": "Invert Numerical Value",
-                    "key": "SPEED"
-                }
-            },
-            {
-                "rid": 1008,
                 "type": {
                     "class": "GraphCondition_AlwaysSucceed",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -338,17 +312,17 @@
                     "GUID": "c318ba99-776a-43ce-8564-dffdf1b90e89",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 1083.0,
+                        "x": 1083.199951171875,
                         "y": 736.0,
-                        "width": 142.0,
-                        "height": 77.0
+                        "width": 143.199951171875,
+                        "height": 76.79998779296875
                     },
                     "ClassReference": "Condition_AlwaysSucceed",
                     "Title": "Always Succeed"
                 }
             },
             {
-                "rid": 1009,
+                "rid": 1008,
                 "type": {
                     "class": "GraphCondition_IsNearLedge2D",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -358,16 +332,37 @@
                     "GUID": "cbfdf721-8d46-4ca9-bb39-6de62ffccad7",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 590.0,
-                        "y": 723.0,
-                        "width": 147.0,
-                        "height": 135.0
+                        "x": 590.4000244140625,
+                        "y": 723.2000122070313,
+                        "width": 148.79998779296876,
+                        "height": 130.39996337890626
                     },
                     "ClassReference": "Condition_IsNearLedge2D",
                     "Title": "Is Near Ledge 2D",
                     "_separationDistance": 0.5,
                     "_rayLength": 1.0,
                     "_layerName": "Ground"
+                }
+            },
+            {
+                "rid": 1009,
+                "type": {
+                    "class": "GraphAction_InvertNumValue",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "eaed5a0d-defb-4699-b3ed-03e601ccf6ae",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 805.6000366210938,
+                        "y": 736.0,
+                        "width": 178.39996337890626,
+                        "height": 95.20001220703125
+                    },
+                    "ClassReference": "Action_InvertNumValue",
+                    "Title": "Invert Numerical Value",
+                    "key": "SPEED"
                 }
             }
         ]

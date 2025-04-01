@@ -55,5 +55,4 @@ namespace SimpleBT.Editor.GraphNodes
             DropDown.value = values[1];
         }
     }
-
 }

@@ -31,8 +31,8 @@ namespace SimpleBT.NonEditor.Nodes
             
             if (!rb2D) return Status.Failure;
 
-            if (velocity.x == 0) { rb2D.linearVelocityY = velocity.y; }
-            else if (velocity.y == 0) { rb2D.linearVelocityX = velocity.x; }
+            if (velocity.x == 0) { rb2D.linearVelocityY = velocity.y * Time.fixedDeltaTime; }
+            else if (velocity.y == 0) { rb2D.linearVelocityX = velocity.x * Time.fixedDeltaTime; }
             else { rb2D.linearVelocity = velocity; }
 
             return Status.Success;

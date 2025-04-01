@@ -149,17 +149,6 @@ namespace SimpleBT.Editor.Blackboard
         {
             _section = new BlackboardSection() { title = "Exposed Properties" };
             Add(_section);
-
-            ExposedProperty startingProperty = new ExposedProperty();
-            startingProperty.PropertyName = "Self";
-            startingProperty.PropertyRawValue = ""; // This should populate on generation
-            startingProperty.PropertyType = VariableType.GameObject;
-            ExposedProperties.Add(startingProperty);
-
-            BlackboardField field = new BlackboardField(null, startingProperty.PropertyName,
-                startingProperty.PropertyType.ToString());
-            field.RegisterCallback<PointerDownEvent>(evt => { _selectedField = field; });
-            _section.Add(field);
         }
 
         public void Reset()

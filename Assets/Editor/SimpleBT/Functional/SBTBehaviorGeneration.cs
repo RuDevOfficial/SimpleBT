@@ -13,8 +13,8 @@ namespace SimpleBT.Editor.BehaviorGeneration
     {
         public static void GenerateSubTree(NodeCollection collection, BehaviorTree parent)
         {
-            SBTUtils.CreateFolder("Assets", "SimpleBT");
-            SBTUtils.CreateFolder("Assets/SimpleBT", "Behaviors");
+            SBTEditorUtils.CreateFolder("Assets", "SimpleBT");
+            SBTEditorUtils.CreateFolder("Assets/SimpleBT", "Behaviors");
             
             GraphTreeNode root = null;
 
@@ -81,8 +81,8 @@ namespace SimpleBT.Editor.BehaviorGeneration
         
         public static void Generate(NodeCollection collection, TreeExecutor executor)
         {
-            SBTUtils.CreateFolder("Assets", "SimpleBT");
-            SBTUtils.CreateFolder("Assets/SimpleBT", "Behaviors");
+            SBTEditorUtils.CreateFolder("Assets", "SimpleBT");
+            SBTEditorUtils.CreateFolder("Assets/SimpleBT", "Behaviors");
             
             // Create the root SO and assign it to the treeExecutor class 
             BehaviorTree BT = ScriptableObject.CreateInstance<BehaviorTree>();

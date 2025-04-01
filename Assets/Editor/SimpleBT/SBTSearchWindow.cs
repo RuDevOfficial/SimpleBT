@@ -63,6 +63,8 @@ namespace SimpleBT.Editor
                         new SearchTreeEntry(new GUIContent("Set Active", _icon)) { level = 3, userData = "GraphAction_SetActive" },
                         new SearchTreeEntry(new GUIContent("Set Active (Toggle)", _icon)) { level = 3, userData = "GraphAction_SetActiveToggle" },
                     new SearchTreeGroupEntry(new GUIContent("Movement"), 2),
+                        new SearchTreeEntry(new GUIContent("Stop", _icon)) { level = 3, userData = "GraphAction_Stop" },
+                        new SearchTreeEntry(new GUIContent("Follow2D", _icon)) { level = 3, userData = "GraphAction_Follow2D" },
                         new SearchTreeEntry(new GUIContent("LinearMove2D", _icon)) { level = 3, userData = "GraphAction_LinearMove2D" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Other"), 1),

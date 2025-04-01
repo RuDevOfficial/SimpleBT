@@ -27,7 +27,7 @@ namespace SimpleBT.Editor.GraphNodes
         public override void GenerateInterface()
         {
             this.GeneratePort(Direction.Input, Port.Capacity.Single);
-            _dropdown = new DropdownField(SBTUtils.GetAllBehaviorNames(), 0, name =>
+            _dropdown = new DropdownField(SBTEditorUtils.GetAllBehaviorNames(), 0, name =>
             {
                 if (name == ReferencedBehaviorName)
                 {   
@@ -55,7 +55,7 @@ namespace SimpleBT.Editor.GraphNodes
         private void OnDragExited(DragExitedEvent evt)
         {
             foreach (Object obj in DragAndDrop.objectReferences) {
-                if (SBTUtils.TryGetBehaviorFile(obj, out string fileName)) {
+                if (SBTEditorUtils.TryGetBehaviorFile(obj, out string fileName)) {
                     _dropdown.value = fileName;
                     break;
                 }
