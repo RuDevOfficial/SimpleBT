@@ -199,6 +199,12 @@ public static class SBTNonEditorUtils
             value = keyToGet.ConvertValue(typeof(Vector2), keyToGet.ToUpper());
             return (T)value;
         }
+        
+        else if (typeof(T) == typeof(Vector3))
+        {
+            value = keyToGet.ConvertValue(typeof(Vector3), keyToGet.ToUpper());
+            return (T)value;
+        }
 
         // ENUMS
             
@@ -211,6 +217,12 @@ public static class SBTNonEditorUtils
         else if (typeof(T) == typeof(ConditionType))
         {
             value = Enum.Parse<ConditionType>(keyToGet);
+            return (T)value;
+        }
+        
+        else if (typeof(T) == typeof(RigidbodyMoveFlag))
+        {
+            value = Enum.Parse<RigidbodyMoveFlag>(keyToGet);
             return (T)value;
         }
         
@@ -240,5 +252,29 @@ public static class SBTNonEditorUtils
         }
             
         return (T)value;
+    }
+
+    public static void MovePosition(this Rigidbody2D rb2D, Vector2 position, RigidbodyMoveFlag ignoreFlag)
+    {
+        switch (ignoreFlag)
+        {
+            case RigidbodyMoveFlag.X: rb2D.MovePosition(new Vector2(rb2D.gameObject.transform.position.x, position.y)); break;
+            case RigidbodyMoveFlag.Y: rb2D.MovePosition(new Vector2(position.x, rb2D.gameObject.transform.position.y)); break;
+            default: rb2D.MovePosition(position); break;
+        }
+    }
+
+    public static void MovePosition(this Rigidbody rb, Vector3 position, RigidbodyMoveFlag ignoreFlag)
+    {
+        switch (ignoreFlag)
+        {
+            case RigidbodyMoveFlag.X: rb.MovePosition(new Vector3(rb.gameObject.transform.position.x, position.y, position.z)); break;
+            case RigidbodyMoveFlag.Y: rb.MovePosition(new Vector3(position.x, rb.gameObject.transform.position.y, position.z)); break;
+            case RigidbodyMoveFlag.Z: rb.MovePosition(new Vector3(position.x, position.y, rb.gameObject.transform.position.z)); break;
+            case RigidbodyMoveFlag.XY: rb.MovePosition(new Vector3(rb.gameObject.transform.position.x, rb.gameObject.transform.position.y, position.z)); break;
+            case RigidbodyMoveFlag.XZ: rb.MovePosition(new Vector3(rb.gameObject.transform.position.x, position.y, rb.gameObject.transform.position.z)); break;
+            case RigidbodyMoveFlag.YZ: rb.MovePosition(new Vector3(position.x, rb.gameObject.transform.position.y, rb.gameObject.transform.position.z)); break;
+            case RigidbodyMoveFlag.NONE: default: rb.MovePosition(position); break;
+        }
     }
 }

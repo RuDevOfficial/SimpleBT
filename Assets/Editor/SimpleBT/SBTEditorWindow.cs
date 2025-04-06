@@ -152,12 +152,15 @@ namespace SimpleBT.Editor
                 GenerateBehaviorTree();
             }) { text = "Save & Regenerate" }; 
             _removeComponentsButton = new Button(RemoveComponents) { text = "Remove Components" };
+
+            Button clearBlackboardButton = new Button(ClearBlackboard) { text = "Clear Blackboard" };
             
             toolbar.Add(saveButton);
             toolbar.Add(loadButton);
             toolbar.Add(_generateButton);
             toolbar.Add(_regenerateButton);
             toolbar.Add(_removeComponentsButton);
+            toolbar.Add(clearBlackboardButton);
             
             // Adding the Blackboard
             _blackboardGraph = new SBTBlackboardGraph(_graph);
@@ -301,6 +304,11 @@ namespace SimpleBT.Editor
                     _graph.AddElement(edge);
                 }
             }
+        }
+
+        private void ClearBlackboard()
+        {
+            _blackboardGraph?.Reset();
         }
 
         #endregion

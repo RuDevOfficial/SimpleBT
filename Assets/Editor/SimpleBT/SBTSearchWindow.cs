@@ -62,11 +62,17 @@ namespace SimpleBT.Editor
                         new SearchTreeEntry(new GUIContent("Always Succeed", _icon)) { level = 3, userData = "GraphAction_AlwaysSucceed" },
                         new SearchTreeEntry(new GUIContent("Set Active", _icon)) { level = 3, userData = "GraphAction_SetActive" },
                         new SearchTreeEntry(new GUIContent("Set Active (Toggle)", _icon)) { level = 3, userData = "GraphAction_SetActiveToggle" },
+                        new SearchTreeEntry(new GUIContent("Is GameObject Close", _icon)) { level = 3, userData = "GraphCondition_IsGameObjectClose" },
+                        new SearchTreeEntry(new GUIContent("Store Random Position 3D", _icon)) { level = 3, userData = "GraphAction_StoreRandomPosition3D" },
                     new SearchTreeGroupEntry(new GUIContent("Movement"), 2),
                         new SearchTreeEntry(new GUIContent("Stop", _icon)) { level = 3, userData = "GraphAction_Stop" },
-                        new SearchTreeEntry(new GUIContent("Follow2D", _icon)) { level = 3, userData = "GraphAction_Follow2D" },
-                        new SearchTreeEntry(new GUIContent("LinearMove2D", _icon)) { level = 3, userData = "GraphAction_LinearMove2D" },
-                
+                        new SearchTreeGroupEntry(new GUIContent("2D"), 3),
+                            new SearchTreeEntry(new GUIContent("Follow 2D", _icon)) { level = 4, userData = "GraphAction_Follow2D" },
+                            new SearchTreeEntry(new GUIContent("Go To Position 2D", _icon)) { level = 4, userData = "GraphAction_GoToPosition2D" },
+                            new SearchTreeEntry(new GUIContent("Linear Move 2D", _icon)) { level = 4, userData = "GraphAction_LinearMove2D" },
+                        new SearchTreeGroupEntry(new GUIContent("3D"), 3),
+                            new SearchTreeEntry(new GUIContent("Go To Position 3D", _icon)) { level = 4, userData = "GraphAction_GoToPosition3D" },
+                        
                 new SearchTreeGroupEntry(new GUIContent("Other"), 1),
                     new SearchTreeEntry(new GUIContent("Debug", _icon)) { level = 2, userData = "GraphAction_Debug" },
             };

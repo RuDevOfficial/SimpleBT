@@ -40,6 +40,11 @@ GridBackground {
     justify-content: flex-start;
 }
 
+.Branch #title {
+    align-items: center;
+    background-color: rgba(17, 16, 15, 0.89);
+}
+
 .Condition .unity-label {
     display: flex;
     min-width: 10px;
@@ -48,4 +53,46 @@ GridBackground {
 .Action .unity-label {
     display: flex;
     min-width: 10px;
+}
+
+.TwoTextFieldElement {
+    flex-direction: row;
+    align-self: auto;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.TwoTextFieldElement .TextFieldExtended {
+    align-self: stretch;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+}
+
+.DropdownContainer {
+    flex-direction: row;
+    align-self: auto;
+    align-content: auto;
+    align-items: center;
+    justify-content: flex-start;
+    left: 3px;
+}
+
+.Branch #contents {
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    align-items: center;
+}
+
+TextKeyField .unity-text-field {
+    flex-direction: row;
+    -unity-font-style: normal;
+}
+
+.Action .unity-text-field {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 150px;
+    min-width: 150px;
 }

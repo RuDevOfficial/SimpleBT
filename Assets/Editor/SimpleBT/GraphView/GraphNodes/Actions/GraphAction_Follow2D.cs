@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using SimpleBT.Core;
 using SimpleBT.Editor.Utils;
 using UnityEngine.UIElements;
 
@@ -26,15 +27,15 @@ namespace SimpleBT.Editor.GraphNodes
             base.GenerateInterface();
 
             _targetField = new TextField("Target: ");
-            _targetField.RegisterValueChangedCallback(evt => keyTarget = evt.newValue);
-            extensionContainer.Add(_targetField);
-            
             _speedField = new TextField("Speed: ");
-            _speedField.RegisterValueChangedCallback(evt => keySpeed = evt.newValue);
-            extensionContainer.Add(_speedField);
-            
             _toggle = new Toggle("Use Transform? ");
+            
+            _targetField.RegisterValueChangedCallback(evt => keyTarget = evt.newValue);
+            _speedField.RegisterValueChangedCallback(evt => keySpeed = evt.newValue);
             _toggle.RegisterValueChangedCallback(evt => keyToggle = evt.newValue.ToString());
+            
+            extensionContainer.Add(_targetField);
+            extensionContainer.Add(_speedField);
             extensionContainer.Add(_toggle);
         }
 
@@ -55,4 +56,5 @@ namespace SimpleBT.Editor.GraphNodes
             _toggle.value = bool.Parse(values[2]);
         }
     }
+
 }

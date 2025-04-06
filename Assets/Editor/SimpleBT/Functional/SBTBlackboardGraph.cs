@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using SimpleBT.Editor.Utils;
 using SimpleBT.NonEditor;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -19,6 +20,8 @@ namespace SimpleBT.Editor.Blackboard
 
         private BlackboardSection _section;
 
+        public const string STARTING_PROPERTY_NAME = "ID";
+
         public SBTBlackboardGraph(GraphView associatedGraphView) : base(associatedGraphView)
         {
             this.addItemRequested = AddItem;
@@ -27,7 +30,7 @@ namespace SimpleBT.Editor.Blackboard
             _icon = new Texture2D(1, 1);
             _icon.SetPixel(0, 0, Color.clear); // Currently bugged
 
-            SetBlackboard();
+            //SetBlackboard();
 
             RegisterCallback<KeyDownEvent>(evt =>
             {
@@ -47,12 +50,11 @@ namespace SimpleBT.Editor.Blackboard
         }
 
         // Method based of the code by Mert Kirimgeri on YT https://www.youtube.com/watch?v=F4cTWOxMjMY&t=1091s&ab_channel=MertKirimgeri
-        private void EditItem(Blackboard blackboard, VisualElement element, string newValue)
+        public void EditItem(Blackboard blackboard, VisualElement element, string newValue)
         {
             newValue = newValue.FilterValue();
 
-            if (string.IsNullOrEmpty(newValue))
-            {
+            if (string.IsNullOrEmpty(newValue)) {
                 EditorUtility.DisplayDialog("Error", "Value cannot be empty!", "OK");
                 return;
             }
@@ -63,11 +65,11 @@ namespace SimpleBT.Editor.Blackboard
                 EditorUtility.DisplayDialog("Error", "This property is already named, choose another one!", "OK");
                 return;
             }
-            else if (field.text == "Self") {
+            else if (field.text == STARTING_PROPERTY_NAME) {
                 EditorUtility.DisplayDialog("Error", "You can't rename this variable!", "OK");
                 return;
             }
-            else if (newValue == "Self") {
+            else if (newValue == STARTING_PROPERTY_NAME) {
                 EditorUtility.DisplayDialog("Error", "That name is prohibited!", "OK");
                 return;
             }
@@ -83,7 +85,8 @@ namespace SimpleBT.Editor.Blackboard
         // Method based on Mert Kirimgeri on YT https://www.youtube.com/watch?v=F4cTWOxMjMY&t=1091s&ab_channel=MertKirimgeri
         public void AddNewField(ExposedProperty exposedProperty)
         {
-            if (exposedProperty.PropertyName == "Self") { return; }
+            if (exposedProperty.PropertyName == STARTING_PROPERTY_NAME
+                && ExposedProperties.Count > 0) { return; }
             
             GenerateNewProperty(exposedProperty, out var localPropertyValue, out var property);
 
@@ -131,6 +134,14 @@ namespace SimpleBT.Editor.Blackboard
         private void GenerateNewProperty(ExposedProperty exposedProperty,
             out string localPropertyValue, out ExposedProperty property)
         {
+            if (exposedProperty.PropertyName == STARTING_PROPERTY_NAME)
+            {
+                localPropertyValue = exposedProperty.PropertyRawValue;
+                property = exposedProperty; 
+                ExposedProperties.Add(property);
+                return;
+            }
+            
             string localPropertyName = exposedProperty.PropertyName;
             localPropertyValue = exposedProperty.PropertyRawValue;
 
@@ -149,13 +160,22 @@ namespace SimpleBT.Editor.Blackboard
         {
             _section = new BlackboardSection() { title = "Exposed Properties" };
             Add(_section);
+            
+            if (ExposedProperties.Any(p => p.PropertyName == STARTING_PROPERTY_NAME)) { return; }
+            
+            ExposedProperty nameReferenceProperty = new ExposedProperty();
+            nameReferenceProperty.PropertyName = STARTING_PROPERTY_NAME;
+            nameReferenceProperty.PropertyRawValue = "Please change";
+            nameReferenceProperty.PropertyType = VariableType.String;
+            
+            AddNewField(nameReferenceProperty);
         }
 
         public void Reset()
         {
             contentContainer.Clear();
             ExposedProperties.Clear();
-            SetBlackboard();
+            //SetBlackboard();
         }
     }
 }

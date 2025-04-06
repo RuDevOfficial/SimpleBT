@@ -8,24 +8,24 @@ namespace SimpleBT.NonEditor.Nodes
 {
     public class Action_Debug : ExecutionNode, INodeKeyAssignable
     {
-        [SerializeField] private string KeyMessage;
-        [SerializeField] private string KeyResult;
+        [SerializeField] private string _keyMessage;
+        [SerializeField] private string _keyResult;
 
         private Status status;
         
         public void AssignKeys(List<string> keys)
         {
-            KeyMessage = keys[0];
-            KeyResult = keys[1];
+            _keyMessage = keys[0];
+            _keyResult = keys[1];
         }
         
         protected override void Initialize() {
-            status = blackboard.GetValue<Status>(KeyResult);
+            status = blackboard.GetValue<Status>(_keyResult);
         }
 
         protected override Status Tick()
         {
-            Debug.Log(KeyMessage);
+            Debug.Log(_keyMessage);
             return status;
         }
     }

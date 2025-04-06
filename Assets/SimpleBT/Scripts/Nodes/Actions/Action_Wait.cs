@@ -31,5 +31,10 @@ namespace SimpleBT.NonEditor.Nodes
                 return _status;
             }
         }
+
+        public override void OnAbort()
+        {
+            _currentTime = 0.0f;
+        }
     }
 }

@@ -21,10 +21,6 @@ namespace SimpleBT.Core
         public virtual void RegisterBlackboard(SBTBlackboard sbtBlackboard) { blackboard = sbtBlackboard; }
     }
     
-    public enum Status
-    {
-        Running,
-        Success,
-        Failure
-    }
+    public enum Status { Running, Success, Failure }
+    public enum RigidbodyMoveFlag { NONE, X, Y, Z, XY, XZ, YZ }
 }

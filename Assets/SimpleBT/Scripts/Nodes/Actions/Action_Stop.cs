@@ -5,12 +5,21 @@ namespace SimpleBT.NonEditor.Nodes
 {
     public class Action_Stop : ExecutionNode
     {
-        private Rigidbody2D rb2D;
-        protected override void Initialize() { rb2D = blackboard.GetComponent<Rigidbody2D>(); }
+        private Rigidbody2D _rb2D;
+        private Rigidbody _rb;
+
+        protected override void Initialize()
+        {
+            _rb2D = blackboard.GetComponent<Rigidbody2D>();
+            _rb = blackboard.GetComponent<Rigidbody>();
+        }
         protected override Status Tick()
         {
-            if (!rb2D) { return Status.Failure; }
-            rb2D.linearVelocity *= 0;
+            if (!_rb2D && !_rb) { return Status.Failure; }
+            
+            if (_rb2D) { _rb2D.linearVelocity *= 0; }
+            else { _rb.linearVelocity *= 0; }
+            
             return Status.Success;
         }
     }

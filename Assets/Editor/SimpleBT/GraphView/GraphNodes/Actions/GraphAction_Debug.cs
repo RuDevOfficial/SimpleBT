@@ -24,19 +24,15 @@ namespace SimpleBT.Editor.GraphNodes
         {
             base.GenerateInterface();
 
-            TextElement title = new TextElement();
-            title.text = "  Message: ";
-
-            messageField = new TextField();
+            messageField = new TextField("Message: ");
             messageField.multiline = true;
             messageField.RegisterValueChangedCallback(evt => DebugMessage = evt.newValue);
             
             string[] conditions = Enum.GetNames(typeof(ActionStatus));
             DropDown = new DropdownField(conditions.ToList(), 0, FormatSelectedValueCallback);
             
-            extensionContainer.Add(DropDown);
-            extensionContainer.Add(title);
             extensionContainer.Add(messageField);
+            extensionContainer.Add(DropDown);
             
             RefreshExpandedState();
         }

@@ -1,0 +1,167 @@
+{
+    "BehaviorName": "Example_AntEater",
+    "NodeCollection": {
+        "BehaviorName": "Example_AntEater",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "56afe6dd-b085-4259-8b4f-dd506e63ae1d",
+                "toGUIDs": [
+                    "d6a19f24-3fc6-43fe-a8ad-34aeaf4b5df3"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "43cec032-ad7d-4627-b5b4-12091d7cfeee",
+                "toGUIDs": [],
+                "Values": [
+                    "Enemy/Ant",
+                    "3",
+                    "False",
+                    "ANT"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "0404834b-d61c-46da-bf32-5889e7766ad0",
+                "toGUIDs": [],
+                "Values": [
+                    "",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
+                "fromGUID": "d6a19f24-3fc6-43fe-a8ad-34aeaf4b5df3",
+                "toGUIDs": [
+                    "43cec032-ad7d-4627-b5b4-12091d7cfeee",
+                    "0404834b-d61c-46da-bf32-5889e7766ad0"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": 178.0,
+            "y": 82.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": []
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "56afe6dd-b085-4259-8b4f-dd506e63ae1d",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 427.0,
+                        "y": -78.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphCondition_IsGameObjectClose",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "43cec032-ad7d-4627-b5b4-12091d7cfeee",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 225.0,
+                        "y": 186.0,
+                        "width": 168.0,
+                        "height": 154.0
+                    },
+                    "ClassReference": "Condition_IsGameObjectClose",
+                    "Title": "Is GameObject Close",
+                    "_keyTag": "Enemy/Ant",
+                    "_keyDistance": "3",
+                    "_keyBlackboardToggle": "False",
+                    "_keyParameter": "ANT"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "GraphAction_Debug",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "0404834b-d61c-46da-bf32-5889e7766ad0",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 423.0,
+                        "y": 186.0,
+                        "width": 164.0,
+                        "height": 117.0
+                    },
+                    "ClassReference": "Action_Debug",
+                    "Title": "Debug",
+                    "DebugMessage": "",
+                    "Status": 0
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "GraphComposite_Sequence",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "d6a19f24-3fc6-43fe-a8ad-34aeaf4b5df3",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 376.0,
+                        "y": 52.0,
+                        "width": 77.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence",
+                    "Title": "Sequence"
+                }
+            }
+        ]
+    }
+}
