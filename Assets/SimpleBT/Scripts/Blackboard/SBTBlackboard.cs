@@ -54,8 +54,10 @@ namespace SimpleBT.NonEditor
         /// <returns></returns>
         public T GetComplexValue<T>(string keyToGet)
         {
-            if (_data.ContainsKey(keyToGet.ToUpper())) {
-                _data.TryGetValue(keyToGet.ToUpper(), out object value);
+            string key = keyToGet.ToUpper();
+            
+            if (_data.ContainsKey(key)) {
+                _data.TryGetValue(key, out object value);
                 return (T)value;
             }
             else
@@ -77,6 +79,13 @@ namespace SimpleBT.NonEditor
             
             if (_data.ContainsKey(key)) { _data[key] = value; }
             else { _data.Add(key, value); }
+        }
+
+        public void RemoveValue(string key)
+        {
+            key = key.ToUpper();
+            
+            if (_data.ContainsKey(key)) { _data.Remove(key); }
         }
     }
 

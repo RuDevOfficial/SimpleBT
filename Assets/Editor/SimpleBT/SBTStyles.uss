@@ -58,7 +58,7 @@ GridBackground {
 .TwoTextFieldElement {
     flex-direction: row;
     align-self: auto;
-    align-content: stretch;
+    align-content: flex-start;
     justify-content: flex-start;
     align-items: center;
 }
@@ -94,5 +94,5 @@ TextKeyField .unity-text-field {
     flex-wrap: nowrap;
     flex-direction: row;
     max-width: 150px;
-    min-width: 150px;
+    min-width: auto;
 }

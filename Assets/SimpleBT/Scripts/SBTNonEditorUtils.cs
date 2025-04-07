@@ -152,7 +152,8 @@ public static class SBTNonEditorUtils
         {
             Debug.LogError($"Error generating tree because of node {name}\n" +
                       "Are you sure its inside the namespace SimpleBT.NonEditor.Nodes?\n" +
-                      "Are you sure the GraphNode title matches the other class?");
+                      "Are you sure the GraphNode title matches the other class?\n" +
+                      "Are you sure you put INodeKeyAssignable and also put the values on the GraphNode?");
         }
     }
 

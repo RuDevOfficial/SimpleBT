@@ -27,6 +27,8 @@ namespace SimpleBT.NonEditor.Nodes
                         _lastIndex = i;
                         break;
                     }
+
+                    break;
                 }
                 
                 // If this line is ran through code it means no condition on

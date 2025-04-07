@@ -37,6 +37,8 @@ namespace SimpleBT.Editor
                     new SearchTreeEntry(new GUIContent("Comparison Condition", _icon)) { level = 2, userData = "GraphCondition_Comparison" },
                     new SearchTreeEntry(new GUIContent("Is Near Ledge 2D", _icon)) { level = 2, userData = "GraphCondition_IsNearLedge2D" },
                     new SearchTreeEntry(new GUIContent("Is at Minimum Distance", _icon)) { level = 2, userData = "GraphCondition_IsAtMinimumDistance" },
+                    new SearchTreeEntry(new GUIContent("Is GameObject Close 2D", _icon)) { level = 2, userData = "GraphCondition_IsGameObjectClose2D" },
+                    new SearchTreeEntry(new GUIContent("Is GameObject Close 3D", _icon)) { level = 2, userData = "GraphCondition_IsGameObjectClose3D" },
 
                 new SearchTreeEntry(new GUIContent("Branch", _icon)) { level = 1, userData = "BehaviorTreeGraphNode" },
                 
@@ -60,9 +62,9 @@ namespace SimpleBT.Editor
                 new SearchTreeGroupEntry(new GUIContent("Actions"), 1),
                     new SearchTreeGroupEntry(new GUIContent("General"), 2),
                         new SearchTreeEntry(new GUIContent("Always Succeed", _icon)) { level = 3, userData = "GraphAction_AlwaysSucceed" },
+                        new SearchTreeEntry(new GUIContent("Destroy GameObject", _icon)) { level = 3, userData = "GraphAction_DestroyGameObject" },
                         new SearchTreeEntry(new GUIContent("Set Active", _icon)) { level = 3, userData = "GraphAction_SetActive" },
                         new SearchTreeEntry(new GUIContent("Set Active (Toggle)", _icon)) { level = 3, userData = "GraphAction_SetActiveToggle" },
-                        new SearchTreeEntry(new GUIContent("Is GameObject Close", _icon)) { level = 3, userData = "GraphCondition_IsGameObjectClose" },
                         new SearchTreeEntry(new GUIContent("Store Random Position 3D", _icon)) { level = 3, userData = "GraphAction_StoreRandomPosition3D" },
                     new SearchTreeGroupEntry(new GUIContent("Movement"), 2),
                         new SearchTreeEntry(new GUIContent("Stop", _icon)) { level = 3, userData = "GraphAction_Stop" },
@@ -71,6 +73,7 @@ namespace SimpleBT.Editor
                             new SearchTreeEntry(new GUIContent("Go To Position 2D", _icon)) { level = 4, userData = "GraphAction_GoToPosition2D" },
                             new SearchTreeEntry(new GUIContent("Linear Move 2D", _icon)) { level = 4, userData = "GraphAction_LinearMove2D" },
                         new SearchTreeGroupEntry(new GUIContent("3D"), 3),
+                            new SearchTreeEntry(new GUIContent("Follow 3D", _icon)) { level = 4, userData = "GraphAction_Follow3D" },
                             new SearchTreeEntry(new GUIContent("Go To Position 3D", _icon)) { level = 4, userData = "GraphAction_GoToPosition3D" },
                         
                 new SearchTreeGroupEntry(new GUIContent("Other"), 1),
