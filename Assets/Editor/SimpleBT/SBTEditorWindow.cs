@@ -24,7 +24,7 @@ namespace SimpleBT.Editor
     using System.IO;
     
     [System.Serializable]
-    public class SBTEditorWindow : EditorWindow, ISerializationCallbackReceiver
+    public class SBTEditorWindow : EditorWindow
     {
         private readonly Rect _blackboardRect = new Rect(0, 30, 250, 350);
         
@@ -62,6 +62,7 @@ namespace SimpleBT.Editor
             GenerateGraph();
             GenerateVisualElements();
             LoadEditorData();
+            Load(_lastFieldValue);
         }
 
         private void OnDisable() {
@@ -311,18 +312,6 @@ namespace SimpleBT.Editor
             _blackboardGraph?.Reset();
         }
 
-        #endregion
-        
-        #region ISerializationCallbackReceiver Methods
-        
-        //Method to save on domain reload
-        public void OnBeforeSerialize() {
-            if(!string.IsNullOrEmpty(_lastFieldValue)) { SBTDataManager.SaveEditorToJson(this); }
-        }
-
-        //Left blank
-        public void OnAfterDeserialize() { }
-        
         #endregion
         
         #region Generating Tree, Blackboard & Object Cleanup

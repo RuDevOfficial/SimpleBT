@@ -193,6 +193,9 @@ public static class SBTNonEditorUtils
                 value = newBool;
                 return (T)value;
             }
+
+            value = false;
+            return (T)value;
         }
             
         else if (typeof(T) == typeof(Vector2))

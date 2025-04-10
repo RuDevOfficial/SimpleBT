@@ -5,34 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="227eb850-3e24-477a-8760-e6199cf36f52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_DestroyGameObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_DestroyGameObject.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Follow3D.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Follow3D.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_IsGameObjectClose3D.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_IsGameObjectClose3D.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_DestroyGameObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_DestroyGameObject.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Follow3D.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Follow3D.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsGameObjectClose2D.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsGameObjectClose2D.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsGameObjectClose3D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Flee2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Flee2D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Flee3D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Flee3D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_FleeToPosition3D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_FleeToPosition3D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_OverrideGameObjectPosition3D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_OverrideGameObjectPosition3D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_OverrideTag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_OverrideTag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_ParentObjectToSelf.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_ParentObjectToSelf.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_RemoveKey.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_RemoveKey.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_SendMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_SendMessage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_SingleTextFieldTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_SingleTextFieldTemplate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_UnparentGameObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_UnparentGameObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Flee2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Flee2D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Flee3D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Flee3D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_OverrideGameObjectPosition3D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_OverrideGameObjectPosition3D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_OverrideTag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_OverrideTag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_ParentObjectToSelf.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_ParentObjectToSelf.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_RemoveKey.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_RemoveKey.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_SendMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_SendMessage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_UnparentGameObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_UnparentGameObject.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Follow2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Follow2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_IsGameObjectClose.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_IsGameObjectClose2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_IsGameObjectClose.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_IsGameObjectClose2D.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_GoToPosition2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_GoToPosition2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_InvertNumValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_InvertNumValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTStyles.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTStyles.uss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SimpleBT/Ant3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SimpleBT/Ant3D.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_AntEater.simple" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_AntEater.simple" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Wander.simple" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Wander.simple" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Blackboard/SBTBlackboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Blackboard/SBTBlackboard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Follow2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Follow2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_IsGameObjectClose.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_IsGameObjectClose.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsGameObjectClose3D.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Composite_Priority.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Composite_Priority.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Follow3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Follow3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_GoToPosition3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_GoToPosition3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsGameObjectClose3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsGameObjectClose3D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTNonEditorUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTNonEditorUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +83,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/fd/08ecc396/List`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/53c71f9d05b34c738cdf17763c0778792f200/fa/290aeb14/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5c/d612a9e9/Void.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7fd37b296550485d95ecaf5a50ed53b21f4200/0a/b16892dd/VisualElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/19/1cf98714/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PeaSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Flee3D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_Comparison.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Composite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
@@ -240,7 +266,10 @@
       <workItem from="1743944214583" duration="7522000" />
       <workItem from="1743964427834" duration="2340000" />
       <workItem from="1744023996313" duration="4526000" />
-      <workItem from="1744032424446" duration="837000" />
+      <workItem from="1744032424446" duration="945000" />
+      <workItem from="1744113565971" duration="3874000" />
+      <workItem from="1744198075687" duration="3329000" />
+      <workItem from="1744295328206" duration="6094000" />
     </task>
     <servers />
   </component>

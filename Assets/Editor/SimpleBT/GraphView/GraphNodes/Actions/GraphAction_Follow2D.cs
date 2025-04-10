@@ -14,7 +14,7 @@ namespace SimpleBT.Editor.GraphNodes
         private TextField _targetField;
         private TextField _speedField;
         private Toggle _useTransformToggle;
-        private DropdownField _ignoreDropdown;
+        private DropdownField _rigidBodyFlag;
         private TextField _distanceField;
 
         [SerializeField] protected string _keyTarget;
@@ -41,9 +41,9 @@ namespace SimpleBT.Editor.GraphNodes
             VisualElement dropdownContainer = new VisualElement();
             dropdownContainer.AddToClassList("DropdownContainer");
             string[] conditions = Enum.GetNames(typeof(RigidbodyMoveFlag));
-            _ignoreDropdown = new DropdownField(conditions.ToList(), 0, FormatSelectedValueCallback);
+            _rigidBodyFlag = new DropdownField(conditions.ToList(), 0, FormatSelectedValueCallback);
             dropdownContainer.Add(new Label("Ignore Flag: "));
-            dropdownContainer.Add(_ignoreDropdown);
+            dropdownContainer.Add(_rigidBodyFlag);
             
             _targetField.RegisterValueChangedCallback(evt => _keyTarget = evt.newValue);
             _speedField.RegisterValueChangedCallback(evt => _keySpeed = evt.newValue);
@@ -74,7 +74,7 @@ namespace SimpleBT.Editor.GraphNodes
             _targetField.value = values[0];
             _speedField.value = values[1];
             _useTransformToggle.value = bool.Parse(values[2]);
-            _ignoreDropdown.value = values[3];
+            _rigidBodyFlag.value = values[3];
             _distanceField.value = values[4];
         }
         
@@ -84,5 +84,4 @@ namespace SimpleBT.Editor.GraphNodes
             return arg;
         }
     }
-
 }

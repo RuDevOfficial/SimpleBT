@@ -19,6 +19,8 @@ namespace SimpleBT.NonEditor
                 b.Instantiate();
                 _data.Add(b.Key, b.Value);
             }
+            
+            _data.Add("SELF", gameObject);
         }
 
         // ReSharper disable Unity.PerformanceAnalysis

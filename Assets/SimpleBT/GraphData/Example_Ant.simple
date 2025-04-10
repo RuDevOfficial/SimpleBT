@@ -1,0 +1,141 @@
+{
+    "BehaviorName": "Example_Ant",
+    "NodeCollection": {
+        "BehaviorName": "Example_Ant",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "3dcba0f0-047f-41c1-84c7-0233a70c33ea",
+                "toGUIDs": [
+                    "4150b671-feb0-4877-af60-9e09c81196f8"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "4150b671-feb0-4877-af60-9e09c81196f8",
+                "toGUIDs": [
+                    "6e7b7410-b746-4ced-be23-3e71ea68ef67"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "6e7b7410-b746-4ced-be23-3e71ea68ef67",
+                "toGUIDs": [],
+                "Values": [
+                    "Example_Ant",
+                    "Example_Ant_Food"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": -235.0,
+            "y": 35.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": []
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3dcba0f0-047f-41c1-84c7-0233a70c33ea",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 554.0,
+                        "y": 97.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphDecorator_RepeatForever",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "4150b671-feb0-4877-af60-9e09c81196f8",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 537.0,
+                        "y": 213.0,
+                        "width": 134.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Decorator_RepeatForever",
+                    "Title": "Repeat Forever"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "BehaviorTreeGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "6e7b7410-b746-4ced-be23-3e71ea68ef67",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 523.0,
+                        "y": 347.0,
+                        "width": 164.0,
+                        "height": 76.0
+                    },
+                    "ClassReference": "BehaviorTree",
+                    "Title": "Branch",
+                    "_dropdown": {
+                        "rid": 1003
+                    },
+                    "lastDropDownValue": "Example_Ant_Food",
+                    "ReferencedBehaviorName": "Example_Ant",
+                    "_lastValue": 0
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "DropdownField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Example_Ant_Food"
+                }
+            }
+        ]
+    }
+}

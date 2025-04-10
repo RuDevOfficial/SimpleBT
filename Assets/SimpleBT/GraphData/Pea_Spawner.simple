@@ -1,0 +1,220 @@
+{
+    "BehaviorName": "Pea_Spawner",
+    "NodeCollection": {
+        "BehaviorName": "Pea_Spawner",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
+                "toGUIDs": [
+                    "d99e110d-3d36-4093-995e-a67f1f2bc9fe"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "d99e110d-3d36-4093-995e-a67f1f2bc9fe",
+                "toGUIDs": [
+                    "fb691339-4f9b-4bcc-8729-05841eaa4321"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "fb691339-4f9b-4bcc-8729-05841eaa4321",
+                "toGUIDs": [
+                    "8b2ed28c-033f-43d5-8d46-f5a8a824ba50",
+                    "9318c538-f4c0-48ec-a4dd-b45a22001c66"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
+                "fromGUID": "8b2ed28c-033f-43d5-8d46-f5a8a824ba50",
+                "toGUIDs": [],
+                "Values": [
+                    "SpawnFood"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1004
+                },
+                "fromGUID": "9318c538-f4c0-48ec-a4dd-b45a22001c66",
+                "toGUIDs": [],
+                "Values": [
+                    "10",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": -189.0,
+            "y": -146.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": []
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 642.0,
+                        "y": 268.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphDecorator_RepeatForever",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "d99e110d-3d36-4093-995e-a67f1f2bc9fe",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 633.0,
+                        "y": 401.0,
+                        "width": 134.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Decorator_RepeatForever",
+                    "Title": "Repeat Forever"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "GraphComposite_Sequence",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "fb691339-4f9b-4bcc-8729-05841eaa4321",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 667.0,
+                        "y": 514.0,
+                        "width": 77.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence",
+                    "Title": "Sequence"
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "GraphAction_SendMessage",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "8b2ed28c-033f-43d5-8d46-f5a8a824ba50",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 596.0,
+                        "y": 623.0,
+                        "width": 142.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Action_SendMessage",
+                    "Title": "Send Message",
+                    "_keyField": "SpawnFood"
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "GraphAction_Wait",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "9318c538-f4c0-48ec-a4dd-b45a22001c66",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 744.0,
+                        "y": 623.0,
+                        "width": 90.0,
+                        "height": 117.0
+                    },
+                    "ClassReference": "Action_Wait",
+                    "Title": "Wait",
+                    "TextField": {
+                        "rid": 1005
+                    },
+                    "DropDown": {
+                        "rid": 1006
+                    }
+                }
+            },
+            {
+                "rid": 1005,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "10"
+                }
+            },
+            {
+                "rid": 1006,
+                "type": {
+                    "class": "DropdownField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Success"
+                }
+            }
+        ]
+    }
+}

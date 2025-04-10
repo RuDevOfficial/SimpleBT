@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using SimpleBT.Editor.GraphNodes;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -43,6 +41,7 @@ namespace SimpleBT.Editor
                 new SearchTreeEntry(new GUIContent("Branch", _icon)) { level = 1, userData = "BehaviorTreeGraphNode" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Blackboard"), 1),
+                    new SearchTreeEntry(new GUIContent("Remove Key", _icon)) { level = 2, userData = "GraphAction_RemoveKey" },
                     new SearchTreeEntry(new GUIContent("Invert Numerical Value", _icon)) { level = 2, userData = "GraphAction_InvertNumValue" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Composite"), 1),
@@ -62,6 +61,11 @@ namespace SimpleBT.Editor
                 new SearchTreeGroupEntry(new GUIContent("Actions"), 1),
                     new SearchTreeGroupEntry(new GUIContent("General"), 2),
                         new SearchTreeEntry(new GUIContent("Always Succeed", _icon)) { level = 3, userData = "GraphAction_AlwaysSucceed" },
+                        new SearchTreeEntry(new GUIContent("Send Message", _icon)) { level = 3, userData = "GraphAction_SendMessage" },
+                        new SearchTreeEntry(new GUIContent("Override Tag", _icon)) { level = 3, userData = "GraphAction_OverrideTag" },
+                        new SearchTreeEntry(new GUIContent("Parent GameObject to Self", _icon)) { level = 3, userData = "GraphAction_ParentObjectToSelf" },
+                        new SearchTreeEntry(new GUIContent("Unparent GameObject", _icon)) { level = 3, userData = "GraphAction_UnparentGameObject" },
+                        new SearchTreeEntry(new GUIContent("Override GameObject Position 3D", _icon)) { level = 3, userData = "GraphAction_OverrideGameObjectPosition3D" },
                         new SearchTreeEntry(new GUIContent("Destroy GameObject", _icon)) { level = 3, userData = "GraphAction_DestroyGameObject" },
                         new SearchTreeEntry(new GUIContent("Set Active", _icon)) { level = 3, userData = "GraphAction_SetActive" },
                         new SearchTreeEntry(new GUIContent("Set Active (Toggle)", _icon)) { level = 3, userData = "GraphAction_SetActiveToggle" },
@@ -70,14 +74,18 @@ namespace SimpleBT.Editor
                         new SearchTreeEntry(new GUIContent("Stop", _icon)) { level = 3, userData = "GraphAction_Stop" },
                         new SearchTreeGroupEntry(new GUIContent("2D"), 3),
                             new SearchTreeEntry(new GUIContent("Follow 2D", _icon)) { level = 4, userData = "GraphAction_Follow2D" },
+                            new SearchTreeEntry(new GUIContent("Flee 2D", _icon)) { level = 4, userData = "GraphAction_Flee2D" },
                             new SearchTreeEntry(new GUIContent("Go To Position 2D", _icon)) { level = 4, userData = "GraphAction_GoToPosition2D" },
                             new SearchTreeEntry(new GUIContent("Linear Move 2D", _icon)) { level = 4, userData = "GraphAction_LinearMove2D" },
                         new SearchTreeGroupEntry(new GUIContent("3D"), 3),
                             new SearchTreeEntry(new GUIContent("Follow 3D", _icon)) { level = 4, userData = "GraphAction_Follow3D" },
+                            new SearchTreeEntry(new GUIContent("Flee 3D", _icon)) { level = 4, userData = "GraphAction_Flee3D" },
                             new SearchTreeEntry(new GUIContent("Go To Position 3D", _icon)) { level = 4, userData = "GraphAction_GoToPosition3D" },
                         
                 new SearchTreeGroupEntry(new GUIContent("Other"), 1),
                     new SearchTreeEntry(new GUIContent("Debug", _icon)) { level = 2, userData = "GraphAction_Debug" },
+                    
+                new SearchTreeGroupEntry(new GUIContent("Custom"), 1),
             };
 
             AddCustomEntries(context, entries);

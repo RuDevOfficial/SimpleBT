@@ -44,6 +44,8 @@ namespace SimpleBT.Editor.GraphNodes
             _positionTF.RegisterValueChangedCallback(evt => _keyPosition = evt.newValue);
             _speedTF.RegisterValueChangedCallback(evt => _keySpeed = evt.newValue);
             _useTransformToggle.RegisterValueChangedCallback(evt => _keyUseTransform = evt.newValue.ToString());
+
+            _useTransformToggle.value = false;
             
             extensionContainer.Add(_positionTF);
             extensionContainer.Add(_speedTF);

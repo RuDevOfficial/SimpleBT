@@ -19,12 +19,13 @@ namespace SimpleBT.NonEditor.Nodes
         {
             if (!_target)
             {
+                if (_useTransform == false && !_rb) { return Status.Failure; }
+
                 _target = blackboard.GetComplexValue<GameObject>(_keyTarget); 
                 _velocity = blackboard.GetValue<float>(_keySpeed);
+                
                 if (!_target) { return Status.Failure; }
             }
-            
-            if (_useTransform == false && !_rb) { return Status.Failure; }
             
             Vector3 direction = (_target.transform.position - blackboard.gameObject.transform.position).normalized;
             
@@ -35,8 +36,11 @@ namespace SimpleBT.NonEditor.Nodes
                 else { _rb.linearVelocity = direction * (_velocity * Time.fixedDeltaTime);}
             }
 
-            return Vector3.Distance(_target.transform.position, blackboard.gameObject.transform.position) 
-                   <= _distance ? Status.Success : Status.Running;
+            bool result = Vector3.Distance(_target.transform.position, blackboard.gameObject.transform.position) <= _distance;
+            if (!result) return Status.Running;
+            
+            _target = null;
+            return Status.Success;
         }
 
         public override void OnAbort()
@@ -44,4 +48,5 @@ namespace SimpleBT.NonEditor.Nodes
             _target = null;
         }
     }
+
 }

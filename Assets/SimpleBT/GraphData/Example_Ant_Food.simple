@@ -1,0 +1,466 @@
+{
+    "BehaviorName": "Example_Ant_Food",
+    "NodeCollection": {
+        "BehaviorName": "Example_Ant_Food",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "ed2c77ed-545b-4d53-84ed-c7d299dda3b2",
+                "toGUIDs": [
+                    "69f448b9-e68d-4c90-b54f-51b139b61c54",
+                    "9d1b3f1d-5ed8-4e31-87f7-43d2a7ea4fe2",
+                    "83bdad50-0efc-4ca0-924c-5056a7aff567",
+                    "15252bc8-6ac0-4a9d-96f1-54e1087de187",
+                    "aed71c87-a297-4a21-afa8-6458ce0be9c5",
+                    "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
+                    "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
+                    "dfafa294-b818-4026-b3e8-57666f956231"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "aed71c87-a297-4a21-afa8-6458ce0be9c5",
+                "toGUIDs": [],
+                "Values": [
+                    "0, 1, 0",
+                    "3",
+                    "False",
+                    "Y"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
+                "toGUIDs": [],
+                "Values": [
+                    "PEA"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
+                "fromGUID": "83bdad50-0efc-4ca0-924c-5056a7aff567",
+                "toGUIDs": [],
+                "Values": [
+                    "PEA"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1004
+                },
+                "fromGUID": "15252bc8-6ac0-4a9d-96f1-54e1087de187",
+                "toGUIDs": [],
+                "Values": [
+                    "PEA",
+                    "0, 4, 0",
+                    "True"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1005
+                },
+                "fromGUID": "69f448b9-e68d-4c90-b54f-51b139b61c54",
+                "toGUIDs": [],
+                "Values": [
+                    "Food/Pea",
+                    "20",
+                    "True",
+                    "PEA"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1006
+                },
+                "fromGUID": "9d1b3f1d-5ed8-4e31-87f7-43d2a7ea4fe2",
+                "toGUIDs": [],
+                "Values": [
+                    "PEA",
+                    "3",
+                    "False",
+                    "Y",
+                    "1"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1007
+                },
+                "fromGUID": "85c645a3-f94c-4a9e-8308-5271a10c5d5a",
+                "toGUIDs": [
+                    "ed2c77ed-545b-4d53-84ed-c7d299dda3b2"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1008
+                },
+                "fromGUID": "3dcba0f0-047f-41c1-84c7-0233a70c33ea",
+                "toGUIDs": [
+                    "85c645a3-f94c-4a9e-8308-5271a10c5d5a"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1009
+                },
+                "fromGUID": "f6b02bcc-7894-4032-bc3f-905e156e02b1",
+                "toGUIDs": [],
+                "Values": [
+                    "PEA",
+                    "0, 1, 0",
+                    "False"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1010
+                },
+                "fromGUID": "dfafa294-b818-4026-b3e8-57666f956231",
+                "toGUIDs": [],
+                "Values": [
+                    "PEA"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1011
+                },
+                "fromGUID": "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
+                "toGUIDs": [],
+                "Values": [
+                    "PEA",
+                    "Food/Obtained"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": 43.0,
+            "y": 30.0
+        },
+        "ViewportScale": {
+            "x": 0.6575162410736084,
+            "y": 0.6575162410736084
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": []
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "GraphComposite_Sequence",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "ed2c77ed-545b-4d53-84ed-c7d299dda3b2",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 554.0,
+                        "y": 226.0,
+                        "width": 77.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence",
+                    "Title": "Sequence"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphAction_GoToPosition3D",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "aed71c87-a297-4a21-afa8-6458ce0be9c5",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 699.0,
+                        "y": 389.0,
+                        "width": 150.0,
+                        "height": 154.0
+                    },
+                    "ClassReference": "Action_GoToPosition3D",
+                    "Title": "Go To Position 3D",
+                    "_keyPosition": "0, 1, 0",
+                    "_keySpeed": "3",
+                    "_keyUseTransform": "False",
+                    "_keyRigidbodyMoveFlag": 2
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "GraphAction_UnparentGameObject",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 865.0,
+                        "y": 389.0,
+                        "width": 142.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Action_UnparentGameObject",
+                    "Title": "Unparent Object",
+                    "_keyGameObject": "PEA"
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "GraphAction_ParentObjectToSelf",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "83bdad50-0efc-4ca0-924c-5056a7aff567",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 358.0,
+                        "y": 389.0,
+                        "width": 128.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Action_ParentObjectToSelf",
+                    "Title": "Parent\nObject To Self",
+                    "_keyGameObject": "PEA"
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "GraphAction_OverrideGameObjectPosition3D",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "15252bc8-6ac0-4a9d-96f1-54e1087de187",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 496.0,
+                        "y": 389.0,
+                        "width": 188.0,
+                        "height": 134.0
+                    },
+                    "ClassReference": "Action_OverrideGameObjectPosition3D",
+                    "Title": "Override\nGameObject Position 3D",
+                    "_keyGameObject": "PEA",
+                    "_keyPosition": "0, 4, 0",
+                    "_keyLocal": "True"
+                }
+            },
+            {
+                "rid": 1005,
+                "type": {
+                    "class": "GraphCondition_IsGameObjectClose3D",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "69f448b9-e68d-4c90-b54f-51b139b61c54",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 6.0,
+                        "y": 389.0,
+                        "width": 187.0,
+                        "height": 154.0
+                    },
+                    "ClassReference": "Condition_IsGameObjectClose3D",
+                    "Title": "Is GameObject Close 3D",
+                    "_keyTag": "Food/Pea",
+                    "_keyRadius": "20",
+                    "_keyBlackboardToggle": "True",
+                    "_keyParameter": "PEA"
+                }
+            },
+            {
+                "rid": 1006,
+                "type": {
+                    "class": "GraphAction_Follow3D",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "9d1b3f1d-5ed8-4e31-87f7-43d2a7ea4fe2",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 212.0,
+                        "y": 389.0,
+                        "width": 134.0,
+                        "height": 173.0
+                    },
+                    "ClassReference": "Action_Follow3D",
+                    "Title": "Follow 3D",
+                    "_keyTarget": "PEA",
+                    "_keySpeed": "3",
+                    "_keyToggle": "False",
+                    "_keyRigidbodyMoveFlag": 2,
+                    "_keyDistance": "1"
+                }
+            },
+            {
+                "rid": 1007,
+                "type": {
+                    "class": "GraphDecorator_RepeatForever",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "85c645a3-f94c-4a9e-8308-5271a10c5d5a",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 524.0,
+                        "y": 89.0,
+                        "width": 134.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Decorator_RepeatForever",
+                    "Title": "Repeat Forever"
+                }
+            },
+            {
+                "rid": 1008,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3dcba0f0-047f-41c1-84c7-0233a70c33ea",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 524.0,
+                        "y": -29.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1009,
+                "type": {
+                    "class": "GraphAction_OverrideGameObjectPosition3D",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "f6b02bcc-7894-4032-bc3f-905e156e02b1",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 1452.0,
+                        "y": 372.0,
+                        "width": 188.0,
+                        "height": 134.0
+                    },
+                    "ClassReference": "Action_OverrideGameObjectPosition3D",
+                    "Title": "Override\nGameObject Position 3D",
+                    "_keyGameObject": "PEA",
+                    "_keyPosition": "0, 1, 0",
+                    "_keyLocal": "False"
+                }
+            },
+            {
+                "rid": 1010,
+                "type": {
+                    "class": "GraphAction_RemoveKey",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "dfafa294-b818-4026-b3e8-57666f956231",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 1188.0,
+                        "y": 389.0,
+                        "width": 118.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Action_RemoveKey",
+                    "Title": "Remove Key",
+                    "_keyField": "PEA"
+                }
+            },
+            {
+                "rid": 1011,
+                "type": {
+                    "class": "GraphAction_OverrideTag",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 1024.0,
+                        "y": 389.0,
+                        "width": 140.0,
+                        "height": 117.0
+                    },
+                    "ClassReference": "Action_OverrideTag",
+                    "Title": "Override Tag",
+                    "_keyField": "PEA",
+                    "_keyDropdownField": "Food/Obtained"
+                }
+            }
+        ]
+    }
+}

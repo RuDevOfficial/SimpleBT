@@ -59,9 +59,12 @@ namespace SimpleBT.NonEditor.Nodes
                 if (_rb2D.bodyType == RigidbodyType2D.Kinematic) { _rb2D.MovePosition((Vector2)blackboard.gameObject.transform.position + direction * (_velocity * Time.deltaTime), _rigidbodyMoveFlag); }
                 else { _rb2D.linearVelocity = direction * (_velocity * Time.fixedDeltaTime); }
             }
+
+            bool result = Vector2.Distance(_target.transform.position, blackboard.gameObject.transform.position) <= _distance;
+            if (!result) return Status.Running;
             
-            return Vector2.Distance(_target.transform.position, blackboard.gameObject.transform.position) 
-                   <= _distance ? Status.Success : Status.Running;
+            _target = null;
+            return Status.Success;
         }
     }
 
