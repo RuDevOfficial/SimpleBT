@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &94008686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +299,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GUID: 8b2ed28c-033f-43d5-8d46-f5a8a824ba50
   _keyMethodName: SpawnFood
+--- !u!114 &250370265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0819e07cd144f78d70a011e47d1710, type: 3}
+  m_Name: 6
+  m_EditorClassIdentifier: 
+  GUID: 69f448b9-e68d-4c90-b54f-51b139b61c54
+  _keyTag: Food/Pea
+  _keyRadius: 20
+  _keyBlackboardToggle: True
+  _keyParameter: PEA
 --- !u!114 &358919691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +329,24 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   GUID: 0a8acde5-2f23-4356-9906-1674b5dc295b
+--- !u!114 &375848461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a26f268c74c40f98317bcb4f8f0e9f5, type: 3}
+  m_Name: 7
+  m_EditorClassIdentifier: 
+  GUID: 9d1b3f1d-5ed8-4e31-87f7-43d2a7ea4fe2
+  _keyTarget: PEA
+  _keySpeed: 3
+  _keyUseTransform: False
+  _keyIgnoreFlag: Y
+  _keyDistance: 1
 --- !u!1 &526962555
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2924091bdb827439206f7535467acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BT: {fileID: 1234710619}
+  BT: {fileID: 2097582960}
 --- !u!54 &526962562
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -492,6 +527,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GUID: d99e110d-3d36-4093-995e-a67f1f2bc9fe
   Child: {fileID: 1841572899}
+--- !u!114 &581392062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7e34297f7f4de9839ece781f8bd49d, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  GUID: dfafa294-b818-4026-b3e8-57666f956231
+  _key: PEA
 --- !u!1 &607786007
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +722,7 @@ MonoBehaviour:
   GUID: 9318c538-f4c0-48ec-a4dd-b45a22001c66
   keyTime: 10
   keyStatus: Success
---- !u!114 &660939330
+--- !u!114 &783228517
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -682,13 +731,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a2e342837d54034a44bcc7f110bbbc4, type: 3}
-  m_Name: 5
+  m_Script: {fileID: 11500000, guid: 3e752de97b1146f49f88917a2beb99a1, type: 3}
+  m_Name: 2
   m_EditorClassIdentifier: 
-  GUID: 15252bc8-6ac0-4a9d-96f1-54e1087de187
-  _keyGameObject: PEA
-  _keyPosition: 0, 4, 0
-  _keyLocal: True
+  GUID: aed71c87-a297-4a21-afa8-6458ce0be9c5
+  _keyPosition: 0, 1, 0
+  _keySpeed: 3
+  _keyUseTransform: False
+  _keyIgnoreFlag: Y
+--- !u!114 &797464281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798821543ef74a78809f50c98d396976, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  GUID: 4150b671-feb0-4877-af60-9e09c81196f8
+  Child: {fileID: 1635309953}
+--- !u!114 &829791603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7ce0fe88fd4ac7bcf99c9d7d72df84, type: 3}
+  m_Name: 8
+  m_EditorClassIdentifier: 
+  GUID: dbe5e6c5-7c6a-4d62-a842-174c6e60f00b
+  _keyTarget: PEA
+  _keyTag: Food/Obtained
 --- !u!114 &859843596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,20 +938,6 @@ MonoBehaviour:
   - {fileID: 1848860046}
   - {fileID: 1698911527}
   RelatedBranch: 
---- !u!114 &943507868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2778715bfe484aa8999ec72588f239, type: 3}
-  m_Name: 3
-  m_EditorClassIdentifier: 
-  GUID: 5f2ab4ca-9d9b-4422-82d3-2f69e350c418
-  _gameObjectKey: PEA
 --- !u!114 &956192279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +953,29 @@ MonoBehaviour:
   GUID: 9f5d6f74-431f-4b67-b5b9-b2ee5c98e0ef
   keyTime: 3
   keyStatus: Success
+--- !u!114 &969155400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e1131228e340d6b8003fcaa98c7570, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  GUID: ed2c77ed-545b-4d53-84ed-c7d299dda3b2
+  _children:
+  - {fileID: 250370265}
+  - {fileID: 375848461}
+  - {fileID: 1675538577}
+  - {fileID: 2128421948}
+  - {fileID: 783228517}
+  - {fileID: 1122610289}
+  - {fileID: 829791603}
+  - {fileID: 2023824388}
+  - {fileID: 581392062}
 --- !u!114 &1044214570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,22 +993,6 @@ MonoBehaviour:
   - {fileID: 956192279}
   - {fileID: 204410607}
   - {fileID: 1289071918}
---- !u!114 &1103609995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a2e342837d54034a44bcc7f110bbbc4, type: 3}
-  m_Name: 9
-  m_EditorClassIdentifier: 
-  GUID: f6b02bcc-7894-4032-bc3f-905e156e02b1
-  _keyGameObject: PEA
-  _keyPosition: 0, 1, 0
-  _keyLocal: False
 --- !u!1001 &1108849116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -978,7 +1050,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f44b78c15542948b9bd9e21ffe0e5e, type: 3}
---- !u!114 &1110920477
+--- !u!114 &1122610289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -987,56 +1059,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf7e34297f7f4de9839ece781f8bd49d, type: 3}
-  m_Name: 10
+  m_Script: {fileID: 11500000, guid: bd2778715bfe484aa8999ec72588f239, type: 3}
+  m_Name: 3
   m_EditorClassIdentifier: 
-  GUID: dfafa294-b818-4026-b3e8-57666f956231
-  _key: PEA
---- !u!114 &1230322176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a26f268c74c40f98317bcb4f8f0e9f5, type: 3}
-  m_Name: 7
-  m_EditorClassIdentifier: 
-  GUID: 9d1b3f1d-5ed8-4e31-87f7-43d2a7ea4fe2
-  _keyTarget: PEA
-  _keySpeed: 3
-  _keyUseTransform: False
-  _keyIgnoreFlag: Y
-  _keyDistance: 1
---- !u!114 &1234710619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c669c04ccc4e09b6a9cd15a1695354, type: 3}
-  m_Name: Example_Ant_Food
-  m_EditorClassIdentifier: 
-  GUID: 3dcba0f0-047f-41c1-84c7-0233a70c33ea
-  Root: {fileID: 1827779149}
-  CompleteNodeList:
-  - {fileID: 2136382623}
-  - {fileID: 1907349466}
-  - {fileID: 943507868}
-  - {fileID: 1490644413}
-  - {fileID: 660939330}
-  - {fileID: 1598210834}
-  - {fileID: 1230322176}
-  - {fileID: 1827779149}
-  - {fileID: 1103609995}
-  - {fileID: 1110920477}
-  - {fileID: 1867459033}
-  RelatedBranch: 
+  GUID: 5f2ab4ca-9d9b-4422-82d3-2f69e350c418
+  _gameObjectKey: PEA
 --- !u!114 &1289071918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,37 +1081,6 @@ MonoBehaviour:
   _keySpeed: 1
   _keyUseTransform: False
   _keyIgnoreFlag: Y
---- !u!114 &1490644413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 265ef7e22d4942dd8950987c195f5514, type: 3}
-  m_Name: 4
-  m_EditorClassIdentifier: 
-  GUID: 83bdad50-0efc-4ca0-924c-5056a7aff567
-  _gameObjectKey: PEA
---- !u!114 &1598210834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca0819e07cd144f78d70a011e47d1710, type: 3}
-  m_Name: 6
-  m_EditorClassIdentifier: 
-  GUID: 69f448b9-e68d-4c90-b54f-51b139b61c54
-  _keyTag: Food/Pea
-  _keyRadius: 20
-  _keyBlackboardToggle: True
-  _keyParameter: PEA
 --- !u!114 &1600128286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,6 +1097,32 @@ MonoBehaviour:
   _children:
   - {fileID: 876157198}
   - {fileID: 1640530494}
+--- !u!114 &1635309953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c669c04ccc4e09b6a9cd15a1695354, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  GUID: 3dcba0f0-047f-41c1-84c7-0233a70c33ea
+  Root: {fileID: 969155400}
+  CompleteNodeList:
+  - {fileID: 969155400}
+  - {fileID: 783228517}
+  - {fileID: 1122610289}
+  - {fileID: 1675538577}
+  - {fileID: 2128421948}
+  - {fileID: 250370265}
+  - {fileID: 375848461}
+  - {fileID: 829791603}
+  - {fileID: 2023824388}
+  - {fileID: 581392062}
+  RelatedBranch: Example_Ant_Food
 --- !u!1 &1640307696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1260,20 @@ MonoBehaviour:
   _children:
   - {fileID: 358919691}
   - {fileID: 859843596}
+--- !u!114 &1675538577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265ef7e22d4942dd8950987c195f5514, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  GUID: 83bdad50-0efc-4ca0-924c-5056a7aff567
+  _gameObjectKey: PEA
 --- !u!114 &1698911527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1404,20 +1440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GUID: 42777262-be46-45bf-b43d-d0830e195a4d
   Child: {fileID: 1600128286}
---- !u!114 &1827779149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798821543ef74a78809f50c98d396976, type: 3}
-  m_Name: 8
-  m_EditorClassIdentifier: 
-  GUID: 85c645a3-f94c-4a9e-8308-5271a10c5d5a
-  Child: {fileID: 2136382623}
 --- !u!114 &1841572899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,38 +1474,6 @@ MonoBehaviour:
   _keyUseTransform: False
   _keyIgnoreFlag: Y
   _keyDistance: 1
---- !u!114 &1867459033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7ce0fe88fd4ac7bcf99c9d7d72df84, type: 3}
-  m_Name: 11
-  m_EditorClassIdentifier: 
-  GUID: dbe5e6c5-7c6a-4d62-a842-174c6e60f00b
-  _keyTarget: PEA
-  _keyTag: Food/Obtained
---- !u!114 &1907349466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e752de97b1146f49f88917a2beb99a1, type: 3}
-  m_Name: 2
-  m_EditorClassIdentifier: 
-  GUID: aed71c87-a297-4a21-afa8-6458ce0be9c5
-  _keyPosition: 0, 1, 0
-  _keySpeed: 3
-  _keyUseTransform: False
-  _keyIgnoreFlag: Y
 --- !u!114 &2007022652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1504,7 +1494,7 @@ MonoBehaviour:
   - {fileID: 212267820}
   - {fileID: 652971550}
   RelatedBranch: 
---- !u!114 &2136382623
+--- !u!114 &2023824388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1513,19 +1503,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7e1131228e340d6b8003fcaa98c7570, type: 3}
-  m_Name: 1
+  m_Script: {fileID: 11500000, guid: 2a2e342837d54034a44bcc7f110bbbc4, type: 3}
+  m_Name: 9
   m_EditorClassIdentifier: 
-  GUID: ed2c77ed-545b-4d53-84ed-c7d299dda3b2
-  _children:
-  - {fileID: 1598210834}
-  - {fileID: 1230322176}
-  - {fileID: 1490644413}
-  - {fileID: 660939330}
-  - {fileID: 1907349466}
-  - {fileID: 943507868}
-  - {fileID: 1867459033}
-  - {fileID: 1110920477}
+  GUID: f6b02bcc-7894-4032-bc3f-905e156e02b1
+  _keyGameObject: PEA
+  _keyPosition: 0, 1, 0
+  _keyLocal: False
+--- !u!114 &2097582960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c669c04ccc4e09b6a9cd15a1695354, type: 3}
+  m_Name: Example_Ant
+  m_EditorClassIdentifier: 
+  GUID: 3dcba0f0-047f-41c1-84c7-0233a70c33ea
+  Root: {fileID: 797464281}
+  CompleteNodeList:
+  - {fileID: 797464281}
+  - {fileID: 1635309953}
+  RelatedBranch: 
+--- !u!114 &2128421948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2e342837d54034a44bcc7f110bbbc4, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  GUID: 15252bc8-6ac0-4a9d-96f1-54e1087de187
+  _keyGameObject: PEA
+  _keyPosition: 0, 4, 0
+  _keyLocal: True
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ namespace SimpleBT.NonEditor.Nodes
             if (!_gameObject) { return Status.Failure; }
             
             if (_isLocal) { _gameObject.transform.localPosition = _position; }
-            else { _gameObject.transform.position = _gameObject.transform.position + _position; }
+            else { _gameObject.transform.position = _position; }
             _gameObject = null;
             
             return Status.Success;

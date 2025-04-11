@@ -45,8 +45,8 @@
             }
         ],
         "ViewportPosition": {
-            "x": -235.0,
-            "y": 35.0
+            "x": -37.0,
+            "y": -12.0
         },
         "ViewportScale": {
             "x": 1.0,
@@ -110,8 +110,8 @@
                     "GUID": "6e7b7410-b746-4ced-be23-3e71ea68ef67",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 523.0,
-                        "y": 347.0,
+                        "x": 525.0,
+                        "y": 324.0,
                         "width": 164.0,
                         "height": 76.0
                     },

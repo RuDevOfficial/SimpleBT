@@ -16,6 +16,7 @@
                     "aed71c87-a297-4a21-afa8-6458ce0be9c5",
                     "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
                     "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
+                    "f6b02bcc-7894-4032-bc3f-905e156e02b1",
                     "dfafa294-b818-4026-b3e8-57666f956231"
                 ],
                 "Values": [],
@@ -117,7 +118,7 @@
                 "Node": {
                     "rid": 1007
                 },
-                "fromGUID": "85c645a3-f94c-4a9e-8308-5271a10c5d5a",
+                "fromGUID": "3dcba0f0-047f-41c1-84c7-0233a70c33ea",
                 "toGUIDs": [
                     "ed2c77ed-545b-4d53-84ed-c7d299dda3b2"
                 ],
@@ -130,11 +131,12 @@
                 "Node": {
                     "rid": 1008
                 },
-                "fromGUID": "3dcba0f0-047f-41c1-84c7-0233a70c33ea",
-                "toGUIDs": [
-                    "85c645a3-f94c-4a9e-8308-5271a10c5d5a"
+                "fromGUID": "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
+                "toGUIDs": [],
+                "Values": [
+                    "PEA",
+                    "Food/Obtained"
                 ],
-                "Values": [],
                 "VariableName": "",
                 "Condition": 0,
                 "VariableCheckName": ""
@@ -166,29 +168,15 @@
                 "VariableName": "",
                 "Condition": 0,
                 "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1011
-                },
-                "fromGUID": "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
-                "toGUIDs": [],
-                "Values": [
-                    "PEA",
-                    "Food/Obtained"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
             }
         ],
         "ViewportPosition": {
-            "x": 43.0,
-            "y": 30.0
+            "x": 239.0,
+            "y": 165.0
         },
         "ViewportScale": {
-            "x": 0.6575162410736084,
-            "y": 0.6575162410736084
+            "x": 0.49717673659324648,
+            "y": 0.49717673659324648
         }
     },
     "BlackboardCollection": {
@@ -358,26 +346,6 @@
             {
                 "rid": 1007,
                 "type": {
-                    "class": "GraphDecorator_RepeatForever",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "85c645a3-f94c-4a9e-8308-5271a10c5d5a",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 524.0,
-                        "y": 89.0,
-                        "width": 134.0,
-                        "height": 77.0
-                    },
-                    "ClassReference": "Decorator_RepeatForever",
-                    "Title": "Repeat Forever"
-                }
-            },
-            {
-                "rid": 1008,
-                "type": {
                     "class": "RootGraphNode",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
@@ -396,6 +364,28 @@
                 }
             },
             {
+                "rid": 1008,
+                "type": {
+                    "class": "GraphAction_OverrideTag",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 1024.0,
+                        "y": 389.0,
+                        "width": 140.0,
+                        "height": 117.0
+                    },
+                    "ClassReference": "Action_OverrideTag",
+                    "Title": "Override Tag",
+                    "_keyField": "PEA",
+                    "_keyDropdownField": "Food/Obtained"
+                }
+            },
+            {
                 "rid": 1009,
                 "type": {
                     "class": "GraphAction_OverrideGameObjectPosition3D",
@@ -406,8 +396,8 @@
                     "GUID": "f6b02bcc-7894-4032-bc3f-905e156e02b1",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 1452.0,
-                        "y": 372.0,
+                        "x": 1187.0,
+                        "y": 389.0,
                         "width": 188.0,
                         "height": 134.0
                     },
@@ -429,7 +419,7 @@
                     "GUID": "dfafa294-b818-4026-b3e8-57666f956231",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 1188.0,
+                        "x": 1396.0,
                         "y": 389.0,
                         "width": 118.0,
                         "height": 97.0
@@ -437,28 +427,6 @@
                     "ClassReference": "Action_RemoveKey",
                     "Title": "Remove Key",
                     "_keyField": "PEA"
-                }
-            },
-            {
-                "rid": 1011,
-                "type": {
-                    "class": "GraphAction_OverrideTag",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 1024.0,
-                        "y": 389.0,
-                        "width": 140.0,
-                        "height": 117.0
-                    },
-                    "ClassReference": "Action_OverrideTag",
-                    "Title": "Override Tag",
-                    "_keyField": "PEA",
-                    "_keyDropdownField": "Food/Obtained"
                 }
             }
         ]
