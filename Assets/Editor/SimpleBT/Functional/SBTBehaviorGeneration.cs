@@ -1,6 +1,5 @@
 ﻿using SimpleBT.Editor.Data;
 using SimpleBT.NonEditor.Tree;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace SimpleBT.Editor.BehaviorGeneration
@@ -146,7 +145,8 @@ namespace SimpleBT.Editor.BehaviorGeneration
             {
                 if (node is BehaviorTree tree)
                 {
-                    BehaviorCollection subCollection = SBTDataManager.LoadBehaviorCollectionToJson(tree.RelatedBranch);
+                    BehaviorCollection subCollection = 
+                        SBTDataManager.LoadBehaviorCollectionToJson(tree.RelatedBranch);
                     GenerateSubTree(subCollection.NodeCollection, tree);
                 }
             }

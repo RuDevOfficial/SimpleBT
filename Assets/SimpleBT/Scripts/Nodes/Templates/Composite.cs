@@ -20,9 +20,9 @@ namespace SimpleBT.Core
             foreach(Node node in _children) { node.RegisterBlackboard(sbtBlackboard); }
         }
         
-        public Condition GetFirstConditional() {
+        public ConditionNode GetFirstConditional() {
             for (int i = 0; i < _children.Count; i++) {
-                if (_children[i] is Condition condition) {
+                if (_children[i] is ConditionNode condition) {
                     return condition;
                 }
             }
@@ -31,6 +31,6 @@ namespace SimpleBT.Core
             return null;
         }
 
-        public virtual void AddChild(Node child) { _children.Add(child); }
+        public void AddChild(Node child) { _children.Add(child); }
     }
 }

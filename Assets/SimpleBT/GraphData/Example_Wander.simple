@@ -81,12 +81,12 @@
             }
         ],
         "ViewportPosition": {
-            "x": 202.0,
-            "y": 107.0
+            "x": 161.60000610351563,
+            "y": 50.400001525878909
         },
         "ViewportScale": {
-            "x": 0.7561436891555786,
-            "y": 0.7561436891555786
+            "x": 0.6575162410736084,
+            "y": 0.6575162410736084
         }
     },
     "BlackboardCollection": {
@@ -107,9 +107,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 440.0,
-                        "y": 213.0,
-                        "width": 77.0,
-                        "height": 77.0
+                        "y": 212.8000030517578,
+                        "width": 77.60003662109375,
+                        "height": 76.80000305175781
                     },
                     "ClassReference": "Sequence",
                     "Title": "Sequence"
@@ -127,9 +127,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 440.0,
-                        "y": 90.0,
-                        "width": 73.0,
-                        "height": 77.0
+                        "y": 90.4000015258789,
+                        "width": 73.60003662109375,
+                        "height": 76.79999542236328
                     },
                     "ClassReference": "Root",
                     "Title": "Root"
@@ -146,10 +146,10 @@
                     "GUID": "8c0292c2-5734-49c5-8c04-164e424b16a8",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 393.0,
-                        "y": 321.0,
-                        "width": 201.0,
-                        "height": 154.0
+                        "x": 393.6000061035156,
+                        "y": 320.79998779296877,
+                        "width": 204.80001831054688,
+                        "height": 148.0
                     },
                     "ClassReference": "Action_StoreRandomPosition3D",
                     "Title": "Store Random Position 3D",
@@ -172,10 +172,10 @@
                     "GUID": "9f5d6f74-431f-4b67-b5b9-b2ee5c98e0ef",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 286.0,
-                        "y": 321.0,
-                        "width": 85.0,
-                        "height": 117.0
+                        "x": 286.4000244140625,
+                        "y": 320.79998779296877,
+                        "width": 87.19998168945313,
+                        "height": 113.60000610351563
                     },
                     "ClassReference": "Action_Wait",
                     "Title": "Wait",
@@ -198,10 +198,10 @@
                     "GUID": "088632b4-93be-44df-b721-2f3627554c8d",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 625.0,
-                        "y": 321.0,
-                        "width": 150.0,
-                        "height": 154.0
+                        "x": 625.6000366210938,
+                        "y": 320.79998779296877,
+                        "width": 150.39996337890626,
+                        "height": 149.60000610351563
                     },
                     "ClassReference": "Action_GoToPosition3D",
                     "Title": "Go To Position 3D",

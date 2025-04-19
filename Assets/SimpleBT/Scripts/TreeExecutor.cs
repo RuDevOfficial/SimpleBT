@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace SimpleBT.NonEditor.Tree
 {
@@ -15,7 +15,7 @@ namespace SimpleBT.NonEditor.Tree
         private void Awake()
         {
             _sbtBlackboard = GetComponent<SBTBlackboard>();
-            if (_sbtBlackboard == null) { Debug.Log("Couldn't get the Blackboard, is it attached to the GameObject?"); }
+            Assert.IsNotNull(_sbtBlackboard, "Blackboard not found in GameObject" + gameObject.name);
         }
 
         private void Start() { BT.RegisterBlackboard(_sbtBlackboard); }

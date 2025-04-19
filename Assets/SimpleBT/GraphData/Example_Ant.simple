@@ -45,8 +45,8 @@
             }
         ],
         "ViewportPosition": {
-            "x": -37.0,
-            "y": -12.0
+            "x": -111.19999694824219,
+            "y": -71.19999694824219
         },
         "ViewportScale": {
             "x": 1.0,
@@ -70,10 +70,10 @@
                     "GUID": "3dcba0f0-047f-41c1-84c7-0233a70c33ea",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 554.0,
-                        "y": 97.0,
-                        "width": 73.0,
-                        "height": 77.0
+                        "x": 554.4000244140625,
+                        "y": 96.80000305175781,
+                        "width": 73.5999755859375,
+                        "height": 76.80000305175781
                     },
                     "ClassReference": "Root",
                     "Title": "Root"
@@ -90,10 +90,10 @@
                     "GUID": "4150b671-feb0-4877-af60-9e09c81196f8",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 537.0,
-                        "y": 213.0,
-                        "width": 134.0,
-                        "height": 77.0
+                        "x": 537.6000366210938,
+                        "y": 212.8000030517578,
+                        "width": 135.199951171875,
+                        "height": 76.80000305175781
                     },
                     "ClassReference": "Decorator_RepeatForever",
                     "Title": "Repeat Forever"
@@ -110,9 +110,9 @@
                     "GUID": "6e7b7410-b746-4ced-be23-3e71ea68ef67",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 525.0,
+                        "x": 525.6000366210938,
                         "y": 324.0,
-                        "width": 164.0,
+                        "width": 164.79998779296876,
                         "height": 76.0
                     },
                     "ClassReference": "BehaviorTree",

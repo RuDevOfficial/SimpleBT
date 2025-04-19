@@ -80,14 +80,14 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.55816996&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Beta&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -98,7 +98,7 @@
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\DESARROLLO DE VIDEOJUEGOS\UNITY\Installers\6000.0.26f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.26f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\DESARROLLO DE VIDEOJUEGOS\UNITY\Projects\SimpleBT&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\DESARROLLO DE VIDEOJUEGOS\UNITY\Projects\SimpleBT" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -106,7 +106,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\DESARROLLO DE VIDEOJUEGOS\UNITY\Installers\6000.0.26f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.26f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\DESARROLLO DE VIDEOJUEGOS\UNITY\Projects\SimpleBT&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\DESARROLLO DE VIDEOJUEGOS\UNITY\Projects\SimpleBT" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -225,6 +225,11 @@
       <workItem from="1744113565971" duration="3874000" />
       <workItem from="1744198075687" duration="3329000" />
       <workItem from="1744295328206" duration="7556000" />
+      <workItem from="1744532735822" duration="1651000" />
+      <workItem from="1744534417283" duration="9613000" />
+      <workItem from="1744632671606" duration="8664000" />
+      <workItem from="1744733111130" duration="2503000" />
+      <workItem from="1744897642506" duration="4285000" />
     </task>
     <servers />
   </component>
@@ -241,25 +246,6 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Composite_Priority.cs</url>
-          <line>16</line>
-          <properties documentPath="D:\DESARROLLO DE VIDEOJUEGOS\UNITY\Projects\SimpleBT\Assets\SimpleBT\Scripts\Nodes\Composites\Composite_Priority.cs" containingFunctionPresentation="Method 'Tick'">
-            <startOffsets>
-              <option value="399" />
-            </startOffsets>
-            <endOffsets>
-              <option value="422" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

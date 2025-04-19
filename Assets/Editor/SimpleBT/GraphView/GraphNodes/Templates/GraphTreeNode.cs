@@ -16,19 +16,12 @@ namespace SimpleBT.Editor.GraphNodes
         public string Title;
 
         public GraphTreeNode() { }
-        
         public GraphTreeNode(string path) : base(path) { }
         
-        public virtual void Instantiate() {
-            GUID = Guid.NewGuid().ToString();
-        }
-
+        public virtual void Instantiate() { GUID = Guid.NewGuid().ToString(); }
         public virtual void Set() { title = Title; }
-
         public abstract void GenerateInterface();
-
         public abstract List<string> GetValues();
-
         public abstract void ReloadValues(List<string> values);
     }
 }

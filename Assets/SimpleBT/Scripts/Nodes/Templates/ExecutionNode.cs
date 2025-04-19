@@ -7,8 +7,12 @@ namespace SimpleBT.Core
         private bool _initialized = false;
         protected abstract void Initialize();
         public override Status OnTick() {
-            if (_initialized == false) { _initialized = true; Initialize(); }
+            
+            if (_initialized != false) return Tick();
+            
+            _initialized = true; Initialize();
             return Tick();
+            
         }
     }
 }

@@ -6,7 +6,6 @@ namespace SimpleBT.Core
 {
     public interface INodeKeyAssignable { public void AssignKeys(List<string> keys); }
     public interface INodeMother { public void AddChild(Node child); }
-    public interface INodeConditional { public bool Check(); }
     
     public abstract class Node : ScriptableObject
     {

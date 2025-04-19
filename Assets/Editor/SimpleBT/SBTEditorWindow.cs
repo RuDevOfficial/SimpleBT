@@ -145,7 +145,7 @@ namespace SimpleBT.Editor
             
             Button saveButton = new Button(Save) { text = "Save" };
             Button loadButton = new Button(() => { Load(_field.value); }) { text = "Load" };
-            _generateButton = new Button(GenerateGameObjectComponents) { text = "Generate" };
+            _generateButton = new Button(GenerateBehavior) { text = "Generate" };
             _regenerateButton = new Button(() =>
             {
                 Save();
@@ -316,7 +316,7 @@ namespace SimpleBT.Editor
         
         #region Generating Tree, Blackboard & Object Cleanup
 
-        private void GenerateGameObjectComponents()
+        private void GenerateBehavior()
         {
             // Editor Part
             GameObject selectedObject = Selection.activeGameObject;
@@ -329,10 +329,7 @@ namespace SimpleBT.Editor
             _regenerateButton.SetEnabled(true);
             _generateButton.SetEnabled(false);
             
-            //TODO Tree Generation Part
             GenerateBehaviorTree(executor);
-
-            //TODO Blackboard Generation
             GenerateBlackboard();
         }
 

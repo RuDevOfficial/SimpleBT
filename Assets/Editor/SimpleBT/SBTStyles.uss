@@ -18,15 +18,6 @@ GridBackground {
     text-overflow: clip;
 }
 
-.Composite #title-button-container {
-    color: rgb(255, 255, 255);
-    display: none;
-    overflow: hidden;
-    visibility: hidden;
-    -unity-text-align: middle-center;
-    -unity-font-style: bold;
-}
-
 .Decorator #title {
     background-color: rgba(37, 118, 26, 0.82);
     -unity-font-style: bold;

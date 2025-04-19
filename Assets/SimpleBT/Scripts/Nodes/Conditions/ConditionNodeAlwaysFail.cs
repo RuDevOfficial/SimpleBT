@@ -4,9 +4,9 @@ using SimpleBT.Decorator;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Condition_AlwaysSucceed : Condition
+    public class ConditionNodeAlwaysFail : ConditionNode
     {
-        public override bool Check() { return true; }
+        public override bool Check() { return false; }
         protected override void Initialize() { }
     }
 }

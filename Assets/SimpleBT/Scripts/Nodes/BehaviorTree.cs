@@ -21,16 +21,17 @@ namespace SimpleBT.NonEditor.Nodes
 
         public Node GetNodeByGUID(string guid)
         {
-            foreach (var node in CompleteNodeList.Where(node => node.GUID == guid)) { return node; }
-            if (this.GUID == guid) { return Root;}
+            foreach (var node in CompleteNodeList.Where(node => node.GUID == guid)) {
+                return node;
+            }
             
-            return null;
+            return this.GUID == guid ? Root : null;
         }
         
         public void LinkNodes(string fromGuid, string toGuid)
         {
-            Node fromNode = this.GetNodeByGUID(fromGuid);
-            Node toNode = this.GetNodeByGUID(toGuid);
+            Node fromNode = GetNodeByGUID(fromGuid);
+            Node toNode = GetNodeByGUID(toGuid);
 
             if (fromNode is INodeMother nodeMother) {
                 nodeMother.AddChild(toNode);

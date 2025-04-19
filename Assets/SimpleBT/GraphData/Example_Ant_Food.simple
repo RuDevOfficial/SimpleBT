@@ -171,8 +171,8 @@
             }
         ],
         "ViewportPosition": {
-            "x": 239.0,
-            "y": 165.0
+            "x": 296.0,
+            "y": 54.400001525878909
         },
         "ViewportScale": {
             "x": 0.49717673659324648,
@@ -196,10 +196,10 @@
                     "GUID": "ed2c77ed-545b-4d53-84ed-c7d299dda3b2",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 554.0,
-                        "y": 226.0,
-                        "width": 77.0,
-                        "height": 77.0
+                        "x": 554.4000244140625,
+                        "y": 226.39999389648438,
+                        "width": 77.5999755859375,
+                        "height": 76.80001831054688
                     },
                     "ClassReference": "Sequence",
                     "Title": "Sequence"
@@ -216,10 +216,10 @@
                     "GUID": "aed71c87-a297-4a21-afa8-6458ce0be9c5",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 699.0,
-                        "y": 389.0,
-                        "width": 150.0,
-                        "height": 154.0
+                        "x": 699.2000122070313,
+                        "y": 388.79998779296877,
+                        "width": 150.4000244140625,
+                        "height": 149.60003662109376
                     },
                     "ClassReference": "Action_GoToPosition3D",
                     "Title": "Go To Position 3D",
@@ -240,10 +240,10 @@
                     "GUID": "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 865.0,
-                        "y": 389.0,
-                        "width": 142.0,
-                        "height": 97.0
+                        "x": 865.6000366210938,
+                        "y": 388.79998779296877,
+                        "width": 143.199951171875,
+                        "height": 95.20001220703125
                     },
                     "ClassReference": "Action_UnparentGameObject",
                     "Title": "Unparent Object",
@@ -261,10 +261,10 @@
                     "GUID": "83bdad50-0efc-4ca0-924c-5056a7aff567",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 358.0,
-                        "y": 389.0,
-                        "width": 128.0,
-                        "height": 97.0
+                        "x": 358.4000244140625,
+                        "y": 388.79998779296877,
+                        "width": 128.79998779296876,
+                        "height": 95.20001220703125
                     },
                     "ClassReference": "Action_ParentObjectToSelf",
                     "Title": "Parent\nObject To Self",
@@ -283,9 +283,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 496.0,
-                        "y": 389.0,
-                        "width": 188.0,
-                        "height": 134.0
+                        "y": 388.79998779296877,
+                        "width": 189.60003662109376,
+                        "height": 131.20001220703126
                     },
                     "ClassReference": "Action_OverrideGameObjectPosition3D",
                     "Title": "Override\nGameObject Position 3D",
@@ -305,10 +305,10 @@
                     "GUID": "69f448b9-e68d-4c90-b54f-51b139b61c54",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 6.0,
-                        "y": 389.0,
-                        "width": 187.0,
-                        "height": 154.0
+                        "x": 6.399999618530273,
+                        "y": 388.79998779296877,
+                        "width": 188.8000030517578,
+                        "height": 149.60003662109376
                     },
                     "ClassReference": "Condition_IsGameObjectClose3D",
                     "Title": "Is GameObject Close 3D",
@@ -330,9 +330,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 212.0,
-                        "y": 389.0,
-                        "width": 134.0,
-                        "height": 173.0
+                        "y": 388.79998779296877,
+                        "width": 134.40000915527345,
+                        "height": 167.20001220703126
                     },
                     "ClassReference": "Action_Follow3D",
                     "Title": "Follow 3D",
@@ -355,9 +355,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 524.0,
-                        "y": -29.0,
-                        "width": 73.0,
-                        "height": 77.0
+                        "y": -28.799999237060548,
+                        "width": 73.60003662109375,
+                        "height": 76.80000305175781
                     },
                     "ClassReference": "Root",
                     "Title": "Root"
@@ -375,9 +375,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 1024.0,
-                        "y": 389.0,
+                        "y": 388.79998779296877,
                         "width": 140.0,
-                        "height": 117.0
+                        "height": 113.60003662109375
                     },
                     "ClassReference": "Action_OverrideTag",
                     "Title": "Override Tag",
@@ -396,10 +396,10 @@
                     "GUID": "f6b02bcc-7894-4032-bc3f-905e156e02b1",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 1187.0,
-                        "y": 389.0,
-                        "width": 188.0,
-                        "height": 134.0
+                        "x": 1187.199951171875,
+                        "y": 388.79998779296877,
+                        "width": 189.5999755859375,
+                        "height": 131.20001220703126
                     },
                     "ClassReference": "Action_OverrideGameObjectPosition3D",
                     "Title": "Override\nGameObject Position 3D",
@@ -420,9 +420,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 1396.0,
-                        "y": 389.0,
-                        "width": 118.0,
-                        "height": 97.0
+                        "y": 388.79998779296877,
+                        "width": 118.39990234375,
+                        "height": 95.20001220703125
                     },
                     "ClassReference": "Action_RemoveKey",
                     "Title": "Remove Key",

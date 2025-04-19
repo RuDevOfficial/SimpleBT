@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Condition_IsAtMinimumDistance : Condition, INodeKeyAssignable
+    public class ConditionNodeIsAtMinimumDistance : ConditionNode, INodeKeyAssignable
     {
         [SerializeField] private string keyTarget;
         [SerializeField] private string keyDistance;

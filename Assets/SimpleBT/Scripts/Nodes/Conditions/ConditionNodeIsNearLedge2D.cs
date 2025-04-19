@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Condition_IsNearLedge2D : Condition, INodeKeyAssignable
+    public class ConditionNodeIsNearLedge2D : ConditionNode, INodeKeyAssignable
     {
         [SerializeField] private string keySeparationDistance;
         [SerializeField] private string keyLength;
