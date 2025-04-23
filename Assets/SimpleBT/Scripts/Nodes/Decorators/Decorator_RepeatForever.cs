@@ -1,11 +1,9 @@
 ﻿using SimpleBT.Core;
-using SimpleBT.Decorator;
+using SimpleBT.NoneEditor.Nodes;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    using Decorator;
-    
-    public class Decorator_RepeatForever : DecoratorNode
+    public class Decorator_RepeatForever : Decorator
     {
         protected override Status Tick()
         {

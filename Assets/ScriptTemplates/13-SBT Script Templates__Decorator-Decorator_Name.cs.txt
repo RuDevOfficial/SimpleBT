@@ -1,0 +1,12 @@
+using SimpleBT.Core;
+using SimpleBT.NoneEditor.Nodes;
+
+public class #SCRIPTNAME# : Decorator
+{
+    protected override Status Tick()
+    {
+        // Decorators only have one child node and can decide what to do after the Status the child returns.
+        Status returnedChildState = Child.OnTick();
+        return Status.Running;
+    }
+}

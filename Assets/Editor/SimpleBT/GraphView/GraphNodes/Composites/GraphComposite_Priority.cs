@@ -1,6 +1,6 @@
 ﻿namespace SimpleBT.Editor.GraphNodes
 {
-    public class GraphComposite_Priority : GraphCompositeNode
+    public class GraphComposite_Priority : GraphComposite
     {
         public GraphComposite_Priority()
         {

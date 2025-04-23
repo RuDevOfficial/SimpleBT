@@ -25,7 +25,7 @@ namespace SimpleBT.Editor
         {
             List<SearchTreeEntry> entries = new List<SearchTreeEntry>()
             {
-                new SearchTreeGroupEntry(new GUIContent("Create Node")),
+                new SearchTreeGroupEntry(new GUIContent("Spawn Node")),
                 
                 new SearchTreeEntry(new GUIContent("Root", _icon)) { level = 1, userData = "RootGraphNode" },
                 
@@ -100,9 +100,10 @@ namespace SimpleBT.Editor
         /// <param name="context"> The SearchWindowContext parameter </param>
         /// <param name="entries"> The pre-built list of entries </param>
         /// <returns></returns>
-        protected virtual List<SearchTreeEntry> AddCustomEntries(SearchWindowContext context, List<SearchTreeEntry> entries)
+        private void AddCustomEntries(SearchWindowContext context, List<SearchTreeEntry> entries)
         {
-            return entries;
+            SBTSearchTreeEntryAddon addon = (SBTSearchTreeEntryAddon)_graph.EditorReference.ObjectField.value;
+            if (addon != null) { entries.AddRange(addon.GetEntries(context)); }
         }
     
         public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
@@ -130,8 +131,16 @@ namespace SimpleBT.Editor
             }
             
             Vector2 localMousePosition = _graph.GetLocalMousePosition(context.screenMousePosition, true);
-            
-            Type type = Type.GetType($"SimpleBT.Editor.GraphNodes.{searchTreeEntry.userData}");
+            string dataString = searchTreeEntry.userData.ToString();
+            Type type;
+
+            if (dataString.Contains("Custom_"))
+            {
+                dataString = dataString.Remove(0, 7);
+                type = Type.GetType($"{dataString}");
+            }
+            else { type = Type.GetType($"SimpleBT.Editor.GraphNodes.{dataString}"); }
+
             var node = (GraphTreeNode)Activator.CreateInstance(type);
             
             if (node is BehaviorTreeGraphNode btNode) { btNode.ReferencedBehaviorName = _graph.EditorReference.LastFieldValue; }
@@ -147,7 +156,6 @@ namespace SimpleBT.Editor
             return true;
         }
     }
-    
-    
+
 }
 

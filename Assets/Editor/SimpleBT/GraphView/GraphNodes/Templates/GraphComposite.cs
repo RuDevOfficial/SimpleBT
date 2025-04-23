@@ -5,9 +5,9 @@ using UnityEditor.Experimental.GraphView;
 namespace SimpleBT.Editor.GraphNodes
 {
     [System.Serializable]
-    public class GraphCompositeNode : GraphTreeNode
+    public class GraphComposite : GraphTreeNode
     {
-        public GraphCompositeNode()
+        public GraphComposite()
         {
             Title = "Composite";
             ClassReference = "Composite";

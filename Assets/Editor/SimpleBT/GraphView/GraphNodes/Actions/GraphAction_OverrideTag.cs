@@ -20,5 +20,4 @@ namespace SimpleBT.Editor.GraphNodes
             _dropdownField.choices = UnityEditorInternal.InternalEditorUtility.tags.ToList();
         }
     }
-
 }

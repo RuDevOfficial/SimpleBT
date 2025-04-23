@@ -1,0 +1,28 @@
+using System.Collections.Generic;
+using SimpleBT.NonEditor.Nodes;
+using SimpleBT.Core;
+
+// If the Condition does NOT require any keys to then instantiate you can remove:
+// The "INodeKeyAssignable" interface and AssignKeys method
+public class #SCRIPTNAME# : Condition, INodeKeyAssignable
+{
+    public void AssignKeys(List<string> keys)
+    {
+        // If the node requires keys assign them here like
+        // _keyTarget = keys[0]
+    }
+
+    protected override void Initialize()
+    {
+        // Initialize unchanging values here. Only gets triggered once in runtime.
+        // To understand when to use blackboard.GetValue<type>() or blackboard.GetComplexValue<type>() check the github repo
+    }
+
+    public override bool Check()
+    {
+        // Get changing values here.
+    
+        // Conditions gets ticked only once and must return true or false (success or failure)
+        return true;
+    }
+}

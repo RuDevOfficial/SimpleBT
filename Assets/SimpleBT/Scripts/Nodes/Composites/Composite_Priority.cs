@@ -9,7 +9,7 @@ namespace SimpleBT.NonEditor.Nodes
         private int _lastIndex = -1;
         private bool _analyzed = false;
 
-        private ConditionNode[] _conditionals;
+        private Condition[] _conditionals;
         
         // ReSharper disable Unity.PerformanceAnalysis
         protected override Status Tick()
@@ -42,7 +42,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         private bool AnalyzeAndFillArray()
         {
-            _conditionals = new ConditionNode[_children.Count];
+            _conditionals = new Condition[_children.Count];
             
             for (int i = 0; i < _children.Count; i++) {
                 if (_children[i] is not Composite composite)

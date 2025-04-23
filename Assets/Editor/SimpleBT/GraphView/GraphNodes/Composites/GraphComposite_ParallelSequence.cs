@@ -1,6 +1,6 @@
 ﻿namespace SimpleBT.Editor.GraphNodes
 {
-    public class GraphComposite_ParallelSequence : GraphCompositeNode
+    public class GraphComposite_ParallelSequence : GraphComposite
     {
         public GraphComposite_ParallelSequence()
         {

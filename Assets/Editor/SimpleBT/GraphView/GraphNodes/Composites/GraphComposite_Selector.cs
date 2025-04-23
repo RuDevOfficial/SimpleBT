@@ -1,6 +1,6 @@
 ﻿namespace SimpleBT.Editor.GraphNodes
 {
-    public class GraphComposite_Selector : GraphCompositeNode
+    public class GraphComposite_Selector : GraphComposite
     {
         public GraphComposite_Selector()
         {

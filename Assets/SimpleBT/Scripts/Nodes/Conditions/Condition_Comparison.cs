@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class ConditionNodeComparison : ConditionNode, INodeKeyAssignable
+    public class Condition_Comparison : Condition, INodeKeyAssignable
     {
         public string KeyFirstVariable;
         public string KeySecondVariable;

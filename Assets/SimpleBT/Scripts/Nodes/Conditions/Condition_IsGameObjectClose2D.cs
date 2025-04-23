@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Condition_IsGameObjectClose2D : ConditionNode, INodeKeyAssignable
+    public class Condition_IsGameObjectClose2D : Condition, INodeKeyAssignable
     {
         [SerializeField] protected string _keyTag;
         [SerializeField] private string _keyRadius;

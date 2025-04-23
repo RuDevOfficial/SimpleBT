@@ -1,9 +1,9 @@
-﻿namespace SimpleBT.Decorator
+﻿namespace SimpleBT.NoneEditor.Nodes
 {
     using SimpleBT.Core;
     using NonEditor;
     
-    public abstract class DecoratorNode : Node, INodeMother
+    public abstract class Decorator : Node, INodeMother
     {
         public Node Child;
 

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using SimpleBT.Editor.GraphNodes;
+using SimpleBT.Editor.Utils;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -27,7 +28,7 @@ namespace SimpleBT.Editor
             this.AddManipulator(new SelectionDragger());
             this.AddManipulator(new RectangleSelector());
             
-            //Adding Contextual Menu
+            //Adding Search Window
             if (_searchWindow == null)
             {
                 _searchWindow = ScriptableObject.CreateInstance<SBTSearchWindow>();
@@ -40,7 +41,18 @@ namespace SimpleBT.Editor
             var styeSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/SimpleBT/SBTStyles.uss");
             styleSheets.Add(styeSheet);
         }
-        
+
+        public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
+        {
+            base.BuildContextualMenu(evt);
+
+            // Removes all entries except "Create Node"
+            for (int i = evt.menu.MenuItems().Count - 1; i > 0 ; i--) { evt.menu.RemoveItemAt(i); }
+            
+            // Adds custom entries
+            evt.menu.AppendAction("Create Custom Node", SBTEditorUtils.ShowTemplatePopupWindow);
+        }
+
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
         {
             List<Port> compatiblePorts = new List<Port>();

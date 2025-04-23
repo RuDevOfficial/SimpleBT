@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using System.Globalization;
-using SimpleBT.Core;
-using SimpleBT.Decorator;
+using SimpleBT.NoneEditor.Nodes;
 using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Decorator_ExecuteOnceWithDelay : DecoratorNode, INodeKeyAssignable
+    using Core;
+    
+    public class Decorator_ExecuteOnceWithDelay : Decorator, INodeKeyAssignable
     {
         public string keyDelay;
         

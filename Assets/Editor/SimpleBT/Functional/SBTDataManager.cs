@@ -60,7 +60,11 @@ namespace SimpleBT.Editor.Data
         {
             SBTEditorUtils.CreateFolder("Assets/SimpleBT", "EditorData");
 
-            SBTEditorData data = new SBTEditorData() { LastFileName = window.LastFieldValue, };
+            SBTEditorData data = new SBTEditorData()
+            {
+                LastFileName = window.LastFieldValue,
+                Addon = window.LastObjectAddon
+            };
             
             string json = JsonUtility.ToJson(data, true);
             

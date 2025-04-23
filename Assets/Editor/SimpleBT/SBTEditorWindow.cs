@@ -35,16 +35,20 @@ namespace SimpleBT.Editor
         private Button _removeComponentsButton;
         private Button _regenerateButton;
 
+        public ObjectField ObjectField;
+
         #region Private Fields
         
         private TextField _field;
         private static string _lastFieldValue;
+        private static SBTSearchTreeEntryAddon _lastObjectAddon;
         
         #endregion
         
         #region Public Fields
         
         public string LastFieldValue => _lastFieldValue;
+        public SBTSearchTreeEntryAddon LastObjectAddon => _lastObjectAddon;
         
         #endregion
         
@@ -155,6 +159,12 @@ namespace SimpleBT.Editor
             _removeComponentsButton = new Button(RemoveComponents) { text = "Remove Components" };
 
             Button clearBlackboardButton = new Button(ClearBlackboard) { text = "Clear Blackboard" };
+
+            ObjectField = new ObjectField();
+            ObjectField.objectType = typeof(SBTSearchTreeEntryAddon);
+            ObjectField.style.maxWidth = 300;
+            ObjectField.label = "Custom Entries SO: ";
+            ObjectField.RegisterValueChangedCallback(evt => _lastObjectAddon = (SBTSearchTreeEntryAddon)evt.newValue);
             
             toolbar.Add(saveButton);
             toolbar.Add(loadButton);
@@ -162,6 +172,7 @@ namespace SimpleBT.Editor
             toolbar.Add(_regenerateButton);
             toolbar.Add(_removeComponentsButton);
             toolbar.Add(clearBlackboardButton);
+            toolbar.Add(ObjectField);
             
             // Adding the Blackboard
             _blackboardGraph = new SBTBlackboardGraph(_graph);
@@ -175,6 +186,9 @@ namespace SimpleBT.Editor
 
             _lastFieldValue = editorData.LastFileName;
             _field.value = _lastFieldValue;
+
+            _lastObjectAddon = editorData.Addon;
+            ObjectField.value = _lastObjectAddon;
         }
         
         #endregion
