@@ -137,12 +137,25 @@ If you want to get rid of the components you can press "*Remove Components*".
 
 ## Creating Custom Nodes
 
-1. Right click on the graph view to open the contextual menu 
+1. Right-click on the graph view to open the contextual menu
 2. Select "Create Custom Node"
+
+![Step 1 & 2](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Create%20Custom%20Node%20Step%201_1.png?raw=true)
+
 3. Choose type, give it a name and select "Create"
+
+![Step 3](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Create%20Custom%20Node%20Step1_X.png?raw=true)
+
 4. Modify the *Title* and *ClassReference* parameters inside the constructor, then add your logic
-5. (If no CustomEntrySO exists) Right click on the graph view and select "Create Custom Entries SO"
+
+![Step 4](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Example%20GraphAction.png?raw=true)
+
+5. (If no CustomEntrySO exists) Right-click on the graph view and select "Create Custom Entries SO"
 6. Open your Custom Entries Scriptable Object and add a new entry inside the *GetEntries()* method. Userdata must start with "Custom_"
+
+
+
+7. Create an asset from your Custom Entries SO and drag it to the "Custom Entries SO" Object Field.
 
 If your class reference is the same name as your non-editor node it should appear on the graph view!
 
