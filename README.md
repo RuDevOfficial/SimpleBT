@@ -27,7 +27,7 @@ Work in progress
 
 First, open the window located at the top bar called *SimpleBT*->*Window*.
 
-![SBTEditorWindow](https://i.imgur.com/yJLVfGu.png)
+![SBTEditorWindow](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/SBTEditorWindow%20Window.png?raw=true)
 
 Once open you can write a new name for the behavior  and start adding nodes by pressing **space** or **right-clicking**->**Create Node**. A search window will show up.
 
@@ -35,9 +35,9 @@ Once open you can write a new name for the behavior  and start adding nodes by p
 - It is required to create a Root node first before any other, and there cannot be more than 1. If you try to add another you'll get a popup
 - Behavior names **can only contain** numbers and '_' characters
 
-![SBTSearchWindow](https://i.imgur.com/bFJnXE5.png)
+![SBTSearchWindow](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/SBTSearchWindow.png?raw=true)
 
-![Populating the Behavior](https://i.imgur.com/CADupkk.png)
+![Populating the Behavior](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/BehaviorExample.png?raw=true)
 
 At any point you can press the button **Save** to save the behavior onto a JSON file which will be located in *Assets->SimpleBT->GraphData*. 
 
@@ -49,7 +49,7 @@ At any point you can press the button **Save** to save the behavior onto a JSON 
 
 To create a new variable press the **+** icon, you can rename it by double-click. Modify its value type or content by accessing the expanded section (">" icon on the left).
 
-![Blackboard](https://i.imgur.com/ksfQtp8.png)
+![Blackboard](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Blackboard.png?raw=true)
 
 To delete a variable select the respective field and press **delete** (not backspace).
 
@@ -73,8 +73,6 @@ To generate the tree select a GameObject and then press "*Generate Tree & Blackb
 If you want to get rid of the components you can press "*Remove Components*".
 
 ![Generation](https://i.imgur.com/lhvxWX6.png)
-
-![Generation2](https://i.imgur.com/eX6drtf.png)
 
 **Note**: 
 - To properly generate it you **must save beforehand**.
