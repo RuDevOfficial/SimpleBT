@@ -69,14 +69,10 @@ To delete a variable select the respective field and press **delete** (not backs
 
 ## Generating the Tree and Blackboard
 
-To generate the tree select a GameObject and then press "*Generate Tree & Blackboard*". If the behavior has changed you can press *"Regenerate*".
+To generate the tree select a GameObject and then press "*Generate*". If the behavior has changed you can press *"Save & Regenerate*".
 If you want to get rid of the components you can press "*Remove Components*".
 
 ![Generation](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Saving%20and%20Regenerating.png?raw=true)
-
-**Note**: 
-- To properly generate it you **must save beforehand**.
-- After generation you can modify the values by hand on each ScriptableObject if they contain values (Not recommended, will be overwritten on regeneration)
 
 ## Available Nodes (In Sections)
 
@@ -209,9 +205,6 @@ This section is exclusive for your custom nodes.
 ![Step7](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Custom%20Entries.png?raw=true)
 
 **If your class reference is the same name as your non-editor node it should appear on the graph view!**
-
-### Creating a new Non-Graph Node
-### Adding the Graph Node to the Search Window
 
 ## Future Updates
 - Implement Repeat Until Failure, Repeat Until Success, Repeat X Times *decorators*
