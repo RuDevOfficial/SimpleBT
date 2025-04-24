@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="227eb850-3e24-477a-8760-e6199cf36f52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Custom/CustomNodeEntries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Custom/CustomNodeEntries.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +233,7 @@
       <workItem from="1745392032420" duration="7748000" />
       <workItem from="1745413486035" duration="1710000" />
       <workItem from="1745477417159" duration="5285000" />
-      <workItem from="1745512138295" duration="3697000" />
+      <workItem from="1745512138295" duration="5744000" />
     </task>
     <servers />
   </component>

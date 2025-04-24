@@ -78,15 +78,15 @@ If you want to get rid of the components you can press "*Remove Components*".
 - To properly generate it you **must save beforehand**.
 - After generation you can modify the values by hand on each ScriptableObject if they contain values (Not recommended, will be overwritten on regeneration)
 
-## Available Nodes
+## Available Nodes (In Sections)
 
 <details>
 <summary>Ungrouped</summary>
 
-| Name   | Description             |
-|--------|-------------------------|
-| Root   | Acts as the tree root   |
-| Branch | Behavior Tree as a node |
+| Name   | Description                                                                                                        |
+|--------|--------------------------------------------------------------------------------------------------------------------|
+| Root   | Acts as the tree root <br/> Must be added first before any other node                                              |
+| Branch | Behavior Tree as a node <br/> Recommended for behavior branching |
 
 </details>
 
@@ -94,12 +94,26 @@ If you want to get rid of the components you can press "*Remove Components*".
 <details>
 <summary>Actions</summary>
 
-| Name  | Description |
-| ------------- | ------------- |
-| SetActive  | Disables or enables the GameObject |
-| SetActive (Toggle)  | Toggles the active state of the GameObject  |
-| Wait  | Waits a specific amount of time  |
-| Debug  | Prints a message, can choose if Succeeds or Fails after  |
+| Name                      | Description                                                                                               | Section       |
+|---------------------------|-----------------------------------------------------------------------------------------------------------|---------------|
+| Always Succeed            | Self explanatory                                                                                          | General       |
+| Send Message              | Calls the specified method with no parameters on all scripts attached to the GameObject                   | General       |
+| Override Tag              | Self explanatory                                                                                          | General       |
+| Parent GameObject to Self | Uses *.SetParent()* on the target GameObject                                                              | General       |
+| Unparent GameObject       | Uses *.SetParent(null)* on the target GameObject                                                          | General       |
+| Destroy GameObject        | Self explanatory                                                                                          | General       |
+| Set Active                | Sets the target GameObject to active or disabled.                                                         | General       |
+| Set Active (Toggle)       | Toggles the target GameObject's active status                                                             | General       |
+| Store Random Position 3D  | Raycasts with additional height and a random range into the ground. <br/>A Vector2 position can be stored | General       |
+| Stop                      | Rigidbody / Rigidbody 2D linear velocity is set to 0                                                      | Movement      |
+| Follow 2D                 | Follows a target and can Ignore the X or Y axis <br/>Can toggle between transform or Rigidbody2D          | Movement / 2D |
+| Flee 2D                   | Moves in the opposite direction of Follow2D                                                               | Movement / 2D |
+| Go To Position 2D         | Goes to a Vector 2 position and can ignore the X or Y axis                                                | Movement / 2D |
+| Linear Move 2D            | Continuously moves the GameObject in a linear velocity                                                    | Movement / 2D |
+| Follow 3D                 | Same as Follow2D but can also ignore the Z axis                                                           | Movement / 3D |
+| Flee 3D                   | Same as Flee2D but can also ignore the Z axis                                                             | Movement / 3D |
+| Go To Position 3D         | Same as GoToPosition3D but can also ignore the Z axis                                                     | Movement / 3D |
+| Wait X Seconds            | Self explanatory                                                                                          | Movement / 3D |
 
 </details>
 
@@ -107,10 +121,14 @@ If you want to get rid of the components you can press "*Remove Components*".
 <details>
 <summary>Conditions</summary>
 
-| Name  | Description |
-| ------------- | ------------- |
-| Sequence  | Ticks each children in order, fails if one fails, succeeds if all succeed  |
-| Selector  | Ticks each children in order, succeeds if one succeeds, fails if all fail  |
+| Name                   | Description                                                  |
+|------------------------|--------------------------------------------------------------|
+| Always Succeed         | Self explanatory                                             |
+| Always Fail            | Self explanatory                                             |
+| Comparison             | Compares between numbers and if the "A" value is null or not |
+| Is Near Ledge 2D       | Checks if the gameObject is near a ledge in 2D               |
+| Is GameObject Close 2D | Checks if the gameObject's target is close enough in 2D      |
+| Is GameObject Close 3D | Checks if the gameObject's target is close enough in 3D      |
 
 </details>
 
@@ -118,10 +136,13 @@ If you want to get rid of the components you can press "*Remove Components*".
 <details>
 <summary>Composites</summary>
 
-| Name  | Description |
-| ------------- | ------------- |
-| Sequence  | Ticks each children in order, fails if one fails, succeeds if all succeed  |
-| Selector  | Ticks each children in order, succeeds if one succeeds, fails if all fail  |
+| Name              | Description                                                                                                                                                                                                  |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Sequence          | Ticks each children in order, fails if one fails, succeeds if all succeed                                                                                                                                    |
+| Selector          | Ticks each children in order, succeeds if one succeeds, fails if all fail                                                                                                                                    |
+| Parallel Sequence | Ticks all children in parallel, if any fail all fail                                                                                                                                                         |
+| Random Sequence   | Selects a random children to tick until all are ticked (Follows Sequence Logic)                                                                                                                              |
+| Priority          | Prioritizes nodes on the left and aborts lesser important nodes <br/> Requires Composites as children and each composite must contain a Condition <br/>AlwaysSucceed recommended to the least important node |
 
 </details>
 
@@ -129,9 +150,37 @@ If you want to get rid of the components you can press "*Remove Components*".
 <details>
 <summary>Decorators</summary>
 
-| Name  | Description |
-| ------------- | ------------- |
-| Repeat Forever  | Always returns "Running", preventing the behavior from finishing |
+| Name           | Description |
+|----------------| ------------- |
+| Repeat Forever | Always returns "Running", preventing the behavior from finishing |
+
+</details>
+
+<details>
+<summary>Blackboard</summary>
+
+| Name                   | Description      |
+|------------------------|------------------|
+| Remove Key             | Self explanatory |
+| Invert Numerical Value | Self explanatory |
+
+</details>
+
+<details>
+<summary>Other</summary>
+
+| Name  | Description                                                                             |
+|-------|-----------------------------------------------------------------------------------------|
+| Debug | Sends a *Debug.Log()* message <br/> Can choose between Succeed or Failure after the log |
+
+</details>
+
+</details>
+
+<details>
+<summary>Custom</summary>
+
+This section is exclusive for your custom nodes.
 
 </details>
 
@@ -150,14 +199,16 @@ If you want to get rid of the components you can press "*Remove Components*".
 
 ![Step 4](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Example%20GraphAction.png?raw=true)
 
-5. (If no CustomEntrySO exists) Right-click on the graph view and select "Create Custom Entries SO"
-6. Open your Custom Entries Scriptable Object and add a new entry inside the *GetEntries()* method. Userdata must start with "Custom_"
+5. (If no CustomEntrySO exists) Right-click on the graph view's contextual menu and select "Create Custom Entries SO",
+6. Open your Custom Entries Scriptable Object script and add a new entry inside the *GetEntries()* method. Userdata must start with "Custom_"
 
-
+![Step 6](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Example%20Entries.png?raw=true)
 
 7. Create an asset from your Custom Entries SO and drag it to the "Custom Entries SO" Object Field.
 
-If your class reference is the same name as your non-editor node it should appear on the graph view!
+![Step7](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Custom%20Entries.png?raw=true)
+
+**If your class reference is the same name as your non-editor node it should appear on the graph view!**
 
 ### Creating a new Non-Graph Node
 ### Adding the Graph Node to the Search Window
