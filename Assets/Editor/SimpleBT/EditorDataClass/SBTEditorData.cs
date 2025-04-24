@@ -7,7 +7,7 @@ namespace SimpleBT.Editor.Data
     public class SBTEditorData
     {
         public string LastFileName;
-        public SBTSearchTreeEntryAddon Addon;
+        public SBTCustomEntryScriptable scriptable;
     
         public SBTEditorData(){  }
     }

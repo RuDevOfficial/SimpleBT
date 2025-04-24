@@ -51,6 +51,9 @@ namespace SimpleBT.Editor
             
             // Adds custom entries
             evt.menu.AppendAction("Create Custom Node", SBTEditorUtils.ShowTemplatePopupWindow);
+            
+            // Create Custom Node SO Script
+            evt.menu.AppendAction("Create Custom Entries SO", SBTEditorUtils.CreateCustomEntriesSOAsset);
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)

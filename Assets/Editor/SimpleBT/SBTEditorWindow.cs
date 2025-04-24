@@ -35,20 +35,20 @@ namespace SimpleBT.Editor
         private Button _removeComponentsButton;
         private Button _regenerateButton;
 
-        public ObjectField ObjectField;
+        [SerializeReference] public ObjectField ObjectField;
 
         #region Private Fields
         
         private TextField _field;
         private static string _lastFieldValue;
-        private static SBTSearchTreeEntryAddon _lastObjectAddon;
+        private static SBTCustomEntryScriptable _lastObjectScriptable;
         
         #endregion
         
         #region Public Fields
         
         public string LastFieldValue => _lastFieldValue;
-        public SBTSearchTreeEntryAddon LastObjectAddon => _lastObjectAddon;
+        public SBTCustomEntryScriptable LastObjectScriptable => _lastObjectScriptable;
         
         #endregion
         
@@ -161,10 +161,10 @@ namespace SimpleBT.Editor
             Button clearBlackboardButton = new Button(ClearBlackboard) { text = "Clear Blackboard" };
 
             ObjectField = new ObjectField();
-            ObjectField.objectType = typeof(SBTSearchTreeEntryAddon);
+            ObjectField.objectType = typeof(SBTCustomEntryScriptable);
             ObjectField.style.maxWidth = 300;
             ObjectField.label = "Custom Entries SO: ";
-            ObjectField.RegisterValueChangedCallback(evt => _lastObjectAddon = (SBTSearchTreeEntryAddon)evt.newValue);
+            ObjectField.RegisterValueChangedCallback(evt => _lastObjectScriptable = (SBTCustomEntryScriptable)evt.newValue);
             
             toolbar.Add(saveButton);
             toolbar.Add(loadButton);
@@ -187,8 +187,8 @@ namespace SimpleBT.Editor
             _lastFieldValue = editorData.LastFileName;
             _field.value = _lastFieldValue;
 
-            _lastObjectAddon = editorData.Addon;
-            ObjectField.value = _lastObjectAddon;
+            _lastObjectScriptable = editorData.scriptable;
+            ObjectField.value = _lastObjectScriptable;
         }
         
         #endregion

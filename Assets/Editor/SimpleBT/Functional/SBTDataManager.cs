@@ -63,7 +63,7 @@ namespace SimpleBT.Editor.Data
             SBTEditorData data = new SBTEditorData()
             {
                 LastFileName = window.LastFieldValue,
-                Addon = window.LastObjectAddon
+                scriptable = window.LastObjectScriptable
             };
             
             string json = JsonUtility.ToJson(data, true);

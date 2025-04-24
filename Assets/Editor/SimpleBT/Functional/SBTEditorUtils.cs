@@ -86,7 +86,7 @@ namespace SimpleBT.Editor.Utils
             CreateFolder("Assets/SimpleBT", "Custom");
             CreateFolder("Assets/Editor/SimpleBT", "Custom");
             
-            TemplateClassPopupWindow window = ScriptableObject.CreateInstance<TemplateClassPopupWindow>();
+            SBTCustomNodeCreationWindow window = ScriptableObject.CreateInstance<SBTCustomNodeCreationWindow>();
         }
 
         public static void CreateTemplateNode(string name, NodeType nodeType)
@@ -197,6 +197,13 @@ namespace SimpleBT.Editor.Utils
                     AssetDatabase.Refresh();
                     break;
             }
+        }
+
+        public static void CreateCustomEntriesSOAsset(DropdownMenuAction obj)
+        {
+            string templatePath = "Assets/ScriptTemplates/20-SBT Script Templates__CustomNodeEntries-CustomNodeEntries.cs.txt";
+            ProjectWindowUtil.CreateScriptAssetFromTemplateFile(templatePath, $"CustomNodeEntries.cs");
+            AssetDatabase.Refresh();
         }
     } 
 }

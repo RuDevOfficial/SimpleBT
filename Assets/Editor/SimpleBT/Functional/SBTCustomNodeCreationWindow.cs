@@ -7,11 +7,11 @@ using UnityEngine.UIElements;
 
 namespace Editor.SimpleBT.Functional
 {
-    public class TemplateClassPopupWindow : EditorWindow
+    public class SBTCustomNodeCreationWindow : EditorWindow
     {
         private void OnEnable()
         {
-            TemplateClassPopupWindow window = GetWindow<TemplateClassPopupWindow>();
+            SBTCustomNodeCreationWindow window = GetWindow<SBTCustomNodeCreationWindow>();
             window.titleContent = new GUIContent("Create Custom Node");
         }
 

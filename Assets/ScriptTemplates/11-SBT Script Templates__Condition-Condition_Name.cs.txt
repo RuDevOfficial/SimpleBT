@@ -26,3 +26,7 @@ public class #SCRIPTNAME# : Condition, INodeKeyAssignable
         return true;
     }
 }
+
+
+
+

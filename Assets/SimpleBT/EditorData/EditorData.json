@@ -1,6 +1,6 @@
 {
     "LastFileName": "Example_Ant",
-    "Addon": {
-        "instanceID": -43920
+    "scriptable": {
+        "instanceID": 45040
     }
 }

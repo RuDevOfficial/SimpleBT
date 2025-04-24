@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04adfc253bd049e99a4c59b235124ca3, type: 3}
-  m_Name: Custom Entry List
+  m_Script: {fileID: 11500000, guid: b1415a048fa44d249cd02d6e25d772b0, type: 3}
+  m_Name: Custom Entries
   m_EditorClassIdentifier: 

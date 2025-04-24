@@ -102,8 +102,8 @@ namespace SimpleBT.Editor
         /// <returns></returns>
         private void AddCustomEntries(SearchWindowContext context, List<SearchTreeEntry> entries)
         {
-            SBTSearchTreeEntryAddon addon = (SBTSearchTreeEntryAddon)_graph.EditorReference.ObjectField.value;
-            if (addon != null) { entries.AddRange(addon.GetEntries(context)); }
+            SBTCustomEntryScriptable scriptable = (SBTCustomEntryScriptable)_graph.EditorReference.ObjectField.value;
+            if (scriptable != null) { entries.AddRange(scriptable.GetEntries(context)); }
         }
     
         public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
@@ -139,6 +139,7 @@ namespace SimpleBT.Editor
                 dataString = dataString.Remove(0, 7);
                 type = Type.GetType($"{dataString}");
             }
+
             else { type = Type.GetType($"SimpleBT.Editor.GraphNodes.{dataString}"); }
 
             var node = (GraphTreeNode)Activator.CreateInstance(type);
@@ -156,6 +157,5 @@ namespace SimpleBT.Editor
             return true;
         }
     }
-
 }
 
