@@ -1,0 +1,22 @@
+{
+    "BehaviorName": "New_Behavior",
+    "NodeCollection": {
+        "BehaviorName": "New_Behavior",
+        "Nodes": [],
+        "ViewportPosition": {
+            "x": -50.0,
+            "y": -38.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": []
+    },
+    "references": {
+        "version": 2,
+        "RefIds": []
+    }
+}

@@ -55,14 +55,15 @@ To delete a variable select the respective field and press **delete** (not backs
 
 ### Currently Supported Types
 
-| Type  | Syntax |
-| ------------- | ------------- |
-| int  | 3  |
-| float  | 3.2  |
-| bool  | true  |
-| string  | something |
-| Vector2  | 3, 3.9  |
-| Vector3  | 21.1, 3, 90  |
+| Type       | Syntax                                 | Blackboard Method                 |
+|------------|----------------------------------------|-----------------------------------|
+| int        | 3                                      | GetValue<<Type>**int**>               |
+| float      | 3.2                                    | GetValue<<Type>**float**>             |
+| bool       | true                                   | GetValue<<Type>**bool**>              |
+| string     | something                              | GetValue<<Type>**string**>            |
+| Vector2    | 3, 3.9                                 | GetValue<<Type>**Vector2**>           |
+| Vector3    | 21.1, 3, 90                            | GetValue<<Type>**Vector3**>           |
+| GameObject | Tomato, Untagged, 391290 (Instance id) | GetComplexValue<<Type>**GameObject**> |
 
 **Note**: Currently supported types *in* the SBTBlackboardGraph, any type can be store on the Blackboard's dictionary at behavior runtime.
 
