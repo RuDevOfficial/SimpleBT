@@ -72,33 +72,28 @@ To delete a variable select the respective field and press **delete** (not backs
 To generate the tree select a GameObject and then press "*Generate Tree & Blackboard*". If the behavior has changed you can press *"Regenerate*".
 If you want to get rid of the components you can press "*Remove Components*".
 
-![Generation](https://i.imgur.com/lhvxWX6.png)
+![Generation](https://github.com/RuDevOfficial/SimpleBT/blob/Beta/Screenshots/Saving%20and%20Regenerating.png?raw=true)
 
 **Note**: 
 - To properly generate it you **must save beforehand**.
 - After generation you can modify the values by hand on each ScriptableObject if they contain values (Not recommended, will be overwritten on regeneration)
 
-## Creating Custom Nodes
-
-WIP
-
-Currently there is no automatic process that creates all the classes for you, so it requires a bit of manual labor to implement.
-
-### Creating a new Graph Node
-### Creating a new Non-Graph Node
-### Adding the Graph Node to the Search Window
-
 ## Available Nodes
 
-These are the current available notes split in categories.
+<details>
+<summary>Ungrouped</summary>
 
-### Core
-| Name  | Description |
-| ------------- | ------------- |
-| Root  | Acts as the tree root  |
-| Condition  | Compares numerical or object values  |
+| Name   | Description             |
+|--------|-------------------------|
+| Root   | Acts as the tree root   |
+| Branch | Behavior Tree as a node |
 
-### Actions
+</details>
+
+
+<details>
+<summary>Actions</summary>
+
 | Name  | Description |
 | ------------- | ------------- |
 | SetActive  | Disables or enables the GameObject |
@@ -106,26 +101,62 @@ These are the current available notes split in categories.
 | Wait  | Waits a specific amount of time  |
 | Debug  | Prints a message, can choose if Succeeds or Fails after  |
 
-### Composites
+</details>
+
+
+<details>
+<summary>Conditions</summary>
+
 | Name  | Description |
 | ------------- | ------------- |
 | Sequence  | Ticks each children in order, fails if one fails, succeeds if all succeed  |
 | Selector  | Ticks each children in order, succeeds if one succeeds, fails if all fail  |
 
-### Decorators
+</details>
+
+
+<details>
+<summary>Composites</summary>
+
+| Name  | Description |
+| ------------- | ------------- |
+| Sequence  | Ticks each children in order, fails if one fails, succeeds if all succeed  |
+| Selector  | Ticks each children in order, succeeds if one succeeds, fails if all fail  |
+
+</details>
+
+
+<details>
+<summary>Decorators</summary>
+
 | Name  | Description |
 | ------------- | ------------- |
 | Repeat Forever  | Always returns "Running", preventing the behavior from finishing |
 
+</details>
+
+## Creating Custom Nodes
+
+1. Right click on the graph view to open the contextual menu 
+2. Select "Create Custom Node"
+3. Choose type, give it a name and select "Create"
+4. Modify the *Title* and *ClassReference* parameters inside the constructor, then add your logic
+5. (If no CustomEntrySO exists) Right click on the graph view and select "Create Custom Entries SO"
+6. Open your Custom Entries Scriptable Object and add a new entry inside the *GetEntries()* method. Userdata must start with "Custom_"
+
+If your class reference is the same name as your non-editor node it should appear on the graph view!
+
+### Creating a new Non-Graph Node
+### Adding the Graph Node to the Search Window
+
 ## Future Updates
-- Implement Behavior Node (For behavior nesting)
-- Implement Unity related Action Nodes
 - Implement Repeat Until Failure, Repeat Until Success, Repeat X Times *decorators*
 - Implement Parallel, Random *Sequences* and *Selectors*.
+- Modify Node Styling
 
 ## Known Issues
 
-Pending
+- There is no safeguard if you save accidentally
 
 ## Special Thanks
 
