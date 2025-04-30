@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.IO;
 using SimpleBT.Editor.BehaviorGeneration;
 using SimpleBT.Editor.Utils;
 using UnityEngine;
@@ -14,14 +12,13 @@ using Object = UnityEngine.Object;
 namespace SimpleBT.Editor
 {
     //Editor
-    using Editor.Data;
-    using Editor.GraphNodes;
-    using Editor.Blackboard;
+    using Data;
+    using GraphNodes;
+    using Blackboard;
     
     //Non-Editor
     using NonEditor.Tree;
     using NonEditor;
-    using System.IO;
     
     [System.Serializable]
     public class SBTEditorWindow : EditorWindow
@@ -41,6 +38,7 @@ namespace SimpleBT.Editor
         
         private TextField _field;
         private static string _lastFieldValue;
+        private static string _lastFilePath;
         private static SBTCustomEntryScriptable _lastObjectScriptable;
         
         #endregion
@@ -48,6 +46,7 @@ namespace SimpleBT.Editor
         #region Public Fields
         
         public string LastFieldValue => _lastFieldValue;
+        public string LastFilePath => _lastFilePath;
         public SBTCustomEntryScriptable LastObjectScriptable => _lastObjectScriptable;
         
         #endregion
@@ -113,7 +112,8 @@ namespace SimpleBT.Editor
             {
                 if (fileName != _field.value)
                 {
-                    Load(fileName);
+                    Load(fileName, true);
+                    _lastFilePath = AssetDatabase.GetAssetPath(Selection.activeObject);
                     _field.value = fileName;
                     _lastFieldValue = fileName;
                 }
@@ -266,9 +266,9 @@ namespace SimpleBT.Editor
         /// This method loads the data in the JSON file and generates both nodes
         /// and port connections (and edges) separately
         /// </summary>
-        private void Load(string fieldValue = null)
+        private void Load(string fieldValue = null, bool loadWithSelection = false)
         {
-            BehaviorCollection collection = SBTDataManager.LoadBehaviorCollectionToJson(fieldValue);
+            BehaviorCollection collection = SBTDataManager.LoadBehaviorCollectionToJson(fieldValue, loadWithSelection);
             
             //Delete all previous elements to not generate duplicates and empty the blackboard
             _graph.DeleteElements(_graph.graphElements);

@@ -6,7 +6,88 @@
   <component name="ChangeListManager">
     <list default="true" id="227eb850-3e24-477a-8760-e6199cf36f52" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/SBTEditorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/EditorDataClass/SBTEditorData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Functional/SBTDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/AYellowpaper.SerializedCollections.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/AYellowpaper.SerializedCollections.Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/AYellowpaper.SerializedCollections.Editor.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/AYellowpaper.SerializedCollections.Editor.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Assets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Assets/BurgerMenu@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Assets/BurgerMenu@2x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Assets/KeysGeneratorSelectorWindow.uss.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Assets/KeysGeneratorSelectorWindow.uss.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Assets/KeysGeneratorSelectorWindow.uxml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Assets/KeysGeneratorSelectorWindow.uxml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Data.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Data/ElementData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Data/ElementData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Data/ElementSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Data/ElementSettings.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Data/PropertyData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Data/PropertyData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/DisplayType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/DisplayType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/Implementors.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/Implementors.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/Implementors/EnumGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/Implementors/EnumGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/Implementors/IntRangeGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/Implementors/IntRangeGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/Implementors/IntSteppingGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/Implementors/IntSteppingGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorCache.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorCache.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorSelectorWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/KeyListGeneratorSelectorWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/ModificationType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/KeyListGenerators/ModificationType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/PagingElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/PagingElement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/EnumMatcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/EnumMatcher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/Matcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/Matcher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/Matchers.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/Matchers.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/NumericMatcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/NumericMatcher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/StringMatcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/Matchers/StringMatcher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/PropertySearchResult.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/PropertySearchResult.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/SearchQuery.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/SearchQuery.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/SearchResultEntry.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Search/SearchResultEntry.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/SerializedDictionaryDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/SerializedDictionaryDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/SerializedDictionaryInstanceDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/SerializedDictionaryInstanceDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Settings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Settings.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Settings/EditorUserSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Settings/EditorUserSettings.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Settings/EditorUserSettingsProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Settings/EditorUserSettingsProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/States.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/States.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/States/DefaultListState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/States/DefaultListState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/States/ListState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/States/ListState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/States/SearchListState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/States/SearchListState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/GUIEnabledScope.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/GUIEnabledScope.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/LabelWidth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/LabelWidth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/RectUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/RectUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/SCEditorUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/SCEditorUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/SCEnumUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Editor/Scripts/Utility/SCEnumUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Readme.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Readme.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/AYellowpaper.SerializedCollections.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/AYellowpaper.SerializedCollections.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/AYellowpaper.SerializedCollections.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/AYellowpaper.SerializedCollections.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/LookupTables/DictionaryLookupTable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/LookupTables/DictionaryLookupTable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/LookupTables/IKeyable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/LookupTables/IKeyable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/AssemblyInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/AssemblyInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedCollectionsUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedCollectionsUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedDictionary.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedDictionary.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedDictionaryAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedDictionaryAttribute.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedKeyValuePair.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/SerializedCollections/Runtime/Scripts/SerializedKeyValuePair.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Ant.simple" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Ant.simple" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Zombie.simple" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Zombie.simple" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/New_Behavior.simple" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/New_Behavior.simple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/test.simple" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/test.simple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Miscelaneous.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Miscelaneous.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/TreeExecutor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/TreeExecutor.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +119,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7fd37b296550485d95ecaf5a50ed53b21f4200/0a/b16892dd/VisualElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/19/1cf98714/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eebf6a509b354512a5d405c8a7dd6f889b6600/40/eab93127/ProjectWindowUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eebf6a509b354512a5d405c8a7dd6f889b6600/7c/c88dad3d/MenuItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PeaSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Action_Exampleee.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Flee3D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Composite.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSettingsWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -77,7 +156,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.55816996&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Beta&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;gold&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -234,6 +313,9 @@
       <workItem from="1745413486035" duration="1710000" />
       <workItem from="1745477417159" duration="5285000" />
       <workItem from="1745512138295" duration="5744000" />
+      <workItem from="1745922061135" duration="963000" />
+      <workItem from="1745923537609" duration="1551000" />
+      <workItem from="1746004913573" duration="2497000" />
     </task>
     <servers />
   </component>

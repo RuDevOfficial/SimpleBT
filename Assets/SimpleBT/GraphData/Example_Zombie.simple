@@ -89,9 +89,11 @@
                 "fromGUID": "03b6dabb-4ce7-4c8b-9465-aabacc8f0daf",
                 "toGUIDs": [],
                 "Values": [
-                    "TARGET",
-                    "50",
-                    "False"
+                    "",
+                    "",
+                    "False",
+                    "NONE",
+                    "3"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -167,12 +169,12 @@
             }
         ],
         "ViewportPosition": {
-            "x": 138.39999389648438,
-            "y": -303.20001220703127
+            "x": 84.0,
+            "y": -360.0
         },
         "ViewportScale": {
-            "x": 0.49717673659324648,
-            "y": 0.49717673659324648
+            "x": 0.6575162410736084,
+            "y": 0.6575162410736084
         }
     },
     "BlackboardCollection": {
@@ -198,10 +200,10 @@
                     "GUID": "aa55072d-3ba0-4526-8263-e8773bf5563a",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 1005.6000366210938,
-                        "y": 802.4000244140625,
-                        "width": 72.7999267578125,
-                        "height": 76.79998779296875
+                        "x": 1006.0,
+                        "y": 802.0,
+                        "width": 95.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Selector",
                     "Title": "Selector"
@@ -218,10 +220,10 @@
                     "GUID": "4b6e415f-dbc5-4204-a026-be4b377f7ae8",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 850.4000244140625,
+                        "x": 850.0,
                         "y": 636.0,
-                        "width": 72.79998779296875,
-                        "height": 76.79998779296875
+                        "width": 95.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Selector",
                     "Title": "Selector"
@@ -239,9 +241,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 776.0,
-                        "y": 480.79998779296877,
-                        "width": 135.20001220703126,
-                        "height": 76.79998779296875
+                        "y": 481.0,
+                        "width": 134.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Decorator_RepeatForever",
                     "Title": "Repeat Forever"
@@ -258,10 +260,10 @@
                     "GUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 718.4000244140625,
-                        "y": 325.6000061035156,
-                        "width": 73.5999755859375,
-                        "height": 76.79998779296875
+                        "x": 718.0,
+                        "y": 326.0,
+                        "width": 73.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Root",
                     "Title": "Root"
@@ -279,9 +281,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 1284.0,
-                        "y": 1101.5999755859375,
-                        "width": 139.199951171875,
-                        "height": 76.800048828125
+                        "y": 1102.0,
+                        "width": 138.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Action_Stop",
                     "Title": "Stop Movement"
@@ -298,10 +300,10 @@
                     "GUID": "952ec381-a3fc-4bbd-acdd-62af3f74c4f6",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 783.2000122070313,
-                        "y": 1215.199951171875,
-                        "width": 182.4000244140625,
-                        "height": 112.800048828125
+                        "x": 783.0,
+                        "y": 1215.0,
+                        "width": 181.0,
+                        "height": 116.0
                     },
                     "ClassReference": "Condition_IsAtMinimumDistance",
                     "Title": "Is at Minimum Distance",
@@ -320,16 +322,18 @@
                     "GUID": "03b6dabb-4ce7-4c8b-9465-aabacc8f0daf",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 1005.6000366210938,
-                        "y": 1206.4000244140625,
-                        "width": 116.7999267578125,
-                        "height": 131.199951171875
+                        "x": 1006.0,
+                        "y": 1206.0,
+                        "width": 140.0,
+                        "height": 173.0
                     },
                     "ClassReference": "Action_Follow2D",
                     "Title": "Follow 2D",
-                    "keyTarget": "TARGET",
-                    "keySpeed": "50",
-                    "keyToggle": "False"
+                    "_keyTarget": "",
+                    "_keySpeed": "",
+                    "_keyToggle": "False",
+                    "_keyRigidbodyMoveFlag": 0,
+                    "_keyDistance": "3"
                 }
             },
             {
@@ -343,10 +347,10 @@
                     "GUID": "0836cc8b-6ad8-49a8-8e71-06fd351ab949",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 927.2000122070313,
-                        "y": 1024.800048828125,
-                        "width": 77.5999755859375,
-                        "height": 76.7999267578125
+                        "x": 927.0,
+                        "y": 1025.0,
+                        "width": 105.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Sequence",
                     "Title": "Sequence"
@@ -364,9 +368,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 492.0,
-                        "y": 896.7999877929688,
-                        "width": 77.60003662109375,
-                        "height": 76.79998779296875
+                        "y": 897.0,
+                        "width": 105.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Sequence",
                     "Title": "Sequence"
@@ -383,10 +387,10 @@
                     "GUID": "509162d5-a233-4fa8-a676-3527ea36fc47",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 311.20001220703127,
-                        "y": 1021.5999755859375,
-                        "width": 182.39999389648438,
-                        "height": 112.800048828125
+                        "x": 311.0,
+                        "y": 1022.0,
+                        "width": 181.0,
+                        "height": 116.0
                     },
                     "ClassReference": "Condition_IsAtMinimumDistance",
                     "Title": "Is at Minimum Distance",
@@ -406,9 +410,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 644.0,
-                        "y": 1024.800048828125,
-                        "width": 139.20001220703126,
-                        "height": 76.7999267578125
+                        "y": 1025.0,
+                        "width": 138.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Action_Stop",
                     "Title": "Stop Movement"
@@ -426,9 +430,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 512.0,
-                        "y": 1021.5999755859375,
-                        "width": 85.60003662109375,
-                        "height": 127.2000732421875
+                        "y": 1022.0,
+                        "width": 113.0,
+                        "height": 117.0
                     },
                     "ClassReference": "Action_Debug",
                     "Title": "Debug",
