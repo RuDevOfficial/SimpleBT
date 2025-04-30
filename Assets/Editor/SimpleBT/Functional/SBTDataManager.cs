@@ -48,27 +48,18 @@ namespace SimpleBT.Editor.Data
         {
             string objectPath = "";
 
-
             if (usedActiveSelection == false)
             {
                 SBTSettingsData data = LoadSettingsFromJson();
                 objectPath = data.GraphDataPath + $"/{fileName}.simple";
             }
-            else
-            {
-                objectPath = AssetDatabase.GetAssetPath(Selection.activeObject);
-            }
+            else { objectPath = AssetDatabase.GetAssetPath(Selection.activeObject); }
 
             if (!File.Exists(objectPath)) {
                 EditorUtility.DisplayDialog("Error", $"JSON file {fileName} does not exist.", "OK");
                 return null;
             }
             
-            //if (!File.Exists($"Assets/SimpleBT/GraphData/{fileName}.simple")) {
-            //    EditorUtility.DisplayDialog("Error", $"JSON file {fileName} does not exist.", "OK");
-            //    return null;
-            //}
-
             string jsonContent = File.ReadAllText(objectPath);
             BehaviorCollection behaviorCollection = JsonUtility.FromJson<BehaviorCollection>(jsonContent);
             return behaviorCollection;
@@ -98,7 +89,13 @@ namespace SimpleBT.Editor.Data
 
             string jsonContent = default;
 
-            try { jsonContent = File.ReadAllText($"Assets/SimpleBT/EditorData/EditorData.json"); }
+            string objectPath = "";
+            
+            SBTSettingsData data = LoadSettingsFromJson();
+            objectPath = data.EditorDataPath; // Checks if you added the whole path including the .json file first
+            if (objectPath.Contains(".json") == false) { objectPath = data.EditorDataPath + "/EditorData.json"; } // If you only added the path up to the file
+
+            try { jsonContent = File.ReadAllText(objectPath); }
             catch { Debug.LogError($"Error reading JSON file EditorData"); return null; }
 
             SBTEditorData editorData;
