@@ -59,6 +59,7 @@ namespace SimpleBT.Editor
                     new SearchTreeEntry(new GUIContent("Wait X Seconds", _icon)) { level = 2, userData = "GraphAction_Wait" },
                 
                 new SearchTreeGroupEntry(new GUIContent("Actions"), 1),
+                    new SearchTreeEntry(new GUIContent("Any Action", _icon)) { level = 2, userData = "GraphAction_Any" },
                     new SearchTreeGroupEntry(new GUIContent("General"), 2),
                         new SearchTreeEntry(new GUIContent("Always Succeed", _icon)) { level = 3, userData = "GraphAction_AlwaysSucceed" },
                         new SearchTreeEntry(new GUIContent("Send Message", _icon)) { level = 3, userData = "GraphAction_SendMessage" },
@@ -139,7 +140,6 @@ namespace SimpleBT.Editor
                 dataString = dataString.Remove(0, 7);
                 type = Type.GetType($"{dataString}");
             }
-
             else { type = Type.GetType($"SimpleBT.Editor.GraphNodes.{dataString}"); }
 
             var node = (GraphTreeNode)Activator.CreateInstance(type);

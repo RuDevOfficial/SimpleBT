@@ -1,0 +1,251 @@
+{
+    "BehaviorName": "Test",
+    "NodeCollection": {
+        "BehaviorName": "Test",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "2c3c7a37-aecc-4b82-8895-59203c7ad874",
+                "toGUIDs": [
+                    "8d2f2ae4-6e43-4c1d-aba9-9d1c7f73ac43"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "8d2f2ae4-6e43-4c1d-aba9-9d1c7f73ac43",
+                "toGUIDs": [
+                    "5cb343b8-2208-4267-a097-1feea188e419",
+                    "eaaf8704-7825-4f2a-86b2-07a3bf292cbf"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "5cb343b8-2208-4267-a097-1feea188e419",
+                "toGUIDs": [],
+                "Values": [
+                    "Potato",
+                    "awdad",
+                    "False"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
+                "fromGUID": "eaaf8704-7825-4f2a-86b2-07a3bf292cbf",
+                "toGUIDs": [],
+                "Values": [
+                    "Debug",
+                    "Success, totalMessage",
+                    "True"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": -5.0,
+            "y": -21.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": [
+            {
+                "PropertyName": "totalMessage",
+                "PropertyRawValue": "new message woah!",
+                "PropertyType": 0
+            }
+        ]
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "2c3c7a37-aecc-4b82-8895-59203c7ad874",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 410.0,
+                        "y": 108.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphComposite_Sequence",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "8d2f2ae4-6e43-4c1d-aba9-9d1c7f73ac43",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 515.0,
+                        "y": 224.0,
+                        "width": 105.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence",
+                    "Title": "Sequence"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "GraphAction_Any",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "5cb343b8-2208-4267-a097-1feea188e419",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 441.0,
+                        "y": 340.0,
+                        "width": 148.0,
+                        "height": 134.0
+                    },
+                    "ClassReference": "Action_Any",
+                    "Title": "GraphAction_Any",
+                    "_actionName": {
+                        "rid": 1004
+                    },
+                    "_parameters": {
+                        "rid": 1005
+                    },
+                    "_toggle": {
+                        "rid": 1006
+                    }
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "GraphAction_Any",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "eaaf8704-7825-4f2a-86b2-07a3bf292cbf",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 633.0,
+                        "y": 340.0,
+                        "width": 164.0,
+                        "height": 134.0
+                    },
+                    "ClassReference": "Action_Any",
+                    "Title": "GraphAction_Any",
+                    "_actionName": {
+                        "rid": 1007
+                    },
+                    "_parameters": {
+                        "rid": 1008
+                    },
+                    "_toggle": {
+                        "rid": 1009
+                    }
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Potato"
+                }
+            },
+            {
+                "rid": 1005,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "awdad"
+                }
+            },
+            {
+                "rid": 1006,
+                "type": {
+                    "class": "Toggle",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": false
+                }
+            },
+            {
+                "rid": 1007,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Debug"
+                }
+            },
+            {
+                "rid": 1008,
+                "type": {
+                    "class": "TextField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Success, totalMessage"
+                }
+            },
+            {
+                "rid": 1009,
+                "type": {
+                    "class": "Toggle",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": true
+                }
+            }
+        ]
+    }
+}

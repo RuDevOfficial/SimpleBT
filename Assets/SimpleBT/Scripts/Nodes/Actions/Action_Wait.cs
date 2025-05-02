@@ -14,7 +14,11 @@ namespace SimpleBT.NonEditor.Nodes
         
         private Status _status;
 
-        public void AssignKeys(List<string> keys) { keyTime = keys[0]; keyStatus = keys[1]; }
+        public void AssignKeys(List<string> keys)
+        {
+            keyTime = keys[0];
+            keyStatus = keys[1];
+        }
 
         protected override void Initialize() {
             _time = blackboard.GetValue<float>(keyTime); 

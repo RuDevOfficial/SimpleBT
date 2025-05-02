@@ -11,6 +11,7 @@ namespace SimpleBT.NonEditor.Nodes
         [SerializeField] private string _keyMessage;
         [SerializeField] private string _keyResult;
 
+        private string _message;
         private Status _status;
         
         public void AssignKeys(List<string> keys)
@@ -21,11 +22,12 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override void Initialize() {
             _status = blackboard.GetValue<Status>(_keyResult);
+            _message = blackboard.GetValue<string>(_keyMessage);
         }
 
         protected override Status Tick()
         {
-            Debug.Log(_keyMessage);
+            Debug.Log(_message);
             return _status;
         }
     }

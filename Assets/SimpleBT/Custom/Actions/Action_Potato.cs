@@ -1,0 +1,33 @@
+using System.Collections.Generic;
+using SimpleBT.Core;
+using SimpleBT.NonEditor.Nodes;
+using UnityEngine;
+
+// If the Action does NOT require any keys to then instantiate you can remove:
+// The "INodeKeyAssignable" interface and AssignKeys method
+public class Action_Potato : ExecutionNode, INodeKeyAssignable
+{
+    public void AssignKeys(List<string> keys)
+    {
+        // If the node requires keys assign them here like
+        // _keyTarget = keys[0]
+    }
+
+    protected override void Initialize()
+    {
+        // Initialize unchanging values here. Only gets triggered once in runtime.
+        // To understand when to use blackboard.GetValue<type>() or blackboard.GetComplexValue<type>() check the github repo
+    }
+
+    protected override Status Tick()
+    {
+        // Obtain changing values here.
+        // Recommended to create a clause to execute once for every time the node starts to get ticked again
+        // See "Action_Flee2D" for an example on a possible approach
+        
+        // Return Success, Failure or Running
+        // (Returning "Running" will keep ticking the node until it returns something else)
+        return Status.Success;
+    }
+}
+

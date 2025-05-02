@@ -138,12 +138,40 @@ public static class SBTNonEditorUtils
         try
         {
             Type toNodeType = Type.GetType($"SimpleBT.NonEditor.Nodes.{name}");
-            Node generatedNode = (Node)ScriptableObject.CreateInstance(toNodeType);
+            if (toNodeType == null) { toNodeType = Type.GetType(name); }
+
+            Node generatedNode = null;
+            List<string> filteredValues = null;
+            
+            if (toNodeType == typeof(Action_Any))
+            {
+                filteredValues = values[1].Split(',', StringSplitOptions.RemoveEmptyEntries).ToList();
+
+                for (int i = filteredValues.Count - 1; i >= 0; i--) {
+                    string subString = filteredValues[i];
+                    subString = FilterValue(subString, filterNumbers: false);
+                    if (string.IsNullOrEmpty(subString) || string.IsNullOrWhiteSpace(subString)) { filteredValues.RemoveAt(i); }
+                    else { filteredValues[i] = subString; }
+                }
+
+                filteredValues.Reverse();
+
+                bool.TryParse(values[2], out bool isBuiltIn);
+                
+                Type customType = Type.GetType(
+                    isBuiltIn == false ? 
+                        $"Action_{values[0]}" : 
+                        $"SimpleBT.NonEditor.Nodes.Action_{values[0]}");
+
+                generatedNode = (Node)ScriptableObject.CreateInstance(customType);
+            }
+            else { generatedNode = (Node)ScriptableObject.CreateInstance(toNodeType); }
+            
             generatedNode.GUID = guid;
             generatedNode.name = (tree.CompleteNodeList.Count + 1).ToString();
 
             if (generatedNode is INodeKeyAssignable nodeInterface) {
-                nodeInterface.AssignKeys(values);
+                nodeInterface.AssignKeys(toNodeType == typeof(Action_Any) ? filteredValues : values);
             }
             
             tree.CompleteNodeList.Add(generatedNode);
@@ -152,6 +180,7 @@ public static class SBTNonEditorUtils
         {
             Debug.LogError($"Error generating tree because of node {name}\n" +
                       "Are you sure its inside the namespace SimpleBT.NonEditor.Nodes?\n" +
+                      "If the node is custom, is it in a namespace?\n" +
                       "Are you sure the GraphNode title matches the other class?\n" +
                       "Are you sure you put INodeKeyAssignable and also put the values on the GraphNode?");
         }
