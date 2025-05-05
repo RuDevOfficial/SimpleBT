@@ -1,0 +1,245 @@
+{
+    "BehaviorName": "Example_Guard",
+    "NodeCollection": {
+        "BehaviorName": "Example_Guard",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
+                "toGUIDs": [
+                    "049399b3-b080-4fa5-b139-c2a631a93947"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "049399b3-b080-4fa5-b139-c2a631a93947",
+                "toGUIDs": [
+                    "e0a03292-77ba-4777-b5cd-e3d7834a0cd5"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "e0a03292-77ba-4777-b5cd-e3d7834a0cd5",
+                "toGUIDs": [
+                    "449ad11f-0db1-4ebc-894c-80bcf2e9bb1e",
+                    "7ed8f005-7bc2-4193-b2e2-24e165601561",
+                    "a449ccc0-3c45-4452-a9d9-4bfc31c3f766"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
+                "fromGUID": "449ad11f-0db1-4ebc-894c-80bcf2e9bb1e",
+                "toGUIDs": [],
+                "Values": [
+                    "Player",
+                    "lookdistance",
+                    "True",
+                    "player"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1004
+                },
+                "fromGUID": "a449ccc0-3c45-4452-a9d9-4bfc31c3f766",
+                "toGUIDs": [],
+                "Values": [
+                    "seee",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1005
+                },
+                "fromGUID": "7ed8f005-7bc2-4193-b2e2-24e165601561",
+                "toGUIDs": [],
+                "Values": [
+                    "player",
+                    "10000001",
+                    "lookdistance"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": -107.0,
+            "y": -275.0
+        },
+        "ViewportScale": {
+            "x": 0.8695651888847351,
+            "y": 0.8695651888847351
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": [
+            {
+                "PropertyName": "lookdistance",
+                "PropertyRawValue": "30",
+                "PropertyType": 2
+            }
+        ]
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 738.0,
+                        "y": 354.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphDecorator_RepeatForever",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "049399b3-b080-4fa5-b139-c2a631a93947",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 723.0,
+                        "y": 475.0,
+                        "width": 134.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Decorator_RepeatForever",
+                    "Title": "Repeat Forever"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "GraphComposite_Sequence",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "e0a03292-77ba-4777-b5cd-e3d7834a0cd5",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 738.0,
+                        "y": 593.0,
+                        "width": 105.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Sequence",
+                    "Title": "Sequence"
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "GraphCondition_IsGameObjectClose3D",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "449ad11f-0db1-4ebc-894c-80bcf2e9bb1e",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 518.0,
+                        "y": 740.0,
+                        "width": 187.0,
+                        "height": 154.0
+                    },
+                    "ClassReference": "Condition_IsGameObjectClose3D",
+                    "Title": "Is GameObject Close 3D",
+                    "_keyTag": "Player",
+                    "_keyRadius": "lookdistance",
+                    "_keyBlackboardToggle": "True",
+                    "_keyParameter": "player"
+                }
+            },
+            {
+                "rid": 1004,
+                "type": {
+                    "class": "GraphAction_Debug",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "a449ccc0-3c45-4452-a9d9-4bfc31c3f766",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 938.0,
+                        "y": 740.0,
+                        "width": 105.0,
+                        "height": 117.0
+                    },
+                    "ClassReference": "Action_Debug",
+                    "Title": "Debug",
+                    "DebugMessage": "seee",
+                    "Status": 0
+                }
+            },
+            {
+                "rid": 1005,
+                "type": {
+                    "class": "GraphCondition_CanSeeTarget3D",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "7ed8f005-7bc2-4193-b2e2-24e165601561",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 738.0,
+                        "y": 740.0,
+                        "width": 172.0,
+                        "height": 136.0
+                    },
+                    "ClassReference": "Condition_CanSeeTarget3D",
+                    "Title": "Can See Target 3D",
+                    "_targetFieldValue": "player",
+                    "_layerMaskValue": "10000001",
+                    "_radiusValue": "lookdistance"
+                }
+            }
+        ]
+    }
+}

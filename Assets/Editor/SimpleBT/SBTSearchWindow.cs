@@ -37,6 +37,7 @@ namespace SimpleBT.Editor
                     new SearchTreeEntry(new GUIContent("Is at Minimum Distance", _icon)) { level = 2, userData = "GraphCondition_IsAtMinimumDistance" },
                     new SearchTreeEntry(new GUIContent("Is GameObject Close 2D", _icon)) { level = 2, userData = "GraphCondition_IsGameObjectClose2D" },
                     new SearchTreeEntry(new GUIContent("Is GameObject Close 3D", _icon)) { level = 2, userData = "GraphCondition_IsGameObjectClose3D" },
+                    new SearchTreeEntry(new GUIContent("Can See Target 3D", _icon)) { level = 2, userData = "GraphCondition_CanSeeTarget3D" },
 
                 new SearchTreeEntry(new GUIContent("Branch", _icon)) { level = 1, userData = "BehaviorTreeGraphNode" },
                 

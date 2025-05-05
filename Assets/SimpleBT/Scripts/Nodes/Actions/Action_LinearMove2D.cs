@@ -44,5 +44,4 @@ namespace SimpleBT.NonEditor.Nodes
             if (_velocity.y != 0) { rb2D.linearVelocityY = 0; }
         }
     }
-
 }

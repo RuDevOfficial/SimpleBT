@@ -8,6 +8,7 @@ TagManager:
   - Enemy/AntEater
   - Food/Pea
   - Food/Obtained
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Wall
   - 
   - 
   - 
