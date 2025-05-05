@@ -65,7 +65,7 @@ To delete a variable select the respective field and press **delete** (not backs
 | Vector3    | 21.1, 3, 90                            | GetValue<<Type>**Vector3**>           |
 | GameObject | Tomato, Untagged, 391290 (Instance id) | GetComplexValue<<Type>**GameObject**> |
 
-**Note**: Currently supported types *in* the SBTBlackboardGraph, any type can be store on the Blackboard's dictionary at behavior runtime.
+**Note**: Currently supported types *in* the SBTBlackboardGraph, any type can be stored on the Blackboard's dictionary at behavior runtime.
 
 ## Generating the Tree and Blackboard
 
