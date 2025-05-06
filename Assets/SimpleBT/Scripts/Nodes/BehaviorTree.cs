@@ -43,5 +43,10 @@ namespace SimpleBT.NonEditor.Nodes
         {
             RelatedBranch = keys[1];
         }
+
+        public override void OnDrawGizmos()
+        {
+            Root?.OnDrawGizmos();
+        }
     }
 }

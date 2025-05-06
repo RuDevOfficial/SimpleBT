@@ -15,5 +15,11 @@ namespace SimpleBT.NonEditor.Nodes
 
             return false;
         }
+
+        public override void OnDrawGizmos()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(blackboard.gameObject.transform.position, _radius);
+        }
     }
 }

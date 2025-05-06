@@ -278,9 +278,13 @@ public static class SBTNonEditorUtils
             
             int.TryParse(inID, out int instanceID);
 
-            foreach (GameObject obj in GameObject.FindGameObjectsWithTag(tag)) {
-                if (instanceID != 0) { if(obj.GetInstanceID() == instanceID) { value = obj; break; } }
-                else if (obj.name == name) { value = obj; break; }
+            if (tag == "Untagged") { GameObject.Find(name); }
+            else
+            {
+                foreach (GameObject obj in GameObject.FindGameObjectsWithTag(tag)) {
+                    if (instanceID != 0) { if(obj.GetInstanceID() == instanceID) { value = obj; break; } }
+                    else if (obj.name == name) { value = obj; break; }
+                }
             }
         }
             

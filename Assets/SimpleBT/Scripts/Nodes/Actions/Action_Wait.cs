@@ -41,4 +41,5 @@ namespace SimpleBT.NonEditor.Nodes
             _currentTime = 0.0f;
         }
     }
+
 }

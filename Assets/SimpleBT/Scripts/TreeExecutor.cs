@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -10,6 +11,8 @@ namespace SimpleBT.NonEditor.Tree
     {
         public Node BT;
         private SBTBlackboard _sbtBlackboard;
+
+        private bool _executing = false; // For debugging purposes OnDrawGizmos
         private bool _finished = false;
 
         private void Awake()
@@ -18,7 +21,11 @@ namespace SimpleBT.NonEditor.Tree
             Assert.IsNotNull(_sbtBlackboard, "Blackboard not found in GameObject" + gameObject.name);
         }
 
-        private void Start() { BT.RegisterBlackboard(_sbtBlackboard); }
+        private void Start()
+        {
+            BT.RegisterBlackboard(_sbtBlackboard);
+            _executing = true;
+        }
 
         private void Update()
         {
@@ -30,6 +37,13 @@ namespace SimpleBT.NonEditor.Tree
                 Debug.Log("I finished the execution with... " + state);
                 _finished = true;
             }
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (_executing == false) { return; }
+            
+            BT.OnDrawGizmos();
         }
     }
 

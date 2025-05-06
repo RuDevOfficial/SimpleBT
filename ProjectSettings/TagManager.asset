@@ -9,6 +9,7 @@ TagManager:
   - Food/Pea
   - Food/Obtained
   - CinemachineTarget
+  - RandomPosition
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - Ground
   - Wall
-  - 
+  - Bullet
   - 
   - 
   - 

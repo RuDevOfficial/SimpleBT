@@ -58,5 +58,14 @@ namespace SimpleBT.NonEditor.Nodes
 
             return true;
         }
+
+        public override void OnDrawGizmos()
+        {
+            if (_lastIndex == -1) { return; }
+            
+            foreach (var node in _children.Where(node => node == _children[_lastIndex])) {
+                node.OnDrawGizmos();
+            }
+        }
     }
 }

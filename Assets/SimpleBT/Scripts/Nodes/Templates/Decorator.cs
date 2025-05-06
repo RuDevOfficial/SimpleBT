@@ -1,4 +1,6 @@
-﻿namespace SimpleBT.NoneEditor.Nodes
+﻿using UnityEngine;
+
+namespace SimpleBT.NoneEditor.Nodes
 {
     using SimpleBT.Core;
     using NonEditor;
@@ -16,5 +18,8 @@
         }
 
         public void AddChild(Node child) { Child = child; }
+        public override void OnDrawGizmos() {
+            Child?.OnDrawGizmos();
+        }
     }
 }

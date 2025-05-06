@@ -84,6 +84,6 @@ TextKeyField .unity-text-field {
 .Action .unity-text-field {
     flex-wrap: nowrap;
     flex-direction: row;
-    max-width: 150px;
+    max-width: 200px;
     min-width: auto;
 }

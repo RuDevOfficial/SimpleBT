@@ -14,9 +14,10 @@ namespace SimpleBT.Core
 
         public virtual Status OnTick() { return Tick(); }
         
-        public virtual void OnAbort() {  }
         protected abstract Status Tick();
-
+        public virtual void OnAbort() {  }
+        public virtual void OnDrawGizmos() {  }
+        
         public virtual void RegisterBlackboard(SBTBlackboard sbtBlackboard) { blackboard = sbtBlackboard; }
     }
     

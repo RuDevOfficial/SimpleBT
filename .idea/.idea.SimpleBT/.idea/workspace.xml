@@ -5,20 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="227eb850-3e24-477a-8760-e6199cf36f52" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_LookAtTargetOnce.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_LookAtTargetOnce.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_NavMeshAgentGoToTarget.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_NavMeshAgentGoToTarget.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_LookAtTargetOnce.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_LookAtTargetOnce.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_NavMeshAgentGoToTarget.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_NavMeshAgentGoToTarget.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleBT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Custom/GraphConditions/GraphCondition_CanSeeTarget3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_CanSeeTarget3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/Custom/GraphConditions/GraphCondition_CanSeeTarget3D.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Conditions/GraphCondition_CanSeeTarget3D.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Debug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_Debug.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_SendMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/GraphView/GraphNodes/Actions/GraphAction_SendMessage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSearchWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleScenes/Ant3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExampleScenes/Ant3D.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleScenes/BackAndForthExample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExampleScenes/BackAndForthExample.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleScenes/Zombie2D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExampleScenes/Zombie2D.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/EditorData/EditorData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_BackAndForth.simple" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_BackAndForth.simple" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Zombie.simple" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Zombie.simple" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_LinearMove2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_LinearMove2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTStyles.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTStyles.uss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExampleScenes/Shooter.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExampleScenes/Shooter.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Custom/Conditions/Condition_CanSeeTarget3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_CanSeeTarget3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Custom/Conditions/Condition_CanSeeTarget3D.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_CanSeeTarget3D.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Guard.simple" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/GraphData/Example_Guard.simple" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Wait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Actions/Action_Wait.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/BehaviorTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/BehaviorTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Composite_Priority.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Composites/Composite_Priority.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsGameObjectClose3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Conditions/Condition_IsGameObjectClose3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Composite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Composite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Decorator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Decorator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/Nodes/Templates/Node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTNonEditorUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/SBTNonEditorUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/TreeExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleBT/Scripts/TreeExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +60,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/b1/5911a620/Dictionary`2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/321eb2db7c6d43ea8fc39b54eaca345246ae00/fd/08ecc396/List`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3789ee403a53437cbb6b5d9ab6311f51573620/97/5a5eaa85/BitArray.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/53c71f9d05b34c738cdf17763c0778792f200/fa/290aeb14/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
@@ -52,8 +68,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7fd37b296550485d95ecaf5a50ed53b21f4200/0a/b16892dd/VisualElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9ff2ec5163204af481ac0a675d8e1bf82ac00/c4/f244d808/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/19/1cf98714/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/20/621a90ae/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eebf6a509b354512a5d405c8a7dd6f889b6600/40/eab93127/ProjectWindowUtil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eebf6a509b354512a5d405c8a7dd6f889b6600/7c/c88dad3d/MenuItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/Custom/CustomNodeEntries.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTEditorWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SimpleBT/SBTSettingsWindow.cs" root0="FORCE_HIGHLIGHTING" />
@@ -137,13 +155,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11556">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="11556" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -255,6 +275,7 @@
       <workItem from="1746018164301" duration="2512000" />
       <workItem from="1746178814127" duration="4841000" />
       <workItem from="1746441486220" duration="5305000" />
+      <workItem from="1746527188284" duration="9101000" />
     </task>
     <servers />
   </component>
@@ -271,6 +292,25 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/SimpleBT/Scripts/Blackboard/SBTBlackboard.cs</url>
+          <line>66</line>
+          <properties documentPath="D:\DESARROLLO DE VIDEOJUEGOS\UNITY\Projects\SimpleBT\Assets\SimpleBT\Scripts\Blackboard\SBTBlackboard.cs" containingFunctionPresentation="Method 'GetComplexValue'">
+            <startOffsets>
+              <option value="2300" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2364" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

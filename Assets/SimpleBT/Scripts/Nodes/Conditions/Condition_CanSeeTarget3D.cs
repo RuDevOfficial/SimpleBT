@@ -16,6 +16,10 @@ namespace SimpleBT.NonEditor.Nodes
         private GameObject _target;
         private LayerMask _layerMask;
         private float _radius;
+
+        // debugging purposes
+        private Vector3 _hitPosition = Vector3.zero;
+        private bool _hitTarget = false;
         
         public void AssignKeys(List<string> keys)
         {
@@ -37,18 +41,19 @@ namespace SimpleBT.NonEditor.Nodes
             Vector3 rayDirection = (_target.transform.position - blackboard.gameObject.transform.position).normalized;
             Physics.Raycast(blackboard.gameObject.transform.position, rayDirection, out RaycastHit hit, _radius, _layerMask);
 
-            if (hit.collider)
-            {
-                Debug.Log(hit.collider.gameObject);
-            }
-    
-            // Conditions gets ticked only once and must return true or false (success or failure)
-            return false;
+            if (!hit.collider) return false;
+            
+            _hitPosition = hit.point;
+            _hitTarget = hit.collider.gameObject == _target;
+            return _hitTarget;
+        }
+
+        public override void OnDrawGizmos()
+        {
+            Gizmos.color = _hitTarget ? Color.green : Color.red;
+            Gizmos.DrawLine(blackboard.gameObject.transform.position, _hitPosition);
         }
     }
-
-
-
 }
 
 

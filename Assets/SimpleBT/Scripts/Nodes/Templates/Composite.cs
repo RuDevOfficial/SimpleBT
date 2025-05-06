@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using SimpleBT.NonEditor;
 using SimpleBT.NonEditor.Nodes;
 using UnityEngine;
@@ -32,5 +33,12 @@ namespace SimpleBT.Core
         }
 
         public void AddChild(Node child) { _children.Add(child); }
+
+        public override void OnDrawGizmos()
+        {
+            foreach (var node in _children.Where(node => node == _children[_childrenIndex])) {
+                node.OnDrawGizmos();
+            }
+        }
     }
 }
