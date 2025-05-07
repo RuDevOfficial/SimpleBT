@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -8,10 +9,14 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        StartCoroutine(DeathOnTime());
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() { rb.MovePosition(transform.position + transform.forward * 0.5f); }
+
+    IEnumerator DeathOnTime()
     {
-        rb.MovePosition(transform.position + transform.forward * 0.5f);
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }

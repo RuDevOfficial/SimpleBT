@@ -61,11 +61,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         public override void OnDrawGizmos()
         {
-            if (_lastIndex == -1) { return; }
-            
-            foreach (var node in _children.Where(node => node == _children[_lastIndex])) {
-                node.OnDrawGizmos();
-            }
+            foreach (Condition condition in _conditionals) { condition.OnDrawGizmos(); }
         }
     }
 }

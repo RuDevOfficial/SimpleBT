@@ -11,7 +11,7 @@ namespace SimpleBT.Editor.GraphNodes
 
         public GraphAction_NavMeshAgentGoToTarget()
         {
-            Title = "NavMeshAgent Go To Target";
+            Title = "NavMeshAgent\nGo To Target";
             ClassReference = "Action_NavMeshAgentGoToTarget";
         }
         

@@ -314,4 +314,9 @@ public static class SBTNonEditorUtils
             case RigidbodyMoveFlag.NONE: default: rb.MovePosition(position); break;
         }
     }
+    
+    public static T GetEnumByString<T>(string value) where T : Enum
+    {
+        return (T)Enum.Parse(typeof(T), value);
+    }
 }

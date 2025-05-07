@@ -27,5 +27,9 @@ namespace SimpleBT.NonEditor.Nodes
             ChildrenStatus.Clear();
             for (int i = 0; i < _children.Count(); i++) { ChildrenStatus.Add(Status.Running); }
         }
+
+        public override void OnDrawGizmos() {
+            foreach (var node in _children) { node.OnDrawGizmos(); }
+        }
     }
 }

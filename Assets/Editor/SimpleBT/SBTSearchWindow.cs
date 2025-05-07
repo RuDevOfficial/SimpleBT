@@ -38,6 +38,11 @@ namespace SimpleBT.Editor
                     new SearchTreeEntry(new GUIContent("Is GameObject Close 2D", _icon)) { level = 2, userData = "GraphCondition_IsGameObjectClose2D" },
                     new SearchTreeEntry(new GUIContent("Is GameObject Close 3D", _icon)) { level = 2, userData = "GraphCondition_IsGameObjectClose3D" },
                     new SearchTreeEntry(new GUIContent("Can See Target 3D", _icon)) { level = 2, userData = "GraphCondition_CanSeeTarget3D" },
+                    new SearchTreeGroupEntry(new GUIContent("Comparisons"), 2),
+                        new SearchTreeEntry(new GUIContent("Compare Blackboard Values", _icon)) { level = 3, userData = "GraphCondition_CompareParameters" },                
+                        new SearchTreeEntry(new GUIContent("Compare Bool", _icon)) { level = 3, userData = "GraphCondition_CompareBool" },                
+                        new SearchTreeEntry(new GUIContent("Compare Float", _icon)) { level = 3, userData = "GraphCondition_CompareFloat" },                
+                        new SearchTreeEntry(new GUIContent("Compare String", _icon)) { level = 3, userData = "GraphCondition_CompareString" },                
 
                 new SearchTreeEntry(new GUIContent("Branch", _icon)) { level = 1, userData = "BehaviorTreeGraphNode" },
                 
@@ -54,6 +59,7 @@ namespace SimpleBT.Editor
                 
                 new SearchTreeGroupEntry(new GUIContent("Decorators"), 1),
                     new SearchTreeEntry(new GUIContent("Repeat Forever", _icon)) { level = 2, userData = "GraphDecorator_RepeatForever" },
+                    new SearchTreeEntry(new GUIContent("Repeat Until Success", _icon)) { level = 2, userData = "GraphDecorator_RepeatUntilSuccess" },
                     new SearchTreeEntry(new GUIContent("Execute Once With Delay", _icon)) { level = 2, userData = "GraphDecorator_ExecuteOnceWithDelay" },
 
                 new SearchTreeGroupEntry(new GUIContent("Flow"), 1),

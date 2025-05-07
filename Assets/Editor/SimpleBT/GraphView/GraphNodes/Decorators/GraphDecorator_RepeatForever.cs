@@ -13,4 +13,5 @@ namespace SimpleBT.Editor.GraphNodes
         public override List<string> GetValues() { return null; }
         public override void ReloadValues(List<string> values) { }
     }
+
 }

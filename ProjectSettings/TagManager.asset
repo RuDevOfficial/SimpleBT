@@ -10,6 +10,7 @@ TagManager:
   - Food/Obtained
   - CinemachineTarget
   - RandomPosition
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Ground
   - Wall
   - Bullet
-  - 
-  - 
+  - PlayerBullet
+  - Enemy
   - 
   - 
   - 

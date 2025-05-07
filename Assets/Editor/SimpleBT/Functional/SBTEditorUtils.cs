@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using Editor.SimpleBT.Functional;
 using Unity.VisualScripting;
@@ -204,6 +205,12 @@ namespace SimpleBT.Editor.Utils
             string templatePath = "Assets/ScriptTemplates/20-SBT Script Templates__CustomNodeEntries-CustomNodeEntries.cs.txt";
             ProjectWindowUtil.CreateScriptAssetFromTemplateFile(templatePath, $"CustomNodeEntries.cs");
             AssetDatabase.Refresh();
+        }
+
+        public static List<String> ReturnEnumToList<T>() where T : Enum
+        {
+            List<string> list = Enum.GetNames(typeof(T)).ToList();
+            return list;
         }
     } 
 }

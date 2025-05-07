@@ -14,7 +14,7 @@ namespace SimpleBT.NonEditor
         
         private Dictionary<string, object> _data = new Dictionary<string, object>();
 
-        private void Start() {
+        private void Awake() {
             foreach (BlackboardData b in GraphData) {
                 b.Instantiate();
                 _data.Add(b.Key, b.Value);

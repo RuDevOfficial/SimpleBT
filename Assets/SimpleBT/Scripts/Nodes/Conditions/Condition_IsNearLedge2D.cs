@@ -22,6 +22,8 @@ namespace SimpleBT.NonEditor.Nodes
         Vector2 leftVector;
         Vector2 rightVector;
 
+        private List<RaycastHit2D> hits = new List<RaycastHit2D>();
+
         public void AssignKeys(List<string> keys)
         {
             keySeparationDistance = keys[0]; 
@@ -42,16 +44,22 @@ namespace SimpleBT.NonEditor.Nodes
             
             leftVector = (Vector2)blackboard.gameObject.transform.position + new Vector2(rb2D.linearVelocityX >= 0 ? 1 : -1, 0) * raySeparationDistance;
 
-            List<RaycastHit2D> leftHits = Physics2D.RaycastAll(leftVector, Vector2.down, rayLength, 1 << _layerMask).ToList();
+            hits = Physics2D.RaycastAll(leftVector, Vector2.down, rayLength, 1 << _layerMask).ToList();
             
             // Filter out the raycasting gameObject
-            for (var i = leftHits.Count - 1; i >= 0; i--)
+            for (var i = hits.Count - 1; i >= 0; i--)
             {
-                if (leftHits[i].transform.gameObject != blackboard.gameObject) continue;
-                leftHits.RemoveAt(i); break;
+                if (hits[i].transform.gameObject != blackboard.gameObject) continue;
+                hits.RemoveAt(i); break;
             }
             
-            return leftHits.Count == 0;
+            return hits.Count == 0;
+        }
+
+        public override void OnDrawGizmos()
+        {
+            Gizmos.color = hits.Count > 0 ? Color.green : Color.red;
+            Gizmos.DrawLine(leftVector, leftVector + Vector2.down * rayLength);
         }
     }
 
