@@ -1,0 +1,129 @@
+{
+    "BehaviorName": "Example_Unity_Methods",
+    "NodeCollection": {
+        "BehaviorName": "Example_Unity_Methods",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "635e7bba-c809-4b25-8052-3cc4f19013a1",
+                "toGUIDs": [
+                    "c8c53bb8-263a-4de9-81f0-08b18b09d079"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "c8c53bb8-263a-4de9-81f0-08b18b09d079",
+                "toGUIDs": [
+                    "43957c72-5396-46a3-b7ba-37d771186813"
+                ],
+                "Values": [
+                    "4"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "43957c72-5396-46a3-b7ba-37d771186813",
+                "toGUIDs": [],
+                "Values": [
+                    "repeated",
+                    "Success"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": 25.0,
+            "y": -353.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": []
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "635e7bba-c809-4b25-8052-3cc4f19013a1",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 410.0,
+                        "y": 478.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphDecorator_RepeatXTimes",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "c8c53bb8-263a-4de9-81f0-08b18b09d079",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 493.0,
+                        "y": 600.0,
+                        "width": 103.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Decorator_RepeatXTimes",
+                    "Title": "Repeat\nX Times",
+                    "_keyField": "4"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "GraphAction_Debug",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "43957c72-5396-46a3-b7ba-37d771186813",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 579.0,
+                        "y": 742.0,
+                        "width": 127.0,
+                        "height": 117.0
+                    },
+                    "ClassReference": "Action_Debug",
+                    "Title": "Debug",
+                    "DebugMessage": "repeated",
+                    "Status": 0
+                }
+            }
+        ]
+    }
+}

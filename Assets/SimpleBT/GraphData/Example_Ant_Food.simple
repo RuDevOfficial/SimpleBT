@@ -7,27 +7,6 @@
                 "Node": {
                     "rid": 1000
                 },
-                "fromGUID": "ed2c77ed-545b-4d53-84ed-c7d299dda3b2",
-                "toGUIDs": [
-                    "69f448b9-e68d-4c90-b54f-51b139b61c54",
-                    "9d1b3f1d-5ed8-4e31-87f7-43d2a7ea4fe2",
-                    "83bdad50-0efc-4ca0-924c-5056a7aff567",
-                    "15252bc8-6ac0-4a9d-96f1-54e1087de187",
-                    "aed71c87-a297-4a21-afa8-6458ce0be9c5",
-                    "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
-                    "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
-                    "f6b02bcc-7894-4032-bc3f-905e156e02b1",
-                    "dfafa294-b818-4026-b3e8-57666f956231"
-                ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1001
-                },
                 "fromGUID": "aed71c87-a297-4a21-afa8-6458ce0be9c5",
                 "toGUIDs": [],
                 "Values": [
@@ -42,7 +21,7 @@
             },
             {
                 "Node": {
-                    "rid": 1002
+                    "rid": 1001
                 },
                 "fromGUID": "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
                 "toGUIDs": [],
@@ -55,7 +34,7 @@
             },
             {
                 "Node": {
-                    "rid": 1003
+                    "rid": 1002
                 },
                 "fromGUID": "83bdad50-0efc-4ca0-924c-5056a7aff567",
                 "toGUIDs": [],
@@ -68,7 +47,7 @@
             },
             {
                 "Node": {
-                    "rid": 1004
+                    "rid": 1003
                 },
                 "fromGUID": "15252bc8-6ac0-4a9d-96f1-54e1087de187",
                 "toGUIDs": [],
@@ -83,7 +62,7 @@
             },
             {
                 "Node": {
-                    "rid": 1005
+                    "rid": 1004
                 },
                 "fromGUID": "69f448b9-e68d-4c90-b54f-51b139b61c54",
                 "toGUIDs": [],
@@ -99,7 +78,7 @@
             },
             {
                 "Node": {
-                    "rid": 1006
+                    "rid": 1005
                 },
                 "fromGUID": "9d1b3f1d-5ed8-4e31-87f7-43d2a7ea4fe2",
                 "toGUIDs": [],
@@ -116,11 +95,11 @@
             },
             {
                 "Node": {
-                    "rid": 1007
+                    "rid": 1006
                 },
                 "fromGUID": "3dcba0f0-047f-41c1-84c7-0233a70c33ea",
                 "toGUIDs": [
-                    "ed2c77ed-545b-4d53-84ed-c7d299dda3b2"
+                    "3b245b76-ebc3-44f7-bcfe-13e84bd6e48f"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -129,7 +108,7 @@
             },
             {
                 "Node": {
-                    "rid": 1008
+                    "rid": 1007
                 },
                 "fromGUID": "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
                 "toGUIDs": [],
@@ -143,7 +122,7 @@
             },
             {
                 "Node": {
-                    "rid": 1009
+                    "rid": 1008
                 },
                 "fromGUID": "f6b02bcc-7894-4032-bc3f-905e156e02b1",
                 "toGUIDs": [],
@@ -158,7 +137,7 @@
             },
             {
                 "Node": {
-                    "rid": 1010
+                    "rid": 1009
                 },
                 "fromGUID": "dfafa294-b818-4026-b3e8-57666f956231",
                 "toGUIDs": [],
@@ -168,11 +147,32 @@
                 "VariableName": "",
                 "Condition": 0,
                 "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1010
+                },
+                "fromGUID": "3b245b76-ebc3-44f7-bcfe-13e84bd6e48f",
+                "toGUIDs": [
+                    "69f448b9-e68d-4c90-b54f-51b139b61c54",
+                    "9d1b3f1d-5ed8-4e31-87f7-43d2a7ea4fe2",
+                    "83bdad50-0efc-4ca0-924c-5056a7aff567",
+                    "15252bc8-6ac0-4a9d-96f1-54e1087de187",
+                    "aed71c87-a297-4a21-afa8-6458ce0be9c5",
+                    "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
+                    "dbe5e6c5-7c6a-4d62-a842-174c6e60f00b",
+                    "f6b02bcc-7894-4032-bc3f-905e156e02b1",
+                    "dfafa294-b818-4026-b3e8-57666f956231"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
             }
         ],
         "ViewportPosition": {
-            "x": 296.0,
-            "y": 54.400001525878909
+            "x": 345.0,
+            "y": 150.0
         },
         "ViewportScale": {
             "x": 0.49717673659324648,
@@ -188,26 +188,6 @@
             {
                 "rid": 1000,
                 "type": {
-                    "class": "GraphComposite_Sequence",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "ed2c77ed-545b-4d53-84ed-c7d299dda3b2",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 554.4000244140625,
-                        "y": 226.39999389648438,
-                        "width": 77.5999755859375,
-                        "height": 76.80001831054688
-                    },
-                    "ClassReference": "Sequence",
-                    "Title": "Sequence"
-                }
-            },
-            {
-                "rid": 1001,
-                "type": {
                     "class": "GraphAction_GoToPosition3D",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
@@ -216,10 +196,10 @@
                     "GUID": "aed71c87-a297-4a21-afa8-6458ce0be9c5",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 699.2000122070313,
-                        "y": 388.79998779296877,
-                        "width": 150.4000244140625,
-                        "height": 149.60003662109376
+                        "x": 699.0,
+                        "y": 389.0,
+                        "width": 150.0,
+                        "height": 154.0
                     },
                     "ClassReference": "Action_GoToPosition3D",
                     "Title": "Go To Position 3D",
@@ -230,7 +210,7 @@
                 }
             },
             {
-                "rid": 1002,
+                "rid": 1001,
                 "type": {
                     "class": "GraphAction_UnparentGameObject",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -240,10 +220,10 @@
                     "GUID": "5f2ab4ca-9d9b-4422-82d3-2f69e350c418",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 865.6000366210938,
-                        "y": 388.79998779296877,
-                        "width": 143.199951171875,
-                        "height": 95.20001220703125
+                        "x": 866.0,
+                        "y": 389.0,
+                        "width": 142.0,
+                        "height": 97.0
                     },
                     "ClassReference": "Action_UnparentGameObject",
                     "Title": "Unparent Object",
@@ -251,7 +231,7 @@
                 }
             },
             {
-                "rid": 1003,
+                "rid": 1002,
                 "type": {
                     "class": "GraphAction_ParentObjectToSelf",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -261,10 +241,10 @@
                     "GUID": "83bdad50-0efc-4ca0-924c-5056a7aff567",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 358.4000244140625,
-                        "y": 388.79998779296877,
-                        "width": 128.79998779296876,
-                        "height": 95.20001220703125
+                        "x": 358.0,
+                        "y": 389.0,
+                        "width": 128.0,
+                        "height": 97.0
                     },
                     "ClassReference": "Action_ParentObjectToSelf",
                     "Title": "Parent\nObject To Self",
@@ -272,7 +252,7 @@
                 }
             },
             {
-                "rid": 1004,
+                "rid": 1003,
                 "type": {
                     "class": "GraphAction_OverrideGameObjectPosition3D",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -283,9 +263,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 496.0,
-                        "y": 388.79998779296877,
-                        "width": 189.60003662109376,
-                        "height": 131.20001220703126
+                        "y": 389.0,
+                        "width": 188.0,
+                        "height": 134.0
                     },
                     "ClassReference": "Action_OverrideGameObjectPosition3D",
                     "Title": "Override\nGameObject Position 3D",
@@ -295,7 +275,7 @@
                 }
             },
             {
-                "rid": 1005,
+                "rid": 1004,
                 "type": {
                     "class": "GraphCondition_IsGameObjectClose3D",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -305,10 +285,10 @@
                     "GUID": "69f448b9-e68d-4c90-b54f-51b139b61c54",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 6.399999618530273,
-                        "y": 388.79998779296877,
-                        "width": 188.8000030517578,
-                        "height": 149.60003662109376
+                        "x": 6.0,
+                        "y": 389.0,
+                        "width": 187.0,
+                        "height": 154.0
                     },
                     "ClassReference": "Condition_IsGameObjectClose3D",
                     "Title": "Is GameObject Close 3D",
@@ -319,7 +299,7 @@
                 }
             },
             {
-                "rid": 1006,
+                "rid": 1005,
                 "type": {
                     "class": "GraphAction_Follow3D",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -330,9 +310,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 212.0,
-                        "y": 388.79998779296877,
-                        "width": 134.40000915527345,
-                        "height": 167.20001220703126
+                        "y": 389.0,
+                        "width": 134.0,
+                        "height": 173.0
                     },
                     "ClassReference": "Action_Follow3D",
                     "Title": "Follow 3D",
@@ -344,7 +324,7 @@
                 }
             },
             {
-                "rid": 1007,
+                "rid": 1006,
                 "type": {
                     "class": "RootGraphNode",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -355,16 +335,16 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 524.0,
-                        "y": -28.799999237060548,
-                        "width": 73.60003662109375,
-                        "height": 76.80000305175781
+                        "y": -29.0,
+                        "width": 73.0,
+                        "height": 77.0
                     },
                     "ClassReference": "Root",
                     "Title": "Root"
                 }
             },
             {
-                "rid": 1008,
+                "rid": 1007,
                 "type": {
                     "class": "GraphAction_OverrideTag",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -375,9 +355,9 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 1024.0,
-                        "y": 388.79998779296877,
+                        "y": 389.0,
                         "width": 140.0,
-                        "height": 113.60003662109375
+                        "height": 117.0
                     },
                     "ClassReference": "Action_OverrideTag",
                     "Title": "Override Tag",
@@ -386,7 +366,7 @@
                 }
             },
             {
-                "rid": 1009,
+                "rid": 1008,
                 "type": {
                     "class": "GraphAction_OverrideGameObjectPosition3D",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -396,10 +376,10 @@
                     "GUID": "f6b02bcc-7894-4032-bc3f-905e156e02b1",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 1187.199951171875,
-                        "y": 388.79998779296877,
-                        "width": 189.5999755859375,
-                        "height": 131.20001220703126
+                        "x": 1187.0,
+                        "y": 389.0,
+                        "width": 188.0,
+                        "height": 134.0
                     },
                     "ClassReference": "Action_OverrideGameObjectPosition3D",
                     "Title": "Override\nGameObject Position 3D",
@@ -409,7 +389,7 @@
                 }
             },
             {
-                "rid": 1010,
+                "rid": 1009,
                 "type": {
                     "class": "GraphAction_RemoveKey",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -420,13 +400,33 @@
                     "Rect": {
                         "serializedVersion": "2",
                         "x": 1396.0,
-                        "y": 388.79998779296877,
-                        "width": 118.39990234375,
-                        "height": 95.20001220703125
+                        "y": 389.0,
+                        "width": 118.0,
+                        "height": 97.0
                     },
                     "ClassReference": "Action_RemoveKey",
                     "Title": "Remove Key",
                     "_keyField": "PEA"
+                }
+            },
+            {
+                "rid": 1010,
+                "type": {
+                    "class": "GraphComposite_Sequence",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3b245b76-ebc3-44f7-bcfe-13e84bd6e48f",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 579.0,
+                        "y": 126.0,
+                        "width": 105.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Composite_Sequence",
+                    "Title": "Sequence"
                 }
             }
         ]

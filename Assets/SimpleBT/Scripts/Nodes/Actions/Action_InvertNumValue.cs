@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_InvertNumValue : ExecutionNode, INodeKeyAssignable
+    public class Action_InvertNumValue : Node, INodeKeyAssignable
     {
         [SerializeField] private string keyNumValue;
         

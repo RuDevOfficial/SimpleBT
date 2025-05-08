@@ -35,7 +35,7 @@ namespace SimpleBT.NonEditor.Nodes
             _radius = blackboard.GetValue<float>(_keyRadius);
         }
 
-        public override bool Check()
+        protected override bool Check()
         {
             // Get changing values here.
             Vector3 rayDirection = (_target.transform.position - blackboard.gameObject.transform.position).normalized;

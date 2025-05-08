@@ -12,7 +12,7 @@ using UnityEditor;
 namespace SimpleBT.NonEditor.Nodes
 {
     // TODO make it work if it has a value attached and not just written on the node
-    public class Action_SetActive : ExecutionNode
+    public class Action_SetActive : Node
     {
         [SerializeField] private string Key;
         [SerializeField] protected string KeyGameobjectName;

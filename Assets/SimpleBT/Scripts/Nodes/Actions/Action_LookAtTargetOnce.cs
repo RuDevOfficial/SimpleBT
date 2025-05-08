@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_LookAtTargetOnce : ExecutionNode, INodeKeyAssignable
+    public class Action_LookAtTargetOnce : Node, INodeKeyAssignable
     {
         [SerializeField] private string _keyTarget;
         private GameObject _target;

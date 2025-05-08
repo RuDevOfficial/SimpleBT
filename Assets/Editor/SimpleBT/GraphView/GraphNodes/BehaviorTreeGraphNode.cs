@@ -19,7 +19,7 @@ namespace SimpleBT.Editor.GraphNodes
         
         public BehaviorTreeGraphNode()
         {
-            Title = "Branch";
+            Title = "Behavior Tree";
             ClassReference = "BehaviorTree";
 
             RegisterCallback<DragExitedEvent>(OnDragExited);

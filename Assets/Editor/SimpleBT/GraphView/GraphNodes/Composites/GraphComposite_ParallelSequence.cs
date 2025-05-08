@@ -5,7 +5,7 @@
         public GraphComposite_ParallelSequence()
         {
             Title = "Parallel Sequence";
-            ClassReference = "ParallelSequence";
+            ClassReference = "Composite_ParallelSequence";
         }
     }
 }

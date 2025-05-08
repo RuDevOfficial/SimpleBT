@@ -76,14 +76,35 @@ GridBackground {
     align-items: center;
 }
 
-TextKeyField .unity-text-field {
-    flex-direction: row;
-    -unity-font-style: normal;
-}
-
 .Action .unity-text-field {
     flex-wrap: nowrap;
     flex-direction: row;
     max-width: 200px;
     min-width: auto;
+}
+
+.ValueDropdownContainer {
+    flex-direction: row;
+    align-content: auto;
+    justify-content: space-between;
+}
+
+.ValueField {
+    align-self: auto;
+    width: 100px;
+}
+
+.SingleTextField .unity-text-field__label {
+    align-items: stretch;
+    align-self: auto;
+    min-width: 40px;
+}
+
+.SingleTextField .unity-text-field__input {
+    min-width: 40px;
+    max-width: 60px;
+}
+
+.Decorator {
+    max-width: 120px;
 }

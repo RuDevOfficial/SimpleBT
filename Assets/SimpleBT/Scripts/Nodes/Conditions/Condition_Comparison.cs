@@ -43,7 +43,7 @@ namespace SimpleBT.NonEditor.Nodes
             }
         }
 
-        public override bool Check()
+        protected override bool Check()
         {
             if (varAType == typeof(int) || varAType == typeof(float)
                 && varBType == typeof(int) || varBType == typeof(float))

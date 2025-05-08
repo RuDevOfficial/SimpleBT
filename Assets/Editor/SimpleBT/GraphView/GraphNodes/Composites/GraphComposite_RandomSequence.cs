@@ -5,7 +5,7 @@
         public GraphComposite_RandomSequence()
         {
             Title = "Random Sequence";
-            ClassReference = "RandomSequence";
+            ClassReference = "Composite_RandomSequence";
         }
     }
 }

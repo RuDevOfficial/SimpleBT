@@ -5,7 +5,7 @@
         public GraphComposite_Sequence()
         {
             Title = "Sequence";
-            ClassReference = "Sequence";
+            ClassReference = "Composite_Sequence";
         }
     }
 }

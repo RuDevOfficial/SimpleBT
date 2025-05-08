@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_Debug : ExecutionNode, INodeKeyAssignable
+    public class Action_Debug : Node, INodeKeyAssignable
     {
         [SerializeField] private string _keyMessage;
         [SerializeField] private string _keyResult;

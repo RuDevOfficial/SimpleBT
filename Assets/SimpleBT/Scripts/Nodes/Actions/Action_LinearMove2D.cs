@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_LinearMove2D : ExecutionNode, INodeKeyAssignable
+    public class Action_LinearMove2D : Node, INodeKeyAssignable
     {
         [SerializeField] protected string keyXVel;
         [SerializeField] protected string keyYVel;

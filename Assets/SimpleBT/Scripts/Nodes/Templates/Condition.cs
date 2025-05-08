@@ -2,10 +2,10 @@
 {
     using Core;
 
-    public abstract class Condition : ExecutionNode
+    public abstract class Condition : Node
     {
         protected override Status Tick() { return Check() == true ? Status.Success : Status.Failure; }
-        public abstract bool Check();
+        protected abstract bool Check();
     }
 }
 

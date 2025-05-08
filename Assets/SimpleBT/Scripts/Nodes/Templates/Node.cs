@@ -9,11 +9,19 @@ namespace SimpleBT.Core
     
     public abstract class Node : ScriptableObject
     {
+        private bool _isInitialized = false;
         public string GUID;
         protected SBTBlackboard blackboard;
 
-        public virtual Status OnTick() { return Tick(); }
+        public virtual Status OnTick()
+        {
+            if (_isInitialized) return Tick();
+            
+            Initialize(); _isInitialized = true;
+            return Tick(); 
+        }
         
+        protected virtual void Initialize() { }
         protected abstract Status Tick();
         public virtual void OnAbort() {  }
         public virtual void OnDrawGizmos() {  }

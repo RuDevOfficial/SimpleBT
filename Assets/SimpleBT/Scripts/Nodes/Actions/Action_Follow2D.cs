@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_Follow2D : ExecutionNode, INodeKeyAssignable
+    public class Action_Follow2D : Node, INodeKeyAssignable
     {
         [SerializeField] protected string _keyTarget;
         [SerializeField] protected string _keySpeed;

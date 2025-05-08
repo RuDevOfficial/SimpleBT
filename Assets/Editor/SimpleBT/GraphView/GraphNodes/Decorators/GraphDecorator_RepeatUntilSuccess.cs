@@ -6,11 +6,9 @@ namespace SimpleBT.Editor.GraphNodes
     {
         public GraphDecorator_RepeatUntilSuccess()
         {
-            Title = "Repeat Until Success";
+            Title = "Repeat\nUntil Success";
             ClassReference = "Decorator_RepeatUntilSuccess";
         }
-        
-        public override List<string> GetValues() { return null; }
-        public override void ReloadValues(List<string> values) { }
     }
+
 }

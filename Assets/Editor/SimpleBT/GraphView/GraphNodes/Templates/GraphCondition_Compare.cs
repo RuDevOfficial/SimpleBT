@@ -26,7 +26,7 @@ namespace SimpleBT.Editor.GraphNodes
             base.GenerateInterface();
             
             _firstValueField = new TextField("Value A: ");
-            _comparisonField = new DropdownField("Compare To:", new List<string>(){"Empty"}, 0);
+            _comparisonField = new DropdownField("Compare To:", SBTEditorUtils.ReturnEnumToList<Comparison>(), 0);
             
             _firstValueField.RegisterValueChangedCallback(evt => _keyValue = evt.newValue);
             _comparisonField.RegisterValueChangedCallback(evt => _keyComparison = evt.newValue);

@@ -8,9 +8,8 @@ namespace SimpleBT.NonEditor.Nodes
         protected override Status Tick()
         {
             Status childStatus = Child.OnTick();
-
-            if (childStatus != Status.Success) { return Status.Running; }
-            return Status.Success;
+            return childStatus != Status.Success ? Status.Running : Status.Success;
         }
     }
+
 }

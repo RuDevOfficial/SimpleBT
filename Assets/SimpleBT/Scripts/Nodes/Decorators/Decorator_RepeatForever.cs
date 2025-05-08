@@ -7,7 +7,7 @@ namespace SimpleBT.NonEditor.Nodes
     {
         protected override Status Tick()
         {
-            Child.OnTick();
+            Child?.OnTick();
             return Status.Running;
         }
     }

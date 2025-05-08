@@ -24,7 +24,7 @@ namespace SimpleBT.NonEditor.Nodes
             distance = blackboard.GetValue<float>(keyDistance);
         }
 
-        public override bool Check()
+        protected override bool Check()
         {
             if (!target) { return false; }
 

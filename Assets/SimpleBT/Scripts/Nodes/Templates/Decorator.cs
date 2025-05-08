@@ -9,7 +9,7 @@ namespace SimpleBT.NoneEditor.Nodes
     {
         public Node Child;
 
-        public override Status OnTick() { return Child == null ? Status.Success : Tick(); }
+        protected override Status Tick() { return Child == null ? Status.Success : Child.OnTick(); }
         
         public override void RegisterBlackboard(SBTBlackboard sbtBlackboard)
         {

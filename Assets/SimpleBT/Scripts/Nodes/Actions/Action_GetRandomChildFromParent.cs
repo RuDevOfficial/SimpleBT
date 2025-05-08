@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_GetRandomChildFromParent : ExecutionNode, INodeKeyAssignable
+    public class Action_GetRandomChildFromParent : Node, INodeKeyAssignable
     {
         [SerializeField] private string _keyGameObjectParent;
         [SerializeField] private string _keyResult;

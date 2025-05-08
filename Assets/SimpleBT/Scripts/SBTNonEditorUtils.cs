@@ -19,7 +19,6 @@ public static class SBTNonEditorUtils
         { VariableType.Vector2, typeof(Vector2) },
         { VariableType.Vector3, typeof(Vector3) }
     };
-
     
     public static object ConvertValue(this string valueToConvert, Type type, string variableName)
     {
@@ -75,7 +74,7 @@ public static class SBTNonEditorUtils
         return null;
     }
     
-    public static object ConvertComplexValue(this string valueToConvert, Type type, string variableName)
+    public static object ConvertComplexValue(this string valueToConvert, Type type)
     {
         string[] substring = valueToConvert.Split(',');
         
@@ -239,23 +238,9 @@ public static class SBTNonEditorUtils
             return (T)value;
         }
 
-        // ENUMS
-            
-        else if (typeof(T) == typeof(Status))
+        else if (typeof(T).IsEnum)
         {
-            value = Enum.Parse<Status>(keyToGet);
-            return (T)value;
-        }
-            
-        else if (typeof(T) == typeof(ConditionType))
-        {
-            value = Enum.Parse<ConditionType>(keyToGet);
-            return (T)value;
-        }
-        
-        else if (typeof(T) == typeof(RigidbodyMoveFlag))
-        {
-            value = Enum.Parse<RigidbodyMoveFlag>(keyToGet);
+            value = Enum.Parse(typeof(T), keyToGet.ToUpper(), true);
             return (T)value;
         }
         

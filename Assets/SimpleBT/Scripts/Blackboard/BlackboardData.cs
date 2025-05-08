@@ -15,7 +15,7 @@ namespace SimpleBT.NonEditor
         public void Instantiate()
         {
             Type type = VariableType.ConvertToType();
-            var newValue = RawValue.ConvertValue(type, Key) ?? RawValue.ConvertComplexValue(type, Key);
+            var newValue = RawValue.ConvertValue(type, Key) ?? RawValue.ConvertComplexValue(type);
             Value = newValue;
         }
     }

@@ -7,15 +7,13 @@ namespace SimpleBT.NonEditor.Nodes
     public class Composite_Priority : Composite
     {
         private int _lastIndex = -1;
-        private bool _analyzed = false;
-
-        private Condition[] _conditionals;
+        private Condition[] _conditionals = null;
         
+        protected override void Initialize() { AnalyzeAndFillArray(); }
+
         // ReSharper disable Unity.PerformanceAnalysis
-        protected override Status Tick()
+        protected override Status ExecuteFlow()
         {
-            if (_analyzed == false) { if (AnalyzeAndFillArray() == false) { return Status.Failure; } };
-            
             for (int i = 0; i < _conditionals.Length; i++)
             {
                 Status status = _conditionals[i].OnTick();
@@ -37,30 +35,28 @@ namespace SimpleBT.NonEditor.Nodes
                 _lastIndex = -1;
             }
 
-            return _lastIndex < 0 ? Status.Failure : _children[_lastIndex].OnTick();
+            if (_lastIndex < 0) { return Status.Failure; }
+            else
+            {
+                _childrenIndex = _lastIndex;
+                return _children[_childrenIndex].OnTick();
+            }
         }
-
-        private bool AnalyzeAndFillArray()
+        
+        private void AnalyzeAndFillArray()
         {
             _conditionals = new Condition[_children.Count];
             
-            for (int i = 0; i < _children.Count; i++) {
-                if (_children[i] is not Composite composite)
-                {
-                    Debug.LogError("All Children nodes of Composite_Priority must be a Composite. Returning Failure.");
-                    return false;
-                }
-
-                _conditionals[i] = composite.GetFirstConditional();
+            for (var i = 0; i < _children.Count; i++) {
+                if (_children[i] is Composite composite) { _conditionals[i] = composite.GetFirstConditional(); }
+                else { Debug.LogError("All Children nodes of Composite_Priority must be a Composite. Returning Failure."); }
             }
-                
-            _analyzed = true;
-
-            return true;
         }
 
         public override void OnDrawGizmos()
         {
+            if (_conditionals == null) return;
+
             foreach (Condition condition in _conditionals) { condition.OnDrawGizmos(); }
         }
     }

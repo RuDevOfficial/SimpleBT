@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_Wait : ExecutionNode, INodeKeyAssignable
+    public class Action_Wait : Node, INodeKeyAssignable
     {
         [SerializeField] private string keyTime;
         [SerializeField] private string keyStatus;

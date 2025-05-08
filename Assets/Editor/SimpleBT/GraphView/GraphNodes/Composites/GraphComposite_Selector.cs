@@ -5,7 +5,7 @@
         public GraphComposite_Selector()
         {
             Title = "Selector";
-            ClassReference = "Selector";
+            ClassReference = "Composite_Selector";
         }
     }
 

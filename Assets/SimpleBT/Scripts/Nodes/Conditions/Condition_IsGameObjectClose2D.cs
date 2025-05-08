@@ -28,7 +28,7 @@ namespace SimpleBT.NonEditor.Nodes
             _storeValue = blackboard.GetValue<bool>(_keyBlackboardToggle);
         }
         
-        public override bool Check()
+        protected override bool Check()
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(blackboard.gameObject.transform.position, _radius);
             foreach(Collider2D collider in colliders) {

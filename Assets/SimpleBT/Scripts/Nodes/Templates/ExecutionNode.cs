@@ -2,6 +2,7 @@
 
 namespace SimpleBT.Core
 {
+    /*
     public abstract class ExecutionNode : Node
     {
         private bool _initialized = false;
@@ -12,7 +13,6 @@ namespace SimpleBT.Core
             
             _initialized = true; Initialize();
             return Tick();
-            
         }
-    }
+    }*/
 }

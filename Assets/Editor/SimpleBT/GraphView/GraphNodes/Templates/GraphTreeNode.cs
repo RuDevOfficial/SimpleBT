@@ -21,8 +21,8 @@ namespace SimpleBT.Editor.GraphNodes
         public virtual void Instantiate() { GUID = Guid.NewGuid().ToString(); }
         public virtual void Set() { title = Title; }
         public abstract void GenerateInterface();
-        public abstract List<string> GetValues();
-        public abstract void ReloadValues(List<string> values);
+        public virtual List<string> GetValues() { return null; }
+        public virtual void ReloadValues(List<string> values) { }
     }
 }
 

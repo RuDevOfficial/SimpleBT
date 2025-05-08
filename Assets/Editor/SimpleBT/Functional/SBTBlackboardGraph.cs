@@ -30,8 +30,6 @@ namespace SimpleBT.Editor.Blackboard
             _icon = new Texture2D(1, 1);
             _icon.SetPixel(0, 0, Color.clear); // Currently bugged
 
-            //SetBlackboard();
-
             RegisterCallback<KeyDownEvent>(evt =>
             {
                 if (evt.keyCode == KeyCode.Delete && _selectedField != null)
@@ -156,26 +154,10 @@ namespace SimpleBT.Editor.Blackboard
             ExposedProperties.Add(property);
         }
 
-        void SetBlackboard()
-        {
-            _section = new BlackboardSection() { title = "Exposed Properties" };
-            Add(_section);
-            
-            if (ExposedProperties.Any(p => p.PropertyName == STARTING_PROPERTY_NAME)) { return; }
-            
-            ExposedProperty nameReferenceProperty = new ExposedProperty();
-            nameReferenceProperty.PropertyName = STARTING_PROPERTY_NAME;
-            nameReferenceProperty.PropertyRawValue = "Please change";
-            nameReferenceProperty.PropertyType = VariableType.String;
-            
-            AddNewField(nameReferenceProperty);
-        }
-
         public void Reset()
         {
             contentContainer.Clear();
             ExposedProperties.Clear();
-            //SetBlackboard();
         }
     }
 }

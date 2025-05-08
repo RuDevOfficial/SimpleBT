@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_RemoveKey : ExecutionNode, INodeKeyAssignable
+    public class Action_RemoveKey : Node, INodeKeyAssignable
     {
         [SerializeField] private string _key;
 

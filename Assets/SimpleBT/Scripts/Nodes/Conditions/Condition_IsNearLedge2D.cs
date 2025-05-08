@@ -38,7 +38,7 @@ namespace SimpleBT.NonEditor.Nodes
             rb2D = blackboard.GetComponent<Rigidbody2D>();
         }
 
-        public override bool Check()
+        protected override bool Check()
         {
             if (!rb2D) {  Debug.LogError("Is Near Edge 2D requires Rigidbody 2D"); return false; }
             
