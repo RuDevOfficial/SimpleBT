@@ -304,4 +304,35 @@ public static class SBTNonEditorUtils
     {
         return (T)Enum.Parse(typeof(T), value);
     }
+
+    public static Keyframe GetKeyFrame(string keyFrameValues, char splitChar)
+    {
+        string[] values = keyFrameValues.Split(splitChar);
+        
+        var newKeyFrame = new Keyframe {
+            time = MathF.Round(float.Parse(values[0], NumberStyles.Float, NumberFormatInfo.InvariantInfo), 2),
+            value = MathF.Round(float.Parse(values[1], NumberStyles.Float, NumberFormatInfo.InvariantInfo), 2),
+            inTangent = MathF.Round(float.Parse(values[2], NumberStyles.Float, NumberFormatInfo.InvariantInfo), 2),
+            outTangent = MathF.Round(float.Parse(values[3], NumberStyles.Float, NumberFormatInfo.InvariantInfo), 2),
+            inWeight = MathF.Round(float.Parse(values[4], NumberStyles.Float, NumberFormatInfo.InvariantInfo), 2),
+            outWeight = MathF.Round(float.Parse(values[5], NumberStyles.Float, NumberFormatInfo.InvariantInfo), 2),
+            weightedMode = GetEnumByString<WeightedMode>(values[6])
+        };
+        
+
+        return newKeyFrame;
+    }
+
+    public static Keyframe[] GetKeyFrames(string longValueString, char firstSplitChar, char secondSplitChar)
+    {
+        var keyFrames = new List<Keyframe>();
+        var keyFrameValues = longValueString.Split(firstSplitChar).ToList();
+        for (int i = 0; i < keyFrameValues.Count; i++)
+        {
+            var keyFrame = GetKeyFrame(keyFrameValues[i], secondSplitChar);
+            keyFrames.Add(keyFrame);
+        }
+
+        return keyFrames.ToArray();
+    }
 }

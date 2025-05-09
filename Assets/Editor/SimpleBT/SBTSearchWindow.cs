@@ -74,6 +74,13 @@ namespace SimpleBT.Editor
                 
                     new SearchTreeGroupEntry(new GUIContent("Rotation"), 2),
                         new SearchTreeEntry(new GUIContent("Look At Target", _icon)) { level = 3, userData = "GraphAction_LookAtTargetOnce" },
+                        new SearchTreeGroupEntry(new GUIContent("2D Specific"), 3),
+                            new SearchTreeEntry(new GUIContent("Rotate Degrees 2D", _icon)) { level = 4, userData = "GraphAction_RotateDegrees2D" },
+                            new SearchTreeEntry(new GUIContent("Rotate Constantly 2D", _icon)) { level = 4, userData = "GraphAction_RotateConstantly2D" },
+                            
+                        new SearchTreeGroupEntry(new GUIContent("3D Specific"), 3),
+                            new SearchTreeEntry(new GUIContent("Rotate Degrees 3D", _icon)) { level = 4, userData = "GraphAction_RotateDegrees3D" },
+                            new SearchTreeEntry(new GUIContent("Rotate Constantly 3D", _icon)) { level = 4, userData = "GraphAction_RotateConstantly3D" },
                         
                     new SearchTreeGroupEntry(new GUIContent("Time"), 2),
                         new SearchTreeEntry(new GUIContent("Wait X Seconds", _icon)) { level = 3, userData = "GraphAction_Wait" },

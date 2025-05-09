@@ -61,4 +61,5 @@ namespace SimpleBT.Editor.GraphNodes
         Success,
         Failure
     }
+
 }

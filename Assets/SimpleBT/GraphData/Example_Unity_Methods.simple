@@ -7,9 +7,9 @@
                 "Node": {
                     "rid": 1000
                 },
-                "fromGUID": "635e7bba-c809-4b25-8052-3cc4f19013a1",
+                "fromGUID": "812c8a5c-4cc9-4198-809b-c3ac662259e7",
                 "toGUIDs": [
-                    "c8c53bb8-263a-4de9-81f0-08b18b09d079"
+                    "d17c08ba-b068-44d6-af40-2eac6ffb9e6e"
                 ],
                 "Values": [],
                 "VariableName": "",
@@ -20,26 +20,11 @@
                 "Node": {
                     "rid": 1001
                 },
-                "fromGUID": "c8c53bb8-263a-4de9-81f0-08b18b09d079",
-                "toGUIDs": [
-                    "43957c72-5396-46a3-b7ba-37d771186813"
-                ],
-                "Values": [
-                    "4"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1002
-                },
-                "fromGUID": "43957c72-5396-46a3-b7ba-37d771186813",
+                "fromGUID": "d17c08ba-b068-44d6-af40-2eac6ffb9e6e",
                 "toGUIDs": [],
                 "Values": [
-                    "repeated",
-                    "Success"
+                    "10",
+                    "XYZ"
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -47,8 +32,8 @@
             }
         ],
         "ViewportPosition": {
-            "x": 25.0,
-            "y": -353.0
+            "x": -147.0,
+            "y": -29.0
         },
         "ViewportScale": {
             "x": 1.0,
@@ -69,11 +54,11 @@
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "635e7bba-c809-4b25-8052-3cc4f19013a1",
+                    "GUID": "812c8a5c-4cc9-4198-809b-c3ac662259e7",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 410.0,
-                        "y": 478.0,
+                        "x": 466.0,
+                        "y": 160.0,
                         "width": 73.0,
                         "height": 77.0
                     },
@@ -84,44 +69,23 @@
             {
                 "rid": 1001,
                 "type": {
-                    "class": "GraphDecorator_RepeatXTimes",
+                    "class": "GraphAction_RotateConstantly3D",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "GUID": "c8c53bb8-263a-4de9-81f0-08b18b09d079",
+                    "GUID": "d17c08ba-b068-44d6-af40-2eac6ffb9e6e",
                     "Rect": {
                         "serializedVersion": "2",
-                        "x": 493.0,
-                        "y": 600.0,
-                        "width": 103.0,
-                        "height": 97.0
-                    },
-                    "ClassReference": "Decorator_RepeatXTimes",
-                    "Title": "Repeat\nX Times",
-                    "_keyField": "4"
-                }
-            },
-            {
-                "rid": 1002,
-                "type": {
-                    "class": "GraphAction_Debug",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "43957c72-5396-46a3-b7ba-37d771186813",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 579.0,
-                        "y": 742.0,
-                        "width": 127.0,
+                        "x": 562.0,
+                        "y": 277.0,
+                        "width": 171.0,
                         "height": 117.0
                     },
-                    "ClassReference": "Action_Debug",
-                    "Title": "Debug",
-                    "DebugMessage": "repeated",
-                    "Status": 0
+                    "ClassReference": "Action_RotateConstantly3D",
+                    "Title": "Rotate Constantly 3D",
+                    "_keyField": "10",
+                    "_keyDropdownField": "XYZ"
                 }
             }
         ]
