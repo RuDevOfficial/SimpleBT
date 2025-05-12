@@ -7,6 +7,7 @@ namespace SimpleBT.NonEditor.Nodes
     public class Action_ParentObjectToSelf : Node, INodeKeyAssignable
     {
         [SerializeField] protected string _gameObjectKey;
+        
         protected GameObject _gameObject;
         
         public void AssignKeys(List<string> keys) { _gameObjectKey = keys[0]; }

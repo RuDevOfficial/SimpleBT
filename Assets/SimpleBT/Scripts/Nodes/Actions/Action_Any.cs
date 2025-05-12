@@ -5,31 +5,15 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    // If the Action does NOT require any keys to then instantiate you can remove:
-    // The "INodeKeyAssignable" interface and AssignKeys method
+    // This class itself should never be used
     public class Action_Any : Node, INodeKeyAssignable
     {
         private Type _actionType;
         private Node _actionNode;
         
-        public void AssignKeys(List<string> keys)
-        {
-            // If the node requires keys assign them here like
-            // _keyTarget = keys[0]
-        }
-
-        protected override void Initialize()
-        {
-            // Initialize unchanging values here. Only gets triggered once in runtime.
-            // To understand when to use blackboard.GetValue<type>() or blackboard.GetComplexValue<type>() check the github repo
-
-            _actionNode = ScriptableObject.CreateInstance(_actionType) as Node;
-        }
-
-        protected override Status Tick()
-        {
-            return _actionNode.OnTick();
-        }
+        public void AssignKeys(List<string> keys) { }
+        protected override void Initialize() { _actionNode = ScriptableObject.CreateInstance(_actionType) as Node; }
+        protected override Status Tick() { return _actionNode.OnTick(); }
     }
 }
 

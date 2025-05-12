@@ -8,22 +8,20 @@ namespace SimpleBT.NonEditor.Nodes
     
     public class Decorator_ExecuteOnceWithDelay : Decorator, INodeKeyAssignable
     {
-        public string keyDelay;
-        
-        private float _currentTime = 0.0f;
-        private float Delay = 0.0f;
-
-        private bool triggered = false;
+        public string _keyDelay;
+        private float _currentTime;
+        private float _delay;
+        private bool _triggered ;
         
         protected override Status Tick()
         {
-            if (!triggered) {
-                triggered = true;
-                Delay = blackboard.GetValue<float>(keyDelay);
-                _currentTime = Delay;
+            if (!_triggered) {
+                _triggered = true;
+                _delay = blackboard.GetValue<float>(_keyDelay);
+                _currentTime = _delay;
             }
             
-            if (_currentTime < Delay) {
+            if (_currentTime < _delay) {
                 _currentTime += Time.deltaTime;
                 return Status.Running;
             }
@@ -34,7 +32,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         public void AssignKeys(List<string> keys)
         {
-            keyDelay = keys[0];
+            _keyDelay = keys[0];
         }
     }
 }

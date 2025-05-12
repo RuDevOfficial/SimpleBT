@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using SimpleBT.Core;
+﻿using SimpleBT.Core;
 using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes

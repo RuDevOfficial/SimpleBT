@@ -7,6 +7,7 @@ namespace SimpleBT.NonEditor.Nodes
     public class Action_RotateConstantly2D : Node, INodeKeyAssignable
     {
         [SerializeField] private string _keySpeed;
+        
         protected float _speed;
 
         public virtual void AssignKeys(List<string> keys) { _keySpeed = keys[0]; }
@@ -18,9 +19,7 @@ namespace SimpleBT.NonEditor.Nodes
             return Status.Running;
         }
 
-        protected virtual Vector3 GetDesiredRotation() {
-            return new Vector3(0, 0, _speed) ;
-        }
+        protected virtual Vector3 GetDesiredRotation() { return new Vector3(0, 0, _speed) ; }
     }
 
 }

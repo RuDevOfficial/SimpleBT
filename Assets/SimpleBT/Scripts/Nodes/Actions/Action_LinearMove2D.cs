@@ -9,9 +9,9 @@ namespace SimpleBT.NonEditor.Nodes
         [SerializeField] protected string keyXVel;
         [SerializeField] protected string keyYVel;
 
-        protected Vector2 _velocity = new Vector2();
+        private Vector2 _velocity;
 
-        protected Rigidbody2D rb2D;
+        private Rigidbody2D rb2D;
         
         public virtual void AssignKeys(List<string> keys)
         {

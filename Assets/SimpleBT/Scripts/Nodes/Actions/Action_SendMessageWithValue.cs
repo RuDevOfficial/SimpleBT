@@ -31,7 +31,7 @@ namespace SimpleBT.NonEditor.Nodes
                 Type valueType = type.ConvertToType();
                 _value = type == VariableType.GameObject ? 
                     _keyValue.ConvertComplexValue(valueType) : 
-                    _keyValue.ConvertValue(valueType, _keyValue);
+                    _keyValue.ConvertValue(valueType);
             }
 
             _options = blackboard.GetValue<SendMessageOptions>(_keyOptions);

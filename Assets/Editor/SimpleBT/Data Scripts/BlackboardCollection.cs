@@ -4,6 +4,7 @@ using UnityEngine.Serialization;
 
 namespace SimpleBT.Editor.Data
 {
+    // Stores all data related to the blackboard values
     [System.Serializable]
     public class BlackboardCollection
     {

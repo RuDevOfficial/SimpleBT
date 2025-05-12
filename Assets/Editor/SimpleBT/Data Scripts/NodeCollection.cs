@@ -4,6 +4,7 @@ using UnityEngine.Serialization;
 
 namespace SimpleBT.Editor.Data
 {
+    // Stores all graph node data from a behavior
     [System.Serializable]
     public class NodeCollection
     {

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using SimpleBT.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor.Nodes
 {

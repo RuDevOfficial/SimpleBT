@@ -1,13 +1,5 @@
-using System;
-using System.Collections.Generic;
-using SimpleBT.NonEditor.Nodes;
-using SimpleBT.Core;
-using UnityEngine;
-
 namespace SimpleBT.NonEditor.Nodes
 {
-    // If the Condition does NOT require any keys to then instantiate you can remove:
-    // The "INodeKeyAssignable" interface and AssignKeys method
     public class Condition_CompareString : Condition_CompareParameters
     {
         protected override bool Check()

@@ -1,10 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using SimpleBT.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor
 {
@@ -20,6 +15,7 @@ namespace SimpleBT.NonEditor
                 _data.Add(b.Key, b.Value);
             }
             
+            // For easy access to the agent that holds the blackboard
             _data.Add("SELF", gameObject);
         }
 

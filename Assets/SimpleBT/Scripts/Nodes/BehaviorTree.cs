@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using SimpleBT.Core;
-using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor.Nodes
 {
@@ -14,11 +11,12 @@ namespace SimpleBT.NonEditor.Nodes
         public List<Node> CompleteNodeList = new List<Node>();
         public string RelatedBranch;
         
+        public void AssignKeys(List<string> keys) { RelatedBranch = keys[1]; }
         public override Status OnTick() { return Tick(); }
         protected override Status Tick() { return Root == null ? Status.Failure : Root.OnTick(); }
         
-        public override void RegisterBlackboard(SBTBlackboard sbtBlackboard) { Root?.RegisterBlackboard(sbtBlackboard); }
-
+        #region Behavior Specific Methods
+        
         public Node GetNodeByGUID(string guid)
         {
             foreach (var node in CompleteNodeList.Where(node => node.GUID == guid)) {
@@ -39,14 +37,10 @@ namespace SimpleBT.NonEditor.Nodes
         }
 
         public void AssignRoot(Node node) { Root = node; }
-        public void AssignKeys(List<string> keys)
-        {
-            RelatedBranch = keys[1];
-        }
+        
+        #endregion
 
-        public override void OnDrawGizmos()
-        {
-            Root?.OnDrawGizmos();
-        }
+        public override void RegisterBlackboard(SBTBlackboard sbtBlackboard) { Root?.RegisterBlackboard(sbtBlackboard); }
+        public override void OnDrawGizmos() { Root?.OnDrawGizmos(); }
     }
 }

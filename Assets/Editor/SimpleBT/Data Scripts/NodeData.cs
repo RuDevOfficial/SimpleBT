@@ -14,10 +14,5 @@ namespace SimpleBT.Editor.Data
         public string fromGUID;
         public List<string> toGUIDs = new List<string>();
         public List<string> Values = new List<string>();
-        
-        // Specific node data for Condition
-        public string VariableName;
-        public ConditionType Condition;
-        public string VariableCheckName;
     }
 }

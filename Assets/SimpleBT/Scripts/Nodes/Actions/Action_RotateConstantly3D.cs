@@ -6,6 +6,7 @@ namespace SimpleBT.NonEditor.Nodes
     public class Action_RotateConstantly3D : Action_RotateConstantly2D
     {
         [SerializeField] private string _keyAxisRotation;
+        
         private AxisRotationType _axisRotation;
 
         public override void AssignKeys(List<string> keys) {

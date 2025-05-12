@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Example class for the Ant3D behavior.
 public class PeaSpawnerExtras : MonoBehaviour
 {
     [SerializeField] private GameObject _peaPrefab;

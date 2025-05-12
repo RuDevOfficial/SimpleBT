@@ -2,6 +2,7 @@ using System;
 using SimpleBT.NonEditor;
 using UnityEngine;
 
+// Example script for the Shooter 3D scene
 public class ShootingEnemy : MonoBehaviour
 {
     public GameObject bulletPrefab;

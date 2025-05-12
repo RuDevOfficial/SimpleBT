@@ -7,6 +7,7 @@ namespace SimpleBT.NonEditor.Nodes
     public class Action_LookAtTargetOnce : Node, INodeKeyAssignable
     {
         [SerializeField] private string _keyTarget;
+        
         private GameObject _target;
         
         public void AssignKeys(List<string> keys) { _keyTarget = keys[0]; }

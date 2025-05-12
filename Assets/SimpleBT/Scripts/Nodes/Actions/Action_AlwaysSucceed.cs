@@ -1,5 +1,4 @@
-﻿using System;
-using SimpleBT.Core;
+﻿using SimpleBT.Core;
 
 namespace SimpleBT.NonEditor.Nodes
 {

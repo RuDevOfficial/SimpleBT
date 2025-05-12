@@ -8,15 +8,3 @@
         protected abstract bool Check();
     }
 }
-
-public enum ConditionType
-{
-    Equal,
-    NotEqual,
-    Less_Than,
-    Less_Or_Equal_Than,
-    More_Than,
-    More_Or_Equal_Than,
-    IsNull,
-    IsNotNull
-}

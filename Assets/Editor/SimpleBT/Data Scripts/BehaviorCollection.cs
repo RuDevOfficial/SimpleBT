@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SimpleBT.Editor.Data
 {
+    
+    // Stores all data related to a behavior
     [System.Serializable]
     public class BehaviorCollection
     {

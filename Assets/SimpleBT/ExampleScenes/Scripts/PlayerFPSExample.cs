@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Example class for the Shooter 3D scene
 public class PlayerFPSExample : MonoBehaviour
 {
     public GameObject BulletPrefab;

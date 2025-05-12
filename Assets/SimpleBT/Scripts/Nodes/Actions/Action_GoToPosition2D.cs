@@ -12,12 +12,12 @@ namespace SimpleBT.NonEditor.Nodes
         [SerializeField] protected string _keyIgnoreFlag;
 
         private Vector2 _position;
-        protected float _speed = 0;
-        protected bool _useTransform = false;
+        protected float _speed;
+        protected bool _useTransform;
         protected RigidbodyMoveFlag _rigidbodyMoveFlag;
         
-        protected float _timeToReach = 0;
-        protected float _time = 0.0f;
+        protected float _timeToReach;
+        protected float _time;
         private Vector2 _direction;
         private Rigidbody2D _rb2D;
 

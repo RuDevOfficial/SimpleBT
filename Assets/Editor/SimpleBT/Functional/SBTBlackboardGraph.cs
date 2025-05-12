@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SimpleBT.Editor.Utils;
-using SimpleBT.NonEditor;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace SimpleBT.Editor.Blackboard
 {
+    using NonEditor;
+    using Utils;
     using UnityEditor.Experimental.GraphView;
 
     public class SBTBlackboardGraph : Blackboard
     {
         private Texture2D _icon;
-        public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
         private BlackboardField _selectedField;
-
         private BlackboardSection _section;
+
+        public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
 
         public const string STARTING_PROPERTY_NAME = "ID";
 
@@ -30,6 +29,7 @@ namespace SimpleBT.Editor.Blackboard
             _icon = new Texture2D(1, 1);
             _icon.SetPixel(0, 0, Color.clear); // Currently bugged
 
+            // Removes the selected field (if it exists)
             RegisterCallback<KeyDownEvent>(evt =>
             {
                 if (evt.keyCode == KeyCode.Delete && _selectedField != null)
@@ -48,7 +48,7 @@ namespace SimpleBT.Editor.Blackboard
         }
 
         // Method based of the code by Mert Kirimgeri on YT https://www.youtube.com/watch?v=F4cTWOxMjMY&t=1091s&ab_channel=MertKirimgeri
-        public void EditItem(Blackboard blackboard, VisualElement element, string newValue)
+        private void EditItem(Blackboard blackboard, VisualElement element, string newValue)
         {
             newValue = newValue.FilterValue();
 
@@ -81,6 +81,10 @@ namespace SimpleBT.Editor.Blackboard
         private void AddItem(Blackboard obj) { AddNewField(new ExposedProperty()); }
 
         // Method based on Mert Kirimgeri on YT https://www.youtube.com/watch?v=F4cTWOxMjMY&t=1091s&ab_channel=MertKirimgeri
+        /// <summary>
+        /// Adds a new field to the SBTBlackboardGraph class
+        /// </summary>
+        /// <param name="exposedProperty"></param>
         public void AddNewField(ExposedProperty exposedProperty)
         {
             if (exposedProperty.PropertyName == STARTING_PROPERTY_NAME
@@ -103,8 +107,7 @@ namespace SimpleBT.Editor.Blackboard
                 ExposedProperties[changingPropertyIndex].PropertyRawValue = evt.newValue;
             });
 
-            string[] conditions = Enum.GetNames(typeof(VariableType));
-            DropdownField dropdownField = new DropdownField(conditions.ToList(), (int)property.PropertyType, value =>
+            DropdownField dropdownField = new DropdownField(SBTEditorUtils.ReturnEnumToList<VariableType>(), (int)property.PropertyType, value =>
             {
                 blackboardField.typeText = value;
                 Enum.TryParse(value, out VariableType variableType);
@@ -129,6 +132,12 @@ namespace SimpleBT.Editor.Blackboard
             Add(container);
         }
 
+        /// <summary>
+        /// Generates a new property and makes sure the same name for 2 different variables cannot exist
+        /// </summary>
+        /// <param name="exposedProperty">The incoming property</param>
+        /// <param name="localPropertyValue">Outgoing property value</param>
+        /// <param name="property">Outgoing exposed property</param>
         private void GenerateNewProperty(ExposedProperty exposedProperty,
             out string localPropertyValue, out ExposedProperty property)
         {

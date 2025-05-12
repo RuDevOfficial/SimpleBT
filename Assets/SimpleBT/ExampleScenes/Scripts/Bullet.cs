@@ -1,7 +1,7 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
+// Example script for the bullet class
 public class Bullet : MonoBehaviour
 {
     private Rigidbody rb;

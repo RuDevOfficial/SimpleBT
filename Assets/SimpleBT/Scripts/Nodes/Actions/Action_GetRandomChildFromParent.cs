@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using SimpleBT.Core;
-using SimpleBT.NonEditor.Nodes;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace SimpleBT.NonEditor.Nodes
 {

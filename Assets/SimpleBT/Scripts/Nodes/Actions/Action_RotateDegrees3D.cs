@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using SimpleBT.Core;
 using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
@@ -7,6 +6,7 @@ namespace SimpleBT.NonEditor.Nodes
     public class Action_RotateDegrees3D : Action_RotateDegrees2D
     {
         [SerializeField] private string _keyRotationType;
+        
         private AxisRotationType _axisRotationType = AxisRotationType.X;
         
         public override void AssignKeys(List<string> keys)

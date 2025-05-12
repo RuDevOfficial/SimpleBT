@@ -12,7 +12,7 @@ namespace SimpleBT.NonEditor.Nodes
         
         private GameObject _gameObject;
         private Vector3 _position = Vector3.zero;
-        private bool _isLocal = false;
+        private bool _isLocal;
         
         public void AssignKeys(List<string> keys)
         {

@@ -12,11 +12,11 @@ namespace SimpleBT.NonEditor.Nodes
         [SerializeField] private string _keyFrames;
 
         private AnimationCurve _curve;
-        protected float _degrees = 0;
-        private float _time = 0;
+        protected float _degrees;
+        private float _time;
         private RotationInterpolationType _interpolation = RotationInterpolationType.Lerp;
 
-        private float _currentTime = 0;
+        private float _currentTime;
         private Quaternion _startingQuaternion;
         protected Quaternion _targetQuaternion;
 
