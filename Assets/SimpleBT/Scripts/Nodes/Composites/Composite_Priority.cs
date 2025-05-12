@@ -11,7 +11,6 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override void Initialize() { AnalyzeAndFillArray(); }
 
-        // ReSharper disable Unity.PerformanceAnalysis
         protected override Status ExecuteFlow()
         {
             for (int i = 0; i < _conditionals.Length; i++)

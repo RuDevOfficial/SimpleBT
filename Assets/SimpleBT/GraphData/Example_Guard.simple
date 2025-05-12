@@ -103,7 +103,7 @@
                         "serializedVersion": "2",
                         "x": 723.0,
                         "y": 475.0,
-                        "width": 134.0,
+                        "width": 120.0,
                         "height": 77.0
                     },
                     "ClassReference": "Decorator_RepeatForever",

@@ -23,8 +23,8 @@
                 "fromGUID": "0381004e-96db-4a51-937c-af9b1bce1ac1",
                 "toGUIDs": [],
                 "Values": [
-                    "SPEED",
-                    "0"
+                    "",
+                    ""
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -52,7 +52,7 @@
                 "fromGUID": "eaed5a0d-defb-4699-b3ed-03e601ccf6ae",
                 "toGUIDs": [],
                 "Values": [
-                    "SPEED"
+                    ""
                 ],
                 "VariableName": "",
                 "Condition": 0,
@@ -139,8 +139,8 @@
             }
         ],
         "ViewportPosition": {
-            "x": 0.0,
-            "y": -57.0
+            "x": 23.0,
+            "y": 20.0
         },
         "ViewportScale": {
             "x": 0.7561436891555786,
@@ -192,13 +192,13 @@
                         "serializedVersion": "2",
                         "x": 454.0,
                         "y": 487.0,
-                        "width": 166.0,
+                        "width": 200.0,
                         "height": 116.0
                     },
                     "ClassReference": "Action_LinearMove2D",
                     "Title": "Linear Movement 2D",
-                    "xVelocity": "SPEED",
-                    "yVelocity": "0"
+                    "_keyXVelocity": "",
+                    "_keyYVelocity": ""
                 }
             },
             {
@@ -237,12 +237,12 @@
                         "serializedVersion": "2",
                         "x": 806.0,
                         "y": 736.0,
-                        "width": 178.0,
+                        "width": 200.0,
                         "height": 97.0
                     },
                     "ClassReference": "Action_InvertNumValue",
                     "Title": "Invert Numerical Value",
-                    "key": "SPEED"
+                    "_key": ""
                 }
             },
             {

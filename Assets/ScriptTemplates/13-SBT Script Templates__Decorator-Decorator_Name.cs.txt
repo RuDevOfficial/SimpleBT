@@ -1,6 +1,8 @@
 using SimpleBT.Core;
 using SimpleBT.NoneEditor.Nodes;
 
+// If the Node does require any keys to then instantiate you can add:
+// The "INodeKeyAssignable" interface and AssignKeys method
 public class #SCRIPTNAME# : Decorator
 {
     protected override Status Tick()

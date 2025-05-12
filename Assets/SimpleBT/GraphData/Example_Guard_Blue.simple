@@ -95,32 +95,6 @@
                 "Node": {
                     "rid": 1006
                 },
-                "fromGUID": "08858235-dc4d-4651-a45b-f9891c518ab9",
-                "toGUIDs": [],
-                "Values": [
-                    "player"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1007
-                },
-                "fromGUID": "706f441e-8dbc-403c-8738-8b96e40117a0",
-                "toGUIDs": [],
-                "Values": [
-                    "ShootBullet"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1008
-                },
                 "fromGUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
                 "toGUIDs": [
                     "295a5db4-793c-4149-8a50-c4e95203265a"
@@ -132,7 +106,7 @@
             },
             {
                 "Node": {
-                    "rid": 1009
+                    "rid": 1007
                 },
                 "fromGUID": "295a5db4-793c-4149-8a50-c4e95203265a",
                 "toGUIDs": [
@@ -146,7 +120,7 @@
             },
             {
                 "Node": {
-                    "rid": 1010
+                    "rid": 1008
                 },
                 "fromGUID": "03886f8b-4d2e-4198-a915-bf1e0625bee8",
                 "toGUIDs": [
@@ -161,7 +135,7 @@
             },
             {
                 "Node": {
-                    "rid": 1011
+                    "rid": 1009
                 },
                 "fromGUID": "2f588f8a-af4f-4fc3-ae76-c513c1f5f184",
                 "toGUIDs": [
@@ -175,11 +149,37 @@
                 "VariableName": "",
                 "Condition": 0,
                 "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1010
+                },
+                "fromGUID": "08858235-dc4d-4651-a45b-f9891c518ab9",
+                "toGUIDs": [],
+                "Values": [
+                    "player"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1011
+                },
+                "fromGUID": "706f441e-8dbc-403c-8738-8b96e40117a0",
+                "toGUIDs": [],
+                "Values": [
+                    "ShootBullet"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
             }
         ],
         "ViewportPosition": {
-            "x": -158.0,
-            "y": -231.0
+            "x": -501.0,
+            "y": -288.0
         },
         "ViewportScale": {
             "x": 1.0,
@@ -245,7 +245,7 @@
                         "serializedVersion": "2",
                         "x": 311.0,
                         "y": 858.0,
-                        "width": 225.0,
+                        "width": 200.0,
                         "height": 116.0
                     },
                     "ClassReference": "Action_GetRandomChildFromParent",
@@ -267,7 +267,7 @@
                         "serializedVersion": "2",
                         "x": 558.0,
                         "y": 858.0,
-                        "width": 213.0,
+                        "width": 200.0,
                         "height": 97.0
                     },
                     "ClassReference": "Action_NavMeshAgentGoToTarget",
@@ -335,63 +335,17 @@
                         "serializedVersion": "2",
                         "x": 1303.0,
                         "y": 858.0,
-                        "width": 84.0,
+                        "width": 200.0,
                         "height": 117.0
                     },
                     "ClassReference": "Action_Wait",
                     "Title": "Wait",
-                    "TextField": {
-                        "rid": 1012
-                    },
-                    "DropDown": {
-                        "rid": 1013
-                    }
+                    "_keySeconds": "1",
+                    "_keyActionStatus": "Success"
                 }
             },
             {
                 "rid": 1006,
-                "type": {
-                    "class": "GraphAction_LookAtTargetOnce",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "08858235-dc4d-4651-a45b-f9891c518ab9",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 1420.0,
-                        "y": 858.0,
-                        "width": 165.0,
-                        "height": 97.0
-                    },
-                    "ClassReference": "Action_LookAtTargetOnce",
-                    "Title": "Look At Target Once",
-                    "_keyField": "player"
-                }
-            },
-            {
-                "rid": 1007,
-                "type": {
-                    "class": "GraphAction_SendMessage",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "706f441e-8dbc-403c-8738-8b96e40117a0",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 1611.0,
-                        "y": 858.0,
-                        "width": 140.0,
-                        "height": 97.0
-                    },
-                    "ClassReference": "Action_SendMessage",
-                    "Title": "Send Message",
-                    "_keyField": "ShootBullet"
-                }
-            },
-            {
-                "rid": 1008,
                 "type": {
                     "class": "RootGraphNode",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -411,7 +365,7 @@
                 }
             },
             {
-                "rid": 1009,
+                "rid": 1007,
                 "type": {
                     "class": "GraphComposite_Selector",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -431,7 +385,7 @@
                 }
             },
             {
-                "rid": 1010,
+                "rid": 1008,
                 "type": {
                     "class": "GraphComposite_Sequence",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -451,7 +405,7 @@
                 }
             },
             {
-                "rid": 1011,
+                "rid": 1009,
                 "type": {
                     "class": "GraphComposite_Sequence",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -471,25 +425,45 @@
                 }
             },
             {
-                "rid": 1012,
+                "rid": 1010,
                 "type": {
-                    "class": "TextField",
-                    "ns": "UnityEngine.UIElements",
-                    "asm": "UnityEngine.UIElementsModule"
+                    "class": "GraphAction_LookAtTargetOnce",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "m_Value": "1"
+                    "GUID": "08858235-dc4d-4651-a45b-f9891c518ab9",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 1527.0,
+                        "y": 858.0,
+                        "width": 200.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Action_LookAtTargetOnce",
+                    "Title": "Look At Target Once",
+                    "_keyField": "player"
                 }
             },
             {
-                "rid": 1013,
+                "rid": 1011,
                 "type": {
-                    "class": "DropdownField",
-                    "ns": "UnityEngine.UIElements",
-                    "asm": "UnityEngine.UIElementsModule"
+                    "class": "GraphAction_SendMessage",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "m_Value": "Success"
+                    "GUID": "706f441e-8dbc-403c-8738-8b96e40117a0",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 1753.0,
+                        "y": 858.0,
+                        "width": 200.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Action_SendMessage",
+                    "Title": "Send Message",
+                    "_keyField": "ShootBullet"
                 }
             }
         ]

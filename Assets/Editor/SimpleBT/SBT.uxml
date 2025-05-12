@@ -1,3 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/Editor/SimpleBT/SBTStyles.uss?fileID=7433441132597879392&amp;guid=9807f583e81cb7d4c82ae242dc4aa6c0&amp;type=3#SBTStyles" />
-</ui:UXML>

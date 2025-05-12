@@ -74,6 +74,7 @@ namespace SimpleBT.Editor.Data
                 LastFileName = window.LastFieldValue,
                 LastFilePath = window.LastFilePath,
                 scriptable = window.LastObjectScriptable
+                
             };
             
             string json = JsonUtility.ToJson(data, true);
@@ -113,7 +114,8 @@ namespace SimpleBT.Editor.Data
             SBTSettingsData data = new SBTSettingsData()
             {
                 EditorDataPath = settingsWindow.EditorDataPath,
-                GraphDataPath = settingsWindow.GraphDataPath
+                GraphDataPath = settingsWindow.GraphDataPath,
+                StyleDataPath = settingsWindow.StyleDataPath
             };
             
             string json = JsonUtility.ToJson(data, true);

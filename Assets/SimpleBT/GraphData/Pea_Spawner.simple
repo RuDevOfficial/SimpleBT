@@ -33,6 +33,20 @@
                 "Node": {
                     "rid": 1002
                 },
+                "fromGUID": "dd20f93d-6cef-427f-9392-ca6582aeb055",
+                "toGUIDs": [
+                    "8b2ed28c-033f-43d5-8d46-f5a8a824ba50",
+                    "9318c538-f4c0-48ec-a4dd-b45a22001c66"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1003
+                },
                 "fromGUID": "8b2ed28c-033f-43d5-8d46-f5a8a824ba50",
                 "toGUIDs": [],
                 "Values": [
@@ -44,28 +58,14 @@
             },
             {
                 "Node": {
-                    "rid": 1003
+                    "rid": 1004
                 },
                 "fromGUID": "9318c538-f4c0-48ec-a4dd-b45a22001c66",
                 "toGUIDs": [],
                 "Values": [
-                    "10",
+                    "5",
                     "Success"
                 ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1004
-                },
-                "fromGUID": "dd20f93d-6cef-427f-9392-ca6582aeb055",
-                "toGUIDs": [
-                    "8b2ed28c-033f-43d5-8d46-f5a8a824ba50",
-                    "9318c538-f4c0-48ec-a4dd-b45a22001c66"
-                ],
-                "Values": [],
                 "VariableName": "",
                 "Condition": 0,
                 "VariableCheckName": ""
@@ -129,53 +129,6 @@
             {
                 "rid": 1002,
                 "type": {
-                    "class": "GraphAction_SendMessage",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "8b2ed28c-033f-43d5-8d46-f5a8a824ba50",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 596.0,
-                        "y": 623.0,
-                        "width": 142.0,
-                        "height": 97.0
-                    },
-                    "ClassReference": "Action_SendMessage",
-                    "Title": "Send Message",
-                    "_keyField": "SpawnFood"
-                }
-            },
-            {
-                "rid": 1003,
-                "type": {
-                    "class": "GraphAction_Wait",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "9318c538-f4c0-48ec-a4dd-b45a22001c66",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 744.0,
-                        "y": 623.0,
-                        "width": 90.0,
-                        "height": 117.0
-                    },
-                    "ClassReference": "Action_Wait",
-                    "Title": "Wait",
-                    "TextField": {
-                        "rid": 1005
-                    },
-                    "DropDown": {
-                        "rid": 1006
-                    }
-                }
-            },
-            {
-                "rid": 1004,
-                "type": {
                     "class": "GraphComposite_Sequence",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
@@ -194,25 +147,46 @@
                 }
             },
             {
-                "rid": 1005,
+                "rid": 1003,
                 "type": {
-                    "class": "TextField",
-                    "ns": "UnityEngine.UIElements",
-                    "asm": "UnityEngine.UIElementsModule"
+                    "class": "GraphAction_SendMessage",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "m_Value": "10"
+                    "GUID": "8b2ed28c-033f-43d5-8d46-f5a8a824ba50",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 573.0,
+                        "y": 623.0,
+                        "width": 200.0,
+                        "height": 97.0
+                    },
+                    "ClassReference": "Action_SendMessage",
+                    "Title": "Send Message",
+                    "_keyField": "SpawnFood"
                 }
             },
             {
-                "rid": 1006,
+                "rid": 1004,
                 "type": {
-                    "class": "DropdownField",
-                    "ns": "UnityEngine.UIElements",
-                    "asm": "UnityEngine.UIElementsModule"
+                    "class": "GraphAction_Wait",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
                 },
                 "data": {
-                    "m_Value": "Success"
+                    "GUID": "9318c538-f4c0-48ec-a4dd-b45a22001c66",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 825.0,
+                        "y": 623.0,
+                        "width": 200.0,
+                        "height": 117.0
+                    },
+                    "ClassReference": "Action_Wait",
+                    "Title": "Wait",
+                    "_keySeconds": "5",
+                    "_keyActionStatus": "Success"
                 }
             }
         ]
