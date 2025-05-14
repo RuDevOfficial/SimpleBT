@@ -1,4 +1,6 @@
-﻿namespace SimpleBT.Editor.GraphNodes
+﻿using SimpleBT.NonEditor.Nodes;
+
+namespace SimpleBT.Editor.GraphNodes
 {
     [System.Serializable]
     public class GraphDecorator_RepeatXTimes : GraphDecorator_SingleTextField
@@ -16,4 +18,5 @@
             _textField.label = "Amount: ";
         }
     }
+
 }

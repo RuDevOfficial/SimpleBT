@@ -18,10 +18,12 @@ This flow is decided by the interaction between the **composite** nodes, **decor
 
 Ticking is an essential part of this model, and every time the behavior ticks (updates) it has to return 1 of 3 states: Success, Failure or Running.
 
-For further information you can read *Michele Colledanchise and Petter ¨Ogren"'s Behavior Trees in Robotics and AI An Introduction* here: https://arxiv.org/pdf/1709.00084
+For further information you can read *Michele Colledanchise and Petter Ögren's Behavior Trees in Robotics and AI An Introduction* here: https://arxiv.org/pdf/1709.00084
 ## How to Install the Package
 
-Head over the "releases" section and download the unity package. Open your Unity 6 project and then open the package, select all files and import.
+1. Head over the "releases" section and download the unity package. 
+2. Open your Unity 6 project and then open the package
+3. Select all files and import.
 
 ## Creating a Behavior
 
@@ -79,52 +81,78 @@ If you want to get rid of the components you can press "*Remove Components*".
 <details>
 <summary>Ungrouped</summary>
 
-| Name   | Description                                                                                                        |
-|--------|--------------------------------------------------------------------------------------------------------------------|
-| Root   | Acts as the tree root <br/> Must be added first before any other node                                              |
-| Branch | Behavior Tree as a node <br/> Recommended for behavior branching |
+| Name     | Description                                                           |
+|----------|-----------------------------------------------------------------------|
+| Root     | Acts as the tree root <br/> Must be added first before any other node |
+| Behavior | References a different behavior. Used for behavior nesting.           |
 
 </details>
-
 
 <details>
-<summary>Actions</summary>
+<summary>Blackboard</summary>
 
-| Name                      | Description                                                                                               | Section       |
-|---------------------------|-----------------------------------------------------------------------------------------------------------|---------------|
-| Always Succeed            | Self explanatory                                                                                          | General       |
-| Send Message              | Calls the specified method with no parameters on all scripts attached to the GameObject                   | General       |
-| Override Tag              | Self explanatory                                                                                          | General       |
-| Parent GameObject to Self | Uses *.SetParent()* on the target GameObject                                                              | General       |
-| Unparent GameObject       | Uses *.SetParent(null)* on the target GameObject                                                          | General       |
-| Destroy GameObject        | Self explanatory                                                                                          | General       |
-| Set Active                | Sets the target GameObject to active or disabled.                                                         | General       |
-| Set Active (Toggle)       | Toggles the target GameObject's active status                                                             | General       |
-| Store Random Position 3D  | Raycasts with additional height and a random range into the ground. <br/>A Vector2 position can be stored | General       |
-| Stop                      | Rigidbody / Rigidbody 2D linear velocity is set to 0                                                      | Movement      |
-| Follow 2D                 | Follows a target and can Ignore the X or Y axis <br/>Can toggle between transform or Rigidbody2D          | Movement / 2D |
-| Flee 2D                   | Moves in the opposite direction of Follow2D                                                               | Movement / 2D |
-| Go To Position 2D         | Goes to a Vector 2 position and can ignore the X or Y axis                                                | Movement / 2D |
-| Linear Move 2D            | Continuously moves the GameObject in a linear velocity                                                    | Movement / 2D |
-| Follow 3D                 | Same as Follow2D but can also ignore the Z axis                                                           | Movement / 3D |
-| Flee 3D                   | Same as Flee2D but can also ignore the Z axis                                                             | Movement / 3D |
-| Go To Position 3D         | Same as GoToPosition3D but can also ignore the Z axis                                                     | Movement / 3D |
-| Wait X Seconds            | Self explanatory                                                                                          | Movement / 3D |
+| Name                     | Description                                                          |
+|--------------------------|----------------------------------------------------------------------|
+| Invert Numerical Value   | Inverts a numerical blackboard value and stores it                   |
+| Remove Key               | Removes a key from the dictionary.                                   |
+| Store Random Position 3D | Stores a random position given a distance, layer. Stores the result. |
 
 </details>
 
+<details>
+<summary>Action</summary>
+
+| Name                            | Description                                                                                            | Section              |
+|---------------------------------|--------------------------------------------------------------------------------------------------------|----------------------|
+| Destroy GameObject              | Self explanatory                                                                                       | GameObject           |
+| Get Random Child from Parent    | Self explanatory                                                                                       | GameObject           |
+| Send Message                    | Sends a [message](https://docs.unity3d.com/ScriptReference/GameObject.SendMessage.html) to all methods | GameObject           |
+| Send Message with Value         | Just like message, but with values inside parameters                                                   | GameObject           |
+| Set Active                      | Self explanatory                                                                                       | GameObject           |
+| Set Active (Toggle)             | Self explanatory                                                                                       | GameObject           |
+| Set GameObject Parent to Null   | Self explanatory                                                                                       | GameObject           |
+| Override Tag                    | Self explanatory                                                                                       | GameObject           |
+| Parent GameObject to Self       | Self explanatory                                                                                       | GameObject           |
+| Move Navmesh Agent to Target 3D | Self explanatory                                                                                       | NavMesh              |
+| Any Action                      | Action that can transform to any other given the correct name and values                               | Movement/General     |
+| Stop                            | Self explanatory                                                                                       | Movement/General     |
+| Flee 2D                         | Self explanatory                                                                                       | Movement/2D          |
+| Follow 2D                       | Self explanatory                                                                                       | Movement/2D          |
+| Go to Position 2D               | Self explanatory                                                                                       | Movement/2D          |
+| Linear Move 2D                  | Self explanatory                                                                                       | Movement/2D          |
+| Flee 3D                         | Self explanatory                                                                                       | Movement/3D          |
+| Follow 3D                       | Self explanatory                                                                                       | Movement/3D          |
+| Go to Position 3D               | Self explanatory                                                                                       | Movement/3D          |
+| Override GameObject Position 3D | Self explanatory                                                                                       | Movement/3D          |
+| Look At Target                  | Self explanatory                                                                                       | Rotation             |
+| Rotate Degrees 2D               | Self explanatory                                                                                       | Rotation/2D Specific |
+| Rotate Constantly 2D            | Self explanatory                                                                                       | Rotation/2D Specific |
+| Rotate Degrees 3D               | Self explanatory                                                                                       | Rotation/3D Specific |
+| Rotate Constantly 3D            | Self explanatory                                                                                       | Rotation/3D Specific |
+| Wait X Seconds                  | Self explanatory                                                                                       | Time                 |
+| Debug                           | Prints a debug message                                                                                 | Other                |
+
+</details>
 
 <details>
 <summary>Conditions</summary>
 
-| Name                   | Description                                                  |
-|------------------------|--------------------------------------------------------------|
-| Always Succeed         | Self explanatory                                             |
-| Always Fail            | Self explanatory                                             |
-| Comparison             | Compares between numbers and if the "A" value is null or not |
-| Is Near Ledge 2D       | Checks if the gameObject is near a ledge in 2D               |
-| Is GameObject Close 2D | Checks if the gameObject's target is close enough in 2D      |
-| Is GameObject Close 3D | Checks if the gameObject's target is close enough in 3D      |
+| Name                      | Section     |
+|---------------------------|-------------|
+| Compare Blackboard Values | Comparisons |
+| Compare Bool              | Comparisons |
+| Compare Bools             | Comparisons |
+| Compare Float             | Comparisons |
+| Compare String            | Comparisons |
+| Compare Vector2           | Comparisons |
+| Compare Vector3           | Comparisons |
+| Is GameObject Close 2D    | 2D Specific |
+| Is Near Ledge 2D          | 2D Specific |
+| Can See Target 3D         | 3D Specific |
+| Is GameObject Close 3D    | 3D Specific |
+| Always Succeed            | Other       |
+| Always Fail               | Other       |
+| Is At Minimum Distance    | Other       |
 
 </details>
 
@@ -146,32 +174,17 @@ If you want to get rid of the components you can press "*Remove Components*".
 <details>
 <summary>Decorators</summary>
 
-| Name           | Description |
-|----------------| ------------- |
-| Repeat Forever | Always returns "Running", preventing the behavior from finishing |
+| Name                           | Description                                                                        |
+|--------------------------------|------------------------------------------------------------------------------------|
+| Execute Once With Delay        | Executes the child once and doesn't repeat until certain seconds have passed       |
+| Repeat Forever                 | Always returns "Running", preventing the behavior from finishing                   |
+| Repeat Until Success           | Ticks the child until the child returns success                                    |
+| Repeat Until Failure           | Ticks the child until the child returns failure                                    |
+| Repeat X Times                 | Ticks the child x times, then returns success                                      |
+| Repeat X Times w/ Child Result | Ticks the child x times, then returns whatever the child returned at the last time |
 
 </details>
 
-<details>
-<summary>Blackboard</summary>
-
-| Name                   | Description      |
-|------------------------|------------------|
-| Remove Key             | Self explanatory |
-| Invert Numerical Value | Self explanatory |
-
-</details>
-
-<details>
-<summary>Other</summary>
-
-| Name  | Description                                                                             |
-|-------|-----------------------------------------------------------------------------------------|
-| Debug | Sends a *Debug.Log()* message <br/> Can choose between Succeed or Failure after the log |
-
-</details>
-
-</details>
 
 <details>
 <summary>Custom</summary>
@@ -206,14 +219,37 @@ This section is exclusive for your custom nodes.
 
 **If your class reference is the same name as your non-editor node it should appear on the graph view!**
 
-## Future Updates
-- Implement Repeat Until Failure, Repeat Until Success, Repeat X Times *decorators*
-- Implement Parallel, Random *Sequences* and *Selectors*.
-- Modify Node Styling
+## Saving and Loading on other Folders
 
-## Known Issues
+If you decide you want to save the editor, graph data and style somewhere else make sure to...
+1. Select "Settings" below the SimpleBT section
+2. Fill the new path to those files
+3. Press save
 
-- There is no safeguard if you save accidentally
+![Settings Window](https://github.com/RuDevOfficial/SimpleBT/blob/main/Screenshots/SettingsWindow.PNG?raw=true)
+
+Make sure to NEVER change the directory where SettingsData is located or everything will break!
+
+## Common Questions
+
+- **What happens if I made custom nodes? Do I need to send them besides the .simple behavior file to my friend?**
+  - **Answer**: Yes, make sure to import those custom nodes onto your project BEFORE loading the behavior.
+
+
+- **Which custom node types can I make?**
+  - **Answer**: Actions, conditions, composites and decorators. Pretty much all you will need.
+
+
+- **Can I fork this project?**
+  - **Answer**: Yes, you can fork this project since it's license is MIT. Just give me credit.
+
+
+- **My behaviors are not loading when I select them. What's wrong?**
+  - **Answer**: Make sure you have set the necessary paths on the settings window data.
+
+
+- **My behavior is still not loading after setting the paths**
+  - **Answer**: You probably moved the SettingsData folder, that folder MUST stay there at all times.
 
 ## Special Thanks
 

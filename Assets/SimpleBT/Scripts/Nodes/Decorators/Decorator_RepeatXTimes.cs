@@ -8,8 +8,8 @@ namespace SimpleBT.NonEditor.Nodes
     public class Decorator_RepeatXTimes : Decorator, INodeKeyAssignable
     {
         [SerializeField] private string _keyTimes;
-        private int _maxTimes;
-        private int _times = 0;
+        protected int _maxTimes;
+        protected int _times = 0;
         
         public void AssignKeys(List<string> keys) { _keyTimes = keys[0]; }
 
@@ -18,11 +18,12 @@ namespace SimpleBT.NonEditor.Nodes
         protected override Status Tick()
         {
             _times += 1;
-            Status status = Child.OnTick();
+            Child.OnTick();
             if (_times < _maxTimes) return Status.Running;
             
             _times = 0;
             return Status.Success;
         }
     }
+
 }

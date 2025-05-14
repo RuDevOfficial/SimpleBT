@@ -134,6 +134,7 @@ namespace SimpleBT.Editor
                     new SearchTreeEntry(new GUIContent("Repeat Until Success", _icon)) { level = 2, userData = "GraphDecorator_RepeatUntilSuccess" },
                     new SearchTreeEntry(new GUIContent("Repeat Until Failure", _icon)) { level = 2, userData = "GraphDecorator_RepeatUntilFailure" },
                     new SearchTreeEntry(new GUIContent("Repeat X Times", _icon)) { level = 2, userData = "GraphDecorator_RepeatXTimes" },
+                    new SearchTreeEntry(new GUIContent("Repeat X Times w/ Child Result", _icon)) { level = 2, userData = "GraphDecorator_RepeatXTimesChildResult" },
 
                     
                 new SearchTreeGroupEntry(new GUIContent("Custom"), 1),
