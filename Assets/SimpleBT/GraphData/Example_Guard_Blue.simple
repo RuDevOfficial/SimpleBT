@@ -14,10 +14,7 @@
                     "meleedistance",
                     "True",
                     "player"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -28,10 +25,7 @@
                 "Values": [
                     "SafePositions, RandomPosition",
                     "randomchild"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -41,10 +35,7 @@
                 "toGUIDs": [],
                 "Values": [
                     "randomchild"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -57,10 +48,7 @@
                     "lookdistance",
                     "True",
                     "player"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -72,10 +60,7 @@
                     "player",
                     "10000001",
                     "lookdistance"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -86,10 +71,7 @@
                 "Values": [
                     "1",
                     "Success"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -99,10 +81,7 @@
                 "toGUIDs": [
                     "295a5db4-793c-4149-8a50-c4e95203265a"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -113,10 +92,7 @@
                     "03886f8b-4d2e-4198-a915-bf1e0625bee8",
                     "2f588f8a-af4f-4fc3-ae76-c513c1f5f184"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -128,10 +104,7 @@
                     "5dde7bb9-85d4-4e0f-9b35-1cad055988e7",
                     "f971309a-84b0-4a06-a460-47705dc553c5"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -145,10 +118,7 @@
                     "08858235-dc4d-4651-a45b-f9891c518ab9",
                     "706f441e-8dbc-403c-8738-8b96e40117a0"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -158,10 +128,7 @@
                 "toGUIDs": [],
                 "Values": [
                     "player"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -171,10 +138,7 @@
                 "toGUIDs": [],
                 "Values": [
                     "ShootBullet"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             }
         ],
         "ViewportPosition": {
