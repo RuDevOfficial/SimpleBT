@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using SimpleBT.NonEditor;
 using SimpleBT.NonEditor.Nodes;
 using UnityEngine;
@@ -11,8 +12,9 @@ namespace SimpleBT.Core
         protected int _childrenIndex = 0;
 
         // Checks if the composite has any children fist
-        public override Status OnTick() { return _children.Count == 0 ? Status.Success : Tick(); }
-        public override void OnAbort() { foreach(var node in _children) { node.OnAbort();} }
+        protected override Status Tick() { return _children.Count == 0 ? Status.Success : ExecuteFlow(); }
+        public override void OnAbort() { _children[_childrenIndex].OnAbort(); }
+        protected abstract Status ExecuteFlow();
         
         public override void RegisterBlackboard(SBTBlackboard sbtBlackboard)
         {
@@ -32,5 +34,12 @@ namespace SimpleBT.Core
         }
 
         public void AddChild(Node child) { _children.Add(child); }
+
+        public override void OnDrawGizmos()
+        {
+            foreach (var node in _children.Where(node => node == _children[_childrenIndex])) {
+                node.OnDrawGizmos();
+            }
+        }
     }
 }

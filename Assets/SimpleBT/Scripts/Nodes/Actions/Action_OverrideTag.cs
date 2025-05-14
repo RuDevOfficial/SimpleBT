@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_OverrideTag : ExecutionNode, INodeKeyAssignable
+    public class Action_OverrideTag : Node, INodeKeyAssignable
     {
         [SerializeField] private string _keyTarget;
         [SerializeField] private string _keyTag;

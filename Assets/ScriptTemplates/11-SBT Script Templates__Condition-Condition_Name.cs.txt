@@ -18,7 +18,7 @@ public class #SCRIPTNAME# : Condition, INodeKeyAssignable
         // To understand when to use blackboard.GetValue<type>() or blackboard.GetComplexValue<type>() check the github repo
     }
 
-    public override bool Check()
+    protected override bool Check()
     {
         // Get changing values here.
     

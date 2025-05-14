@@ -1,0 +1,152 @@
+{
+    "BehaviorName": "Example_Guard",
+    "NodeCollection": {
+        "BehaviorName": "Example_Guard",
+        "Nodes": [
+            {
+                "Node": {
+                    "rid": 1000
+                },
+                "fromGUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
+                "toGUIDs": [
+                    "049399b3-b080-4fa5-b139-c2a631a93947"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1001
+                },
+                "fromGUID": "049399b3-b080-4fa5-b139-c2a631a93947",
+                "toGUIDs": [
+                    "76e9f0bb-f33a-402a-bfcd-67dacf5e783d"
+                ],
+                "Values": [],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "76e9f0bb-f33a-402a-bfcd-67dacf5e783d",
+                "toGUIDs": [],
+                "Values": [
+                    "Example_Guard",
+                    "Example_Guard_Blue"
+                ],
+                "VariableName": "",
+                "Condition": 0,
+                "VariableCheckName": ""
+            }
+        ],
+        "ViewportPosition": {
+            "x": -275.0,
+            "y": -226.0
+        },
+        "ViewportScale": {
+            "x": 1.0,
+            "y": 1.0
+        }
+    },
+    "BlackboardCollection": {
+        "ExposedProperties": [
+            {
+                "PropertyName": "lookdistance",
+                "PropertyRawValue": "30",
+                "PropertyType": 2
+            },
+            {
+                "PropertyName": "meleedistance",
+                "PropertyRawValue": "9",
+                "PropertyType": 2
+            }
+        ]
+    },
+    "references": {
+        "version": 2,
+        "RefIds": [
+            {
+                "rid": 1000,
+                "type": {
+                    "class": "RootGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "3fc9541c-4916-4fd9-971a-2f8da42171c8",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 738.0,
+                        "y": 354.0,
+                        "width": 73.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Root",
+                    "Title": "Root"
+                }
+            },
+            {
+                "rid": 1001,
+                "type": {
+                    "class": "GraphDecorator_RepeatForever",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "049399b3-b080-4fa5-b139-c2a631a93947",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 723.0,
+                        "y": 475.0,
+                        "width": 120.0,
+                        "height": 77.0
+                    },
+                    "ClassReference": "Decorator_RepeatForever",
+                    "Title": "Repeat Forever"
+                }
+            },
+            {
+                "rid": 1002,
+                "type": {
+                    "class": "BehaviorTreeGraphNode",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "76e9f0bb-f33a-402a-bfcd-67dacf5e783d",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 711.0,
+                        "y": 602.0,
+                        "width": 174.0,
+                        "height": 76.0
+                    },
+                    "ClassReference": "BehaviorTree",
+                    "Title": "Branch",
+                    "_dropdown": {
+                        "rid": 1003
+                    },
+                    "lastDropDownValue": "Example_Guard_Blue",
+                    "ReferencedBehaviorName": "Example_Guard",
+                    "_lastValue": 0
+                }
+            },
+            {
+                "rid": 1003,
+                "type": {
+                    "class": "DropdownField",
+                    "ns": "UnityEngine.UIElements",
+                    "asm": "UnityEngine.UIElementsModule"
+                },
+                "data": {
+                    "m_Value": "Example_Guard_Blue"
+                }
+            }
+        ]
+    }
+}

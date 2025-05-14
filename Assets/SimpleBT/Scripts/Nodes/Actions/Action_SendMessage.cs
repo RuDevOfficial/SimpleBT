@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_SendMessage : ExecutionNode, INodeKeyAssignable
+    public class Action_SendMessage : Node, INodeKeyAssignable
     {
-        [SerializeField] private string _keyMethodName;
+        [SerializeField] protected string _keyMethodName;
         
-        public void AssignKeys(List<string> keys) { _keyMethodName = keys[0]; }
+        public virtual void AssignKeys(List<string> keys) { _keyMethodName = keys[0]; }
         
         protected override void Initialize() { }
 
@@ -18,4 +18,5 @@ namespace SimpleBT.NonEditor.Nodes
             return Status.Success;
         }
     }
+
 }

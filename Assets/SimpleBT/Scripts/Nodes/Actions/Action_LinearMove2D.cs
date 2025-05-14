@@ -4,14 +4,14 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_LinearMove2D : ExecutionNode, INodeKeyAssignable
+    public class Action_LinearMove2D : Node, INodeKeyAssignable
     {
         [SerializeField] protected string keyXVel;
         [SerializeField] protected string keyYVel;
 
-        protected Vector2 _velocity = new Vector2();
+        private Vector2 _velocity;
 
-        protected Rigidbody2D rb2D;
+        private Rigidbody2D rb2D;
         
         public virtual void AssignKeys(List<string> keys)
         {
@@ -44,5 +44,4 @@ namespace SimpleBT.NonEditor.Nodes
             if (_velocity.y != 0) { rb2D.linearVelocityY = 0; }
         }
     }
-
 }

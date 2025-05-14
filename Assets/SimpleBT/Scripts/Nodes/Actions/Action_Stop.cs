@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_Stop : ExecutionNode
+    public class Action_Stop : Node
     {
         private Rigidbody2D _rb2D;
         private Rigidbody _rb;

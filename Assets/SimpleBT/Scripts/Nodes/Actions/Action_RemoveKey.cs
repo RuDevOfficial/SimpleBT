@@ -4,19 +4,13 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_RemoveKey : ExecutionNode, INodeKeyAssignable
+    public class Action_RemoveKey : Node, INodeKeyAssignable
     {
         [SerializeField] private string _key;
 
-        public void AssignKeys(List<string> keys)
-        {
-            _key = keys[0];
-        }
+        public void AssignKeys(List<string> keys) { _key = keys[0]; }
 
-        protected override void Initialize()
-        {
-            
-        }
+        protected override void Initialize() { }
         
         protected override Status Tick()
         {

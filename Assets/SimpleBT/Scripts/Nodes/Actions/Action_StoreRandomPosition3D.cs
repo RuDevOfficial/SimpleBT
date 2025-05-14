@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_StoreRandomPosition3D : ExecutionNode, INodeKeyAssignable
+    public class Action_StoreRandomPosition3D : Node, INodeKeyAssignable
     {
         [SerializeField] private string _keyMinDistance, _keyMaxDistance;
         [SerializeField] private string _keyRaycastHeight, _keyRaycastDistance;

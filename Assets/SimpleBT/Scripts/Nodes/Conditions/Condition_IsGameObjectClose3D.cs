@@ -4,7 +4,7 @@ namespace SimpleBT.NonEditor.Nodes
 {
     public class Condition_IsGameObjectClose3D : Condition_IsGameObjectClose2D
     {
-        public override bool Check()
+        protected override bool Check()
         {
             Collider[] colliders = Physics.OverlapSphere(blackboard.gameObject.transform.position, _radius);
             foreach(Collider collider in colliders) {
@@ -14,6 +14,12 @@ namespace SimpleBT.NonEditor.Nodes
             }
 
             return false;
+        }
+
+        public override void OnDrawGizmos()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(blackboard.gameObject.transform.position, _radius);
         }
     }
 }

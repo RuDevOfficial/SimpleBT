@@ -2,9 +2,11 @@ using UnityEngine;
 using SimpleBT.Core;
 using SimpleBT.NonEditor.Nodes;
 
+// If the Node does require any keys to then instantiate you can add:
+// The "INodeKeyAssignable" interface and AssignKeys method
 public class #SCRIPTNAME# : Composite
 {
-    protected override Status Tick()
+    protected override Status ExecuteFlow()
     {
         // Return Success, Failure or Running
         // (Returning "Running" will keep ticking the node until it returns something else)

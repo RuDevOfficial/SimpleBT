@@ -1,0 +1,115 @@
+GridBackground {
+    --grid-background-color: rgb(43, 43, 43);
+    --line-color: rgba(50, 50, 50, 0.4);
+    --thick-line-color: rgb(50, 50, 50);
+    --spacing: 25;
+}
+
+.Action #title {
+    background-color: rgba(197, 59, 59, 0.82);
+    -unity-font-style: bold;
+    color: rgb(0, 0, 0);
+}
+
+.Composite #title {
+    background-color: rgba(43, 71, 224, 0.91);
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+    text-overflow: clip;
+}
+
+.Decorator #title {
+    background-color: rgba(37, 118, 26, 0.82);
+    -unity-font-style: bold;
+}
+
+.Condition #title {
+    background-color: rgba(91, 86, 15, 0.82);
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Branch #title {
+    align-items: center;
+    background-color: rgba(17, 16, 15, 0.89);
+}
+
+.Condition .unity-label {
+    display: flex;
+    min-width: 10px;
+}
+
+.Action .unity-label {
+    display: flex;
+    min-width: 10px;
+}
+
+.TwoTextFieldElement {
+    flex-direction: row;
+    align-self: auto;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.TwoTextFieldElement .TextFieldExtended {
+    align-self: stretch;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+}
+
+.DropdownContainer {
+    flex-direction: row;
+    align-self: auto;
+    align-content: auto;
+    align-items: center;
+    justify-content: flex-start;
+    left: 3px;
+}
+
+.Branch #contents {
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    align-items: center;
+}
+
+.Action .unity-text-field {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 200px;
+    min-width: auto;
+}
+
+.ValueDropdownContainer {
+    flex-direction: row;
+    align-content: auto;
+    justify-content: space-between;
+}
+
+.ValueField {
+    align-self: auto;
+    width: 100px;
+}
+
+.SingleTextField .unity-text-field__label {
+    align-items: stretch;
+    align-self: auto;
+    min-width: 40px;
+}
+
+.SingleTextField .unity-text-field__input {
+    min-width: 40px;
+    max-width: 60px;
+}
+
+.Decorator {
+    max-width: 120px;
+}
+
+.Action {
+    min-width: 85px;
+    width: 200px;
+}

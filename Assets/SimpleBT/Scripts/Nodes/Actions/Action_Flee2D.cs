@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_Flee2D : ExecutionNode, INodeKeyAssignable
+    public class Action_Flee2D : Node, INodeKeyAssignable
     {
         [SerializeField] protected string _keyTarget;
         [SerializeField] private string _keySpeed;

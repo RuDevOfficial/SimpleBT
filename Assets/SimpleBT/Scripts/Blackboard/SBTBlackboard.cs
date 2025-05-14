@@ -1,10 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using SimpleBT.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SimpleBT.NonEditor
 {
@@ -14,12 +9,13 @@ namespace SimpleBT.NonEditor
         
         private Dictionary<string, object> _data = new Dictionary<string, object>();
 
-        private void Start() {
+        private void Awake() {
             foreach (BlackboardData b in GraphData) {
                 b.Instantiate();
                 _data.Add(b.Key, b.Value);
             }
             
+            // For easy access to the agent that holds the blackboard
             _data.Add("SELF", gameObject);
         }
 

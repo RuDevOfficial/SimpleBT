@@ -1,4 +1,5 @@
-﻿namespace SimpleBT.NoneEditor.Nodes
+﻿
+namespace SimpleBT.NoneEditor.Nodes
 {
     using SimpleBT.Core;
     using NonEditor;
@@ -7,7 +8,7 @@
     {
         public Node Child;
 
-        public override Status OnTick() { return Child == null ? Status.Success : Tick(); }
+        protected override Status Tick() { return Child == null ? Status.Success : Child.OnTick(); }
         
         public override void RegisterBlackboard(SBTBlackboard sbtBlackboard)
         {
@@ -16,5 +17,8 @@
         }
 
         public void AddChild(Node child) { Child = child; }
+        public override void OnDrawGizmos() {
+            Child?.OnDrawGizmos();
+        }
     }
 }

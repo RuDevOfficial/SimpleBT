@@ -24,12 +24,18 @@ namespace SimpleBT.NonEditor.Nodes
             distance = blackboard.GetValue<float>(keyDistance);
         }
 
-        public override bool Check()
+        protected override bool Check()
         {
             if (!target) { return false; }
 
-            float magnitude = ((Vector2)target.transform.position - (Vector2)blackboard.transform.position).magnitude;
+            float magnitude = (target.transform.position - blackboard.transform.position).magnitude;
             return magnitude <= distance;
+        }
+
+        public override void OnDrawGizmos()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(blackboard.gameObject.transform.position, distance);
         }
     }
 }

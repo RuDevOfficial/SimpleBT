@@ -10,7 +10,12 @@ namespace SimpleBT.Editor.BehaviorGeneration
     
     public static class SBTBehaviorGeneration
     {
-        public static void GenerateSubTree(NodeCollection collection, BehaviorTree parent)
+        /// <summary>
+        /// Generates a subtree. It must have been called from the starting generation logic
+        /// </summary>
+        /// <param name="collection">The node collection for the new subtree</param>
+        /// <param name="parent">The parent node of the behavior</param>
+        private static void GenerateSubTree(NodeCollection collection, BehaviorTree parent)
         {
             SBTEditorUtils.CreateFolder("Assets", "SimpleBT");
             SBTEditorUtils.CreateFolder("Assets/SimpleBT", "GraphData");
@@ -78,6 +83,12 @@ namespace SimpleBT.Editor.BehaviorGeneration
             }
         }
         
+        /// <summary>
+        /// Generates the behavior tree based off the GraphNode's "Class Reference" field.
+        /// If a node is a behavior it calls for a subtree generation
+        /// </summary>
+        /// <param name="collection">The incoming node collection</param>
+        /// <param name="executor">The executor script which will hold the behavior</param>
         public static void Generate(NodeCollection collection, TreeExecutor executor)
         {
             SBTEditorUtils.CreateFolder("Assets", "SimpleBT");
@@ -143,12 +154,11 @@ namespace SimpleBT.Editor.BehaviorGeneration
 
             foreach (var node in BT.CompleteNodeList)
             {
-                if (node is BehaviorTree tree)
-                {
-                    BehaviorCollection subCollection = 
-                        SBTDataManager.LoadBehaviorCollectionToJson(tree.RelatedBranch);
-                    GenerateSubTree(subCollection.NodeCollection, tree);
-                }
+                if (node is not BehaviorTree tree) continue;
+                
+                BehaviorCollection subCollection = 
+                    SBTDataManager.LoadBehaviorCollectionToJson(tree.RelatedBranch);
+                GenerateSubTree(subCollection.NodeCollection, tree);
             }
         }
     }

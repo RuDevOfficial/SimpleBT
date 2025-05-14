@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Collections.Generic;
 using SimpleBT.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
-
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 namespace SimpleBT.NonEditor.Nodes
 {
     // TODO make it work if it has a value attached and not just written on the node
-    public class Action_SetActive : ExecutionNode
+    public class Action_SetActive : Node
     {
         [SerializeField] private string Key;
         [SerializeField] protected string KeyGameobjectName;
@@ -35,10 +28,8 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override void Initialize()
         {
-            //_instanceID = blackboard.GetValue<int>(KeyInstanceID);
             _setActive = blackboard.GetValue<bool>(KeySetActive);
-            // TODO FIX THIS
-            //_gameObject = blackboard.GetComplexValue<GameObject>(Key, KeyGameobjectName, KeyTag, KeyInstanceID);
+            _gameObject = blackboard.GetComplexValue<GameObject>($"{KeyGameobjectName}, {KeyTag}, {KeyInstanceID}");
         }
         
         protected override Status Tick()

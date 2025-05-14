@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SimpleBT.NonEditor.Nodes
 {
-    public class Action_DestroyGameObject : ExecutionNode, INodeKeyAssignable
+    public class Action_DestroyGameObject : Node, INodeKeyAssignable
     {
         [SerializeField] private string _keyTarget;
         private GameObject _target;
