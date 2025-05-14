@@ -11,28 +11,11 @@
                 "toGUIDs": [
                     "b57eea52-54f1-43b6-b757-4eb07997972d"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
                     "rid": 1001
-                },
-                "fromGUID": "0381004e-96db-4a51-937c-af9b1bce1ac1",
-                "toGUIDs": [],
-                "Values": [
-                    "",
-                    ""
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1002
                 },
                 "fromGUID": "cbfdf721-8d46-4ca9-bb39-6de62ffccad7",
                 "toGUIDs": [],
@@ -40,107 +23,94 @@
                     "0.5",
                     "1",
                     "Ground"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
+            },
+            {
+                "Node": {
+                    "rid": 1002
+                },
+                "fromGUID": "eaed5a0d-defb-4699-b3ed-03e601ccf6ae",
+                "toGUIDs": [],
+                "Values": [
+                    "SPEED"
+                ]
             },
             {
                 "Node": {
                     "rid": 1003
                 },
-                "fromGUID": "eaed5a0d-defb-4699-b3ed-03e601ccf6ae",
-                "toGUIDs": [],
-                "Values": [
-                    ""
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
-            },
-            {
-                "Node": {
-                    "rid": 1004
-                },
                 "fromGUID": "32842825-e4ed-40ab-98ea-1661df52ef1f",
                 "toGUIDs": [
                     "4bd693c4-b8b3-42bc-b966-26fe0ea2fed8"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
-                    "rid": 1005
+                    "rid": 1004
                 },
                 "fromGUID": "b57eea52-54f1-43b6-b757-4eb07997972d",
                 "toGUIDs": [
                     "0381004e-96db-4a51-937c-af9b1bce1ac1",
                     "b87810e7-a532-4787-b61d-670709211b1a"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
-                    "rid": 1006
+                    "rid": 1005
                 },
                 "fromGUID": "b87810e7-a532-4787-b61d-670709211b1a",
                 "toGUIDs": [
                     "d4cbb82f-3671-430d-bea3-094f55ec7a59",
                     "c412a4c0-5a18-455f-b15d-06ef090e6421"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
-                    "rid": 1007
+                    "rid": 1006
                 },
                 "fromGUID": "d4cbb82f-3671-430d-bea3-094f55ec7a59",
                 "toGUIDs": [
                     "cbfdf721-8d46-4ca9-bb39-6de62ffccad7",
                     "eaed5a0d-defb-4699-b3ed-03e601ccf6ae"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
-                    "rid": 1008
+                    "rid": 1007
                 },
                 "fromGUID": "c412a4c0-5a18-455f-b15d-06ef090e6421",
                 "toGUIDs": [
                     "c318ba99-776a-43ce-8564-dffdf1b90e89"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
+            },
+            {
+                "Node": {
+                    "rid": 1008
+                },
+                "fromGUID": "c318ba99-776a-43ce-8564-dffdf1b90e89",
+                "toGUIDs": [],
+                "Values": []
             },
             {
                 "Node": {
                     "rid": 1009
                 },
-                "fromGUID": "c318ba99-776a-43ce-8564-dffdf1b90e89",
+                "fromGUID": "0381004e-96db-4a51-937c-af9b1bce1ac1",
                 "toGUIDs": [],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": [
+                    "SPEED",
+                    "0"
+                ]
             }
         ],
         "ViewportPosition": {
-            "x": 23.0,
-            "y": 20.0
+            "x": 45.0,
+            "y": -7.0
         },
         "ViewportScale": {
             "x": 0.7561436891555786,
@@ -182,28 +152,6 @@
             {
                 "rid": 1001,
                 "type": {
-                    "class": "GraphAction_LinearMove2D",
-                    "ns": "SimpleBT.Editor.GraphNodes",
-                    "asm": "Assembly-CSharp-Editor"
-                },
-                "data": {
-                    "GUID": "0381004e-96db-4a51-937c-af9b1bce1ac1",
-                    "Rect": {
-                        "serializedVersion": "2",
-                        "x": 454.0,
-                        "y": 487.0,
-                        "width": 200.0,
-                        "height": 116.0
-                    },
-                    "ClassReference": "Action_LinearMove2D",
-                    "Title": "Linear Movement 2D",
-                    "_keyXVelocity": "",
-                    "_keyYVelocity": ""
-                }
-            },
-            {
-                "rid": 1002,
-                "type": {
                     "class": "GraphCondition_IsNearLedge2D",
                     "ns": "SimpleBT.Editor.GraphNodes",
                     "asm": "Assembly-CSharp-Editor"
@@ -225,7 +173,7 @@
                 }
             },
             {
-                "rid": 1003,
+                "rid": 1002,
                 "type": {
                     "class": "GraphAction_InvertNumValue",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -242,11 +190,11 @@
                     },
                     "ClassReference": "Action_InvertNumValue",
                     "Title": "Invert Numerical Value",
-                    "_key": ""
+                    "_key": "SPEED"
                 }
             },
             {
-                "rid": 1004,
+                "rid": 1003,
                 "type": {
                     "class": "RootGraphNode",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -266,7 +214,7 @@
                 }
             },
             {
-                "rid": 1005,
+                "rid": 1004,
                 "type": {
                     "class": "GraphComposite_ParallelSequence",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -286,7 +234,7 @@
                 }
             },
             {
-                "rid": 1006,
+                "rid": 1005,
                 "type": {
                     "class": "GraphComposite_Priority",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -306,7 +254,7 @@
                 }
             },
             {
-                "rid": 1007,
+                "rid": 1006,
                 "type": {
                     "class": "GraphComposite_Sequence",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -326,7 +274,7 @@
                 }
             },
             {
-                "rid": 1008,
+                "rid": 1007,
                 "type": {
                     "class": "GraphComposite_Sequence",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -346,7 +294,7 @@
                 }
             },
             {
-                "rid": 1009,
+                "rid": 1008,
                 "type": {
                     "class": "GraphCondition_AlwaysSucceed",
                     "ns": "SimpleBT.Editor.GraphNodes",
@@ -363,6 +311,28 @@
                     },
                     "ClassReference": "Condition_AlwaysSucceed",
                     "Title": "Always Succeed"
+                }
+            },
+            {
+                "rid": 1009,
+                "type": {
+                    "class": "GraphAction_LinearMove2D",
+                    "ns": "SimpleBT.Editor.GraphNodes",
+                    "asm": "Assembly-CSharp-Editor"
+                },
+                "data": {
+                    "GUID": "0381004e-96db-4a51-937c-af9b1bce1ac1",
+                    "Rect": {
+                        "serializedVersion": "2",
+                        "x": 454.0,
+                        "y": 487.0,
+                        "width": 200.0,
+                        "height": 116.0
+                    },
+                    "ClassReference": "Action_LinearMove2D",
+                    "Title": "Linear Movement 2D",
+                    "_keyXVelocity": "SPEED",
+                    "_keyYVelocity": "0"
                 }
             }
         ]

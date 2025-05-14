@@ -647,7 +647,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "  Blue Guard: Shoots at you and runs to a new position if you get too
     close after a bit\n  Red Guard: Like Blue Guard, but when HP gets low enough
-    it will aggro and \"explode\" on contact"
+    it will aggro and disappear on contact"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
