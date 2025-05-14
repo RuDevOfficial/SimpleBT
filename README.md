@@ -21,7 +21,7 @@ Ticking is an essential part of this model, and every time the behavior ticks (u
 For further information you can read *Michele Colledanchise and Petter ¨Ogren"'s Behavior Trees in Robotics and AI An Introduction* here: https://arxiv.org/pdf/1709.00084
 ## How to Install the Package
 
-Work in progress
+Head over the "releases" section and download the unity package. Open your Unity 6 project and then open the package, select all files and import.
 
 ## Creating a Behavior
 
