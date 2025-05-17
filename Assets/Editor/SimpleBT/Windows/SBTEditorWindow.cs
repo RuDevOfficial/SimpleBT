@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -34,12 +35,14 @@ namespace SimpleBT.Editor
 
         // All toolbar UI elements
         #region Toolbar UI Elements
-        private TextField _field;
+        private ToolbarSearchField _field;
         
-        private Button _generateButton;
-        private Button _removeComponentsButton;
-        private Button _regenerateButton;
+        private ToolbarButton _generateButton;
+        private ToolbarButton _removeComponentsButton;
+        private ToolbarButton _regenerateButton;
         [SerializeReference] public ObjectField ObjectField;
+
+        private TipsLabel _tipsButtonLabel;
         #endregion
         
         // This allows for the value to stay between closing and opening the window
@@ -61,6 +64,11 @@ namespace SimpleBT.Editor
         {
             SBTEditorWindow wnd = GetWindow<SBTEditorWindow>();
             wnd.titleContent = new GUIContent("Simple BT");
+        }
+
+        private void Update()
+        {
+            _tipsButtonLabel?.Update();
         }
 
         #region Event Functions
@@ -129,18 +137,19 @@ namespace SimpleBT.Editor
         {
             // Toolbar itself does not need to hold a reference and must be added to the rootVisualElement just after graph view has been added
             Toolbar toolbar = new Toolbar();
+            toolbar.AddToClassList("Toolbar");
             rootVisualElement.Add(toolbar);
 
             // Buttons that do not require to keep a reference
-            Button saveButton = new Button(Save) { text = "Save" };
-            Button loadButton = new Button(() => { Load(_field.value); }) { text = "Load" };
-            Button clearBlackboardButton = new Button(ClearBlackboard) { text = "Clear Blackboard" };
+            ToolbarButton saveButton = new ToolbarButton(Save) { text = "Save" };
+            ToolbarButton loadButton = new ToolbarButton(() => { Load(_field.value); }) { text = "Load" };
+            ToolbarButton clearBlackboardButton = new ToolbarButton(ClearBlackboard) { text = "Clear Blackboard" };
             
             // UI elements that DO require to keep a reference
-            _field = new TextField("Behavior Name: ") { value = _lastFieldValue ?? "New Behaviour Tree" };
-            _generateButton = new Button(GenerateBehavior) { text = "Generate" };
-            _regenerateButton = new Button(() => { Save(); GenerateBlackboard(); GenerateBehaviorTree(); }) { text = "Save & Regenerate" }; 
-            _removeComponentsButton = new Button(RemoveComponents) { text = "Remove Components" };
+            _field = new ToolbarSearchField() { value = _lastFieldValue ?? "New Behaviour Tree" };
+            _generateButton = new ToolbarButton(GenerateBehavior) { text = "Generate" };
+            _regenerateButton = new ToolbarButton(() => { Save(); GenerateBlackboard(); GenerateBehaviorTree(); }) { text = "Save & Regenerate" }; 
+            _removeComponentsButton = new ToolbarButton(RemoveComponents) { text = "Remove Components" };
             ObjectField = new ObjectField();
             
             // ValueChangedCallback overrides
@@ -173,8 +182,17 @@ namespace SimpleBT.Editor
             _blackboardGraph = new SBTBlackboardGraph(_graph);
             _blackboardGraph.SetPosition(_blackboardRect);
             _graph.Add(_blackboardGraph);
+            
+            // Adding the tips section
+            Toolbar tipsToolBar = new Toolbar();
+
+            _tipsButtonLabel = new TipsLabel() { text = "This is a default tip. More to come every 10 seconds" };
+            _tipsButtonLabel.SetDefaults();
+            tipsToolBar.Add(_tipsButtonLabel);
+            
+            rootVisualElement.Add(tipsToolBar);
         }
-        
+
         private void LoadEditorData()
         {
             SBTEditorData editorData = SBTDataManager.LoadEditorFromJson();
@@ -411,5 +429,6 @@ namespace SimpleBT.Editor
         
         #endregion
     }
+
 }
 

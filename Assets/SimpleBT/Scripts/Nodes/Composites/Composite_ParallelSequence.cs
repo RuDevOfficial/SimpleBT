@@ -28,7 +28,7 @@ namespace SimpleBT.NonEditor.Nodes
             }
         }
 
-        void SetToDefaults() {
+        private void SetToDefaults() {
             _childrenStatus.Clear();
             for (int i = 0; i < _children.Count(); i++) { _childrenStatus.Add(Status.Running); }
         }

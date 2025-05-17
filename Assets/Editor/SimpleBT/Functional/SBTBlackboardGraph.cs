@@ -19,7 +19,7 @@ namespace SimpleBT.Editor.Blackboard
 
         public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
 
-        public const string STARTING_PROPERTY_NAME = "ID";
+        private const string STARTING_PROPERTY_NAME = "ID";
 
         public SBTBlackboardGraph(GraphView associatedGraphView) : base(associatedGraphView)
         {
@@ -32,18 +32,17 @@ namespace SimpleBT.Editor.Blackboard
             // Removes the selected field (if it exists)
             RegisterCallback<KeyDownEvent>(evt =>
             {
-                if (evt.keyCode == KeyCode.Delete && _selectedField != null)
-                {
-                    ExposedProperty property = ExposedProperties.Find(x => x.PropertyName == _selectedField.text);
-                    ExposedProperties.Remove(property);
+                if (evt.keyCode != KeyCode.Delete || _selectedField == null) return;
+                
+                ExposedProperty property = ExposedProperties.Find(x => x.PropertyName == _selectedField.text);
+                ExposedProperties.Remove(property);
 
-                    BlackboardRow row = _selectedField.GetFirstAncestorOfType<BlackboardRow>();
-                    VisualElement newElement = row.parent;
-                    newElement.Clear();
-                    newElement.RemoveFromHierarchy();
+                BlackboardRow row = _selectedField.GetFirstAncestorOfType<BlackboardRow>();
+                VisualElement newElement = row.parent;
+                newElement.Clear();
+                newElement.RemoveFromHierarchy();
 
-                    _selectedField = null;
-                }
+                _selectedField = null;
             });
         }
 
@@ -59,7 +58,7 @@ namespace SimpleBT.Editor.Blackboard
 
             BlackboardField field = (BlackboardField)element;
 
-            if (ExposedProperties.Any(x => x.PropertyName == newValue)) {
+            if (ExposedProperties.Any(x => string.Equals(x.PropertyName, newValue, StringComparison.CurrentCultureIgnoreCase))) {
                 EditorUtility.DisplayDialog("Error", "This property is already named, choose another one!", "OK");
                 return;
             }

@@ -11,10 +11,7 @@
                 "toGUIDs": [
                     "049399b3-b080-4fa5-b139-c2a631a93947"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -24,10 +21,7 @@
                 "toGUIDs": [
                     "76e9f0bb-f33a-402a-bfcd-67dacf5e783d"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -38,10 +32,7 @@
                 "Values": [
                     "Example_Guard",
                     "Example_Guard_Blue"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             }
         ],
         "ViewportPosition": {
@@ -132,8 +123,8 @@
                         "rid": 1003
                     },
                     "lastDropDownValue": "Example_Guard_Blue",
-                    "ReferencedBehaviorName": "Example_Guard",
-                    "_lastValue": 0
+                    "_lastValue": 0,
+                    "ReferencedBehaviorName": "Example_Guard"
                 }
             },
             {

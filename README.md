@@ -61,7 +61,7 @@ To delete a variable select the respective field and press **delete** (not backs
 |------------|----------------------------------------|-----------------------------------|
 | int        | 3                                      | GetValue<<Type>**int**>               |
 | float      | 3.2                                    | GetValue<<Type>**float**>             |
-| bool       | true                                   | GetValue<<Type>**bool**>              |
+| bool       | True                                   | GetValue<<Type>**bool**>              |
 | string     | something                              | GetValue<<Type>**string**>            |
 | Vector2    | 3, 3.9                                 | GetValue<<Type>**Vector2**>           |
 | Vector3    | 21.1, 3, 90                            | GetValue<<Type>**Vector3**>           |
