@@ -21,8 +21,8 @@ namespace SimpleBT.NonEditor.Nodes
         }
 
         protected override void Initialize() {
-            _time = blackboard.GetValue<float>(keyTime); 
-            _status = blackboard.GetValue<Status>(keyStatus);
+            _time = _blackboard.GetValue<float>(keyTime); 
+            _status = _blackboard.GetValue<Status>(keyStatus);
         }
 
         protected override Status Tick() {

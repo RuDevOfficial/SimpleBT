@@ -24,17 +24,17 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override void Initialize()
         {
-            _radius = blackboard.GetValue<float>(_keyRadius);
-            _storeValue = blackboard.GetValue<bool>(_keyBlackboardToggle);
+            _radius = _blackboard.GetValue<float>(_keyRadius);
+            _storeValue = _blackboard.GetValue<bool>(_keyBlackboardToggle);
         }
         
         protected override bool Check()
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(blackboard.gameObject.transform.position, _radius);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(_blackboard.gameObject.transform.position, _radius);
             foreach(Collider2D collider in colliders) {
                 if (!collider.gameObject.CompareTag(_keyTag)) continue;
 
-                if (_storeValue) { blackboard.AddValue(_keyParameter.ToUpper(), collider.gameObject); }
+                if (_storeValue) { _blackboard.AddValue(_keyParameter.ToUpper(), collider.gameObject); }
                 return true;
             }
 

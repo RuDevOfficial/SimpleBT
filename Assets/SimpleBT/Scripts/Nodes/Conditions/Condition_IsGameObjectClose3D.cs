@@ -6,10 +6,10 @@ namespace SimpleBT.NonEditor.Nodes
     {
         protected override bool Check()
         {
-            Collider[] colliders = Physics.OverlapSphere(blackboard.gameObject.transform.position, _radius);
+            Collider[] colliders = Physics.OverlapSphere(_blackboard.gameObject.transform.position, _radius);
             foreach(Collider collider in colliders) {
                 if (!collider.gameObject.CompareTag(_keyTag)) continue;
-                if (_storeValue) { blackboard.AddValue(_keyParameter, collider.gameObject); }
+                if (_storeValue) { _blackboard.AddValue(_keyParameter, collider.gameObject); }
                 return true;
             }
 
@@ -19,7 +19,7 @@ namespace SimpleBT.NonEditor.Nodes
         public override void OnDrawGizmos()
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(blackboard.gameObject.transform.position, _radius);
+            Gizmos.DrawWireSphere(_blackboard.gameObject.transform.position, _radius);
         }
     }
 }

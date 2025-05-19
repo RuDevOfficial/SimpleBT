@@ -16,10 +16,10 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override Status Tick()
         {
-            _target = blackboard.GetComplexValue<GameObject>(_keyTarget);
+            _target = _blackboard.GetComplexValue<GameObject>(_keyTarget);
             if (_target == null) { return Status.Failure;  }
 
-            blackboard.gameObject.transform.LookAt(_target.transform.position);
+            _blackboard.gameObject.transform.LookAt(_target.transform.position);
             
             _target = null;
             return Status.Success;

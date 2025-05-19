@@ -18,7 +18,7 @@ namespace SimpleBT.NonEditor.Nodes
         }
 
         protected override void Initialize() {
-            _parent = blackboard.GetComplexValue<GameObject>(_keyGameObjectParent);
+            _parent = _blackboard.GetComplexValue<GameObject>(_keyGameObjectParent);
         }
 
         protected override Status Tick()
@@ -28,7 +28,7 @@ namespace SimpleBT.NonEditor.Nodes
             int randomNumber = Random.Range(0, _parent.transform.childCount);
             if (randomNumber == 0) { return Status.Failure; }
             
-            blackboard.AddValue(_keyResult, _parent.transform.GetChild(randomNumber).gameObject);
+            _blackboard.AddValue(_keyResult, _parent.transform.GetChild(randomNumber).gameObject);
             return Status.Success;
         }
     }

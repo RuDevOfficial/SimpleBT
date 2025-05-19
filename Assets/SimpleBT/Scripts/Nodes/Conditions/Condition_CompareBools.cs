@@ -4,8 +4,8 @@
     {
         protected override bool Check()
         {
-            bool value = blackboard.GetValue<bool>(_keyValue);
-            bool secondValue = blackboard.GetValue<bool>(_keySecondValue);
+            bool value = _blackboard.GetValue<bool>(_keyValue);
+            bool secondValue = _blackboard.GetValue<bool>(_keySecondValue);
             Comparison comparison = SBTNonEditorUtils.GetEnumByString<Comparison>(_keyComparison);
 
             switch (comparison)

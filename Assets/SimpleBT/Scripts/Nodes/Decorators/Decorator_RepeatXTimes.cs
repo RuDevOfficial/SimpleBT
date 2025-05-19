@@ -13,7 +13,7 @@ namespace SimpleBT.NonEditor.Nodes
         
         public void AssignKeys(List<string> keys) { _keyTimes = keys[0]; }
 
-        protected override void Initialize() { _maxTimes = blackboard.GetValue<int>(_keyTimes); }
+        protected override void Initialize() { _maxTimes = _blackboard.GetValue<int>(_keyTimes); }
 
         protected override Status Tick()
         {

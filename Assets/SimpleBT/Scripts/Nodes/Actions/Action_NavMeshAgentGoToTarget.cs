@@ -19,13 +19,13 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override void Initialize()
         {
-            _agent = blackboard.gameObject.GetComponent<NavMeshAgent>();
+            _agent = _blackboard.gameObject.GetComponent<NavMeshAgent>();
         }
         
         protected override Status Tick()
         {
             if (!_target) {
-                _target = blackboard.GetComplexValue<GameObject>(_keyTarget);
+                _target = _blackboard.GetComplexValue<GameObject>(_keyTarget);
                 _agent.destination = _target.transform.position;
             }
             

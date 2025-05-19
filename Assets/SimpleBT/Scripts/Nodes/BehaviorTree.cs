@@ -34,9 +34,15 @@ namespace SimpleBT.NonEditor.Nodes
             if (fromNode is INodeMother nodeMother) {
                 nodeMother.AddChild(toNode);
             }
+            
+            toNode.Parent = fromNode;
         }
 
-        public void AssignRoot(Node node) { Root = node; }
+        public void AssignRoot(Node node)
+        {
+            Root = node;
+            Root.Parent = this;
+        }
         
         #endregion
 

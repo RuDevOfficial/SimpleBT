@@ -11,10 +11,7 @@
                 "toGUIDs": [
                     "049399b3-b080-4fa5-b139-c2a631a93947"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -24,10 +21,7 @@
                 "toGUIDs": [
                     "8bdbe39d-8245-452f-8635-34e4ffed05e0"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -38,10 +32,7 @@
                 "Values": [
                     "Example_Guard",
                     "Example_Guard_Blue"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -51,10 +42,7 @@
                 "toGUIDs": [
                     "ce02b645-7b63-4d04-b05f-7d4211574da8"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -66,10 +54,7 @@
                     "health",
                     "LessOrEqual",
                     "3"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -80,10 +65,7 @@
                     "08e1ecf7-4a98-4f58-94a0-dbc54c379cdd",
                     "76e9f0bb-f33a-402a-bfcd-67dacf5e783d"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -94,10 +76,7 @@
                     "e5a7fe90-304d-454d-826f-18f1760b73ca",
                     "73aab7d0-9976-48a2-a17c-b715e93abff8"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -107,10 +86,7 @@
                 "toGUIDs": [],
                 "Values": [
                     "player"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -122,10 +98,7 @@
                     "011466c6-9592-4dea-af16-ac513d654068",
                     "7baebd14-92e2-45de-8242-49e854384ebd"
                 ],
-                "Values": [],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                "Values": []
             },
             {
                 "Node": {
@@ -136,10 +109,7 @@
                 "Values": [
                     "player",
                     "1.5"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             },
             {
                 "Node": {
@@ -149,19 +119,16 @@
                 "toGUIDs": [],
                 "Values": [
                     "SELF"
-                ],
-                "VariableName": "",
-                "Condition": 0,
-                "VariableCheckName": ""
+                ]
             }
         ],
         "ViewportPosition": {
-            "x": 69.0,
-            "y": -314.0
+            "x": 139.0,
+            "y": -198.0
         },
         "ViewportScale": {
-            "x": 0.7561436891555786,
-            "y": 0.7561436891555786
+            "x": 0.5717532634735107,
+            "y": 0.5717532634735107
         }
     },
     "BlackboardCollection": {
@@ -248,8 +215,8 @@
                         "rid": 1011
                     },
                     "lastDropDownValue": "Example_Guard_Blue",
-                    "ReferencedBehaviorName": "Example_Guard",
-                    "_lastValue": 0
+                    "_lastValue": 0,
+                    "ReferencedBehaviorName": "Example_Guard"
                 }
             },
             {

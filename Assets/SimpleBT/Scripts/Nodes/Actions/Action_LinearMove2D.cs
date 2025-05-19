@@ -21,15 +21,15 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override void Initialize()
         {
-            blackboard.gameObject.TryGetComponent<Rigidbody2D>(out rb2D);
+            _blackboard.gameObject.TryGetComponent<Rigidbody2D>(out rb2D);
         }
         
         protected override Status Tick()
         {
             if (!rb2D) return Status.Failure;
             
-            _velocity.x = blackboard.GetValue<float>(keyXVel);
-            _velocity.y = blackboard.GetValue<float>(keyYVel);
+            _velocity.x = _blackboard.GetValue<float>(keyXVel);
+            _velocity.y = _blackboard.GetValue<float>(keyYVel);
 
             if (_velocity.x == 0) { rb2D.linearVelocityY = _velocity.y * Time.fixedDeltaTime; }
             else if (_velocity.y == 0) { rb2D.linearVelocityX = _velocity.x * Time.fixedDeltaTime; }

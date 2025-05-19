@@ -18,20 +18,20 @@ namespace SimpleBT.NonEditor.Nodes
         protected override void Initialize()
         {
             base.Initialize();
-            _axisRotationType = blackboard.GetValue<AxisRotationType>(_keyRotationType);
+            _axisRotationType = _blackboard.GetValue<AxisRotationType>(_keyRotationType);
         }
 
         protected override void SetDefaultValues()
         {
             _targetQuaternion = _axisRotationType switch
             {
-                AxisRotationType.X => blackboard.transform.rotation * Quaternion.Euler(_degrees, 0, 0),
-                AxisRotationType.Y => blackboard.transform.rotation * Quaternion.Euler(0, _degrees, 0),
-                AxisRotationType.Z => blackboard.transform.rotation * Quaternion.Euler(0, 0, _degrees),
-                AxisRotationType.XY => blackboard.transform.rotation * Quaternion.Euler(_degrees, _degrees, 0),
-                AxisRotationType.XZ => blackboard.transform.rotation * Quaternion.Euler(_degrees, 0, _degrees),
-                AxisRotationType.YZ => blackboard.transform.rotation * Quaternion.Euler(0, _degrees, _degrees),
-                _ => blackboard.transform.rotation * Quaternion.Euler(_degrees, _degrees, _degrees)
+                AxisRotationType.X => _blackboard.transform.rotation * Quaternion.Euler(_degrees, 0, 0),
+                AxisRotationType.Y => _blackboard.transform.rotation * Quaternion.Euler(0, _degrees, 0),
+                AxisRotationType.Z => _blackboard.transform.rotation * Quaternion.Euler(0, 0, _degrees),
+                AxisRotationType.XY => _blackboard.transform.rotation * Quaternion.Euler(_degrees, _degrees, 0),
+                AxisRotationType.XZ => _blackboard.transform.rotation * Quaternion.Euler(_degrees, 0, _degrees),
+                AxisRotationType.YZ => _blackboard.transform.rotation * Quaternion.Euler(0, _degrees, _degrees),
+                _ => _blackboard.transform.rotation * Quaternion.Euler(_degrees, _degrees, _degrees)
             };
         }
     }

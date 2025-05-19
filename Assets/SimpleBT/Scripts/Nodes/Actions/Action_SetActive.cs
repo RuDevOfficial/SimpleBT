@@ -28,8 +28,8 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override void Initialize()
         {
-            _setActive = blackboard.GetValue<bool>(KeySetActive);
-            _gameObject = blackboard.GetComplexValue<GameObject>($"{KeyGameobjectName}, {KeyTag}, {KeyInstanceID}");
+            _setActive = _blackboard.GetValue<bool>(KeySetActive);
+            _gameObject = _blackboard.GetComplexValue<GameObject>($"{KeyGameobjectName}, {KeyTag}, {KeyInstanceID}");
         }
         
         protected override Status Tick()

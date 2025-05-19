@@ -25,7 +25,7 @@ namespace SimpleBT.NonEditor.Nodes
         {
             VariableType type = Enum.Parse<VariableType>(_keyType);
 
-            if (blackboard.ContainsKey(_keyType)) { blackboard.GetRawValue(_keyType, out _value); }
+            if (_blackboard.ContainsKey(_keyType)) { _blackboard.GetRawValue(_keyType, out _value); }
             else
             {
                 Type valueType = type.ConvertToType();
@@ -34,12 +34,12 @@ namespace SimpleBT.NonEditor.Nodes
                     _keyValue.ConvertValue(valueType);
             }
 
-            _options = blackboard.GetValue<SendMessageOptions>(_keyOptions);
+            _options = _blackboard.GetValue<SendMessageOptions>(_keyOptions);
         }
 
         protected override Status Tick()
         {
-            blackboard.gameObject.SendMessage(_keyMethodName, _value, _options);
+            _blackboard.gameObject.SendMessage(_keyMethodName, _value, _options);
             return Status.Success;
         }
     }

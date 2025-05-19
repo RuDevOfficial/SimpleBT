@@ -10,8 +10,8 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override void Initialize()
         {
-            _rb2D = blackboard.GetComponent<Rigidbody2D>();
-            _rb = blackboard.GetComponent<Rigidbody>();
+            _rb2D = _blackboard.GetComponent<Rigidbody2D>();
+            _rb = _blackboard.GetComponent<Rigidbody>();
         }
         protected override Status Tick()
         {

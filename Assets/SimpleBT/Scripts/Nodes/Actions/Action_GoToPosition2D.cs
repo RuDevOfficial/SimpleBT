@@ -31,19 +31,19 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override void Initialize()
         {
-            _useTransform = blackboard.GetValue<bool>(_keyUseTransform);
-            _rb2D = blackboard.gameObject.GetComponent<Rigidbody2D>();
-            _rigidbodyMoveFlag = blackboard.GetValue<RigidbodyMoveFlag>(_keyIgnoreFlag);
+            _useTransform = _blackboard.GetValue<bool>(_keyUseTransform);
+            _rb2D = _blackboard.gameObject.GetComponent<Rigidbody2D>();
+            _rigidbodyMoveFlag = _blackboard.GetValue<RigidbodyMoveFlag>(_keyIgnoreFlag);
         }
 
         protected override Status Tick()
         {
             if (_time == 0.0f)
             {
-                _position = blackboard.GetValue<Vector2>(_keyPosition);
-                _speed = blackboard.GetValue<float>(_keySpeed);
-                _direction = (_position - (Vector2)blackboard.gameObject.transform.position).normalized;
-                _timeToReach = (_position - (Vector2)blackboard.gameObject.transform.position).magnitude / _speed;
+                _position = _blackboard.GetValue<Vector2>(_keyPosition);
+                _speed = _blackboard.GetValue<float>(_keySpeed);
+                _direction = (_position - (Vector2)_blackboard.gameObject.transform.position).normalized;
+                _timeToReach = (_position - (Vector2)_blackboard.gameObject.transform.position).magnitude / _speed;
                 
                 if (!_rb2D && _useTransform == false) { return Status.Failure; }
                 if (_rb2D) { if (_rb2D.bodyType != RigidbodyType2D.Kinematic) { Debug.LogWarning("To use Action_GoToPosition2D with Rigidbodies select IsKinematic to True"); return Status.Failure; } }
@@ -54,13 +54,13 @@ namespace SimpleBT.NonEditor.Nodes
             {
                 if (_time < _timeToReach) {
                     _time += Time.deltaTime;
-                    blackboard.gameObject.transform.position = (Vector2)blackboard.gameObject.transform.position + _direction * (_speed * Time.deltaTime);
+                    _blackboard.gameObject.transform.position = (Vector2)_blackboard.gameObject.transform.position + _direction * (_speed * Time.deltaTime);
                     return Status.Running;
                 }
                 else
                 {
                     _time = 0.0f;
-                    blackboard.gameObject.transform.position = _position;
+                    _blackboard.gameObject.transform.position = _position;
                     return Status.Success;
                 }
             }

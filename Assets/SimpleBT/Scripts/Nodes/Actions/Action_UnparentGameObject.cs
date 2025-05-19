@@ -7,7 +7,7 @@ namespace SimpleBT.NonEditor.Nodes
     {
         protected override Status Tick()
         {
-            _gameObject = blackboard.GetComplexValue<GameObject>(_gameObjectKey);
+            _gameObject = _blackboard.GetComplexValue<GameObject>(_gameObjectKey);
             if(!_gameObject) { return Status.Failure; }
             
             _gameObject.transform.SetParent(null);

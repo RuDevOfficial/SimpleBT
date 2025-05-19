@@ -12,10 +12,10 @@ namespace SimpleBT.NonEditor.Nodes
 
         public virtual void AssignKeys(List<string> keys) { _keySpeed = keys[0]; }
 
-        protected override void Initialize() { _speed = blackboard.GetValue<float>(_keySpeed); }
+        protected override void Initialize() { _speed = _blackboard.GetValue<float>(_keySpeed); }
 
         protected override Status Tick() {
-            blackboard.transform.rotation *= Quaternion.Euler(GetDesiredRotation() * Time.deltaTime);
+            _blackboard.transform.rotation *= Quaternion.Euler(GetDesiredRotation() * Time.deltaTime);
             return Status.Running;
         }
 

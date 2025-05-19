@@ -16,7 +16,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override void Initialize() {
             base.Initialize();
-            _axisRotation = blackboard.GetValue<AxisRotationType>(_keyAxisRotation);
+            _axisRotation = _blackboard.GetValue<AxisRotationType>(_keyAxisRotation);
         }
 
         protected override Vector3 GetDesiredRotation()

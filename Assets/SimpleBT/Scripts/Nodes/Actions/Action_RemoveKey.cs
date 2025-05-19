@@ -14,7 +14,7 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override Status Tick()
         {
-            blackboard.RemoveValue(_key);
+            _blackboard.RemoveValue(_key);
             return Status.Success;
         }
     }

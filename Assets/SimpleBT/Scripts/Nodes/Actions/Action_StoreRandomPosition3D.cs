@@ -26,11 +26,11 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override void Initialize()
         {
-            _minDistance = blackboard.GetValue<float>(_keyMinDistance);
-            _maxDistance = blackboard.GetValue<float>(_keyMaxDistance);
+            _minDistance = _blackboard.GetValue<float>(_keyMinDistance);
+            _maxDistance = _blackboard.GetValue<float>(_keyMaxDistance);
             
-            _raycastHeight = blackboard.GetValue<float>(_keyRaycastHeight);
-            _raycastDistance = blackboard.GetValue<float>(_keyRaycastDistance);
+            _raycastHeight = _blackboard.GetValue<float>(_keyRaycastHeight);
+            _raycastDistance = _blackboard.GetValue<float>(_keyRaycastDistance);
 
             _layerMask = LayerMask.NameToLayer(_keyLayerMask);
         }
@@ -42,9 +42,9 @@ namespace SimpleBT.NonEditor.Nodes
                 return Status.Failure; 
             }
 
-            Vector3 randomPosition = blackboard.gameObject.transform.position + new Vector3(Random.Range(_minDistance, _maxDistance), _raycastHeight, Random.Range(_minDistance, _maxDistance));
+            Vector3 randomPosition = _blackboard.gameObject.transform.position + new Vector3(Random.Range(_minDistance, _maxDistance), _raycastHeight, Random.Range(_minDistance, _maxDistance));
             bool hit = Physics.Raycast(new Ray(randomPosition, Vector3.down), out RaycastHit hitinfo, _raycastDistance, 1 << _layerMask);
-            blackboard.AddValue(_keyParameter.ToUpper(), hitinfo.point);
+            _blackboard.AddValue(_keyParameter.ToUpper(), hitinfo.point);
             return hit ? Status.Success : Status.Failure;
         }
     }

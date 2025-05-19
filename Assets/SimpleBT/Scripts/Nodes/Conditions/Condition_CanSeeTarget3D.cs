@@ -29,16 +29,16 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override void Initialize()
         {
-            _target = blackboard.GetComplexValue<GameObject>(_keyTarget);
+            _target = _blackboard.GetComplexValue<GameObject>(_keyTarget);
             _layerMask = int.Parse(_keyLayerMask);
-            _radius = blackboard.GetValue<float>(_keyRadius);
+            _radius = _blackboard.GetValue<float>(_keyRadius);
         }
 
         protected override bool Check()
         {
             // Get changing values here.
-            Vector3 rayDirection = (_target.transform.position - blackboard.gameObject.transform.position).normalized;
-            Physics.Raycast(blackboard.gameObject.transform.position, rayDirection, out RaycastHit hit, _radius, _layerMask);
+            Vector3 rayDirection = (_target.transform.position - _blackboard.gameObject.transform.position).normalized;
+            Physics.Raycast(_blackboard.gameObject.transform.position, rayDirection, out RaycastHit hit, _radius, _layerMask);
 
             if (!hit.collider) return false;
             
@@ -50,7 +50,7 @@ namespace SimpleBT.NonEditor.Nodes
         public override void OnDrawGizmos()
         {
             Gizmos.color = _hitTarget ? Color.green : Color.red;
-            Gizmos.DrawLine(blackboard.gameObject.transform.position, _hitPosition);
+            Gizmos.DrawLine(_blackboard.gameObject.transform.position, _hitPosition);
         }
     }
 }

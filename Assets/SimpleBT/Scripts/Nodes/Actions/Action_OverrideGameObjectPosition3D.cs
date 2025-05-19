@@ -23,13 +23,13 @@ namespace SimpleBT.NonEditor.Nodes
         
         protected override void Initialize()
         {
-            _position = blackboard.GetValue<Vector3>(_keyPosition);
-            _isLocal = blackboard.GetValue<bool>(_keyLocal);
+            _position = _blackboard.GetValue<Vector3>(_keyPosition);
+            _isLocal = _blackboard.GetValue<bool>(_keyLocal);
         }
         
         protected override Status Tick()
         {
-            _gameObject = blackboard.GetComplexValue<GameObject>(_keyGameObject);
+            _gameObject = _blackboard.GetComplexValue<GameObject>(_keyGameObject);
             if (!_gameObject) { return Status.Failure; }
             
             if (_isLocal) { _gameObject.transform.localPosition = _position; }

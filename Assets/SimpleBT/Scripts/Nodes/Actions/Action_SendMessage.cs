@@ -14,7 +14,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override Status Tick()
         {
-            blackboard.gameObject.SendMessage(_keyMethodName);
+            _blackboard.gameObject.SendMessage(_keyMethodName);
             return Status.Success;
         }
     }

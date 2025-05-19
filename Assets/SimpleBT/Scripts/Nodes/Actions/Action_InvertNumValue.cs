@@ -13,9 +13,9 @@ namespace SimpleBT.NonEditor.Nodes
         protected override Status Tick() {
             keyNumValue = keyNumValue.ToUpper();
             
-            if (!blackboard.ContainsKey(keyNumValue)) return Status.Failure;
-            float newValue = blackboard.GetValue<float>(keyNumValue) * -1;
-            blackboard.AddValue(keyNumValue, newValue);
+            if (!_blackboard.ContainsKey(keyNumValue)) return Status.Failure;
+            float newValue = _blackboard.GetValue<float>(keyNumValue) * -1;
+            _blackboard.AddValue(keyNumValue, newValue);
             return Status.Success;
         }
     }

@@ -30,16 +30,16 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override void Initialize()
         {
-            _degrees = blackboard.GetValue<float>(_keyDegrees);
-            _time = blackboard.GetValue<float>(_keyTime);
-            _interpolation = blackboard.GetValue<RotationInterpolationType>(_keyInterpolation);
+            _degrees = _blackboard.GetValue<float>(_keyDegrees);
+            _time = _blackboard.GetValue<float>(_keyTime);
+            _interpolation = _blackboard.GetValue<RotationInterpolationType>(_keyInterpolation);
             _curve = new AnimationCurve(SBTNonEditorUtils.GetKeyFrames(_keyFrames, '_', '|'));
         }
 
         protected override Status Tick()
         {
             if (_currentTime == 0) {
-                _startingQuaternion = blackboard.transform.rotation;
+                _startingQuaternion = _blackboard.transform.rotation;
                 SetDefaultValues(); 
             }
             
@@ -51,14 +51,14 @@ namespace SimpleBT.NonEditor.Nodes
                 return Status.Running;
             }
 
-            blackboard.transform.rotation = _targetQuaternion;
+            _blackboard.transform.rotation = _targetQuaternion;
             _currentTime = 0;
             return Status.Success;
         }
 
         private void UpdateRotation(float currentValue)
         {
-            blackboard.transform.rotation = _interpolation switch
+            _blackboard.transform.rotation = _interpolation switch
             {
                 RotationInterpolationType.Slerp => Quaternion.SlerpUnclamped(_startingQuaternion, _targetQuaternion, currentValue),
                 _ => Quaternion.LerpUnclamped(_startingQuaternion, _targetQuaternion, currentValue)
@@ -67,7 +67,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected virtual void SetDefaultValues()
         {
-            _targetQuaternion = blackboard.transform.rotation * Quaternion.Euler(0, 0, _degrees);
+            _targetQuaternion = _blackboard.transform.rotation * Quaternion.Euler(0, 0, _degrees);
         }
     }
 

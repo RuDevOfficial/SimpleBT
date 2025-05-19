@@ -6,8 +6,8 @@ namespace SimpleBT.NonEditor.Nodes
     {
         protected override bool Check()
         {
-            Vector3 firstValue = blackboard.GetValue<Vector3>(_keyValue);
-            Vector3 secondValue = blackboard.GetValue<Vector3>(_keySecondValue);
+            Vector3 firstValue = _blackboard.GetValue<Vector3>(_keyValue);
+            Vector3 secondValue = _blackboard.GetValue<Vector3>(_keySecondValue);
             Comparison comparison = SBTNonEditorUtils.GetEnumByString<Comparison>(_keyComparison);
 
             switch (comparison)

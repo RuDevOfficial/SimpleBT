@@ -9,9 +9,11 @@ namespace SimpleBT.Core
     
     public abstract class Node : ScriptableObject
     {
-        private bool _isInitialized = false;
         public string GUID;
-        protected SBTBlackboard blackboard;
+        public Node Parent;
+        
+        private bool _isInitialized = false;
+        protected SBTBlackboard _blackboard;
 
         public virtual Status OnTick()
         {
@@ -26,7 +28,7 @@ namespace SimpleBT.Core
         public virtual void OnAbort() {  }
         public virtual void OnDrawGizmos() {  }
         
-        public virtual void RegisterBlackboard(SBTBlackboard sbtBlackboard) { blackboard = sbtBlackboard; }
+        public virtual void RegisterBlackboard(SBTBlackboard sbtBlackboard) { _blackboard = sbtBlackboard; }
     }
     
     public enum Status { Running, Success, Failure }

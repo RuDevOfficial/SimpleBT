@@ -10,13 +10,13 @@ namespace SimpleBT.NonEditor.Nodes
         protected override void Initialize()
         {
             base.Initialize();
-            _rb = blackboard.gameObject.GetComponent<Rigidbody>();
+            _rb = _blackboard.gameObject.GetComponent<Rigidbody>();
         }
 
         protected override Status Tick()
         {
             if (!_target) {
-                _target = blackboard.GetComplexValue<GameObject>(_keyTarget);
+                _target = _blackboard.GetComplexValue<GameObject>(_keyTarget);
                 if (!_target) { return Status.Failure; }
 
                 if (_useTransform == false && !_rb) {
@@ -25,16 +25,16 @@ namespace SimpleBT.NonEditor.Nodes
                 }
             }
             
-            Vector3 direction = -1 * (_target.transform.position - blackboard.gameObject.transform.position).normalized;
+            Vector3 direction = -1 * (_target.transform.position - _blackboard.gameObject.transform.position).normalized;
             
-            if (_useTransform) { blackboard.gameObject.transform.position += direction * (_speed * Time.deltaTime); }
+            if (_useTransform) { _blackboard.gameObject.transform.position += direction * (_speed * Time.deltaTime); }
             else
             {
-                if (_rb.isKinematic) { _rb.MovePosition(blackboard.gameObject.transform.position + direction * (_speed * Time.fixedDeltaTime), _flag); }
+                if (_rb.isKinematic) { _rb.MovePosition(_blackboard.gameObject.transform.position + direction * (_speed * Time.fixedDeltaTime), _flag); }
                 else { _rb.linearVelocity = direction * (_speed * Time.fixedDeltaTime);}
             }
 
-            return Vector3.Distance(_target.transform.position, blackboard.gameObject.transform.position) 
+            return Vector3.Distance(_target.transform.position, _blackboard.gameObject.transform.position) 
                    >= _safeDistance ? Status.Success : Status.Running;
         }
     }

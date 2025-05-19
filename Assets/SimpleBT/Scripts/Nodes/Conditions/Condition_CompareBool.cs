@@ -21,7 +21,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override bool Check()
         {
-            bool value = blackboard.GetValue<bool>(_keyValue);
+            bool value = _blackboard.GetValue<bool>(_keyValue);
             bool comparison = bool.Parse(_keyComparison);
             return value == comparison;
         }

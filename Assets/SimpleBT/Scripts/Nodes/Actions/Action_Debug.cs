@@ -19,8 +19,8 @@ namespace SimpleBT.NonEditor.Nodes
         }
         
         protected override void Initialize() {
-            _status = blackboard.GetValue<Status>(_keyResult);
-            _message = blackboard.GetValue<string>(_keyMessage);
+            _status = _blackboard.GetValue<Status>(_keyResult);
+            _message = _blackboard.GetValue<string>(_keyMessage);
         }
 
         protected override Status Tick()

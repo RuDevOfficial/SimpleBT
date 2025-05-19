@@ -17,7 +17,7 @@ namespace SimpleBT.NonEditor.Nodes
         {
             if (!_triggered) {
                 _triggered = true;
-                _delay = blackboard.GetValue<float>(_keyDelay);
+                _delay = _blackboard.GetValue<float>(_keyDelay);
                 _currentTime = _delay;
             }
             

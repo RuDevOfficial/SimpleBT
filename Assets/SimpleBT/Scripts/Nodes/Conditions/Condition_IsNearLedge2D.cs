@@ -28,24 +28,24 @@ namespace SimpleBT.NonEditor.Nodes
         }
 
         protected override void Initialize() {
-            rayLength = blackboard.GetValue<float>(keyLength);
-            raySeparationDistance = blackboard.GetValue<float>(keySeparationDistance);
+            rayLength = _blackboard.GetValue<float>(keyLength);
+            raySeparationDistance = _blackboard.GetValue<float>(keySeparationDistance);
             _layerMask = LayerMask.NameToLayer(keyLayerMaskName);
-            rb2D = blackboard.GetComponent<Rigidbody2D>();
+            rb2D = _blackboard.GetComponent<Rigidbody2D>();
         }
 
         protected override bool Check()
         {
             if (!rb2D) {  Debug.LogError("Is Near Edge 2D requires Rigidbody 2D"); return false; }
             
-            _leftVector = (Vector2)blackboard.gameObject.transform.position + new Vector2(rb2D.linearVelocityX >= 0 ? 1 : -1, 0) * raySeparationDistance;
+            _leftVector = (Vector2)_blackboard.gameObject.transform.position + new Vector2(rb2D.linearVelocityX >= 0 ? 1 : -1, 0) * raySeparationDistance;
 
             _hits = Physics2D.RaycastAll(_leftVector, Vector2.down, rayLength, 1 << _layerMask).ToList();
             
             // Filter out the raycasting gameObject
             for (var i = _hits.Count - 1; i >= 0; i--)
             {
-                if (_hits[i].transform.gameObject != blackboard.gameObject) continue;
+                if (_hits[i].transform.gameObject != _blackboard.gameObject) continue;
                 _hits.RemoveAt(i); break;
             }
             

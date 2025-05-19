@@ -20,22 +20,22 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override void Initialize()
         {
-            target = blackboard.GetComplexValue<GameObject>(keyTarget);
-            distance = blackboard.GetValue<float>(keyDistance);
+            target = _blackboard.GetComplexValue<GameObject>(keyTarget);
+            distance = _blackboard.GetValue<float>(keyDistance);
         }
 
         protected override bool Check()
         {
             if (!target) { return false; }
 
-            float magnitude = (target.transform.position - blackboard.transform.position).magnitude;
+            float magnitude = (target.transform.position - _blackboard.transform.position).magnitude;
             return magnitude <= distance;
         }
 
         public override void OnDrawGizmos()
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(blackboard.gameObject.transform.position, distance);
+            Gizmos.DrawWireSphere(_blackboard.gameObject.transform.position, distance);
         }
     }
 }

@@ -21,8 +21,8 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override bool Check()
         {
-            object value = blackboard.GetValue<object>(_keyValue);
-            object secondValue = blackboard.GetValue<object>(_keySecondValue);
+            object value = _blackboard.GetValue<object>(_keyValue);
+            object secondValue = _blackboard.GetValue<object>(_keySecondValue);
             Comparison comparison = SBTNonEditorUtils.GetEnumByString<Comparison>(_keyComparison);
             
             switch (comparison)

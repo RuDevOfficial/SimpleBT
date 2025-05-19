@@ -6,8 +6,8 @@ namespace SimpleBT.NonEditor.Nodes
     {
         protected override bool Check()
         {
-            float value = blackboard.GetValue<float>(_keyValue);
-            float secondValue = blackboard.GetValue<float>(_keySecondValue);
+            float value = _blackboard.GetValue<float>(_keyValue);
+            float secondValue = _blackboard.GetValue<float>(_keySecondValue);
             Comparison comparison = SBTNonEditorUtils.GetEnumByString<Comparison>(_keyComparison);
 
             switch (comparison)

@@ -187,7 +187,7 @@ public static class SBTNonEditorUtils
             else { generatedNode = (Node)ScriptableObject.CreateInstance(toNodeType); }
             
             generatedNode.GUID = guid;
-            generatedNode.name = (tree.CompleteNodeList.Count + 1).ToString();
+            generatedNode.name = name;
 
             if (generatedNode is INodeKeyAssignable nodeInterface) {
                 nodeInterface.AssignKeys(toNodeType == typeof(Action_Any) ? filteredValues : values);

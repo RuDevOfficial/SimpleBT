@@ -21,7 +21,7 @@ namespace SimpleBT.NonEditor.Nodes
 
         protected override Status Tick()
         {
-            _target = blackboard.GetComplexValue<GameObject>(_keyTarget);
+            _target = _blackboard.GetComplexValue<GameObject>(_keyTarget);
             if (!_target) { return Status.Failure ; }
             
             _target.tag = _keyTag;
